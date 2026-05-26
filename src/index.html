@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leks Sp. z o.o. - Producent wysokiej jakości tradycyjnego pieczywa od 1989 roku. Odkryj nasz asortyment chlebów, bułek, ciast oraz pieczywa dietetycznego.">
+    <title>Leks - Producent Wysokiej Jakości Pieczywa</title>
+    
+    <!-- Google Fonts: Inter (Sans-serif) & Playfair Display (Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Główne style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Szklany, animowany Header (Nawigacja) -->
+    <header id="main-header" class="header-glass">
+        <div class="header-container">
+            <a href="#" class="logo-link" id="nav-logo">
+                <span class="logo-text">LEKS</span>
+                <span class="logo-subtext">PIEKARNIA</span>
+            </a>
+            
+            <nav id="main-nav" class="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active" id="link-home">Start</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">O nas</a></li>
+                    <li><a href="#products" class="nav-link" id="link-products">Produkty</a></li>
+                    <li><a href="#career" class="nav-link" id="link-career">Kariera</a></li>
+                    <li><a href="#contact" class="nav-link" id="link-contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <button id="menu-toggle" class="hamburger" aria-label="Otwórz menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sekcja Hero (Strona Główna z efektem przybliżania) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-container">
+                <div class="hero-bg" id="hero-zoom-bg"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-subtitle animate-on-load">Tradycja od 1989 roku</span>
+                <h1 class="hero-title animate-on-load">Prawdziwy smak,<br><span class="accent-text">wielka skala sukcesu</span></h1>
+                <p class="hero-lead animate-on-load">Dostarczamy najwyższej jakości chleby, bułki i wyroby cukiernicze do tysięcy sklepów w Polsce i Europie.</p>
+                <div class="hero-actions animate-on-load">
+                    <a href="#products" class="btn btn-primary" id="hero-btn-primary">Poznaj ofertę</a>
+                    <a href="#about" class="btn btn-outline" id="hero-btn-secondary">Nasza historia</a>
+                </div>
+            </div>
+            <div class="scroll-indicator" id="scroll-arrow">
+                <span class="mouse-icon">
+                    <span class="mouse-wheel"></span>
+                </span>
+                <span class="scroll-text">Przewiń w dół</span>
+            </div>
+        </section>
+
+        <!-- Sekcja O nas (z osią czasu) -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">O Firmie Leks</span>
+                    <h2 class="section-title">Pasja zrodzona z tradycji</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <p class="lead-text">Leks to dynamicznie rozwijające się przedsiębiorstwo piekarnicze. Łączymy rzemieślniczą tradycję wypieku z najnowocześniejszym parkiem technologicznym.</p>
+                        <p>Z małej, rodzinnej piekarni w Sulęcinie przekształciliśmy się w jednego z liderów rynku. Posiadamy trzy nowoczesne zakłady produkcyjne zaopatrujące sieci handlowe oraz lokalnych odbiorców. Nasze unikalne pieczywo z pradawnej pszenicy **Leks 2AB** to dowód na to, jak nowoczesne podejście do zdrowia spotyka się z tradycyjną recepturą.</p>
+                    </div>
+                    <div class="about-interactive-timeline">
+                        <div class="timeline-navigation" id="timeline-years">
+                            <button class="timeline-year-btn active" data-year="1989">1989</button>
+                            <button class="timeline-year-btn" data-year="1998">1998</button>
+                            <button class="timeline-year-btn" data-year="2005">2005</button>
+                            <button class="timeline-year-btn" data-year="2018">2018</button>
+                            <button class="timeline-year-btn" data-year="2026">2026</button>
+                        </div>
+                        <div class="timeline-content-card" id="timeline-card">
+                            <h4 class="timeline-card-title" id="timeline-title">Założenie Firmy</h4>
+                            <p class="timeline-card-desc" id="timeline-desc">Firma Leks rozpoczęła swoją działalność jako mała piekarnia rodzinna z pasją do tworzenia tradycyjnych chlebów na zakwasie w Sulęcinie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Oferta / Produkty -->
+        <section id="products" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Nasz Asortyment</span>
+                    <h2 class="section-title">Wypieki z serca pieca</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <!-- Kategorie Produktów -->
+                <div class="category-filters" id="product-filters">
+                    <button class="filter-btn active" data-filter="all">Wszystko</button>
+                    <button class="filter-btn" data-filter="bread">Chleby</button>
+                    <button class="filter-btn" data-filter="rolls">Bułki</button>
+                    <button class="filter-btn" data-filter="sweet">Słodkie i Ciasta</button>
+                </div>
+                
+                <!-- Siatka Produktów (GSAP Animated Grid) -->
+                <div class="products-grid" id="products-container">
+                    <div class="product-card" data-category="bread">
+                        <div class="product-image-placeholder">🥖</div>
+                        <div class="product-info">
+                            <span class="product-category">Chleb Tradycyjny</span>
+                            <h3 class="product-title">Chleb Sulęciński</h3>
+                            <p class="product-desc">Klasyczny chleb żytnio-pszenny pieczony na naturalnym zakwasie według tradycyjnej receptury.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="bread">
+                        <div class="product-image-placeholder">🍞</div>
+                        <div class="product-info">
+                            <span class="product-category">Pieczywo Zdrowotne</span>
+                            <h3 class="product-title">Chleb Leks 2AB</h3>
+                            <p class="product-desc">Innowacyjne pieczywo z pradawnej pszenicy 2AB, lekkostrawne i bogate w cenne składniki odżywcze.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="rolls">
+                        <div class="product-image-placeholder">🥯</div>
+                        <div class="product-info">
+                            <span class="product-category">Bułki i Galanteria</span>
+                            <h3 class="product-title">Bułka Grahamka</h3>
+                            <p class="product-desc">Pożywna i chrupiąca bułka grahamka bogata w błonnik, idealna na codzienne śniadanie.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="sweet">
+                        <div class="product-image-placeholder">🍰</div>
+                        <div class="product-info">
+                            <span class="product-category">Wyroby Półcukiernicze</span>
+                            <h3 class="product-title">Drożdżówka z Kruszonką</h3>
+                            <p class="product-desc">Puszysta, słodka drożdżówka z obfitą, maślaną kruszonką i owocowym nadzieniem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Kariera -->
+        <section id="career" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Dołącz do Zespołu</span>
+                    <h2 class="section-title">Praca w Piekarni Leks</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="career-accordion">
+                    <div class="accordion-item" id="job-1">
+                        <button class="accordion-header">
+                            <span>Pracownik Produkcji (Gorzów Wielkopolski)</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p><strong>Miejsce pracy:</strong> Zakład produkcyjny Gorzów Wlkp.</p>
+                            <p><strong>Zadania:</strong> Obsługa maszyn piekarniczych, kontrola jakości wyrobów, pakowanie pieczywa.</p>
+                            <p><strong>Oferujemy:</strong> Stabilne zatrudnienie w oparciu o umowę o pracę, pracę w zgranym zespole, atrakcyjne wynagrodzenie oraz ubezpieczenie grupowe.</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Aplikuj teraz</a>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item" id="job-2">
+                        <button class="accordion-header">
+                            <span>Magazynier Wyrobów Gotowych (Sulęcin)</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p><strong>Miejsce pracy:</strong> Sulęcin (Główna Siedziba)</p>
+                            <p><strong>Zadania:</strong> Przygotowywanie wysyłek do odbiorców handlowych, załadunek aut dostawczych, kontrola stanów magazynowych.</p>
+                            <p><strong>Oferujemy:</strong> Pracę w systemie zmianowym, stabilną pensję podstawową + premie frekwencyjne i wydajnościowe.</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Aplikuj teraz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Kontakt -->
+        <section id="contact" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Napisz Do Nas</span>
+                    <h2 class="section-title">Porozmawiajmy o pieczywie</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-panel">
+                        <h3>Leks Sp. z o.o.</h3>
+                        <p class="contact-address">📍 ul. Emilii Plater 4, 69-200 Sulęcin</p>
+                        <p class="contact-phone">📞 Tel: +48 95 755 24 55</p>
+                        <p class="contact-email">✉ Email: biuro@leks.com.pl</p>
+                        <p class="contact-hours">🕒 Biuro obsługi klienta: Pn - Pt, 8:00 - 16:00</p>
+                    </div>
+                    
+                    <div class="contact-form-panel">
+                        <form id="leks-contact-form" class="modern-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Imię i nazwisko</label>
+                                    <input type="text" id="form-name" required placeholder="np. Jan Kowalski">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Adres e-mail</label>
+                                    <input type="email" id="form-email" required placeholder="np. jan@domena.pl">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Temat</label>
+                                <select id="form-subject">
+                                    <option value="wholesale">Współpraca Hurtowa</option>
+                                    <option value="career">Kariera i rekrutacja</option>
+                                    <option value="general">Zapytanie Ogólne</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Treść wiadomości</label>
+                                <textarea id="form-message" required placeholder="Wpisz treść swojej wiadomości..." rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">Wyślij wiadomość</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container footer-content text-center">
+            <p>&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+            <p class="designer-tag">Projekt i wykonanie: <span class="architect-brand">Senior Developer & Architekt AI</span></p>
+        </div>
+    </footer>
+
+    <!-- Biblioteki GSAP & ScrollTrigger z oficjalnego CDN Cloudflare (Super Fast) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Główny kod JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
