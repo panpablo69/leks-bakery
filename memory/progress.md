@@ -12,8 +12,8 @@
 
 ### 📈 Inżynieria i Szkielet Aplikacji
 - `[x]` Inicjalizacja folderu `memory/` z plikami stanu
-- `[ ]` Stworzenie szkieletu struktury plików (`src/index.html`, `src/css/style.css`, `src/js/app.js`)
-- `[ ]` Skonfigurowanie czcionek i zmiennych CSS w `style.css`
+- `[x]` Stworzenie szkieletu struktury plików (`src/index.html`, `src/css/style.css`, `src/js/app.js`)
+- `[x]` Skonfigurowanie czcionek i zmiennych CSS w `style.css`
 
 ### 🎨 Projektowanie Podstron i Interakcji
 - `[ ]` **Strona Główna**: Imponujący baner hero z efektem dynamicznego przybliżania przy przewijaniu (GSAP ScrollTrigger)
