@@ -43,7 +43,7 @@ function initNavigation() {
 }
 
 /* ==============================================================================
-   2. OBSŁUGA STRONY KATEGORII (DYNAMICZNY FUNNEL B2B)
+   2. OBSŁUGA STRONY KATEGORII (DYNAMICZNY FUNNEL B2B - 7 KATEGORII)
    ============================================================================== */
 function initCategoryPage() {
     const container = document.getElementById("products-container");
@@ -53,8 +53,10 @@ function initCategoryPage() {
     const urlParams = new URLSearchParams(window.location.search);
     let cat = urlParams.get('cat') || 'all';
     
+    const validCategories = ['all', 'bread', 'rolls', '2ab', 'sweet', 'cakes', 'savory', 'sandwiches'];
+    
     // Korekcja jeśli błędna wartość
-    if (!['all', 'bread', 'rolls', 'sweet'].includes(cat)) {
+    if (!validCategories.includes(cat)) {
         cat = 'all';
     }
     
@@ -69,27 +71,51 @@ function initCategoryPage() {
     // Dane dla poszczególnych kategorii
     const categoryInfo = {
         "bread": {
-            title: "Chleby Tradycyjne i Rzemieślnicze",
+            title: "Chleby Tradycyjne",
             subtitle: "Chleby Tradycyjne",
-            desc: "Naturalny, wielofazowy zakwas żytni wyhodowany w Sulęcinie, wysoka wilgotność miękiszu i niepowtarzalny tradycyjny smak w skali makro. Spełniamy najwyższe standardy B2B zatwierdzone przez międzynarodowych audytorów (IFS, BRC).",
-            breadcrumb: "Chleby"
+            desc: "Tradycyjne polskie chleby mieszane i żytnie, wypiekane w 100% na naturalnym wielofazowym zakwasie żytnim. Gwarancja doskonałej wilgotności miękiszu, chrupiącej skórki i długiej świeżości (Bake-off / świeże).",
+            breadcrumb: "Chleby Tradycyjne"
         },
         "rolls": {
-            title: "Bułki, Bagietki i Galanteria",
+            title: "Bułki i Bagietki",
             subtitle: "Bułki i Bagietki",
-            desc: "Bogaty asortyment bułek i bagietek dopasowany pod systemy odroczonego wypieku (Bake-off) w sieciach handlowych. Niezrównana chrupkość, stabilna waga i pełna powtarzalność logistyczna.",
+            desc: "Bogaty asortyment bułek śniadaniowych, kajzerek oraz chrupiących bagietek. Idealnie zoptymalizowane pod systemy odroczonego wypieku (Bake-off) w supermarketach.",
             breadcrumb: "Bułki i Bagietki"
         },
+        "2ab": {
+            title: "Pieczywo Pradawne 2AB",
+            subtitle: "Pieczywo 2AB",
+            desc: "Przełomowe pieczywo funkcjonalne z pradawnej pszenicy 2AB. Lekkostrawna i bogata w składniki odżywcze alternatywa dedykowana dla wrażliwego układu pokarmowego.",
+            breadcrumb: "Pieczywo 2AB"
+        },
         "sweet": {
-            title: "Wyroby Słodkie i Półcukiernicze",
-            subtitle: "Wyroby Słodkie",
-            desc: "Puszyste pączki premium, słodkie drożdżówki z kruszonką i tradycyjne wyroby półcukiernicze. Gotowe rozwiązania mrożone (Bake-off / Thaw & Serve) optymalizujące straty w sklepie.",
-            breadcrumb: "Wyroby Słodkie"
+            title: "Wyroby Półcukiernicze",
+            subtitle: "Półcukiernicze",
+            desc: "Puszyste pączki premium z nadzieniem owocowym lub kremowym oraz tradycyjne maślane drożdżówki z kruszonką. Słodkie wypieki generujące stabilne zyski.",
+            breadcrumb: "Półcukiernicze"
+        },
+        "cakes": {
+            title: "Katalog Cukierniczy",
+            subtitle: "Cukiernia",
+            desc: "Luksusowe torty, delikatne serniki, puszyste ciasta drożdżowe i placki z twarogiem. Wyjątkowe wyroby cukiernicze tworzone według mistrzowskich receptur.",
+            breadcrumb: "Cukiernia"
+        },
+        "savory": {
+            title: "Słone Przekąski Bake-Off",
+            subtitle: "Słone Przekąski",
+            desc: "Chrupiące ślimaki ze szpinakiem, bułki z warzywami oraz pożywne słone przekąski z ciasta francuskiego. Gotowe rozwiązania pod systemy dopieku w sklepie.",
+            breadcrumb: "Słone Przekąski"
+        },
+        "sandwiches": {
+            title: "Świeże Kanapki Bistro",
+            subtitle: "Kanapki",
+            desc: "Świeże, codzienne przygotowywane kanapki z najwyższej jakości wędlinami, warzywami i sosami na bazie chrupiącego pieczywa własnej produkcji Leks.",
+            breadcrumb: "Kanapki"
         },
         "all": {
             title: "Pełna Oferta Pieczywa B2B",
             subtitle: "Wszystkie Produkty",
-            desc: "Kompleksowy asortyment chlebów, bułek, bagietek oraz wyrobów słodkich produkowany w trzech nowoczesnych i wyspecjalizowanych zakładach piekarniczych Leks Sp. z o.o.",
+            desc: "Kompleksowy asortyment chlebów, bułek, bagietek, wyrobów słodkich, cukierniczych, słonych przekąsek i kanapek produkowany w trzech nowoczesnych i wyspecjalizowanych zakładach piekarniczych Leks Sp. z o.o.",
             breadcrumb: "Wszystko"
         }
     };

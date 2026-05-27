@@ -1,7 +1,8 @@
 // Baza danych produktów B2B dla Piekarni Leks Sp. z o.o.
-// Zawiera pełne specyfikacje logistyczne i technologiczne dla kupców sieci handlowych.
+// Zawiera pełne specyfikacje logistyczne i technologiczne dla 7 głównych kategorii.
 
 const PRODUCTS_DATA = {
+    // CATEGORY: BREAD (Chleby Tradycyjne)
     "chleb-sulecinski": {
         title: "Chleb Sulęciński",
         category: "bread",
@@ -16,21 +17,6 @@ const PRODUCTS_DATA = {
         bake: "Temperatura: 200°C | Czas: 10-12 minut (zaparowanie pieca)",
         desc: "Tradycyjny chleb mieszany żytnio-pszenny, pieczony w 100% na naturalnym zakwasie żytnim wyhodowanym w Sulęcinie. Nie zawiera żadnych sztucznych dodatków, konserwantów ani polepszaczy. Charakteryzuje się doskonałą wilgotnością i elastycznością miękiszu, głębokim tradycyjnym aromatem oraz rumianą, popękaną skórką. Dostępny w technologii mrożonej (dopiekanie w sklepie) oraz tradycyjnie dostarczany codziennie rano.",
         ingredients: "Mąka żytnia typ 720, mąka pszenna typ 750, woda pitna, naturalny kwas żytni, sól spożywcza, drożdże piekarskie."
-    },
-    "chleb-leks-2ab": {
-        title: "Chleb Leks 2AB",
-        category: "bread",
-        categoryLabel: "Pieczywo Zdrowotne",
-        image: "img/chleb_leks_2ab.png",
-        weight: "400g (Krojony / Pakowany)",
-        packaging: "Karton zbiorczy 10 szt. / Paleta: 40 kartonów (400 szt.)",
-        ean: "5907552401025",
-        temp: "Temperatura pokojowa (15-22°C)",
-        shelfLife: "6 dni (Pakowanie w atmosferze ochronnej MAP)",
-        cert: "IFS, BRC, Certyfikat Pradawnej Pszenicy 2AB",
-        bake: "Produkt gotowy do spożycia (krojony i pakowany barierowo)",
-        desc: "Innowacyjne pieczywo funkcjonalne klasy Premium wyprodukowane z prastarej pszenicy 2AB (pradawna odmiana Triticum turgidum). Chleb charakteryzuje się wyjątkowo wysoką lekkostrawnością, będąc idealną alternatywą dla osób z nadwrażliwością na gluten typu A obecny w pszenicy modyfikowanej przemysłowo. Posiada bogaty zestaw mikroelementów (selen, cynk, żelazo). Pakowany na automatycznej linii Flow-pack w atmosferze modyfikowanej (MAP), co gwarantuje przedłużoną świeżość bez użycia konserwantów.",
-        ingredients: "Mąka z pradawnej pszenicy 2AB, naturalny kwas z pszenicy 2AB, woda, ziarna dyni, ziarna słonecznika, sól spożywcza."
     },
     "chleb-sielski": {
         title: "Chleb Sielski",
@@ -92,6 +78,8 @@ const PRODUCTS_DATA = {
         desc: "Ciemny chleb w 100% żytni, wypiekany na naturalnym zakwasie żytnim z obfitym dodatkiem łuskanych ziaren słonecznika. Charakteryzuje się gęstym, wilgotnym miękiszem i długą świeżością. Idealny dla klientów poszukujących autentycznego pieczywa razowego o doskonałych wartościach odżywczych.",
         ingredients: "Mąka żytnia typ 720, naturalny zakwas żytni, woda, ziarna słonecznika, sól spożywcza."
     },
+
+    // CATEGORY: ROLLS (Bułki i Bagietki)
     "bulka-grahamka": {
         title: "Bułka Grahamka",
         category: "rolls",
@@ -107,36 +95,6 @@ const PRODUCTS_DATA = {
         desc: "Chrupiąca, pożywna bułka grahamka wypiekana z mąki z pełnego przemiału pszenicy graham. Posiada wysoką zawartość błonnika pokarmowego oraz cenne minerały z okrywy owocowo-nasiennej ziarna. Dedykowana pod system wypieku odroczonego (Bake-off) w supermarketach. Umożliwia stoiskom piekarniczym szybką reakcję na natężenie ruchu klientów, oferując świeże, gorące pieczywo o powtarzalnym, wysokim standardzie jakości.",
         ingredients: "Mąka pszenna graham typ 1850, mąka pszenna typ 750, woda pitna, drożdże, sól spożywcza, olej roślinny."
     },
-    "bulka-2ab": {
-        title: "Bułka Leks 2AB",
-        category: "rolls",
-        categoryLabel: "Bułki i Galanteria",
-        image: "img/bulka_2ab.png",
-        weight: "80g",
-        packaging: "Karton 50 szt. / Paleta: 32 kartony (1600 szt.)",
-        ean: "5907552402022",
-        temp: "-18°C (Łańcuch głębokiego mrożenia)",
-        shelfLife: "12 miesięcy (Bake-off)",
-        cert: "IFS Food, BRC, Certyfikat Pszenicy 2AB",
-        bake: "Temperatura: 200°C | Czas: 6-7 minut z parowaniem",
-        desc: "Wyjątkowa bułka wypiekana z pradawnej odmiany pszenicy 2AB. Charakteryzuje się miękkim, puszystym miękiszem oraz delikatną, chrupiącą skórką. Lekkostrawna formuła i brak sztucznie dodawanego glutenu sprawiają, że produkt cieszy się ogromną popularnością wśród dbających o zdrowie klientów sieci handlowych. Idealna pod systemy wypieku sklepowego.",
-        ingredients: "Mąka z pradawnej pszenicy 2AB, woda, naturalny kwas pszenny 2AB, drożdże, olej słonecznikowy, sól."
-    },
-    "bagietka-2ab": {
-        title: "Bagietka Leks 2AB",
-        category: "rolls",
-        categoryLabel: "Bułki i Galanteria",
-        image: "img/bagietka_2ab.png",
-        weight: "250g",
-        packaging: "Karton 24 szt. / Paleta: 28 kartonów (672 szt.)",
-        ean: "5907552402039",
-        temp: "-18°C (Łańcuch mrożony)",
-        shelfLife: "9 miesięcy (Bake-off)",
-        cert: "IFS Food, BRC, Certyfikat Pszenicy 2AB",
-        bake: "Temperatura: 200-210°C | Czas: 8-10 minut (zaparowanie pieca)",
-        desc: "Tradycyjna długa bagietka w stylu francuskim, stworzona na bazie innowacyjnej, prastarej pszenicy 2AB. Posiada chrupiącą, poprzecznie naciętą skórkę i duże, nieregularne pory w miękiszu, co jest rzadkością w zautomatyzowanej produkcji przemysłowej. Gotowy produkt głęboko mrożony, dedykowany pod wypiek na punktach sprzedaży (Bake-off).",
-        ingredients: "Mąka z pradawnej pszenicy 2AB, woda pitna, drożdże piekarskie, kwas pszenny, sól spożywcza."
-    },
     "bulka-kajzerka": {
         title: "Bułka Kajzerka",
         category: "rolls",
@@ -150,7 +108,7 @@ const PRODUCTS_DATA = {
         cert: "IFS Food, BRC",
         bake: "Temperatura: 210°C | Czas: 5-6 minut bez rozmrażania",
         desc: "Najpopularniejsza bułka w Polsce, wypiekana z najwyższej jakości mąki pszennej. Charakteryzuje się chrupiącą złocistą skórką, puszystym miękiszem oraz tradycyjnym, pięcioramiennym nacięciem na wierzchu. Niezastąpiony element oferty każdego stoiska piekarniczego (Bake-off).",
-        ingredients: "Mąka pszenna typ 500, woda, drożdże piekarskie, tłuszcz roślinny, sól, polepszacz piekarniczy."
+        ingredients: "Mąka pszenna typ 500, woda, drożdże piekarskie, tłuszcze roślinne, sól, polepszacz piekarniczy."
     },
     "bulka-z-dynia": {
         title: "Bułka z Dynią",
@@ -167,10 +125,59 @@ const PRODUCTS_DATA = {
         desc: "Wyjątkowa bułka pszenno-żytnia o chrupiącej skórce, obficie posypana pestkami dyni. Pestki dyni podczas wypieku uwalniają niesamowity, orzechowy aromat. Idealne pieczywo śniadaniowe o podwyższonej zawartości zdrowych kwasów tłuszczowych i minerałów.",
         ingredients: "Mąka pszenna typ 750, woda, pestki dyni, mąka żytnia typ 720, płatki owsiane, drożdże, sól."
     },
+
+    // CATEGORY: 2AB (Pieczywo Zdrowotne 2AB)
+    "chleb-leks-2ab": {
+        title: "Chleb Leks 2AB",
+        category: "2ab",
+        categoryLabel: "Pieczywo 2AB",
+        image: "img/chleb_leks_2ab.png",
+        weight: "400g (Krojony / Pakowany)",
+        packaging: "Karton zbiorczy 10 szt. / Paleta: 40 kartonów (400 szt.)",
+        ean: "5907552401025",
+        temp: "Temperatura pokojowa (15-22°C)",
+        shelfLife: "6 dni (Pakowanie w atmosferze ochronnej MAP)",
+        cert: "IFS, BRC, Certyfikat Pradawnej Pszenicy 2AB",
+        bake: "Produkt gotowy do spożycia (krojony i pakowany barierowo)",
+        desc: "Innowacyjne pieczywo funkcjonalne klasy Premium wyprodukowane z prastarej pszenicy 2AB (pradawna odmiana Triticum turgidum). Chleb charakteryzuje się wyjątkowo wysoką lekkostrawnością, będąc idealną alternatywą dla osób z nadwrażliwością na gluten typu A obecny w pszenicy modyfikowanej przemysłowo. Posiada bogaty zestaw mikroelementów (selen, cynk, żelazo). Pakowany na automatycznej linii Flow-pack w atmosferze modyfikowanej (MAP), co gwarantuje przedłużoną świeżość bez użycia konserwantów.",
+        ingredients: "Mąka z pradawnej pszenicy 2AB, naturalny kwas z pszenicy 2AB, woda, ziarna dyni, ziarna słonecznika, sól spożywcza."
+    },
+    "bulka-2ab": {
+        title: "Bułka Leks 2AB",
+        category: "2ab",
+        categoryLabel: "Pieczywo 2AB",
+        image: "img/bulka_2ab.png",
+        weight: "80g",
+        packaging: "Karton 50 szt. / Paleta: 32 kartony (1600 szt.)",
+        ean: "5907552402022",
+        temp: "-18°C (Łańcuch głębokiego mrożenia)",
+        shelfLife: "12 miesięcy (Bake-off)",
+        cert: "IFS Food, BRC, Certyfikat Pszenicy 2AB",
+        bake: "Temperatura: 200°C | Czas: 6-7 minut z parowaniem",
+        desc: "Wyjątkowa bułka wypiekana z pradawnej odmiany pszenicy 2AB. Charakteryzuje się miękkim, puszystym miękiszem oraz delikatną, chrupiącą skórką. Lekkostrawna formuła i brak sztucznie dodawanego glutenu sprawiają, że produkt cieszy się ogromną popularnością wśród dbających o zdrowie klientów sieci handlowych. Idealna pod systemy wypieku sklepowego.",
+        ingredients: "Mąka z pradawnej pszenicy 2AB, woda, naturalny kwas pszenny 2AB, drożdże, olej słonecznikowy, sól."
+    },
+    "bagietka-2ab": {
+        title: "Bagietka Leks 2AB",
+        category: "2ab",
+        categoryLabel: "Pieczywo 2AB",
+        image: "img/bagietka_2ab.png",
+        weight: "250g",
+        packaging: "Karton 24 szt. / Paleta: 28 kartonów (672 szt.)",
+        ean: "5907552402039",
+        temp: "-18°C (Łańcuch mrożony)",
+        shelfLife: "9 miesięcy (Bake-off)",
+        cert: "IFS Food, BRC, Certyfikat Pszenicy 2AB",
+        bake: "Temperatura: 200-210°C | Czas: 8-10 minut (zaparowanie pieca)",
+        desc: "Tradycyjna długa bagietka w stylu francuskim, stworzona na bazie innowacyjnej, prastarej pszenicy 2AB. Posiada chrupiącą, poprzecznie naciętą skórkę i duże, nieregularne pory w miękiszu, co jest rzadkością w zautomatyzowanej produkcji przemysłowej. Gotowy produkt głęboko mrożony, dedykowany pod wypiek na punktach sprzedaży (Bake-off).",
+        ingredients: "Mąka z pradawnej pszenicy 2AB, woda pitna, drożdże piekarskie, kwas pszenny, sól spożywcza."
+    },
+
+    // CATEGORY: SWEET (Półcukiernicze)
     "drozdzowka-z-kruszonka": {
         title: "Drożdżówka z Kruszonką",
         category: "sweet",
-        categoryLabel: "Wyroby Półcukiernicze",
+        categoryLabel: "Półcukiernicze",
         image: "img/drozdzowka.png",
         weight: "90g",
         packaging: "Skrzynka 20 szt. (świeże) / Karton 40 szt. (mrożone)",
@@ -185,7 +192,7 @@ const PRODUCTS_DATA = {
     "drozdzowka-z-serem": {
         title: "Drożdżówka z Serem",
         category: "sweet",
-        categoryLabel: "Wyroby Półcukiernicze",
+        categoryLabel: "Półcukiernicze",
         image: "img/drozdzowka_ser.png",
         weight: "100g",
         packaging: "Skrzynka 20 szt. (świeże) / Karton 40 szt. (mrożone)",
@@ -194,13 +201,13 @@ const PRODUCTS_DATA = {
         shelfLife: "48h (Dostawa świeża) / 6 miesięcy (Mrożona)",
         cert: "IFS Food",
         bake: "Rozmrażanie: 30-40 min w temperaturze pokojowej",
-        desc: "Królowa polskich słodkich wypieków – puszysta, maślana drożdżówka z obfitym nadzieniem z naturalnego, słodkiego twarogu, posypana chrupiącą kruszonką. Produkowana na bazie tradycyjnej receptury cukierniczej, zachwyca delikatnością ciasta i bogatym smakiem nadzienia.",
-        ingredients: "Mąka pszenna typ 500, twaróg tłusty naturalny, woda, cukier, masło 82%, drożdże, masa jajowa, kruszonka."
+        desc: "Królowa polskich słodkich wypieków – puszysta, maślana drożdżówka z obfitym nadzieniem z naturalnego, słodkiego twarogu, posypana chrupiącą kruszonką. Wypiekana z ciasta drożdżowego o wysokiej puszystości, stanowi idealny produkt śniadaniowy generujący wysokie obroty w sieciach handlowych.",
+        ingredients: "Mąka pszenna typ 500, twaróg słodki naturalny, woda, cukier, masło 82%, drożdże, masa jajowa, kruszonka."
     },
     "paczek-malinowy": {
         title: "Pączek Malinowy",
         category: "sweet",
-        categoryLabel: "Wyroby Półcukiernicze",
+        categoryLabel: "Półcukiernicze",
         image: "img/paczek_malinowy.png",
         weight: "100g",
         packaging: "Karton 36 szt. / Paleta: 40 kartonów (1440 szt.)",
@@ -215,7 +222,7 @@ const PRODUCTS_DATA = {
     "paczek-pistacjowy": {
         title: "Pączek Pistacjowy",
         category: "sweet",
-        categoryLabel: "Wyroby Półcukiernicze",
+        categoryLabel: "Półcukiernicze",
         image: "img/paczek_pistacjowy.png",
         weight: "100g",
         packaging: "Karton 36 szt. / Paleta: 40 kartonów (1440 szt.)",
@@ -226,6 +233,102 @@ const PRODUCTS_DATA = {
         bake: "Produkt gotowy po rozmrożeniu (45-60 minut w temp. pokojowej)",
         desc: "Absolutnie luksusowy pączek premium, który rewolucjonizuje klasyczną ofertę cukierniczą. Wypełniony aksamitnym kremem z prawdziwych pistacji, oblany wykwintnym zielonym lukrem pistacjowym i obficie posypany siekanymi, chrupiącymi orzeszkami pistacjowymi. Prawdziwy hit sprzedażowy w segmencie słodkich wypieków premium.",
         ingredients: "Mąka pszenna typ 500, woda, krem pistacjowy (pistacje 15%, cukier, mleko), tłuszcz cukierniczy, masa jajowa, cukier, drożdże, siekane orzechy pistacjowe."
+    },
+
+    // CATEGORY: CAKES (Cukiernia)
+    "sernik-puszysty": {
+        title: "Sernik Puszysty",
+        category: "cakes",
+        categoryLabel: "Cukiernia",
+        image: "img/kategoria_cukiernia.png",
+        weight: "1.5kg (Blacha zbiorcza)",
+        packaging: "Karton 4 szt. / Paleta: 24 kartony (96 szt.)",
+        ean: "5907552404019",
+        temp: "-18°C (głęboko mrożone)",
+        shelfLife: "6 miesięcy (Łańcuch mrożony)",
+        cert: "IFS Food",
+        bake: "Rozmrażać przez 4 godziny w temperaturze chłodniczej (2-6°C)",
+        desc: "Klasyczny, puszysty i wilgotny sernik premium przygotowywany z trzykrotnie mielonego, naturalnego twarogu tłustego o wyjątkowo gładkiej strukturze. Wypiekany bez dodatku mąki, na chrupiącym kruchym spodzie maślanym. Doskonały, tradycyjny smak z nutą naturalnej wanilii. Idealnie dostosowany do serwowania (Thaw & Serve) w stoiskach cukierniczych.",
+        ingredients: "Twaróg tłusty naturalny 70%, masa jajowa, cukier, masło 82%, mąka pszenna (spód), naturalny aromat waniliowy."
+    },
+    "ciasto-karpatka": {
+        title: "Ciasto Karpatka",
+        category: "cakes",
+        categoryLabel: "Cukiernia",
+        image: "img/kategoria_cukiernia.png",
+        weight: "1.2kg (Blacha)",
+        packaging: "Karton 4 szt. / Paleta: 24 kartony (96 szt.)",
+        ean: "5907552404026",
+        temp: "-18°C (głęboko mrożone)",
+        shelfLife: "6 miesięcy (Łańcuch mrożony)",
+        cert: "IFS Food, BRC",
+        bake: "Rozmrażać przez 3-4 godziny w temperaturze chłodniczej (2-6°C)",
+        desc: "Kultowe polskie ciasto z puszystym kremem budyniowo-maślanym, ułożonym między dwoma warstwami karbowanego ciasta ptysiowego przypominającego góry Karpaty. Całość posypana drobnym cukrem pudrem. Tradycyjna receptura gwarantuje wyśmienity, delikatny smak i wysoką powtarzalność kształtu.",
+        ingredients: "Krem budyniowo-maślany (mleko, masło 82%, cukier, żółtka), mąka pszenna, woda, jaja kurze, cukier puder."
+    },
+
+    // CATEGORY: SAVORY (Słone Przekąski)
+    "slimak-ze-szpinakiem": {
+        title: "Ślimak ze Szpinakiem",
+        category: "savory",
+        categoryLabel: "Słone Przekąski",
+        image: "img/kategoria_przekaski.png",
+        weight: "100g",
+        packaging: "Karton 60 szt. / Paleta: 32 kartony (1920 szt.)",
+        ean: "5907552405016",
+        temp: "-18°C (Łańcuch głębokiego mrożenia)",
+        shelfLife: "9 miesięcy (Bake-off)",
+        cert: "IFS Food, BRC",
+        bake: "Temperatura: 190-200°C | Czas: 15-18 minut z parowaniem (bez rozmrażania)",
+        desc: "Chrupiąca przekąska z wielowarstwowego, puszystego ciasta francuskiego, zwinięta w kształt ślimaka i obficie wypełniona wytrawnym farszem z liści szpinaku, czosnku oraz sera typu feta. Doskonała, pożywna i szybka słona przekąska dedykowana do dopieku bezpośrednio w sklepie.",
+        ingredients: "Mąka pszenna, woda, szpinak liściasty 18%, margaryna piekarnicza, ser feta, cebula, czosnek, sól, pieprz."
+    },
+    "przekaska-z-warzywami": {
+        title: "Przekąska z Warzywami",
+        category: "savory",
+        categoryLabel: "Słone Przekąski",
+        image: "img/kategoria_przekaski.png",
+        weight: "150g",
+        packaging: "Karton 40 szt. / Paleta: 32 kartony (1280 szt.)",
+        ean: "5907552405023",
+        temp: "-18°C (Łańcuch głębokiego mrożenia)",
+        shelfLife: "9 miesięcy (Bake-off)",
+        cert: "IFS Food, BRC",
+        bake: "Temperatura: 195°C | Czas: 16-18 minut bez rozmrażania",
+        desc: "Wytrawna przekąska B2B o podwyższonej gramaturze (150g). Chrupiące ciasto francuskie wypełnione bogatym, śródziemnomorskim farszem warzywnym (papryka, cukinia, pomidory, kukurydza) doprawionym aromatycznymi ziołami prowansalskimi i zapieczone z serem mozzarella na wierzchu.",
+        ingredients: "Mąka pszenna, farsz warzywny (papryka, cukinia, pomidory, cebula, kukurydza), woda, mozzarella, drożdże, sól."
+    },
+
+    // CATEGORY: SANDWICHES (Kanapki)
+    "kanapka-firmowa": {
+        title: "Kanapka z Wędzonym Kurczakiem",
+        category: "sandwiches",
+        categoryLabel: "Kanapki",
+        image: "img/kategoria_kanapki.png",
+        weight: "180g (Pakowanie Flow-pack MAP)",
+        packaging: "Karton zbiorczy 12 szt. (dostawa świeża chłodnicza)",
+        ean: "5907552406013",
+        temp: "Kontrolowana temperatura chłodnicza (2-6°C)",
+        shelfLife: "48h (Codzienna logistyka świeżości)",
+        cert: "IFS Food, BRC",
+        bake: "Produkt gotowy do spożycia na zimno lub do podgrzania (panini)",
+        desc: "Świeża kanapka B2B przygotowywana na bazie chrupiącego pieczywa rzemieślniczego własnej produkcji Leks. Wypełniona plastrami soczystego wędzonego kurczaka, świeżą sałatą, pomidorem, ogórkiem i wyrazistym sosem majonezowo-ziołowym. Pakowana w atmosferze ochronnej MAP, co gwarantuje pełną świeżość chrupiących warzyw i mięsa.",
+        ingredients: "Bułka rzemieślnicza pszenna, wędzona pierś z kurczaka 25%, pomidor, ogórek, sałata zielona, sos majonezowo-ziołowy."
+    },
+    "kanapka-sulejmana": {
+        title: "Kanapka Sulejmana",
+        category: "sandwiches",
+        categoryLabel: "Kanapki",
+        image: "img/kategoria_kanapki.png",
+        weight: "200g ( MAP Flow-pack)",
+        packaging: "Karton zbiorczy 12 szt. (dostawa świeża)",
+        ean: "5907552406020",
+        temp: "Kontrolowana temperatura chłodnicza (2-6°C)",
+        shelfLife: "48h (Logistyka chłodnicza)",
+        cert: "IFS Food, BRC",
+        bake: "Produkt gotowy do bezpośredniego spożycia (lub podgrzania w opiekaczu)",
+        desc: "Pożywna, flagowa kanapka bistro (200g) na bazie chrupiącego, długiego pieczywa pszennego. Wypełniona aromatycznym pieczonym mięsem drobiowym przyprawionym w stylu Gyros/Kebab, chrupiącą kapustą pekińską, ogórkiem konserwowym oraz pikantnym sosem czosnkowym. Wyjątkowo chętnie wybierana w segmencie Food-to-go.",
+        ingredients: "Pieczywo pszenne, pieczone mięso z kurczaka (gyros) 25%, kapusta pekińska, ogórek konserwowy, sos czosnkowy, przyprawy."
     }
 };
 
