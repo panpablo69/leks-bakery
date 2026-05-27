@@ -16,12 +16,11 @@
 </head>
 <body>
 
-    <!-- Szklany, animowany Header (Nawigacja) -->
+    <!-- Szklany, animowany Header (Nawigacja z logotypem i strefą B2B) -->
     <header id="main-header" class="header-glass">
         <div class="header-container">
-            <a href="#" class="logo-link" id="nav-logo">
-                <span class="logo-text">LEKS</span>
-                <span class="logo-subtext">PIEKARNIA</span>
+            <a href="#" class="logo-link" id="nav-logo" aria-label="Leks Strona Główna">
+                <img src="img/leks_logo.svg" alt="Leks Logotyp" class="logo-img">
             </a>
             
             <nav id="main-nav" class="nav-menu">
@@ -34,6 +33,10 @@
                 </ul>
             </nav>
             
+            <div class="header-actions-right">
+                <a href="#contact" class="btn btn-sm btn-primary header-cta-btn">Strefa B2B</a>
+            </div>
+            
             <button id="menu-toggle" class="hamburger" aria-label="Otwórz menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -43,21 +46,64 @@
     </header>
 
     <main>
-        <!-- Sekcja Hero (Strona Główna z efektem przybliżania) -->
+        <!-- Sekcja Hero (Strona Główna z efektem karuzeli/slidera GSAP) -->
         <section id="hero" class="hero-section">
-            <div class="hero-bg-container">
-                <div class="hero-bg" id="hero-zoom-bg" style="background-image: url('img/bakery_hero.png');"></div>
-            </div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <span class="hero-subtitle animate-on-load">Tradycja od 1989 roku</span>
-                <h1 class="hero-title animate-on-load">Prawdziwy smak,<br><span class="accent-text">wielka skala sukcesu</span></h1>
-                <p class="hero-lead animate-on-load">Dostarczamy najwyższej jakości chleby, bułki i wyroby cukiernicze do tysięcy sklepów w Polsce i Europie.</p>
-                <div class="hero-actions animate-on-load">
-                    <a href="#products" class="btn btn-primary" id="hero-btn-primary">Poznaj ofertę</a>
-                    <a href="#about" class="btn btn-outline" id="hero-btn-secondary">Nasza historia</a>
+            <div class="hero-slider" id="hero-slider">
+                <!-- Slide 1 -->
+                <div class="hero-slide active" data-index="0">
+                    <div class="hero-slide-bg" style="background-image: url('img/bakery_hero.png');"></div>
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <span class="hero-subtitle">Najwyższy Standard Produkcji</span>
+                        <h1 class="hero-title">Najlepszy Partner w produkcji pieczywa.<br><span class="accent-text">Tradycyjny smak w skali makro.</span></h1>
+                        <p class="hero-lead">Dostarczamy najwyższej jakości chleby, bułki i wyroby cukiernicze do największych sieci handlowych w Polsce i Europie.</p>
+                        <div class="hero-actions">
+                            <a href="#products" class="btn btn-primary">Poznaj ofertę</a>
+                            <a href="#about" class="btn btn-outline">Nasza historia</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="hero-slide" data-index="1">
+                    <div class="hero-slide-bg" style="background-image: url('img/chleb_leks_2ab.png');"></div>
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <span class="hero-subtitle">Innowacja i Zdrowie</span>
+                        <h1 class="hero-title">Przełomowy Chleb Leks 2AB<br><span class="accent-text">Z pradawnej pszenicy lekkostrawnej</span></h1>
+                        <p class="hero-lead">Zdrowotna rewolucja w piekarstwie funkcjonalnym. Pierwszy na rynku chleb dedykowany osobom z wrażliwym ukłądem pokarmowym.</p>
+                        <div class="hero-actions">
+                            <a href="#products" class="btn btn-primary">Zobacz szczegóły</a>
+                            <a href="#contact" class="btn btn-outline">Zamów próbki B2B</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="hero-slide" data-index="2">
+                    <div class="hero-slide-bg" style="background-image: url('img/bulka_grahamka.png');"></div>
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <span class="hero-subtitle">Pewność Logistyczna</span>
+                        <h1 class="hero-title">Technologia Odroczonego Wypieku (Bake-off)<br><span class="accent-text">Bezpieczne dostawy do 1200+ punktów</span></h1>
+                        <p class="hero-lead">Dostarczamy pieczywo świeże oraz głęboko mrożone w niezawodnym łańcuchu logistycznym, certyfikowane IFS & BRC Grade A.</p>
+                        <div class="hero-actions">
+                            <a href="#about" class="btn btn-primary">Nasze fabryki</a>
+                            <a href="#contact" class="btn btn-outline">Zapytaj o logistykę</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Nawigacja karuzeli -->
+            <div class="slider-controls">
+                <button class="slider-arrow prev-arrow" aria-label="Poprzedni slajd">&#10094;</button>
+                <button class="slider-arrow next-arrow" aria-label="Następny slajd">&#10095;</button>
+            </div>
+            <div class="slider-pagination" id="slider-dots">
+                <button class="dot active" data-slide="0" aria-label="Slajd 1"></button>
+                <button class="dot" data-slide="1" aria-label="Slajd 2"></button>
+                <button class="dot" data-slide="2" aria-label="Slajd 3"></button>
+            </div>
+
             <div class="scroll-indicator" id="scroll-arrow">
                 <span class="mouse-icon">
                     <span class="mouse-wheel"></span>
@@ -201,7 +247,7 @@
                           data-ean="5907552402015"
                           data-temp="-18°C (Łańcuch chłodniczy)"
                           data-bake="Temperatura: 210°C | Czas: 6-8 min (Dopiekanie)"
-                          data-desc-full="Pożywna bułka grahamka produkowana z pełnego przemiału pszenicy graham, o wysokiej zawartości błonnik i mikroelementów. Dostarczana w technologii głębokiego mrożenia (Bake-off) — wymaga jedynie szybkiego dopieku w piecu sklepowym, co eliminuje straty na stoisku i gwarantuje klientowi gorące, pachnące pieczywo o każdej porze dnia.">
+                          data-desc-full="Pożywna bułka grahamka produkowana z pełnego przemiału pszenicy graham, o wysokiej zawartości błonnika i mikroelementów. Dostarczana w technologii głębokiego mrożenia (Bake-off) — wymaga jedynie szybkiego dopieku w piecu sklepowym, co eliminuje straty na stoisku i gwarantuje klientowi gorące, pachnące pieczywo o każdej porze dnia.">
                         <div class="product-image-container">
                             <img src="img/bulka_grahamka.png" alt="Bułka Grahamka" class="product-img">
                         </div>

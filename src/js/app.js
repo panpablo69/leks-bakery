@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
     
     initNavigation();
-    initHeroAnimations();
+    initHeroSlider(); // Inicjalizacja karuzeli slajdów GSAP
     initTimeline();
     initProductFilters();
     initAccordions();
@@ -473,5 +473,160 @@ function initB2BModal() {
         if (e.target === modal) {
             closeModal();
         }
+    });
+}
+
+/* ==============================================================================
+   🎬 ELEGANCKI SLIDER HERO Z EFEKTEM KEN BURNS & ANIMACJĄ GSAP
+   ============================================================================== */
+function initHeroSlider() {
+    const slides = document.querySelectorAll(".hero-slide");
+    const dots = document.querySelectorAll(".slider-pagination .dot");
+    const prevBtn = document.querySelector(".prev-arrow");
+    const nextBtn = document.querySelector(".next-arrow");
+    const header = document.getElementById("main-header");
+    
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    let slideInterval = setInterval(nextSlide, 6500); // Automatyczna zmiana co 6.5 sekundy
+    
+    // Delikatna animacja wejścia nagłówka przy starcie strony
+    gsap.from(header, {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+    });
+    
+    // Animacja startowa pierwszego slajdu
+    const firstSlide = slides[0];
+    const firstContent = firstSlide.querySelector(".hero-slide-content");
+    const firstBg = firstSlide.querySelector(".hero-slide-bg");
+    
+    gsap.fromTo(firstContent.querySelector(".hero-subtitle"), 
+        { opacity: 0, y: 15 }, 
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.5, ease: "power2.out" }
+    );
+    gsap.fromTo(firstContent.querySelector(".hero-title"), 
+        { opacity: 0, y: 25 }, 
+        { opacity: 1, y: 0, duration: 0.8, delay: 0.7, ease: "power3.out" }
+    );
+    gsap.fromTo(firstContent.querySelector(".hero-lead"), 
+        { opacity: 0, y: 15 }, 
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.9, ease: "power2.out" }
+    );
+    gsap.fromTo(firstContent.querySelectorAll(".hero-actions .btn"), 
+        { opacity: 0, y: 15 }, 
+        { opacity: 1, y: 0, stagger: 0.15, duration: 0.6, delay: 1.1, ease: "power2.out" }
+    );
+    
+    // Ken Burns dla pierwszego slajdu
+    gsap.fromTo(firstBg,
+        { scale: 1.05 },
+        { scale: 1.15, duration: 6.5, ease: "sine.out" }
+    );
+    
+    function goToSlide(index) {
+        if (index === currentSlide) return;
+        
+        // Resetowanie automatycznego interwału
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 6500);
+        
+        const activeSlide = slides[currentSlide];
+        const nextSlideElem = slides[index];
+        
+        // 1. Zniknięcie aktywnego slajdu
+        gsap.to(activeSlide.querySelector(".hero-slide-content"), {
+            opacity: 0,
+            y: -25,
+            duration: 0.4,
+            ease: "power2.in"
+        });
+        
+        gsap.to(activeSlide, {
+            opacity: 0,
+            duration: 0.6,
+            ease: "power2.inOut",
+            onComplete: () => {
+                activeSlide.classList.remove("active");
+            }
+        });
+        
+        // Reset skali tła schodzącego slajdu
+        gsap.set(activeSlide.querySelector(".hero-slide-bg"), { scale: 1.05 });
+        
+        // 2. Pojawienie się nowego slajdu
+        nextSlideElem.classList.add("active");
+        gsap.fromTo(nextSlideElem, 
+            { opacity: 0 }, 
+            { opacity: 1, duration: 0.7, ease: "power2.inOut" }
+        );
+        
+        // Animacja tła (Ken Burns) dla nowego slajdu
+        gsap.fromTo(nextSlideElem.querySelector(".hero-slide-bg"),
+            { scale: 1.05 },
+            { scale: 1.15, duration: 6.5, ease: "sine.out" }
+        );
+        
+        // Animacja wsuwania tekstów nowego slajdu
+        const nextContent = nextSlideElem.querySelector(".hero-slide-content");
+        gsap.fromTo(nextContent.querySelector(".hero-subtitle"), 
+            { opacity: 0, y: 20 }, 
+            { opacity: 1, y: 0, duration: 0.5, delay: 0.3, ease: "power2.out" }
+        );
+        gsap.fromTo(nextContent.querySelector(".hero-title"), 
+            { opacity: 0, y: 30 }, 
+            { opacity: 1, y: 0, duration: 0.7, delay: 0.4, ease: "power3.out" }
+        );
+        gsap.fromTo(nextContent.querySelector(".hero-lead"), 
+            { opacity: 0, y: 20 }, 
+            { opacity: 1, y: 0, duration: 0.5, delay: 0.6, ease: "power2.out" }
+        );
+        gsap.fromTo(nextContent.querySelectorAll(".hero-actions .btn"), 
+            { opacity: 0, y: 20 }, 
+            { opacity: 1, y: 0, stagger: 0.15, duration: 0.5, delay: 0.7, ease: "power2.out" }
+        );
+        
+        // Aktualizacja kropek paginacji
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+        
+        currentSlide = index;
+    }
+    
+    function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        goToSlide(next);
+    }
+    
+    function prevSlide() {
+        let prev = (currentSlide - 1 + slides.length) % slides.length;
+        goToSlide(prev);
+    }
+    
+    // Obsługa strzałek nawigacji
+    if (prevBtn) {
+        prevBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            prevSlide();
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            nextSlide();
+        });
+    }
+    
+    // Obsługa klikania kropek (Paginacji)
+    dots.forEach(dot => {
+        dot.addEventListener("click", (e) => {
+            e.preventDefault();
+            const target = parseInt(dot.getAttribute("data-slide"), 10);
+            goToSlide(target);
+        });
     });
 }
