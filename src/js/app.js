@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initNavigation();
     initHeroSlider(); // Inicjalizacja karuzeli slajdów GSAP
     initTimeline();
+    renderAllProducts(); // Dynamiczne renderowanie 15 produktów B2B
     initProductFilters();
     initAccordions();
     initB2BModal();
@@ -212,6 +213,50 @@ function initTimeline() {
 /* ==============================================================================
    4. DYNAMICZNE FILTROWANIE OFERTY (GSAP GRID SHUFFLE)
    ============================================================================== */
+/* ==============================================================================
+   3.5. DYNAMICZNE RENDEROWANIE KART PRODUKTÓW B2B (15 FLAGOWCÓW LEKSA)
+   ============================================================================== */
+function renderAllProducts() {
+    const container = document.getElementById("products-container");
+    if (!container) return;
+    
+    container.innerHTML = ""; // Czyszczenie statycznych kafli z HTML
+    
+    for (const [id, product] of Object.entries(PRODUCTS_DATA)) {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.setAttribute("data-category", product.category);
+        
+        // Dane B2B przypisane jako atrybuty
+        card.setAttribute("data-weight", product.weight);
+        card.setAttribute("data-packaging", product.packaging);
+        card.setAttribute("data-shelf-life", product.shelfLife);
+        card.setAttribute("data-cert", product.cert);
+        card.setAttribute("data-desc-full", product.desc);
+        card.setAttribute("data-ean", product.ean);
+        card.setAttribute("data-temp", product.temp);
+        card.setAttribute("data-bake", product.bake);
+        
+        // Skrócony opis do karty (maksymalnie 120 znaków)
+        const summary = product.desc.length > 120 
+            ? product.desc.substring(0, 117) + "..." 
+            : product.desc;
+            
+        card.innerHTML = `
+            <div class="product-image-container">
+                <img src="${product.image}" alt="${product.title}" class="product-img" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-category">${product.categoryLabel}</span>
+                <h3 class="product-title">${product.title}</h3>
+                <p class="product-desc">${summary}</p>
+                <a href="product.html?id=${id}" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
+            </div>
+        `;
+        container.appendChild(card);
+    }
+}
+
 function initProductFilters() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const productCards = document.querySelectorAll(".product-card");
