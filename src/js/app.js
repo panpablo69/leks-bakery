@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initTimeline();
     initProductFilters();
     initAccordions();
+    initB2BModal();
     initScrollAnimations();
 });
 
@@ -148,24 +149,24 @@ function initHeroAnimations() {
    ============================================================================== */
 const timelineData = {
     "1989": {
-        title: "Założenie Firmy",
-        desc: "Firma Leks rozpoczęła swoją działalność jako mała piekarnia rodzinna z pasją do tworzenia tradycyjnych chlebów na naturalnym zakwasie w Sulęcinie."
+        title: "Założenie Firmy w Sulęcinie",
+        desc: "Firma Leks rozpoczyna działalność jako mała piekarnia rodzinna z pasją do tradycyjnych chlebów na naturalnym zakwasie w Sulęcinie."
     },
     "1998": {
-        title: "Pierwszy Duży Zakład",
-        desc: "Otwarcie nowoczesnego, zautomatyzowanego zakładu produkcyjnego w Sulęcinie, co pozwoliło znacznie rozszerzyć asortyment bułek oraz drobnego pieczywa."
+        title: "Zdolność Produkcyjna: 50 000 / doba",
+        desc: "Wybudowanie pierwszego w pełni zautomatyzowanego zakładu w Sulęcinie. Zdolność produkcyjna wzrasta do 50 tysięcy bochenków na dobę, umożliwiając strategiczne wejście do pierwszych regionalnych sieci handlowych."
     },
     "2005": {
-        title: "Nowy Zakład w Gorzowie Wlkp.",
-        desc: "Uruchomienie drugiego, dużego zakładu produkcyjnego w Gorzowie Wielkopolskim, skupionego na eksporcie oraz zaopatrywaniu zachodnich województw Polski."
+        title: "Wdrożenie Standardów IFS & BRC",
+        desc: "Budowa nowoczesnego zakładu w Gorzowie Wielkopolskim. Wdrożenie rygorystycznych międzynarodowych standardów IFS Food oraz BRC Global Standard na poziomie Grade A, otwierające drzwi do współpracy z ogólnopolskimi i europejskimi sieciami supermarketów."
     },
     "2018": {
-        title: "Akwizycja & Sieci Handlowe",
-        desc: "Nawiązanie kluczowej współpracy z wiodącymi sieciami handlowymi w Europie Środkowej i wdrożenie zaawansowanego systemu chłodniczego do wypieku na miejscu (Bake-off)."
+        title: "Lider Bake-off & 1200+ Punktów",
+        desc: "Wdrożenie pionierskich linii technologii wypieku odroczonego i głębokiego mrożenia (Bake-off). Nasza zaawansowana flota logistyczna zapewnia codzienne, punktualne dostawy świeżego ciasta do ponad 1200 supermarketów w Europie."
     },
     "2026": {
-        title: "Piekarnia Przyszłości Leks 2AB",
-        desc: "Pełne wdrożenie zrównoważonej produkcji piekarniczej z zerowym śladem węglowym oraz linii pieczywa zdrowotnego z pradawnej pszenicy 2AB."
+        title: "Piekarnia Przyszłości & Linia 2AB",
+        desc: "Pełna automatyzacja produkcji z zachowaniem tradycyjnego procesu 24-godzinnej fermentacji. Wdrożenie unikalnej linii pieczywa z pradawnej pszenicy 2AB oraz przejście naszych zakładów na 100% zrównoważoną energię odnawialną."
     }
 };
 
@@ -320,6 +321,34 @@ function initScrollAnimations() {
         }
     });
     
+    // Animacja liczników KPI przy przewijaniu
+    const kpiSection = document.getElementById("kpi-section");
+    if (kpiSection) {
+        gsap.from(".kpi-card", {
+            opacity: 0,
+            y: 35,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: kpiSection,
+                start: "top 85%",
+                onEnter: () => {
+                    const kpiNumbers = document.querySelectorAll(".kpi-number");
+                    kpiNumbers.forEach(num => {
+                        const target = parseInt(num.getAttribute("data-target"), 10);
+                        gsap.to(num, {
+                            innerText: target,
+                            duration: 1.8,
+                            snap: { innerText: 1 },
+                            ease: "power2.out"
+                        });
+                    });
+                }
+            }
+        });
+    }
+    
     // Animacja formularza i panelu kontaktowego
     gsap.from(".contact-info-panel", {
         opacity: 0,
@@ -340,6 +369,109 @@ function initScrollAnimations() {
         scrollTrigger: {
             trigger: ".contact-grid",
             start: "top 80%"
+        }
+    });
+}
+
+/* ==============================================================================
+   7. MODAL SPECYFIKACJI LOGISTYCZNEJ B2B (GSAP ANIMATION)
+   ============================================================================== */
+function initB2BModal() {
+    const modal = document.getElementById("b2b-modal");
+    const modalCard = modal.querySelector(".modal-card");
+    const openButtons = document.querySelectorAll(".open-spec-btn");
+    const closeButton = document.getElementById("close-modal");
+    
+    // Elementy modala do dynamicznej podmiany treści
+    const modalTitle = document.getElementById("modal-product-title");
+    const modalWeight = document.getElementById("modal-weight");
+    const modalPackaging = document.getElementById("modal-packaging");
+    const modalShelfLife = document.getElementById("modal-shelf-life");
+    const modalCert = document.getElementById("modal-cert");
+    const modalDescText = document.getElementById("modal-desc-text");
+    
+    // Nowe pola logistyczne B2B
+    const modalEan = document.getElementById("modal-ean");
+    const modalTemp = document.getElementById("modal-temp");
+    const modalBake = document.getElementById("modal-bake");
+    
+    openButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            
+            // Znajdź najbliższą kartę produktu i wyciągnij z niej dane B2B
+            const card = btn.closest(".product-card");
+            const title = card.querySelector(".product-title").textContent;
+            const weight = card.getAttribute("data-weight");
+            const packaging = card.getAttribute("data-packaging");
+            const shelfLife = card.getAttribute("data-shelf-life");
+            const cert = card.getAttribute("data-cert");
+            const descFull = card.getAttribute("data-desc-full");
+            
+            // Wyciągnij nowe atrybuty B2B
+            const ean = card.getAttribute("data-ean") || "-";
+            const temp = card.getAttribute("data-temp") || "-";
+            const bake = card.getAttribute("data-bake") || "-";
+            
+            // Podmiana zawartości modala
+            modalTitle.textContent = title;
+            modalWeight.textContent = weight;
+            modalPackaging.textContent = packaging;
+            modalShelfLife.textContent = shelfLife;
+            modalCert.textContent = cert;
+            modalDescText.textContent = descFull;
+            
+            // Podmiana nowych pól B2B
+            if (modalEan) modalEan.textContent = ean;
+            if (modalTemp) modalTemp.textContent = temp;
+            if (modalBake) modalBake.textContent = bake;
+            
+            // Dynamiczne przewijanie przycisku CTA w modalu do kontaktu
+            const modalContactBtn = document.getElementById("modal-contact-btn");
+            modalContactBtn.setAttribute("href", "#contact");
+            modalContactBtn.addEventListener("click", () => {
+                closeModal();
+            });
+            
+            // Otwieranie Modala z płynną animacją GSAP (Back Ease)
+            modal.classList.add("active");
+            gsap.fromTo(modal, 
+                { opacity: 0 }, 
+                { opacity: 1, duration: 0.3, ease: "power2.out" }
+            );
+            gsap.fromTo(modalCard, 
+                { y: 60, scale: 0.9, opacity: 0 }, 
+                { y: 0, scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.1)" }
+            );
+        });
+    });
+    
+    // Zamykanie Modala
+    function closeModal() {
+        gsap.to(modalCard, {
+            y: 40,
+            scale: 0.95,
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.in"
+        });
+        
+        gsap.to(modal, {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.in",
+            onComplete: () => {
+                modal.classList.remove("active");
+            }
+        });
+    }
+    
+    closeButton.addEventListener("click", closeModal);
+    
+    // Zamykanie przy kliknięciu w tło modala
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            closeModal();
         }
     });
 }

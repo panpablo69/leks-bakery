@@ -5,33 +5,40 @@
 
 /* --- Domyślny System Tokenów CSS (Zmienne) --- */
 :root {
-    /* Paleta kolorów Premium */
-    --color-bg: #FDFBF7;          /* Kremowa organiczna biel */
-    --color-bg-alt: #F5EFE6;      /* Cieplejszy beżowy podkład */
-    --color-primary: #3E2723;     /* Czekoladowy brąz (pieczywo razowe) */
-    --color-primary-light: #5D4037;
-    --color-accent: #C5A059;      /* Złocisty odcień chrupiącej skórki */
-    --color-accent-light: #E0C387;
-    --color-text: #2D2A26;        /* Ciemny grafit (wysoki kontrast i czytelność) */
-    --color-text-muted: #6D6864;  /* Zgaszony szary dla opisów pomocniczych */
+    /* Paleta kolorów Premium - Zgodna z Księgą Znaku LEKS Sp. z o.o. */
+    --color-bg: #FFF8EF;          /* Ciepła, organiczna mączna biel */
+    --color-bg-alt: #F8ECD9;      /* Ciepły, kremowy podkład piekarniczy */
+    --color-primary: #00376e;     /* Główny Błękit Pruski LEKS (prestiż B2B) */
+    --color-primary-light: #366295;/* Średni błękit pruski marki LEKS */
+    --color-accent: #E5C5A1;      /* Złocisty odcień chrupiącej skórki chleba */
+    --color-accent-light: #F8ECD9; /* Jasny kremowy odcień uzupełniający */
+    --color-text: #323231;        /* Grafitowa czerń dla najwyższej czytelności */
+    --color-text-muted: #989999;  /* Średni szary dla opisów pomocniczych */
     --color-white: #FFFFFF;
-    --color-border: #E6DFD5;
+    --color-border: #D9D9D9;      /* Czysta, nowoczesna jasna ramka */
     
-    /* Typografia */
-    --font-sans: 'Inter', sans-serif;
-    --font-serif: 'Playfair Display', serif;
+    /* Dodatkowe kolory z Księgi Znaku */
+    --color-blue-light: #729AC4;
+    --color-blue-soft: #E9F5FD;
+    --color-orange-accent: #E54608;
+    --color-red-accent: #C4290F;
+    --color-brown-deep: #4F2C15;
+    
+    /* Typografia - Zgodna z Księgą Znaku (Montserrat + Roboto w Internecie) */
+    --font-sans: 'Montserrat', sans-serif;
+    --font-serif: 'Roboto', sans-serif;
     
     /* Skalowanie i cienie */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 16px;
-    --shadow-sm: 0 2px 8px rgba(62, 39, 35, 0.05);
-    --shadow-md: 0 8px 24px rgba(62, 39, 35, 0.08);
-    --shadow-lg: 0 16px 48px rgba(62, 39, 35, 0.12);
+    --shadow-sm: 0 4px 12px rgba(0, 55, 110, 0.05);
+    --shadow-md: 0 12px 36px rgba(0, 55, 110, 0.08);
+    --shadow-lg: 0 24px 72px rgba(0, 55, 110, 0.12);
     
     /* Przejścia animacji */
-    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --- Global Reset & Podstawowe Ustawienia --- */
@@ -823,3 +830,298 @@ body {
         font-size: 1.3rem;
     }
 }
+
+/* ==============================================================================
+   DYNAMIC B2B MODAL (GLASS BACKDROP & PREMIUM CARD)
+   ============================================================================== */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(62, 39, 35, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: none; /* Uruchamiane przez JS */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-top: 4px solid var(--color-accent);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 750px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    transform: translateY(30px);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-backdrop.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+    color: var(--color-primary);
+}
+
+.modal-body {
+    padding: 40px;
+}
+
+.modal-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.modal-title {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.modal-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-border);
+    margin: 24px 0;
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.modal-spec-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.spec-row {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px dashed var(--color-border);
+    padding-bottom: 8px;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.spec-val {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.modal-desc-panel h4 {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.modal-desc-panel p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .modal-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .modal-body {
+        padding: 24px;
+    }
+}
+
+/* ==============================================================================
+   🏛 NOWE KOMPONENTY B2B & KARTA PRODUKTU (BRANDBOOK ALIGNED)
+   ============================================================================== */
+
+/* Obrazy Produktów w Katalogu */
+.product-image-container {
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.08);
+}
+
+/* Pulpit Wydajności B2B (KPI Counters) */
+.b2b-kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.kpi-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-primary-light);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition-fast);
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-light);
+}
+
+.kpi-card:hover::before {
+    transform: scaleX(1);
+    background-color: var(--color-primary);
+}
+
+.kpi-num-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.kpi-number {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.kpi-suffix {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-left: 2px;
+}
+
+.kpi-cert-wrapper {
+    margin-bottom: 20px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kpi-badge {
+    background-color: var(--color-blue-soft);
+    color: var(--color-primary);
+    border: 1px solid var(--color-blue-light);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.kpi-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.kpi-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* Dostosowanie dla Modala z nowymi polami */
+.modal-spec-info .spec-row {
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+}
+
+

@@ -6,10 +6,10 @@
     <meta name="description" content="Leks Sp. z o.o. - Producent wysokiej jakości tradycyjnego pieczywa od 1989 roku. Odkryj nasz asortyment chlebów, bułek, ciast oraz pieczywa dietetycznego.">
     <title>Leks - Producent Wysokiej Jakości Pieczywa</title>
     
-    <!-- Google Fonts: Inter (Sans-serif) & Playfair Display (Serif) -->
+    <!-- Google Fonts: Roboto (Nagłówki) i Montserrat (Treść) zgodnie z Księgą Znaku LEKS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Główne style CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -46,7 +46,7 @@
         <!-- Sekcja Hero (Strona Główna z efektem przybliżania) -->
         <section id="hero" class="hero-section">
             <div class="hero-bg-container">
-                <div class="hero-bg" id="hero-zoom-bg"></div>
+                <div class="hero-bg" id="hero-zoom-bg" style="background-image: url('img/bakery_hero.png');"></div>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
@@ -66,19 +66,20 @@
             </div>
         </section>
 
-        <!-- Sekcja O nas (z osią czasu) -->
+        <!-- Sekcja O nas (z osią czasu zoptymalizowaną pod B2B) -->
         <section id="about" class="section-padding">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">O Firmie Leks</span>
-                    <h2 class="section-title">Pasja zrodzona z tradycji</h2>
+                    <h2 class="section-title">Zdolność produkcyjna na europejską skalę</h2>
                     <div class="section-line"></div>
                 </div>
                 
                 <div class="about-grid">
                     <div class="about-text-content">
-                        <p class="lead-text">Leks to dynamicznie rozwijające się przedsiębiorstwo piekarnicze. Łączymy rzemieślniczą tradycję wypieku z najnowocześniejszym parkiem technologicznym.</p>
-                        <p>Z małej, rodzinnej piekarni w Sulęcinie przekształciliśmy się w jednego z liderów rynku. Posiadamy trzy nowoczesne zakłady produkcyjne zaopatrujące sieci handlowe oraz lokalnych odbiorców. Nasze unikalne pieczywo z pradawnej pszenicy **Leks 2AB** to dowód na to, jak nowoczesne podejście do zdrowia spotyka się z tradycyjną recepturą.</p>
+                        <p class="lead-text">Jesteśmy strategicznym i stabilnym partnerem dla największych sieci handlowych w Polsce i Europie.</p>
+                        <p>Z małej piekarni rzemieślniczej przekształciliśmy się w potężnego producenta z **trzema wyspecjalizowanymi zakładami produkcyjnymi** w Sulęcinie, Gorzowie Wlkp. oraz Tarnowie Byckim. Nasze fabryki posiadają prestiżowe certyfikaty **IFS Food** oraz **BRC Global Standard** na najwyższym poziomie, co gwarantuje pełne bezpieczeństwo i powtarzalność dostaw.</p>
+                        <p>Nasza logistyka świeżości oraz zaawansowana linia wypieku odroczonego (Bake-off) pozwala nam dostarczać chrupiące pieczywo na czas do tysięcy sklepów każdego dnia.</p>
                     </div>
                     <div class="about-interactive-timeline">
                         <div class="timeline-navigation" id="timeline-years">
@@ -90,19 +91,51 @@
                         </div>
                         <div class="timeline-content-card" id="timeline-card">
                             <h4 class="timeline-card-title" id="timeline-title">Założenie Firmy</h4>
-                            <p class="timeline-card-desc" id="timeline-desc">Firma Leks rozpoczęła swoją działalność jako mała piekarnia rodzinna z pasją do tworzenia tradycyjnych chlebów na zakwasie w Sulęcinie.</p>
+                            <p class="timeline-card-desc" id="timeline-desc">Firma Leks rozpoczęła swoją działalność jako mała piekarnia rodzinna z pasją do tworzenia tradycyjnych chlebów na naturalnym zakwasie w Sulęcinie.</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Pulpit Wydajności B2B (KPI Counters) -->
+                <div class="b2b-kpi-container" id="kpi-section">
+                    <div class="kpi-card">
+                        <div class="kpi-num-wrapper">
+                            <span class="kpi-number" data-target="3">0</span>
+                        </div>
+                        <div class="kpi-label">Zakłady produkcyjne</div>
+                        <div class="kpi-desc">Sulęcin, Gorzów, Tarnów Bycki</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-num-wrapper">
+                            <span class="kpi-number" data-target="100">0</span><span class="kpi-suffix">k+</span>
+                        </div>
+                        <div class="kpi-label">Sztuk pieczywa na dobę</div>
+                        <div class="kpi-desc">Ogromna wydajność i powtarzalność</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-num-wrapper">
+                            <span class="kpi-number" data-target="1200">0</span><span class="kpi-suffix">+</span>
+                        </div>
+                        <div class="kpi-label">Punktów dostaw w Europie</div>
+                        <div class="kpi-desc">Niezawodna logistyka i własna flota</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-cert-wrapper">
+                            <span class="kpi-badge">IFS & BRC</span>
+                        </div>
+                        <div class="kpi-label">Klasa Certyfikacji A</div>
+                        <div class="kpi-desc">Standardy zatwierdzone przez audytorów</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sekcja Oferta / Produkty -->
+        <!-- Sekcja Oferta / Produkty (Zoptymalizowana pod B2B) -->
         <section id="products" class="section-padding bg-alt">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">Nasz Asortyment</span>
-                    <h2 class="section-title">Wypieki z serca pieca</h2>
+                    <span class="section-subtitle">Dla Kupców i Partnerów</span>
+                    <h2 class="section-title">Katalog Produktów i Specyfikacja B2B</h2>
                     <div class="section-line"></div>
                 </div>
                 
@@ -116,45 +149,147 @@
                 
                 <!-- Siatka Produktów (GSAP Animated Grid) -->
                 <div class="products-grid" id="products-container">
-                    <div class="product-card" data-category="bread">
-                        <div class="product-image-placeholder">🥖</div>
+                    
+                    <!-- Chleb Sulęciński -->
+                    <div class="product-card" data-category="bread" 
+                          data-weight="500g" 
+                          data-packaging="Skrzynka 12 szt. / Paleta: 48 skrzynek (576 szt.)" 
+                          data-shelf-life="72h (Dostawa świeża) / 9 miesięcy (Bake-off)" 
+                          data-cert="IFS Food, BRC (Grade A)"
+                          data-ean="5907552401018"
+                          data-temp="-18°C (dla technologii głębokiego mrożenia)"
+                          data-bake="Temperatura: 200°C | Czas: 10-12 min"
+                          data-desc-full="Tradycyjny chleb mieszany, oparty w 100% na naturalnym zakwasie żytnim, pieczony bez sztucznych polepszaczy. Charakteryzuje się doskonałą wilgotnością miękiszu i chrupiącą, rumianą skórką. Dostarczany jako świeży lub w technologii głębokiego mrożenia (Bake-off) do wypieku na punkcie handlowym. Wymiary bochenka zoptymalizowane pod automatyczne krajalnice tarczowe i taśmowe.">
+                        <div class="product-image-container">
+                            <img src="img/chleb_sulecinski.png" alt="Chleb Sulęciński" class="product-img">
+                        </div>
                         <div class="product-info">
                             <span class="product-category">Chleb Tradycyjny</span>
                             <h3 class="product-title">Chleb Sulęciński</h3>
                             <p class="product-desc">Klasyczny chleb żytnio-pszenny pieczony na naturalnym zakwasie według tradycyjnej receptury.</p>
+                            <button class="btn btn-sm btn-primary open-spec-btn">Specyfikacja B2B</button>
                         </div>
                     </div>
                     
-                    <div class="product-card" data-category="bread">
-                        <div class="product-image-placeholder">🍞</div>
+                    <!-- Chleb Leks 2AB -->
+                    <div class="product-card" data-category="bread"
+                          data-weight="400g (Krojony / Pakowany w MAP)" 
+                          data-packaging="Karton 10 szt. / Paleta: 40 kartonów (400 szt.)" 
+                          data-shelf-life="6 dni (Pakowany MAP)" 
+                          data-cert="IFS, BRC, Certyfikat Pradawnej Pszenicy 2AB"
+                          data-ean="5907552401025"
+                          data-temp="Temperatura pokojowa (15-22°C)"
+                          data-bake="Produkt gotowy do spożycia (krojony)"
+                          data-desc-full="Innowacyjne pieczywo funkcjonalne z pradawnej pszenicy 2AB (pradawne odmiany pszenicy niezmodyfikowanej). Lekkostrawny chleb dedykowany konsumentom z nadwrażliwością na tradycyjny gluten typu A. Bogaty w selen, cynk oraz błonnik. Pakowany na zautomatyzowanej linii w atmosferze modyfikowanej (MAP) w folię barierową o wysokiej przejrzystości.">
+                        <div class="product-image-container">
+                            <img src="img/chleb_leks_2ab.png" alt="Chleb Leks 2AB" class="product-img">
+                        </div>
                         <div class="product-info">
                             <span class="product-category">Pieczywo Zdrowotne</span>
                             <h3 class="product-title">Chleb Leks 2AB</h3>
                             <p class="product-desc">Innowacyjne pieczywo z pradawnej pszenicy 2AB, lekkostrawne i bogate w cenne składniki odżywcze.</p>
+                            <button class="btn btn-sm btn-primary open-spec-btn">Specyfikacja B2B</button>
                         </div>
                     </div>
                     
-                    <div class="product-card" data-category="rolls">
-                        <div class="product-image-placeholder">🥯</div>
+                    <!-- Bułka Grahamka -->
+                    <div class="product-card" data-category="rolls"
+                          data-weight="70g" 
+                          data-packaging="Karton 60 szt. / Paleta: 32 kartony (1920 szt.)" 
+                          data-shelf-life="12 miesięcy (głęboko mrożone)" 
+                          data-cert="IFS Food, BRC"
+                          data-ean="5907552402015"
+                          data-temp="-18°C (Łańcuch chłodniczy)"
+                          data-bake="Temperatura: 210°C | Czas: 6-8 min (Dopiekanie)"
+                          data-desc-full="Pożywna bułka grahamka produkowana z pełnego przemiału pszenicy graham, o wysokiej zawartości błonnik i mikroelementów. Dostarczana w technologii głębokiego mrożenia (Bake-off) — wymaga jedynie szybkiego dopieku w piecu sklepowym, co eliminuje straty na stoisku i gwarantuje klientowi gorące, pachnące pieczywo o każdej porze dnia.">
+                        <div class="product-image-container">
+                            <img src="img/bulka_grahamka.png" alt="Bułka Grahamka" class="product-img">
+                        </div>
                         <div class="product-info">
                             <span class="product-category">Bułki i Galanteria</span>
                             <h3 class="product-title">Bułka Grahamka</h3>
                             <p class="product-desc">Pożywna i chrupiąca bułka grahamka bogata w błonnik, idealna na codzienne śniadanie.</p>
+                            <button class="btn btn-sm btn-primary open-spec-btn">Specyfikacja B2B</button>
                         </div>
                     </div>
                     
-                    <div class="product-card" data-category="sweet">
-                        <div class="product-image-placeholder">🍰</div>
+                    <!-- Drożdżówka z Kruszonką -->
+                    <div class="product-card" data-category="sweet"
+                          data-weight="90g" 
+                          data-packaging="Skrzynka 20 szt. / Karton 40 szt." 
+                          data-shelf-life="48h (Świeża) / 6 miesięcy (Mrożona)" 
+                          data-cert="IFS Food"
+                          data-ean="5907552403012"
+                          data-temp="Temperatura pokojowa (świeża) / -18°C (mrożona)"
+                          data-bake="Rozmrozić w temp. pokojowej przez 30-40 minut"
+                          data-desc-full="Tradycyjna drożdżówka z puszystego ciasta drożdżowego z obfitą, maślaną kruszonką oraz naturalnym nadzieniem owocowym o obniżonej słodyczy. Zoptymalizowana gramatura i powtarzalny kształt idealnie pasują na taśmy automatycznych linii pakujących typu Flow-pack, spełniając rygorystyczne normy sieci handlowych.">
+                        <div class="product-image-container">
+                            <img src="img/drozdzowka.png" alt="Drożdżówka z Kruszonką" class="product-img">
+                        </div>
                         <div class="product-info">
                             <span class="product-category">Wyroby Półcukiernicze</span>
                             <h3 class="product-title">Drożdżówka z Kruszonką</h3>
                             <p class="product-desc">Puszysta, słodka drożdżówka z obfitą, maślaną kruszonką i owocowym nadzieniem.</p>
+                            <button class="btn btn-sm btn-primary open-spec-btn">Specyfikacja B2B</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Dynamiczny Modal Specyfikacji B2B (Dla Kupców Sieci) -->
+        <div id="b2b-modal" class="modal-backdrop">
+            <div class="modal-card">
+                <button id="close-modal" class="modal-close-btn">&times;</button>
+                <div class="modal-body">
+                    <span class="modal-badge">Specyfikacja Logistyczna B2B</span>
+                    <h3 id="modal-product-title" class="modal-title">Nazwa Produktu</h3>
+                    <div class="modal-divider"></div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-spec-info">
+                            <div class="spec-row">
+                                <span class="spec-label">Gramatura:</span>
+                                <span id="modal-weight" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Pakowanie zbiorcze:</span>
+                                <span id="modal-packaging" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Kod EAN:</span>
+                                <span id="modal-ean" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Warunki transportu:</span>
+                                <span id="modal-temp" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Termin przydatności:</span>
+                                <span id="modal-shelf-life" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Certyfikacja fabryki:</span>
+                                <span id="modal-cert" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Parametry wypieku:</span>
+                                <span id="modal-bake" class="spec-val">-</span>
+                            </div>
+                        </div>
+                        <div class="modal-desc-panel">
+                            <h4>Opis Technologiczny i Logistyka</h4>
+                            <p id="modal-desc-text">-</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <a href="#contact" class="btn btn-primary" id="modal-contact-btn">Zapytaj o wycenę hurtową (B2B)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- Sekcja Kariera -->
         <section id="career" class="section-padding">
             <div class="container">
@@ -227,7 +362,7 @@
                             <div class="form-group">
                                 <label for="form-subject">Temat</label>
                                 <select id="form-subject">
-                                    <option value="wholesale">Współpraca Hurtowa</option>
+                                    <option value="wholesale">Współpraca Hurtowa (B2B)</option>
                                     <option value="career">Kariera i rekrutacja</option>
                                     <option value="general">Zapytanie Ogólne</option>
                                 </select>
