@@ -234,7 +234,7 @@ function initProductFilters() {
                     productCards.forEach(card => {
                         const cardCategory = card.getAttribute("data-category");
                         if (filterValue === "all" || cardCategory === filterValue) {
-                            card.style.display = "block";
+                            card.style.display = "flex";
                         } else {
                             card.style.display = "none";
                         }

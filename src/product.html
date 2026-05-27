@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Karta produktu B2B Leks Sp. z o.o. Szczegółowe specyfikacje logistyczne, pakowanie i parametry wypieku dla kupców sieciowych.">
+    <title>Karta Produktu B2B - Leks Sp. z o.o.</title>
+    
+    <!-- Google Fonts: Roboto i Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Główne style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Dedykowane style dla podstrony produktu */
+        .product-page-content {
+            padding-top: 140px;
+            padding-bottom: 80px;
+        }
+        .breadcrumb {
+            margin-bottom: 30px;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+        .breadcrumb a {
+            color: var(--color-primary-light);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+        .breadcrumb a:hover {
+            color: var(--color-primary);
+        }
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+        }
+        .product-detail-image-wrapper {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+        }
+        .product-detail-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+        }
+        .product-detail-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .product-detail-category {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-primary-light);
+            margin-bottom: 12px;
+        }
+        .product-detail-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+        .product-detail-desc {
+            font-size: 1.05rem;
+            line-height: 1.65;
+            color: var(--color-text);
+            margin-bottom: 30px;
+        }
+        .product-spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .product-spec-table tr {
+            border-bottom: 1px solid var(--color-border);
+        }
+        .product-spec-table tr:last-child {
+            border-bottom: none;
+        }
+        .product-spec-table td {
+            padding: 16px 20px;
+            font-size: 0.95rem;
+        }
+        .product-spec-label {
+            font-weight: 700;
+            color: var(--color-primary);
+            width: 35%;
+            background-color: var(--color-bg-alt);
+        }
+        .product-spec-value {
+            color: var(--color-text);
+            font-weight: 500;
+        }
+        .product-extra-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .extra-info-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+        .extra-info-card h4 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .extra-info-card p, .extra-info-card li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+        }
+        .extra-info-card ul {
+            padding-left: 20px;
+        }
+        .b2b-form-section {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            box-shadow: var(--shadow-lg);
+        }
+        .b2b-form-section h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--color-accent-light);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .b2b-form-section p {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        .product-cta-btn {
+            background-color: var(--color-accent) !important;
+            border-color: var(--color-accent) !important;
+            color: var(--color-primary) !important;
+        }
+        .product-cta-btn:hover {
+            background-color: var(--color-white) !important;
+            border-color: var(--color-white) !important;
+            color: var(--color-primary) !important;
+        }
+        
+        @media (max-width: 992px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .product-detail-image-wrapper {
+                height: 350px;
+            }
+            .product-extra-info {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Szklany, animowany Header (Nawigacja z logotypem i strefą B2B) -->
+    <header id="main-header" class="header-glass">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" id="nav-logo" aria-label="Leks Strona Główna">
+                <img src="img/leks_logo.svg" alt="Leks Logotyp" class="logo-img">
+            </a>
+            
+            <nav id="main-nav" class="nav-menu">
+                <ul>
+                    <li><a href="index.html#hero" class="nav-link">Start</a></li>
+                    <li><a href="index.html#about" class="nav-link">O nas</a></li>
+                    <li><a href="index.html#products" class="nav-link active">Produkty</a></li>
+                    <li><a href="index.html#career" class="nav-link">Kariera</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions-right">
+                <a href="#contact-b2b" class="btn btn-sm btn-primary header-cta-btn">Strefa B2B</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page-content">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumb">
+                <a href="index.html">Start</a> &gt; <a href="index.html#products">Asortyment</a> &gt; <span id="breadcrumb-current-product" style="font-weight: 600; color: var(--color-primary);">Ładowanie...</span>
+            </div>
+            
+            <!-- Główny Grid Szczegółów Produktu -->
+            <div class="product-detail-grid">
+                <!-- Zdjęcie Produktu -->
+                <div class="product-detail-image-wrapper">
+                    <img src="" alt="" id="product-img-element" class="product-detail-image">
+                </div>
+                
+                <!-- Informacje logistyczne i opis -->
+                <div class="product-detail-info">
+                    <span class="product-detail-category" id="product-cat-element">Kategoria</span>
+                    <h1 class="product-detail-title" id="product-title-element">Nazwa Produktu</h1>
+                    <p class="product-detail-desc" id="product-desc-element">Opis techniczny i technologiczny produktu.</p>
+                    
+                    <!-- Tabela Specyfikacji logistycznej dla kupca sieci handlowych -->
+                    <table class="product-spec-table">
+                        <tbody>
+                            <tr>
+                                <td class="product-spec-label">Gramatura:</td>
+                                <td class="product-spec-value" id="spec-weight">-</td>
+                            </tr>
+                            <tr>
+                                <td class="product-spec-label">Pakowanie zbiorcze:</td>
+                                <td class="product-spec-value" id="spec-packaging">-</td>
+                            </tr>
+                            <tr>
+                                <td class="product-spec-label">Kod EAN:</td>
+                                <td class="product-spec-value" id="spec-ean">-</td>
+                            </tr>
+                            <tr>
+                                <td class="product-spec-label">Warunki transportu:</td>
+                                <td class="product-spec-value" id="spec-temp">-</td>
+                            </tr>
+                            <tr>
+                                <td class="product-spec-label">Termin przydatności:</td>
+                                <td class="product-spec-value" id="spec-shelf-life">-</td>
+                            </tr>
+                            <tr>
+                                <td class="product-spec-label">Certyfikacja fabryki:</td>
+                                <td class="product-spec-value" id="spec-cert">-</td>
+                            </tr>
+                            <tr>
+                                <td class="product-spec-label">Parametry wypieku:</td>
+                                <td class="product-spec-value" id="spec-bake">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Dodatkowe Informacje B2B -->
+            <div class="product-extra-info">
+                <div class="extra-info-card">
+                    <h4>Skład i Alergeny</h4>
+                    <p id="product-ingredients-element">Mąka pszenna typ 750, mąka żytnia typ 720, woda, naturalny zakwas żytni (mąka żytnia, woda), sól spożywcza, drożdże piekarskie.</p>
+                    <p style="margin-top: 12px; font-weight: 600; color: var(--color-red-accent);">Alergeny: gluten, może zawierać śladowe ilości sezamu, soi, jaj i mleka.</p>
+                </div>
+                <div class="extra-info-card">
+                    <h4>Zalety dla Kupca Sieciowego</h4>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>Certyfikacja Standardu IFS/BRC:</strong> Gwarancja najwyższego poziomu bezpieczeństwa biologicznego.</li>
+                        <li><strong>Stała masa i powtarzalność:</strong> Proces produkcyjny w pełni zautomatyzowany zapewnia stałe parametry.</li>
+                        <li><strong>Możliwość wypieku w sklepie (Bake-off):</strong> Głębokie mrożenie pozwala na minimalizację strat na punkcie sprzedaży.</li>
+                        <li><strong>Pakowanie zbiorcze:</strong> Optymalny wymiar kartonów i paletyzacji dopasowany pod magazyny centralne.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Formularz Zapytania Hurtowego (B2B Form) -->
+            <section id="contact-b2b" class="b2b-form-section">
+                <h3>Zamów darmowe próbki B2B / Zapytaj o cennik sieciowy</h3>
+                <p>Jesteś menedżerem kategorii lub kupcem sieci supermarketów? Wypełnij formularz poniżej, aby otrzymać bezpłatną dostawę próbek pieczywa bezpośrednio do Twojego biura lub ustalić warunki handlowe.</p>
+                
+                <form id="product-b2b-form" class="modern-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="b2b-name" style="color:var(--color-white);">Imię i Nazwisko / Kupiec</label>
+                            <input type="text" id="b2b-name" required placeholder="np. Jan Kowalski">
+                        </div>
+                        <div class="form-group">
+                            <label for="b2b-network" style="color:var(--color-white);">Nazwa Sieci Handlowej / Firmy</label>
+                            <input type="text" id="b2b-network" required placeholder="np. Dino Polska S.A.">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="b2b-email" style="color:var(--color-white);">Biznesowy adres e-mail</label>
+                            <input type="email" id="b2b-email" required placeholder="np. jan.kowalski@siec.pl">
+                        </div>
+                        <div class="form-group">
+                            <label for="b2b-phone" style="color:var(--color-white);">Telefon kontaktowy</label>
+                            <input type="tel" id="b2b-phone" required placeholder="np. +48 600 700 800">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b2b-message" style="color:var(--color-white);">Zakres zapytania (np. wolumen, punkty dostaw, mrożone vs świeże)</label>
+                        <textarea id="b2b-message" required placeholder="Napisz, jakie produkty i ilości Cię interesują..." rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block product-cta-btn" id="b2b-submit-btn">Wyślij zapytanie handlowe (B2B)</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container footer-content text-center">
+            <p>&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+            <p class="designer-tag">Projekt i wykonanie: <span class="architect-brand">Senior Developer & Architekt AI</span></p>
+        </div>
+    </footer>
+
+    <!-- Dane produktów i logika ładowania dynamicznego -->
+    <script>
+        // Dane B2B produktów zczytane bezpośrednio z asortymentu Leksa
+        const productsData = {
+            "chleb-sulecinski": {
+                title: "Chleb Sulęciński",
+                category: "Chleby tradycyjne",
+                image: "img/chleb_sulecinski.png",
+                weight: "500g / 600g",
+                packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek (576 szt.)",
+                ean: "5907552401018",
+                temp: "-18°C (łańcuch mrożony) lub Dostawa świeża",
+                shelfLife: "72h (Dostawa świeża) / 9 miesięcy (Bake-off)",
+                cert: "IFS Food, BRC Global Standard (Grade A)",
+                bake: "Temperatura: 200°C | Czas: 10-12 minut (zaparowanie pieca)",
+                desc: "Tradycyjny chleb mieszany żytnio-pszenny, pieczony w 100% na naturalnym zakwasie żytnim wyhodowanym w Sulęcinie. Nie zawiera żadnych sztucznych dodatków, konserwantów ani polepszaczy. Charakteryzuje się doskonałą wilgotnością i elastycznością miękiszu, głębokim tradycyjnym aromatem oraz rumianą, popękaną skórką. Dostępny w technologii mrożonej (dopiekanie w sklepie) oraz tradycyjnie dostarczany codziennie rano.",
+                ingredients: "Mąka żytnia typ 720, mąka pszenna typ 750, woda pitna, naturalny kwas żytni, sól spożywcza, drożdże piekarskie."
+            },
+            "chleb-leks-2ab": {
+                title: "Chleb Leks 2AB",
+                category: "Pieczywo zdrowotne i funkcjonalne",
+                image: "img/chleb_leks_2ab.png",
+                weight: "400g (Krojony / Pakowany)",
+                packaging: "Karton zbiorczy 10 szt. / Paleta: 40 kartonów (400 szt.)",
+                ean: "5907552401025",
+                temp: "Temperatura pokojowa (15-22°C)",
+                shelfLife: "6 dni (Pakowanie w atmosferze ochronnej MAP)",
+                cert: "IFS, BRC, Certyfikat Pradawnej Pszenicy 2AB",
+                bake: "Produkt gotowy do spożycia (krojony i pakowany barierowo)",
+                desc: "Innowacyjne pieczywo funkcjonalne klasy Premium wyprodukowane z prastarej pszenicy 2AB (pradawna odmiana Triticum turgidum). Chleb charakteryzuje się wyjątkowo wysoką lekkostrawnością, będąc idealną alternatywą dla osób z nadwrażliwością na gluten typu A obecny w pszenicy modyfikowanej przemysłowo. Posiada bogaty zestaw mikroelementów (selen, cynk, żelazo). Pakowany na automatycznej linii Flow-pack w atmosferze modyfikowanej (MAP), co gwarantuje przedłużoną świeżość bez użycia konserwantów.",
+                ingredients: "Mąka z pradawnej pszenicy 2AB, naturalny kwas z pszenicy 2AB, woda, ziarna dyni, ziarna słonecznika, sól spożywcza."
+            },
+            "bulka-grahamka": {
+                title: "Bułka Grahamka",
+                category: "Bułki i galanteria",
+                image: "img/bulka_grahamka.png",
+                weight: "70g",
+                packaging: "Karton 60 szt. / Paleta: 32 kartony (1920 szt.)",
+                ean: "5907552402015",
+                temp: "-18°C (łańcuch głębokiego mrożenia)",
+                shelfLife: "12 miesięcy (Bake-off głęboko mrożone)",
+                cert: "IFS Food, BRC",
+                bake: "Temperatura: 210°C | Czas: 6-8 minut (wypiek bez rozmrażania)",
+                desc: "Chrupiąca, pożywna bułka grahamka wypiekana z mąki z pełnego przemiału pszenicy graham. Posiada wysoką zawartość błonnika pokarmowego oraz cenne minerały z okrywy owocowo-nasiennej ziarna. Dedykowana pod system wypieku odroczonego (Bake-off) w supermarketach. Umożliwia stoiskom piekarniczym szybką reakcję na natężenie ruchu klientów, oferując świeże, gorące pieczywo o powtarzalnym, wysokim standardzie jakości.",
+                ingredients: "Mąka pszenna graham typ 1850, mąka pszenna typ 750, woda pitna, drożdże, sól spożywcza, olej roślinny."
+            },
+            "drozdzowka-z-kruszonka": {
+                title: "Drożdżówka z Kruszonką",
+                category: "Wyroby słodkie i półcukiernicze",
+                image: "img/drozdzowka.png",
+                weight: "90g",
+                packaging: "Skrzynka 20 szt. (świeże) / Karton 40 szt. (mrożone)",
+                ean: "5907552403012",
+                temp: "Temperatura pokojowa (dostawa świeża) lub -18°C",
+                shelfLife: "48h (Dostawa świeża) / 6 miesięcy (Mrożona)",
+                cert: "IFS Food",
+                bake: "Rozmrażanie: 30-40 min w temperaturze pokojowej",
+                desc: "Puszysta drożdżówka wyprodukowana z najwyższej jakości ciasta drożdżowego o delikatnej strukturze. Pokryta obfitą, chrupiącą maślaną kruszonką i wypełniona nadzieniem owocowym o obniżonej zawartości cukru, co doskonale wpisuje się w nowoczesne trendy prozdrowotne. Kształt, waga i powtarzalność produktu są w pełni dostosowane do automatycznych linii pakujących sieci handlowych.",
+                ingredients: "Mąka pszenna typ 500, woda pitna, cukier, nadzienie jagodowe, masło 82%, drożdże, masa jajowa, kruszonka maślana."
+            },
+            "bulka-2ab": {
+                title: "Bułka z Pradawnej Pszenicy 2AB",
+                category: "Bułki i galanteria",
+                image: "img/bulka_2ab.png",
+                weight: "80g",
+                packaging: "Karton 50 szt. / Paleta: 32 kartony (1600 szt.)",
+                ean: "5907552402022",
+                temp: "-18°C (łańcuch głębokiego mrożenia)",
+                shelfLife: "12 miesięcy (Bake-off)",
+                cert: "IFS Food, BRC, Certyfikat Pszenicy 2AB",
+                bake: "Temperatura: 200°C | Czas: 6-7 minut z parowaniem",
+                desc: "Wyjątkowa bułka wypiekana z pradawnej odmiany pszenicy 2AB. Charakteryzuje się miękkim, puszystym miękiszem oraz delikatną, chrupiącą skórką. Lekkostrawna formuła i brak sztucznie dodawanego glutenu sprawiają, że produkt cieszy się ogromną popularnością wśród dbających o zdrowie klientów sieci handlowych. Idealna pod systemy wypieku sklepowego.",
+                ingredients: "Mąka z pradawnej pszenicy 2AB, woda, naturalny kwas pszenny 2AB, drożdże, olej słonecznikowy, sól."
+            },
+            "bagietka-2ab": {
+                title: "Bagietka z Pradawnej Pszenicy 2AB",
+                category: "Bułki i galanteria",
+                image: "img/bagietka_2ab.png",
+                weight: "250g",
+                packaging: "Karton 24 szt. / Paleta: 28 kartonów (672 szt.)",
+                ean: "5907552402039",
+                temp: "-18°C (Łańcuch mrożony)",
+                shelfLife: "9 miesięcy (Bake-off)",
+                cert: "IFS Food, BRC, Certyfikat Pszenicy 2AB",
+                bake: "Temperatura: 200-210°C | Czas: 8-10 minut (zaparowanie pieca)",
+                desc: "Tradycyjna długa bagietka w stylu francuskim, stworzona na bazie innowacyjnej, prastarej pszenicy 2AB. Posiada chrupiącą, poprzecznie naciętą skórkę i duże, nieregularne pory w miękiszu, co jest rzadkością w zautomatyzowanej produkcji przemysłowej. Gotowy produkt głęboko mrożony, dedykowany pod wypiek na punktach sprzedaży (Bake-off).",
+                ingredients: "Mąka z pradawnej pszenicy 2AB, woda pitna, drożdże piekarskie, kwas pszenny, sól spożywcza."
+            },
+            "chleb-sielski": {
+                title: "Chleb Sielski",
+                category: "Chleby tradycyjne",
+                image: "img/chleb_sielski.png",
+                weight: "500g",
+                packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek (576 szt.)",
+                ean: "5907552401032",
+                temp: "-18°C (Bake-off) lub Dostawa świeża",
+                shelfLife: "72h (Świeży) / 9 miesięcy (Bake-off)",
+                cert: "IFS Food, BRC Grade A",
+                bake: "Temperatura: 200°C | Czas: 12-14 minut z zaparowaniem",
+                desc: "Okrągły, rustykalny bochenek chleba o silnym, tradycyjnym charakterze. Chleb Sielski pieczony jest z mieszanki mąk żytnich i pszennych na gęstym naturalnym zakwasie Sulęcińskim. Gruby, spieczony spód i silnie chrupiąca skórka z mączną posypką dają niesamowite wrażenie chleba prosto z tradycyjnego pieca wiejskiego, zachowując przy tym 100% powtarzalności wagi i kształtu.",
+                ingredients: "Mąka pszenna typ 750, mąka żytnia typ 720, woda, naturalny kwas żytni, sól, drożdże piekarskie."
+            },
+            "paczek-malinowy": {
+                title: "Pączek z Nadzieniem Malinowym",
+                category: "Wyroby słodkie i wyroby cukiernicze",
+                image: "img/paczek_malinowy.png",
+                weight: "100g",
+                packaging: "Karton 36 szt. / Paleta: 40 kartonów (1440 szt.)",
+                ean: "5907552403029",
+                temp: "-18°C (głęboko mrożone)",
+                shelfLife: "6 miesięcy (Łańcuch mrożony)",
+                bake: "Rozmrażać przez 45-60 minut w temperaturze pokojowej",
+                desc: "Puszysty, złocisty pączek w stylu Premium o podwyższonej gramaturze (100g). Wypełniony bogatym, aromatycznym nadzieniem malinowym i posypany drobnym cukrem pudrem. Produkt dostarczany w stanie głęboko mrożonym – gotowy do wyłożenia po prostym rozmrożeniu na punkcie sprzedaży (Thaw & Serve). Gwarantuje zerowe straty technologiczne i zachowanie pełnej świeżości puszystego ciasta.",
+                ingredients: "Mąka pszenna typ 500, woda, nadzienie malinowe 20%, tłuszcz cukierniczy, masa jajowa, cukier, drożdże, sól."
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Pobranie ID produktu z parametrów URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || "chleb-sulecinski";
+            
+            const product = productsData[productId];
+            
+            if (product) {
+                // Podmiana danych w DOM
+                document.title = `${product.title} - Specyfikacja B2B Leks`;
+                document.getElementById("breadcrumb-current-product").textContent = product.title;
+                document.getElementById("product-title-element").textContent = product.title;
+                document.getElementById("product-cat-element").textContent = product.category;
+                document.getElementById("product-desc-element").textContent = product.desc;
+                document.getElementById("product-ingredients-element").innerHTML = `<strong>Składniki:</strong> ${product.ingredients}`;
+                
+                // Zdjęcie
+                const imgElem = document.getElementById("product-img-element");
+                imgElem.src = product.image;
+                imgElem.alt = product.title;
+                
+                // Tabela specyfikacji
+                document.getElementById("spec-weight").textContent = product.weight;
+                document.getElementById("spec-packaging").textContent = product.packaging;
+                document.getElementById("spec-ean").textContent = product.ean;
+                document.getElementById("spec-temp").textContent = product.temp;
+                document.getElementById("spec-shelf-life").textContent = product.shelfLife;
+                document.getElementById("spec-cert").textContent = product.cert;
+                document.getElementById("spec-bake").textContent = product.bake;
+                
+                // Ustawienie tematu zapytania w formularzu B2B
+                const messageTextarea = document.getElementById("b2b-message");
+                messageTextarea.value = `Dzień dobry,\n\nJestem zainteresowany otrzymaniem próbek B2B oraz cennika dla produktu: ${product.title}.\nProszę o kontakt w celu omówienia szczegółów handlowych.`;
+            } else {
+                // Jeśli produkt nie istnieje, przekieruj na stronę główną
+                window.location.href = "index.html";
+            }
+            
+            // Obsługa wysyłki formularza B2B
+            const b2bForm = document.getElementById("product-b2b-form");
+            if (b2bForm) {
+                b2bForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById("b2b-name").value;
+                    const network = document.getElementById("b2b-network").value;
+                    const email = document.getElementById("b2b-email").value;
+                    const phone = document.getElementById("b2b-phone").value;
+                    const msg = document.getElementById("b2b-message").value;
+                    
+                    alert(`[OK] Dziękujemy! Zapytanie dla sieci ${network} zostało pomyślnie wysłane. Nasz dyrektor handlowy skontaktuje się z Tobą w ciągu 2 godzin.`);
+                    b2bForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
