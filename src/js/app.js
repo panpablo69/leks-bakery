@@ -353,18 +353,36 @@ function initScrollAnimations() {
     });
     
     // Animacja siatki produktów przy pierwszym wejściu
-    gsap.from(".product-card", {
-        opacity: 0,
-        y: 50,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: ".products-grid",
-            start: "top 80%",
-            toggleActions: "play none none none"
-        }
-    });
+    if (document.querySelector(".product-card")) {
+        gsap.from(".product-card", {
+            opacity: 0,
+            y: 50,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".products-grid",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+    }
+
+    // Animacja kafli kategorii na stronie głównej
+    if (document.querySelector(".category-card")) {
+        gsap.from(".category-card", {
+            opacity: 0,
+            y: 40,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".category-cards-grid",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            }
+        });
+    }
     
     // Animacja liczników KPI przy przewijaniu
     const kpiSection = document.getElementById("kpi-section");

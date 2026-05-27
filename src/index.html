@@ -180,184 +180,44 @@
         <section id="products" class="section-padding bg-alt">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">Dla Kupców i Partnerów</span>
-                    <h2 class="section-title">Katalog Produktów i Specyfikacja B2B</h2>
+                    <span class="section-subtitle">Dla Kupc�w i Partner�w</span>
+                    <h2 class="section-title">Produkty</h2>
                     <div class="section-line"></div>
                 </div>
                 
-                <!-- Kategorie Produktów -->
-                <div class="category-filters" id="product-filters">
-                    <button class="filter-btn active" data-filter="all">Wszystko</button>
-                    <button class="filter-btn" data-filter="bread">Chleby</button>
-                    <button class="filter-btn" data-filter="rolls">Bu�ki</button>
-                    <button class="filter-btn" data-filter="sweet">S�odkie</button>
-                </div>
-
-                <div class="products-grid" id="products-container">
-                    
-                    <!-- Chleb Sulęciński -->
-                    <div class="product-card" data-category="bread">
-                        <div class="product-image-container">
-                            <img src="img/chleb_sulecinski.png" alt="Chleb Sulęciński" class="product-img">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Chleb Tradycyjny</span>
-                            <h3 class="product-title">Chleb Sulęciński</h3>
-                            <p class="product-desc">Klasyczny chleb żytnio-pszenny pieczony na naturalnym zakwasie według tradycyjnej receptury.</p>
-                            <a href="product.html?id=chleb-sulecinski" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
+                <div class="category-cards-grid" id="category-cards-container">
+                    <!-- Kategoria: Chleby -->
+                    <div class="category-card" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 55, 110, 0.85)), url('img/chleb_sielski.png');">
+                        <div class="category-card-content">
+                            <span class="category-card-badge">Klasyka & Rzemios�o</span>
+                            <h3 class="category-card-title">Chleby Tradycyjne</h3>
+                            <p class="category-card-desc">Chleby �ytnie i mieszane, wypiekane w 100% na naturalnym wielofazowym zakwasie �ytnim. Gwarancja doskona�ej wilgotno�ci i smaku.</p>
+                            <a href="category.html?cat=bread" class="btn btn-sm btn-outline">Zobacz asortyment B2B</a>
                         </div>
                     </div>
                     
-                    <!-- Chleb Leks 2AB -->
-                    <div class="product-card" data-category="bread">
-                        <div class="product-image-container">
-                            <img src="img/chleb_leks_2ab.png" alt="Chleb Leks 2AB" class="product-img">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Pieczywo Zdrowotne</span>
-                            <h3 class="product-title">Chleb Leks 2AB</h3>
-                            <p class="product-desc">Lekkostrawne i bogate w minerały pieczywo z pradawnej pszenicy 2AB, o udowodnionych walorach prozdrowotnych.</p>
-                            <a href="product.html?id=chleb-leks-2ab" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
+                    <!-- Kategoria: Bu�ki -->
+                    <div class="category-card" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 55, 110, 0.85)), url('img/bulka_kajzerka.png');">
+                        <div class="category-card-content">
+                            <span class="category-card-badge">Systemy Bake-Off</span>
+                            <h3 class="category-card-title">Bu�ki i Bagietki</h3>
+                            <p class="category-card-desc">Bogaty wyb�r bu�ek �niadaniowych, kajzerek oraz bagietek z pradawnej pszenicy 2AB. Pe�na optymalizacja wypieku w sklepie.</p>
+                            <a href="category.html?cat=rolls" class="btn btn-sm btn-outline">Zobacz asortyment B2B</a>
                         </div>
                     </div>
                     
-                    <!-- Chleb Sielski -->
-                    <div class="product-card" data-category="bread">
-                        <div class="product-image-container">
-                            <img src="img/chleb_sielski.png" alt="Chleb Sielski" class="product-img">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Chleb Tradycyjny</span>
-                            <h3 class="product-title">Chleb Sielski</h3>
-                            <p class="product-desc">Rustykalny, okrągły bochenek chleba o wyjątkowo chrupiącej skórce, oparty o gęsty zakwas Sulęciński.</p>
-                            <a href="product.html?id=chleb-sielski" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Bułka Grahamka -->
-                    <div class="product-card" data-category="rolls">
-                        <div class="product-image-container">
-                            <img src="img/bulka_grahamka.png" alt="Bułka Grahamka" class="product-img">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Bułki i Galanteria</span>
-                            <h3 class="product-title">Bułka Grahamka</h3>
-                            <p class="product-desc">Pożywna i chrupiąca bułka grahamka bogata w błonnik z pełnego przemiału, idealna do dopieku w sklepie.</p>
-                            <a href="product.html?id=bulka-grahamka" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
-                        </div>
-                    </div>
-
-                    <!-- Bułka 2AB -->
-                    <div class="product-card" data-category="rolls">
-                        <div class="product-image-container">
-                            <img src="img/bulka_2ab.png" alt="Bułka z Pradawnej Pszenicy 2AB" class="product-img">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Bułki i Galanteria</span>
-                            <h3 class="product-title">Bułka Leks 2AB</h3>
-                            <p class="product-desc">Unikalna bułka wypiekana z lekkostrawnej pradawnej pszenicy 2AB, dedykowana pod systemy Bake-off.</p>
-                            <a href="product.html?id=bulka-2ab" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
-                        </div>
-                    </div>
-
-                    <!-- Bagietka 2AB -->
-                    <div class="product-card" data-category="rolls">
-                        <div class="product-image-container">
-                            <img src="img/bagietka_2ab.png" alt="Bagietka z Pradawnej Pszenicy 2AB" class="product-img">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Bułki i Galanteria</span>
-                            <h3 class="product-title">Bagietka Leks 2AB</h3>
-                            <p class="product-desc">Tradycyjna, długa bagietka z prastarej pszenicy 2AB o grubych porach, doskonała do dopiekania.</p>
-                            <a href="product.html?id=bagietka-2ab" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Drożdżówka z Kruszonką -->
-                    <div class="product-card" data-category="sweet">
-                        <div class="product-image-container">
-                            <img src="img/drozdzowka.png" alt="Drożdżówka z Kruszonką" class="product-img">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Wyroby Półcukiernicze</span>
-                            <h3 class="product-title">Drożdżówka z Kruszonką</h3>
-                            <p class="product-desc">Puszysta, słodka drożdżówka z obfitą kruszonką maślaną i naturalnym, zdrowym nadzieniem owocowym.</p>
-                            <a href="product.html?id=drozdzowka-z-kruszonka" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
-                        </div>
-                    </div>
-
-                    <!-- Pączek Malinowy -->
-                    <div class="product-card" data-category="sweet">
-                        <div class="product-image-container">
-                            <img src="img/paczek_malinowy.png" alt="Pączek z Nadzieniem Malinowym" class="product-img">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Wyroby Półcukiernicze</span>
-                            <h3 class="product-title">Pączek Malinowy</h3>
-                            <p class="product-desc">Puszysty pączek premium 100g z obfitym nadzieniem malinowym i posypką z cukru pudru (Thaw & Serve).</p>
-                            <a href="product.html?id=paczek-malinowy" class="btn btn-sm btn-primary">Specyfikacja B2B</a>
-                        </div>
-                    </div>
-                </div>�, maślaną kruszonką i owocowym nadzieniem.</p>
-                            <button class="btn btn-sm btn-primary open-spec-btn">Specyfikacja B2B</button>
+                    <!-- Kategoria: S�odkie -->
+                    <div class="category-card" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 55, 110, 0.85)), url('img/paczek_pistacjowy.png');">
+                        <div class="category-card-content">
+                            <span class="category-card-badge">Galanteria Premium</span>
+                            <h3 class="category-card-title">Wyroby S�odkie</h3>
+                            <p class="category-card-desc">Aromatyczne dro�d��wki z kruszonk�, p�czki z nadzieniem malinowym oraz pistacjowym. S�odkie impulsy generuj�ce zysk.</p>
+                            <a href="category.html?cat=sweet" class="btn btn-sm btn-outline">Zobacz asortyment B2B</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Dynamiczny Modal Specyfikacji B2B (Dla Kupców Sieci) -->
-        <div id="b2b-modal" class="modal-backdrop">
-            <div class="modal-card">
-                <button id="close-modal" class="modal-close-btn">&times;</button>
-                <div class="modal-body">
-                    <span class="modal-badge">Specyfikacja Logistyczna B2B</span>
-                    <h3 id="modal-product-title" class="modal-title">Nazwa Produktu</h3>
-                    <div class="modal-divider"></div>
-                    
-                    <div class="modal-grid">
-                        <div class="modal-spec-info">
-                            <div class="spec-row">
-                                <span class="spec-label">Gramatura:</span>
-                                <span id="modal-weight" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Pakowanie zbiorcze:</span>
-                                <span id="modal-packaging" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Kod EAN:</span>
-                                <span id="modal-ean" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Warunki transportu:</span>
-                                <span id="modal-temp" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Termin przydatności:</span>
-                                <span id="modal-shelf-life" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Certyfikacja fabryki:</span>
-                                <span id="modal-cert" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Parametry wypieku:</span>
-                                <span id="modal-bake" class="spec-val">-</span>
-                            </div>
-                        </div>
-                        <div class="modal-desc-panel">
-                            <h4>Opis Technologiczny i Logistyka</h4>
-                            <p id="modal-desc-text">-</p>
-                        </div>
-                    </div>
-                    
-                    <div class="modal-actions">
-                        <a href="#contact" class="btn btn-primary" id="modal-contact-btn">Zapytaj o wycenę hurtową (B2B)</a>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <!-- Sekcja Kariera -->
         <section id="career" class="section-padding">
