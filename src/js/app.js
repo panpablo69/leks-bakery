@@ -255,6 +255,9 @@ function renderAllProducts() {
         `;
         container.appendChild(card);
     }
+    if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
+    }
 }
 
 function initProductFilters() {
