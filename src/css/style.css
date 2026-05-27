@@ -1409,3 +1409,124 @@ body {
     background-color: var(--color-white) !important;
     color: var(--color-primary) !important;
 }
+
+
+/* ==============================================================================
+   9. CIEPŁE TŁO Z OKRUSZKAMI I PARALLAX KŁOSÓW (B2B PORTAL EXCELLENCE)
+   ============================================================================== */
+body {
+    background-color: #FBF9F5 !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%23C1B0A0' fill-opacity='0.15'%3E%3Ccircle cx='15' cy='15' r='1.2'/%3E%3Ccircle cx='55' cy='25' r='1.8'/%3E%3Ccircle cx='95' cy='15' r='1.2'/%3E%3Ccircle cx='35' cy='65' r='1'/%3E%3Ccircle cx='75' cy='75' r='2'/%3E%3Ccircle cx='25' cy='105' r='1.5'/%3E%3Ccircle cx='65' cy='95' r='1.2'/%3E%3Ccircle cx='105' cy='85' r='1.8'/%3E%3C/g%3E%3C/svg%3E") !important;
+    background-attachment: fixed !important;
+    background-repeat: repeat !important;
+}
+
+/* Dekoracyjne kłosy pszenicy z efektem scroll parallax */
+.decorative-wheat {
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.08;
+    width: 140px;
+    height: auto;
+    transition: transform 0.1s ease-out;
+}
+
+.wheat-left {
+    left: 20px;
+    top: 20%;
+}
+
+.wheat-right {
+    right: 20px;
+    top: 50%;
+}
+
+@media (max-width: 1024px) {
+    .decorative-wheat {
+        display: none; /* Ukryj na urządzeniach mobilnych, aby nie zasłaniały treści */
+    }
+}
+
+/* ==============================================================================
+   10. DYNAMICZNY KATALOG PRODUKTÓW B2B (HOMEPAGE DYNAMIC PANEL)
+   ============================================================================== */
+.catalog-dynamic-wrapper {
+    margin-top: 50px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 50px 40px;
+    box-shadow: var(--shadow-md);
+    width: 100%;
+}
+
+.catalog-nav-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#catalog-back-btn {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transition: var(--transition-fast);
+    white-space: nowrap;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+
+#catalog-back-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.catalog-current-title-wrapper {
+    flex-grow: 1;
+    max-width: 800px;
+    text-align: left;
+}
+
+.catalog-current-title {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.catalog-current-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.subcategory-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .catalog-dynamic-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .catalog-nav-header {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 20px;
+    }
+    
+    .catalog-current-title {
+        font-size: 1.8rem;
+    }
+}

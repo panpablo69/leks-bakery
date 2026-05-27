@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Dekoracyjne kłosy pszenicy do efektu Parallax -->
+    <img src="img/dekoracyjny_klos.svg" class="decorative-wheat wheat-left" aria-hidden="true" alt="">
+    <img src="img/dekoracyjny_klos.svg" class="decorative-wheat wheat-right" aria-hidden="true" alt="">
+    
 
     <!-- Szklany, animowany Header (Nawigacja z logotypem i strefÄ… B2B) -->
     <header id="main-header" class="header-glass">
@@ -185,25 +189,139 @@
                     <div class="section-line"></div>
                 </div>
                 
-                <!-- Kategorie Produktów (Poziome filtry bezpośrednio nad siatką) -->
-                <div class="category-filters" id="product-filters">
-                    <button class="filter-btn active" data-filter="all">Wszystko</button>
-                    <button class="filter-btn" data-filter="bread">Chleby</button>
-                    <button class="filter-btn" data-filter="rolls">Bułki</button>
-                    <button class="filter-btn" data-filter="2ab">Pieczywo 2AB</button>
-                    <button class="filter-btn" data-filter="sweet">Półcukiernicze</button>
-                    <button class="filter-btn" data-filter="cakes">Cukiernia</button>
-                    <button class="filter-btn" data-filter="savory">Słone przekąski</button>
-                    <button class="filter-btn" data-filter="sandwiches">Kanapki</button>
+                <!-- Widok Startowy: 5 Głównych Kategorii (Dużo przestrzeni, czysty layout) -->
+                <div class="category-cards-grid" id="homepage-category-grid">
+                    <!-- Kategoria 1: Pieczywo Leks 2ab -->
+                    <div class="category-card" data-category-link="2ab" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/chleb_leks_2ab.png');">
+                        <div class="category-card-content">
+                            <span class="category-card-badge">Innowacja & Zdrowie</span>
+                            <h3 class="category-card-title">Pieczywo Leks 2ab</h3>
+                            <p class="category-card-desc">Innowacyjna i lekkostrawna gama pieczywa premium wypiekanego z pradawnej pszenicy 2AB. Idealne, naturalne wsparcie dla wrażliwego układu pokarmowego.</p>
+                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategoria 2: Pieczywo (Chleby i Bułki) -->
+                    <div class="category-card" data-category-link="bread_rolls" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/chleb_sielski.png');">
+                        <div class="category-card-content">
+                            <span class="category-card-badge">Baza Asortymentu</span>
+                            <h3 class="category-card-title">Pieczywo (Chleby i Bułki)</h3>
+                            <p class="category-card-desc">Tradycyjne polskie chleby na naturalnym zakwasie żytnim oraz szeroki wybór chrupiących bułek śniadaniowych, kajzerek i bagietek dopasowanych pod stoiska dopieku.</p>
+                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategoria 3: Cukiernia (Ciasta i Torty) -->
+                    <div class="category-card" data-category-link="cakes" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/kategoria_cukiernia.png');">
+                        <div class="category-card-content">
+                            <span class="category-card-badge">Wykwintne Wyroby</span>
+                            <h3 class="category-card-title">Cukiernia (Ciasta i Torty)</h3>
+                            <p class="category-card-desc">Luksusowe torty śmietankowe i czekoladowe, puszyste serniki rzemieślnicze oraz tradycyjne blachy pysznych ciast owocowych tworzone według mistrzowskich receptur.</p>
+                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategoria 4: Produkty półcukiernicze (Drożdżówki, Pączki, Donuty) -->
+                    <div class="category-card" data-category-link="sweet" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/paczek_pistacjowy.png');">
+                        <div class="category-card-content">
+                            <span class="category-card-badge">Słodki Impuls</span>
+                            <h3 class="category-card-title">Wyroby półcukiernicze</h3>
+                            <p class="category-card-desc">Puszyste pączki premium z nadzieniami wiśniowym, malinowym i pistacjowym, maślane drożdżówki oraz puszyste donuty. Słodkie impulsy generujące doskonałą marżę detaliczną.</p>
+                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategoria 5: Kanapki i Słone przekąski -->
+                    <div class="category-card" data-category-link="bistro" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/kategoria_kanapki.png');">
+                        <div class="category-card-content">
+                            <span class="category-card-badge">Strefa Bistro & Go</span>
+                            <h3 class="category-card-title">Kanapki i Słone przekąski</h3>
+                            <p class="category-card-desc">Świeże, codziennie przygotowywane kanapki w technologii Flow-pack MAP oraz chrupiące ślimaki ze szpinakiem, bułki z warzywami i paluchy z serem idealne pod strefy bistro.</p>
+                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Siatka Produktów (GSAP Dynamic Grid) -->
-                <div class="products-grid" id="products-container">
-                    <!-- Karty produktów będą załadowane dynamicznie przez app.js -->
+                <!-- Dedykowana Sekcja Katalogu B2B (Pokazywana płynnie po wybraniu kategorii) -->
+                <div class="catalog-dynamic-wrapper" id="catalog-dynamic-wrapper" style="display: none;">
+                    <div class="catalog-nav-header">
+                        <button class="btn btn-sm btn-outline" id="catalog-back-btn">
+                            Powrót do kategorii
+                        </button>
+                        <div class="catalog-current-title-wrapper">
+                            <h3 class="catalog-current-title" id="catalog-current-title">Nazwa Kategorii</h3>
+                            <p class="catalog-current-desc" id="catalog-current-desc">Opis...</p>
+                        </div>
+                    </div>
+
+                    <!-- Podkategorie Filtry (Tylko dla Pieczywa 'bread_rolls' - Chleby vs Bułki) -->
+                    <div class="subcategory-filters" id="subcategory-filters-container" style="display: none; justify-content: center; gap: 12px; margin-bottom: 30px;">
+                        <button class="filter-btn active" data-subcategory="all">Wszystko</button>
+                        <button class="filter-btn" data-subcategory="bread">Chleby</button>
+                        <button class="filter-btn" data-subcategory="rolls">Bułki i Rogale</button>
+                    </div>
+
+                    <!-- Siatka Produktów (GSAP Dynamic Grid) -->
+                    <div class="products-grid" id="products-container">
+                        <!-- Karty produktów będą załadowane dynamicznie z bazy JS -->
+                    </div>
                 </div>
             </div>
         </section>
-        
+
+        <!-- Dynamiczny Modal Specyfikacji B2B (Dla Kupców Sieci) -->
+        <div id="b2b-modal" class="modal-backdrop">
+            <div class="modal-card">
+                <button id="close-modal" class="modal-close-btn">&times;</button>
+                <div class="modal-body">
+                    <span class="modal-badge">Specyfikacja Logistyczna B2B</span>
+                    <h3 id="modal-product-title" class="modal-title">Nazwa Produktu</h3>
+                    <div class="modal-divider"></div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-spec-info">
+                            <div class="spec-row">
+                                <span class="spec-label">Gramatura:</span>
+                                <span id="modal-weight" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Pakowanie zbiorcze:</span>
+                                <span id="modal-packaging" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Kod EAN:</span>
+                                <span id="modal-ean" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Warunki transportu:</span>
+                                <span id="modal-temp" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Termin przydatności:</span>
+                                <span id="modal-shelf-life" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Certyfikacja fabryki:</span>
+                                <span id="modal-cert" class="spec-val">-</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">Parametry wypieku:</span>
+                                <span id="modal-bake" class="spec-val">-</span>
+                            </div>
+                        </div>
+                        <div class="modal-desc-panel">
+                            <h4>Opis Technologiczny i Logistyka</h4>
+                            <p id="modal-desc-text">-</p>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <a href="#contact" class="btn btn-primary" id="modal-contact-btn">Zapytaj o wycenę hurtową (B2B)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Sekcja Kariera -->
         <section id="career" class="section-padding">
             <div class="container">
