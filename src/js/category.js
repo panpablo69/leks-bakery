@@ -53,7 +53,7 @@ function initCategoryPage() {
     const urlParams = new URLSearchParams(window.location.search);
     let cat = urlParams.get('cat') || 'all';
     
-    const validCategories = ['all', 'bread', 'rolls', '2ab', 'sweet', 'cakes', 'savory', 'sandwiches'];
+    const validCategories = ['all', '2ab', 'bread_rolls', 'cakes', 'sweet', 'bistro'];
     
     // Korekcja jeśli błędna wartość
     if (!validCategories.includes(cat)) {
@@ -70,47 +70,35 @@ function initCategoryPage() {
     
     // Dane dla poszczególnych kategorii
     const categoryInfo = {
-        "bread": {
-            title: "Chleby Tradycyjne",
-            subtitle: "Chleby Tradycyjne",
-            desc: "Tradycyjne polskie chleby mieszane i żytnie, wypiekane w 100% na naturalnym wielofazowym zakwasie żytnim. Gwarancja doskonałej wilgotności miękiszu, chrupiącej skórki i długiej świeżości (Bake-off / świeże).",
-            breadcrumb: "Chleby Tradycyjne"
-        },
-        "rolls": {
-            title: "Bułki i Bagietki",
-            subtitle: "Bułki i Bagietki",
-            desc: "Bogaty asortyment bułek śniadaniowych, kajzerek oraz chrupiących bagietek. Idealnie zoptymalizowane pod systemy odroczonego wypieku (Bake-off) w supermarketach.",
-            breadcrumb: "Bułki i Bagietki"
-        },
         "2ab": {
-            title: "Pieczywo Pradawne 2AB",
-            subtitle: "Pieczywo 2AB",
-            desc: "Przełomowe pieczywo funkcjonalne z pradawnej pszenicy 2AB. Lekkostrawna i bogata w składniki odżywcze alternatywa dedykowana dla wrażliwego układu pokarmowego.",
-            breadcrumb: "Pieczywo 2AB"
+            title: "Pieczywo Leks 2ab",
+            subtitle: "Z Pradawnej Odmiany Pszenicy",
+            desc: "Innowacyjna i lekkostrawna gama pieczywa premium wypiekanego z pradawnej pszenicy 2AB. Idealne, naturalne wsparcie dla wrażliwego układu pokarmowego.",
+            breadcrumb: "Pieczywo Leks 2ab"
         },
-        "sweet": {
-            title: "Wyroby Półcukiernicze",
-            subtitle: "Półcukiernicze",
-            desc: "Puszyste pączki premium z nadzieniem owocowym lub kremowym oraz tradycyjne maślane drożdżówki z kruszonką. Słodkie wypieki generujące stabilne zyski.",
-            breadcrumb: "Półcukiernicze"
+        "bread_rolls": {
+            title: "Pieczywo (Chleby i Bułki)",
+            subtitle: "Baza Asortymentu",
+            desc: "Tradycyjne polskie chleby na naturalnym zakwasie żytnim oraz szeroki wybór chrupiących bułek śniadaniowych, kajzerek i bagietek dopasowanych pod stoiska dopieku.",
+            breadcrumb: "Pieczywo (Chleby i Bułki)"
         },
         "cakes": {
-            title: "Katalog Cukierniczy",
-            subtitle: "Cukiernia",
-            desc: "Luksusowe torty, delikatne serniki, puszyste ciasta drożdżowe i placki z twarogiem. Wyjątkowe wyroby cukiernicze tworzone według mistrzowskich receptur.",
-            breadcrumb: "Cukiernia"
+            title: "Cukiernia (Ciasta i Torty)",
+            subtitle: "Wykwintne Wyroby",
+            desc: "Luksusowe torty śmietankowe i czekoladowe, puszyste serniki rzemieślnicze oraz tradycyjne blachy pysznych ciast owocowych tworzone według mistrzowskich receptur.",
+            breadcrumb: "Cukiernia (Ciasta i Torty)"
         },
-        "savory": {
-            title: "Słone Przekąski Bake-Off",
-            subtitle: "Słone Przekąski",
-            desc: "Chrupiące ślimaki ze szpinakiem, bułki z warzywami oraz pożywne słone przekąski z ciasta francuskiego. Gotowe rozwiązania pod systemy dopieku w sklepie.",
-            breadcrumb: "Słone Przekąski"
+        "sweet": {
+            title: "Wyroby półcukiernicze",
+            subtitle: "Słodki Impuls",
+            desc: "Puszyste pączki premium z nadzieniami wiśniowym, malinowym i pistacjowym, maślane drożdżówki oraz puszyste donuty. Słodkie impulsy generujące doskonałą marżę detaliczną.",
+            breadcrumb: "Wyroby półcukiernicze"
         },
-        "sandwiches": {
-            title: "Świeże Kanapki Bistro",
-            subtitle: "Kanapki",
-            desc: "Świeże, codzienne przygotowywane kanapki z najwyższej jakości wędlinami, warzywami i sosami na bazie chrupiącego pieczywa własnej produkcji Leks.",
-            breadcrumb: "Kanapki"
+        "bistro": {
+            title: "Kanapki i Słone przekąski",
+            subtitle: "Strefa Bistro & Go",
+            desc: "Świeże, codziennie przygotowywane kanapki w technologii Flow-pack MAP oraz chrupiące ślimaki ze szpinakiem, bułki z warzywami i paluchy z serem idealne pod strefy bistro.",
+            breadcrumb: "Kanapki i Słone przekąski"
         },
         "all": {
             title: "Pełna Oferta Pieczywa B2B",
