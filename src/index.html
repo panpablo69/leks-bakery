@@ -6,25 +6,24 @@
     <meta name="description" content="Leks Sp. z o.o. - Producent wysokiej jakości tradycyjnego pieczywa od 1989 roku. Odkryj nasz asortyment chlebów, bułek, ciast oraz pieczywa dietetycznego.">
     <title>Leks - Producent Wysokiej Jakości Pieczywa</title>
     
-    <!-- Google Fonts: Roboto (Nagłówki) i Montserrat (Treść) zgodnie z Księgą Znaku LEKS -->
+    <!-- Google Fonts: Montserrat (Body) & Roboto (Headings) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <!-- Główne style CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=38">
 </head>
 <body>
-    <!-- Dekoracyjne kłosy pszenicy do efektu Parallax -->
-    <img src="img/dekoracyjny_klos.svg" class="decorative-wheat wheat-left" aria-hidden="true" alt="">
-    <img src="img/dekoracyjny_klos.svg" class="decorative-wheat wheat-right" aria-hidden="true" alt="">
-    
 
-    <!-- Szklany, animowany Header (Nawigacja z logotypem i strefą B2B) -->
+    <!-- Szklany, animowany Header (Nawigacja) -->
     <header id="main-header" class="header-glass">
         <div class="header-container">
-            <a href="#" class="logo-link" id="nav-logo" aria-label="Leks Strona Główna">
-                <img src="img/leks_logo.svg" alt="Leks Logotyp" class="logo-img">
+            <a href="#" class="logo-link" id="nav-logo">
+                <img src="img/leks_logo_smacznego.png" alt="Leks Logo">
             </a>
             
             <nav id="main-nav" class="nav-menu">
@@ -37,10 +36,6 @@
                 </ul>
             </nav>
             
-            <div class="header-actions-right">
-                <a href="#contact" class="btn btn-sm btn-primary header-cta-btn">Strefa B2B</a>
-            </div>
-            
             <button id="menu-toggle" class="hamburger" aria-label="Otwórz menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -50,64 +45,23 @@
     </header>
 
     <main>
-        <!-- Sekcja Hero (Strona Główna z efektem karuzeli/slidera GSAP) -->
+        <!-- Sekcja Hero (Strona Główna z efektem przybliżania) -->
         <section id="hero" class="hero-section">
-            <div class="hero-slider" id="hero-slider">
-                <!-- Slide 1 -->
-                <div class="hero-slide active" data-index="0">
-                    <div class="hero-slide-bg" style="background-image: url('img/bakery_hero.png');"></div>
-                    <div class="hero-slide-overlay"></div>
-                    <div class="hero-slide-content">
-                        <span class="hero-subtitle">NajwyŹĽszy Standard Produkcji</span>
-                        <h1 class="hero-title">Najlepszy Partner w produkcji pieczywa.<br><span class="accent-text">Tradycyjny smak w skali makro.</span></h1>
-                        <p class="hero-lead">Dostarczamy najwyŹĽszej jakości chleby, bułki i wyroby cukiernicze do największych sieci handlowych w Polsce i Europie.</p>
-                        <div class="hero-actions">
-                            <a href="#products" class="btn btn-primary">Poznaj ofertę</a>
-                            <a href="#about" class="btn btn-outline">Nasza historia</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="hero-slide" data-index="1">
-                    <div class="hero-slide-bg" style="background-image: url('img/chleb_leks_2ab.png');"></div>
-                    <div class="hero-slide-overlay"></div>
-                    <div class="hero-slide-content">
-                        <span class="hero-subtitle">Innowacja i Zdrowie</span>
-                        <h1 class="hero-title">Przełomowy Chleb Leks 2AB<br><span class="accent-text">Z pradawnej pszenicy lekkostrawnej</span></h1>
-                        <p class="hero-lead">Zdrowotna rewolucja w piekarstwie funkcjonalnym. Pierwszy na rynku chleb dedykowany osobom z wraŹĽliwym ukłądem pokarmowym.</p>
-                        <div class="hero-actions">
-                            <a href="#products" class="btn btn-primary">Zobacz szczegóły</a>
-                            <a href="#contact" class="btn btn-outline">Zamów próbki B2B</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="hero-slide" data-index="2">
-                    <div class="hero-slide-bg" style="background-image: url('img/bulka_grahamka.png');"></div>
-                    <div class="hero-slide-overlay"></div>
-                    <div class="hero-slide-content">
-                        <span class="hero-subtitle">Pewność Logistyczna</span>
-                        <h1 class="hero-title">Technologia Odroczonego Wypieku (Bake-off)<br><span class="accent-text">Bezpieczne dostawy do 1200+ punktów</span></h1>
-                        <p class="hero-lead">Dostarczamy pieczywo świeŹĽe oraz głęboko mroŹĽone w niezawodnym łańcuchu logistycznym, certyfikowane IFS & BRC Grade A.</p>
-                        <div class="hero-actions">
-                            <a href="#about" class="btn btn-primary">Nasze fabryki</a>
-                            <a href="#contact" class="btn btn-outline">Zapytaj o logistykę</a>
-                        </div>
-                    </div>
+            <div class="hero-bg-container">
+                <video autoplay loop muted playsinline class="hero-video" id="hero-zoom-bg">
+                    <source src="img/bakery_hero_video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-subtitle animate-on-load">Tradycja od 1989 roku</span>
+                <h1 class="hero-title animate-on-load">Najlepszy partner w produkcji pieczywa.<br><span class="accent-text">Tradycyjny smak w skali makro.</span></h1>
+                <p class="hero-lead animate-on-load">Dostarczamy najwyższej jakości chleby, bułki i wyroby cukiernicze do tysięcy sklepów w Polsce i Europie.</p>
+                <div class="hero-actions animate-on-load">
+                    <a href="#products" class="btn btn-primary" id="hero-btn-primary">Poznaj ofertę</a>
+                    <a href="#about" class="btn btn-outline" id="hero-btn-secondary">Nasza historia</a>
                 </div>
             </div>
-            
-            <!-- Nawigacja karuzeli -->
-            <div class="slider-controls">
-                <button class="slider-arrow prev-arrow" aria-label="Poprzedni slajd">&#10094;</button>
-                <button class="slider-arrow next-arrow" aria-label="Następny slajd">&#10095;</button>
-            </div>
-            <div class="slider-pagination" id="slider-dots">
-                <button class="dot active" data-slide="0" aria-label="Slajd 1"></button>
-                <button class="dot" data-slide="1" aria-label="Slajd 2"></button>
-                <button class="dot" data-slide="2" aria-label="Slajd 3"></button>
-            </div>
-
             <div class="scroll-indicator" id="scroll-arrow">
                 <span class="mouse-icon">
                     <span class="mouse-wheel"></span>
@@ -125,56 +79,49 @@
                     <div class="section-line"></div>
                 </div>
                 
+                <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
+                <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-about" alt="">
+                
                 <div class="about-grid">
-                    <div class="about-text-content">
-                        <p class="lead-text">Jesteśmy strategicznym i stabilnym partnerem dla największych sieci handlowych w Polsce i Europie.</p>
-                        <p>Z małej piekarni rzemieślniczej przekształciliśmy się w potęŹĽnego producenta z **trzema wyspecjalizowanymi zakładami produkcyjnymi** w Sulęcinie, Gorzowie Wlkp. oraz Tarnowie Byckim. Nasze fabryki posiadają prestiŹĽowe certyfikaty **IFS Food** oraz **BRC Global Standard** na najwyŹĽszym poziomie, co gwarantuje pełne bezpieczeństwo i powtarzalność dostaw.</p>
-                        <p>Nasza logistyka świeŹĽości oraz zaawansowana linia wypieku odroczonego (Bake-off) pozwala nam dostarczać chrupiące pieczywo na czas do tysięcy sklepów kaŹĽdego dnia.</p>
+                    <div class="about-intro-row">
+                        <div class="about-text-content">
+                            <p class="lead-text">Jesteśmy strategicznym i stabilnym partnerem dla największych sieci handlowych w Polsce i Europie.</p>
+                            <p>Z małej piekarni rzemieślniczej przekształciliśmy się w potężnego producenta z <strong>trzema wyspecjalizowanymi zakładami produkcyjnymi</strong> w Sulęcinie, Gorzowie Wlkp. oraz Tarnowie Byckim. Nasze fabryki posiadają prestiżowe certyfikaty <strong>IFS Food</strong> oraz <strong>BRC Global Standard</strong> na najwyższym poziomie, co gwarantuje pełne bezpieczeństwo i powtarzalność dostaw.</p>
+                            <p>Nasza logistyka świeżości oraz zaawansowana linia wypieku odroczonego (Bake-off) pozwala nam dostarczać chrupiące pieczywo na czas do tysięcy sklepów każdego dnia.</p>
+                        </div>
+                        <div class="about-image-column">
+                            <div class="about-image-wrapper">
+                                <div class="about-image-container">
+                                    <img src="img/nasz_zespol.jpg" alt="Zespół Piekarni Leks" class="about-team-img">
+                                </div>
+                                <div class="about-image-overlay">
+                                    <div class="about-image-badge">Nasz Zespół</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="about-interactive-timeline">
+                        <div class="timeline-header text-center">
+                            <h3 class="timeline-section-title">Nasza Historia</h3>
+                            <p class="timeline-section-subtitle">Kliknij na dowolny punkt, aby poznać naszą historię</p>
+                        </div>
                         <div class="timeline-navigation" id="timeline-years">
                             <button class="timeline-year-btn active" data-year="1989">1989</button>
                             <button class="timeline-year-btn" data-year="1998">1998</button>
                             <button class="timeline-year-btn" data-year="2005">2005</button>
+                            <button class="timeline-year-btn" data-year="2010">2010</button>
                             <button class="timeline-year-btn" data-year="2018">2018</button>
                             <button class="timeline-year-btn" data-year="2026">2026</button>
                         </div>
-                        <div class="timeline-content-card" id="timeline-card">
-                            <h4 class="timeline-card-title" id="timeline-title">ZałoŹĽenie Firmy</h4>
-                            <p class="timeline-card-desc" id="timeline-desc">Firma Leks rozpoczęła swoją działalność jako mała piekarnia rodzinna z pasją do tworzenia tradycyjnych chlebów na naturalnym zakwasie w Sulęcinie.</p>
+                        <div class="timeline-body-layout">
+                            <div class="timeline-mascot-wrapper">
+                                <img src="img/maskotka.png" alt="Maskotka Leks" class="timeline-mascot">
+                            </div>
+                            <div class="timeline-content-card" id="timeline-card">
+                                <h4 class="timeline-card-title" id="timeline-title">Założenie Firmy</h4>
+                                <p class="timeline-card-desc" id="timeline-desc">Firma Leks rozpoczęła swoją działalność jako mała piekarnia rodzinna z pasją do tworzenia tradycyjnych chlebów na naturalnym zakwasie w Sulęcinie.</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Pulpit Wydajności B2B (KPI Counters) -->
-                <div class="b2b-kpi-container" id="kpi-section">
-                    <div class="kpi-card">
-                        <div class="kpi-num-wrapper">
-                            <span class="kpi-number" data-target="3">0</span>
-                        </div>
-                        <div class="kpi-label">Zakłady produkcyjne</div>
-                        <div class="kpi-desc">Sulęcin, Gorzów, Tarnów Bycki</div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-num-wrapper">
-                            <span class="kpi-number" data-target="100">0</span><span class="kpi-suffix">k+</span>
-                        </div>
-                        <div class="kpi-label">Sztuk pieczywa na dobę</div>
-                        <div class="kpi-desc">Ogromna wydajność i powtarzalność</div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-num-wrapper">
-                            <span class="kpi-number" data-target="1200">0</span><span class="kpi-suffix">+</span>
-                        </div>
-                        <div class="kpi-label">Punktów dostaw w Europie</div>
-                        <div class="kpi-desc">Niezawodna logistyka i własna flota</div>
-                    </div>
-                    <div class="kpi-card">
-                        <div class="kpi-cert-wrapper">
-                            <span class="kpi-badge">IFS & BRC</span>
-                        </div>
-                        <div class="kpi-label">Klasa Certyfikacji A</div>
-                        <div class="kpi-desc">Standardy zatwierdzone przez audytorów</div>
                     </div>
                 </div>
             </div>
@@ -184,87 +131,18 @@
         <section id="products" class="section-padding bg-alt">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">Dla Kupców i Partnerów</span>
+                    <span class="section-subtitle">Nasz Asortyment</span>
                     <h2 class="section-title">Produkty</h2>
                     <div class="section-line"></div>
                 </div>
                 
-                <!-- Widok Startowy: 5 Głównych Kategorii (Dużo przestrzeni, czysty layout) -->
-                <div class="category-cards-grid" id="homepage-category-grid">
-                    <!-- Kategoria 1: Pieczywo Leks 2ab -->
-                    <div class="category-card" data-category-link="2ab" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/chleb_leks_2ab.png');">
-                        <div class="category-card-content">
-                            <span class="category-card-badge">Innowacja & Zdrowie</span>
-                            <h3 class="category-card-title">Pieczywo Leks 2ab</h3>
-                            <p class="category-card-desc">Innowacyjna i lekkostrawna gama pieczywa premium wypiekanego z pradawnej pszenicy 2AB. Idealne, naturalne wsparcie dla wrażliwego układu pokarmowego.</p>
-                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Kategoria 2: Pieczywo (Chleby i Bułki) -->
-                    <div class="category-card" data-category-link="bread_rolls" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/chleb_sielski.png');">
-                        <div class="category-card-content">
-                            <span class="category-card-badge">Baza Asortymentu</span>
-                            <h3 class="category-card-title">Pieczywo (Chleby i Bułki)</h3>
-                            <p class="category-card-desc">Tradycyjne polskie chleby na naturalnym zakwasie żytnim oraz szeroki wybór chrupiących bułek śniadaniowych, kajzerek i bagietek dopasowanych pod stoiska dopieku.</p>
-                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Kategoria 3: Cukiernia (Ciasta i Torty) -->
-                    <div class="category-card" data-category-link="cakes" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/kategoria_cukiernia.png');">
-                        <div class="category-card-content">
-                            <span class="category-card-badge">Wykwintne Wyroby</span>
-                            <h3 class="category-card-title">Cukiernia (Ciasta i Torty)</h3>
-                            <p class="category-card-desc">Luksusowe torty śmietankowe i czekoladowe, puszyste serniki rzemieślnicze oraz tradycyjne blachy pysznych ciast owocowych tworzone według mistrzowskich receptur.</p>
-                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Kategoria 4: Produkty półcukiernicze (Drożdżówki, Pączki, Donuty) -->
-                    <div class="category-card" data-category-link="sweet" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/paczek_pistacjowy.png');">
-                        <div class="category-card-content">
-                            <span class="category-card-badge">Słodki Impuls</span>
-                            <h3 class="category-card-title">Wyroby półcukiernicze</h3>
-                            <p class="category-card-desc">Puszyste pączki premium z nadzieniami wiśniowym, malinowym i pistacjowym, maślane drożdżówki oraz puszyste donuty. Słodkie impulsy generujące doskonałą marżę detaliczną.</p>
-                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
-                        </div>
-                    </div>
-                    
-                    <!-- Kategoria 5: Kanapki i Słone przekąski -->
-                    <div class="category-card" data-category-link="bistro" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 55, 110, 0.88)), url('img/kategoria_kanapki.png');">
-                        <div class="category-card-content">
-                            <span class="category-card-badge">Strefa Bistro & Go</span>
-                            <h3 class="category-card-title">Kanapki i Słone przekąski</h3>
-                            <p class="category-card-desc">Świeże, codziennie przygotowywane kanapki w technologii Flow-pack MAP oraz chrupiące ślimaki ze szpinakiem, bułki z warzywami i paluchy z serem idealne pod strefy bistro.</p>
-                            <button class="btn btn-sm btn-outline select-cat-btn">Poznaj asortyment B2B</button>
-                        </div>
-                    </div>
-                </div>
+                <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
+                <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-1" alt="">
+                <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-2" alt="">
 
-                <!-- Dedykowana Sekcja Katalogu B2B (Pokazywana płynnie po wybraniu kategorii) -->
-                <div class="catalog-dynamic-wrapper" id="catalog-dynamic-wrapper" style="display: none;">
-                    <div class="catalog-nav-header">
-                        <button class="btn btn-sm btn-outline" id="catalog-back-btn">
-                            Powrót do kategorii
-                        </button>
-                        <div class="catalog-current-title-wrapper">
-                            <h3 class="catalog-current-title" id="catalog-current-title">Nazwa Kategorii</h3>
-                            <p class="catalog-current-desc" id="catalog-current-desc">Opis...</p>
-                        </div>
-                    </div>
-
-                    <!-- Podkategorie Filtry (Tylko dla Pieczywa 'bread_rolls' - Chleby vs Bułki) -->
-                    <div class="subcategory-filters" id="subcategory-filters-container" style="display: none; justify-content: center; gap: 12px; margin-bottom: 30px;">
-                        <button class="filter-btn active" data-subcategory="all">Wszystko</button>
-                        <button class="filter-btn" data-subcategory="bread">Chleby</button>
-                        <button class="filter-btn" data-subcategory="rolls">Bułki i Rogale</button>
-                    </div>
-
-                    <!-- Siatka Produktów (GSAP Dynamic Grid) -->
-                    <div class="products-grid" id="products-container">
-                        <!-- Karty produktów będą załadowane dynamicznie z bazy JS -->
-                    </div>
+                <!-- Siatka Produktów (GSAP Animated Grid) -->
+                <div class="products-grid" id="products-container">
+                    <!-- Kategorie ładowane dynamicznie przez JS -->
                 </div>
             </div>
         </section>
@@ -272,89 +150,454 @@
         <!-- Dynamiczny Modal Specyfikacji B2B (Dla Kupców Sieci) -->
         <div id="b2b-modal" class="modal-backdrop">
             <div class="modal-card">
-                <button id="close-modal" class="modal-close-btn">&times;</button>
-                <div class="modal-body">
-                    <span class="modal-badge">Specyfikacja Logistyczna B2B</span>
-                    <h3 id="modal-product-title" class="modal-title">Nazwa Produktu</h3>
-                    <div class="modal-divider"></div>
-                    
-                    <div class="modal-grid">
-                        <div class="modal-spec-info">
-                            <div class="spec-row">
-                                <span class="spec-label">Gramatura:</span>
-                                <span id="modal-weight" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Pakowanie zbiorcze:</span>
-                                <span id="modal-packaging" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Kod EAN:</span>
-                                <span id="modal-ean" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Warunki transportu:</span>
-                                <span id="modal-temp" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Termin przydatności:</span>
-                                <span id="modal-shelf-life" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Certyfikacja fabryki:</span>
-                                <span id="modal-cert" class="spec-val">-</span>
-                            </div>
-                            <div class="spec-row">
-                                <span class="spec-label">Parametry wypieku:</span>
-                                <span id="modal-bake" class="spec-val">-</span>
-                            </div>
-                        </div>
-                        <div class="modal-desc-panel">
-                            <h4>Opis Technologiczny i Logistyka</h4>
-                            <p id="modal-desc-text">-</p>
-                        </div>
+                <button id="close-modal" class="modal-close-btn" aria-label="Zamknij">&times;</button>
+                <div class="modal-body-layout">
+                    <div class="modal-image-col">
+                        <img id="modal-product-img" src="" alt="Produkt" />
                     </div>
-                    
-                    <div class="modal-actions">
-                        <a href="#contact" class="btn btn-primary" id="modal-contact-btn">Zapytaj o wycenę hurtową (B2B)</a>
+                    <div class="modal-content-col">
+                        <span id="modal-product-cat" class="modal-badge">Specyfikacja B2B</span>
+                        <h3 id="modal-product-title" class="modal-title">Nazwa Produktu</h3>
+                        <div class="modal-divider"></div>
+                        
+                        <ul class="modal-spec-list">
+                            <li><span class="spec-label">Waga:</span> <span id="modal-weight" class="spec-val">-</span></li>
+                            <li><span class="spec-label">Pakowanie:</span> <span id="modal-packaging" class="spec-val">-</span></li>
+                            <li><span class="spec-label">Przydatność:</span> <span id="modal-shelf-life" class="spec-val">-</span></li>
+                            <li><span class="spec-label">Certyfikaty:</span> <span id="modal-cert" class="spec-val">-</span></li>
+                        </ul>
+                        
+                        <div class="modal-actions">
+                            <a href="#contact" class="btn btn-primary" id="modal-contact-btn">Zapytaj o wycenę hurtową (B2B)</a>
+                            <button id="modal-close-action" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-border);">Zamknij</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Sekcja Kariera -->
-        <section id="career" class="section-padding">
+        <!-- Sekcja Prezentacji Cech 2AB (Czysty HTML/CSS) -->
+        <section id="features-2ab" class="section-padding bg-alt">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">Dołącz do Zespołu</span>
-                    <h2 class="section-title">Praca w Piekarni Leks</h2>
+                    <div class="logo-2ab-header-wrapper">
+                        <img src="img/logo-2ab.png" alt="Leks 2AB Logo" class="logo-2ab-header">
+                    </div>
+                    <span class="section-subtitle">Innowacja i Zdrowie</span>
+                    <h2 class="section-title">Pieczywo 2AB</h2>
                     <div class="section-line"></div>
+                    <p class="section-lead" style="max-width: 700px; margin: 24px auto 0; font-size: 1.15rem; color: var(--color-text); line-height: 1.6;">Tworzymy pieczywo <strong>na bazie unikatowej mąki 2AB</strong>, wytwarzanej z pradawnej odmiany pszenicy. To prawdziwa rewolucja w piekarstwie</p>
                 </div>
                 
-                <div class="career-accordion">
-                    <div class="accordion-item" id="job-1">
-                        <button class="accordion-header">
-                            <span>Pracownik Produkcji (Gorzów Wielkopolski)</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p><strong>Miejsce pracy:</strong> Zakład produkcyjny Gorzów Wlkp.</p>
-                            <p><strong>Zadania:</strong> Obsługa maszyn piekarniczych, kontrola jakości wyrobów, pakowanie pieczywa.</p>
-                            <p><strong>Oferujemy:</strong> Stabilne zatrudnienie w oparciu o umowę o pracę, pracę w zgranym zespole, atrakcyjne wynagrodzenie oraz ubezpieczenie grupowe.</p>
-                            <a href="#contact" class="btn btn-sm btn-primary">Aplikuj teraz</a>
+                <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
+                <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-2ab" alt="">
+                
+                <div class="features-presentation">
+                    <div class="features-image-wrapper">
+                         <img src="img/chleb-cechy.png" alt="Chleb 2AB" class="features-main-image">
+                    </div>
+                    
+                    <!-- Cecha 1 (Lewa góra) -->
+                    <div class="feature-label-card fl-top-left">
+                        <span class="feature-line"></span>
+                        <div class="feature-label-header">
+                            <span class="feature-dot"></span>
+                            <span class="feature-title">Naturalna fermentacja</span>
+                        </div>
+                        <div class="feature-tooltip-bubble">
+                            <p>nadaje bułce głęboki, autentyczny smak i podnosi jej <strong>lekkostrawność</strong>.</p>
                         </div>
                     </div>
                     
-                    <div class="accordion-item" id="job-2">
-                        <button class="accordion-header">
-                            <span>Magazynier Wyrobów Gotowych (Sulęcin)</span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p><strong>Miejsce pracy:</strong> Sulęcin (Główna Siedziba)</p>
-                            <p><strong>Zadania:</strong> Przygotowywanie wysyłek do odbiorców handlowych, załadunek aut dostawczych, kontrola stanów magazynowych.</p>
-                            <p><strong>Oferujemy:</strong> Pracę w systemie zmianowym, stabilną pensję podstawową + premie frekwencyjne i wydajnościowe.</p>
-                            <a href="#contact" class="btn btn-sm btn-primary">Aplikuj teraz</a>
+                    <!-- Cecha 2 (Prawa góra) -->
+                    <div class="feature-label-card fl-top-right">
+                        <span class="feature-line"></span>
+                        <div class="feature-label-header">
+                            <span class="feature-dot"></span>
+                            <span class="feature-title">Bogactwo karotenów</span>
+                        </div>
+                        <div class="feature-tooltip-bubble">
+                            <p>to dzięki nim bułka ma swój naturalny, żółty kolor oraz dostarcza <strong>prowitaminy A</strong>, wspierając wzrok i <strong>odporność</strong>.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Cecha 3 (Lewy dół) -->
+                    <div class="feature-label-card fl-bottom-left">
+                        <span class="feature-line"></span>
+                        <div class="feature-label-header">
+                            <span class="feature-dot"></span>
+                            <span class="feature-title">Niższa zawartość FODMAP</span>
+                        </div>
+                        <div class="feature-tooltip-bubble">
+                            <p>doskonała dla osób z <strong>wrażliwymi jelitami</strong>, w tym przy <strong>IBS i SIBO</strong>. Dzięki temu <strong>minimalizuje</strong> wzdęcia i <strong>dyskomfort</strong> trawienny.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Cecha 4 (Prawy dół) -->
+                    <div class="feature-label-card fl-bottom-right">
+                        <span class="feature-line"></span>
+                        <div class="feature-label-header">
+                            <span class="feature-dot"></span>
+                            <span class="feature-title">Źródło Cynku i Selenu</span>
+                        </div>
+                        <div class="feature-tooltip-bubble">
+                            <p>dla wzmocnienia organizmu i codziennej <strong>odporności</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Blog (Swiper) -->
+        <section id="blog" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Wiedza i Inspiracje</span>
+                    <h2 class="section-title">Blog</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
+                <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-blog" alt="">
+                
+                <div class="blog-slider-wrapper" style="position: relative;">
+                    <div class="swiper blog-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slajd 1 -->
+                            <div class="swiper-slide">
+                                <article class="blog-card">
+                                    <div class="blog-img">
+                                        <img src="img/blog_logistics.png" alt="Logistyka">
+                                    </div>
+                                    <div class="blog-content">
+                                        <h3>Logistyka świeżości: Standard na europejską skalę</h3>
+                                        <p>W 2026 roku jakość pieczywa to nie tylko wypiek, to także błyskawiczna logistyka.</p>
+                                        <a href="#" class="blog-read-more">Więcej &rarr;</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Slajd 2 -->
+                            <div class="swiper-slide">
+                                <article class="blog-card">
+                                    <div class="blog-img">
+                                        <img src="img/blog_diet.png" alt="Dieta">
+                                    </div>
+                                    <div class="blog-content">
+                                        <h3>Pieczywo w diecie nowoczesnego konsumenta</h3>
+                                        <p>Konsument poszukuje produktów wspierających zdrowie i odporność.</p>
+                                        <a href="#" class="blog-read-more">Więcej &rarr;</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Slajd 3 -->
+                            <div class="swiper-slide">
+                                <article class="blog-card">
+                                    <div class="blog-img">
+                                        <img src="img/blog_tradition.png" alt="Przepis">
+                                    </div>
+                                    <div class="blog-content">
+                                        <h3>Od ziarna do bochenka. Tradycja spotyka technologię</h3>
+                                        <p>Jak w naszych nowoczesnych fabrykach dbamy o autentyczny smak.</p>
+                                        <a href="#" class="blog-read-more">Więcej &rarr;</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Slajd 4 -->
+                            <div class="swiper-slide">
+                                <article class="blog-card">
+                                    <div class="blog-img">
+                                        <img src="img/blog_ecology.png" alt="Ekologia">
+                                    </div>
+                                    <div class="blog-content">
+                                        <h3>Eko-Piekarnia: Nasza droga do 100% zielonej energii</h3>
+                                        <p>W 2026 roku nasze zakłady produkcyjne przeszły całkowicie na zrównoważone źródła energii, łącząc tradycję z naturą.</p>
+                                        <a href="#" class="blog-read-more">Więcej &rarr;</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- Kontrolki paginacji Swiper -->
+                        <div class="swiper-pagination blog-pagination"></div>
+                    </div>
+                    
+                    <!-- Kontrolki nawigacji Swiper (przeniesione na zewnątrz) -->
+                    <div class="swiper-button-prev blog-prev"></div>
+                    <div class="swiper-button-next blog-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Kariera (Swiper Carousel) -->
+        <section id="career" class="section-padding bg-alt">
+            <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
+            <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-career" alt="">
+            <div class="container" style="position: relative;">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Dołącz do Zespołu</span>
+                    <h2 class="section-title">Praca w Leks</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="career-slider-wrapper" style="position: relative;">
+                    <div class="swiper career-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_production.png" alt="Pracownik Produkcji" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Pracownik Produkcji</h3>
+                                        <p>Zadania: Obsługa maszyn i urządzeń piekarniczych, kontrolowanie parametrów oraz pakowanie wyrobów gotowych.</p>
+                                    </div>
+                                    <p class="career-location">Gorzów Wielkopolski</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_mechanic.png" alt="Mechanik-Elektryk" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Mechanik-Elektryk</h3>
+                                        <p>Zadania: Bieżąca konserwacja parku maszynowego, diagnozowanie i usuwanie awarii elektryczno-mechanicznych.</p>
+                                    </div>
+                                    <p class="career-location">Gorzów Wielkopolski</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_baker.png" alt="Piekarz" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Piekarz - kawiarnia St Klemens</h3>
+                                        <p>Zadania: Rzemieślniczy wypiek tradycyjnego pieczywa w warunkach kawiarnianych, dbanie o jakość i estetykę.</p>
+                                    </div>
+                                    <p class="career-location">Zielona Góra</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_warehouse.png" alt="Magazynier Surowców" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Magazynier Surowców</h3>
+                                        <p>Zadania: Przyjęcie i kontrola jakości surowców, prowadzenie dokumentacji oraz zaopatrzenie produkcji.</p>
+                                    </div>
+                                    <p class="career-location">Gorzów Wielkopolski</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_production.png" alt="Pracownik Produkcji" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Pracownik Produkcji</h3>
+                                        <p>Zadania: Prace pomocnicze przy wypieku pieczywa, obsługa zautomatyzowanych linii, dbanie o higienę pracy.</p>
+                                    </div>
+                                    <p class="career-location">Tarnów Bycki</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_oven.png" alt="Operator Pieców Wsadowych" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Operator Pieców Wsadowych</h3>
+                                        <p>Zadania: Nadzór nad prawidłowym wypiekiem w piecach tunelowych i wsadowych, kontrola temperatur.</p>
+                                    </div>
+                                    <p class="career-location">Gorzów Wielkopolski</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 7 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_warehouse.png" alt="Magazynier Wyrobów Gotowych" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Magazynier Wyrobów Gotowych</h3>
+                                        <p>Zadania: Kompletacja zamówień hurtowych, załadunek samochodów dystrybucyjnych, ewidencja wydań.</p>
+                                    </div>
+                                    <p class="career-location">Gorzów Wielkopolski</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 8 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_leader.png" alt="Mistrz Produkcji / Lider Zmiany" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Mistrz Produkcji / Lider Zmiany</h3>
+                                        <p>Zadania: Zarządzanie zespołem produkcyjnym, koordynacja planu produkcyjnego, nadzór standardów IFS/BRC.</p>
+                                    </div>
+                                    <p class="career-location">Gorzów Wielkopolski</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 9 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_warehouse.png" alt="Magazynier Wyrobów Gotowych" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Magazynier Wyrobów Gotowych</h3>
+                                        <p>Zadania: Przyjmowanie gotowego pieczywa z piekarni, przygotowywanie wysyłek dla sieci handlowych.</p>
+                                    </div>
+                                    <p class="career-location">Tarnów Bycki</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 10 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_oven.png" alt="Operator Pieców Wsadowych" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Operator Pieców Wsadowych</h3>
+                                        <p>Zadania: Obsługa pieców piekarniczych wsadowych i obrotowych, kontrola faz wypieku chlebów.</p>
+                                    </div>
+                                    <p class="career-location">Tarnów Bycki</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 11 -->
+                        <div class="swiper-slide">
+                            <div class="career-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_warehouse.png" alt="Magazynier Surowców" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Magazynier Surowców</h3>
+                                        <p>Zadania: Magazynowanie mąk i składników piekarskich, rozładunek silosów, ewidencja dostaw.</p>
+                                    </div>
+                                    <p class="career-location">Tarnów Bycki</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Aplikuj</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 12 (Rekrutacyjny Placeholder) -->
+                        <div class="swiper-slide">
+                            <div class="career-card placeholder-card">
+                                <div class="card-image-placeholder">
+                                    <img src="img/career_spontaneous.png" alt="Aplikacja Spontaniczna" />
+                                </div>
+                                <div class="career-content">
+                                    <div class="career-body">
+                                        <h3>Aplikacja Spontaniczna</h3>
+                                        <p>Chcesz dołączyć do zespołu Leks, ale nie widzisz pasującej roli? Prześlij swoje CV – z wielką chęcią poznamy Twoje kompetencje!</p>
+                                    </div>
+                                    <p class="career-location">Dowolna lokalizacja</p>
+                                    <a href="#contact" class="btn btn-sm btn-outline">Prześlij CV</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kontrolki paginacji Swiper -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                
+                <!-- Kontrolki nawigacji Swiper (przeniesione na zewnątrz dla czystego cięcia krawędzi) -->
+                <div class="swiper-button-prev career-prev"></div>
+                <div class="swiper-button-next career-next"></div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Nasi Partnerzy -->
+        <section id="partners" class="section-padding partners-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Współpraca</span>
+                    <h2 class="section-title">Nasi Partnerzy</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="partners-container">
+                    <p class="partners-intro text-center">Współpracujemy ze sprawdzonymi, renomowanymi dostawcami komponentów piekarniczych oraz wiodącymi stowarzyszeniami branżowymi w Polsce i Europie:</p>
+                    <div class="partners-grid">
+                        <div class="partner-card" data-partner="backaldrin">
+                            <div class="partner-logo-wrapper">
+                                <img src="https://leks.com.pl/wp-content/uploads/RZ_backaldrin_Logo_cmyk_Logoform-360x360.jpg" alt="backaldrin" class="partner-logo-img">
+                            </div>
+                            <span class="partner-name">backaldrin</span>
+                        </div>
+                        <div class="partner-card" data-partner="puratos">
+                            <div class="partner-logo-wrapper">
+                                <img src="https://leks.com.pl/wp-content/uploads/PURATOS_PL_S_RGB-420x203.png" alt="Puratos" class="partner-logo-img">
+                            </div>
+                            <span class="partner-name">Puratos</span>
+                        </div>
+                        <div class="partner-card" data-partner="uldo">
+                            <div class="partner-logo-wrapper">
+                                <img src="https://leks.com.pl/wp-content/uploads/ULDO-Polska_logo-361x360.jpg" alt="ULDO" class="partner-logo-img">
+                            </div>
+                            <span class="partner-name">ULDO</span>
+                        </div>
+                        <div class="partner-card" data-partner="goodmills">
+                            <div class="partner-logo-wrapper">
+                                <img src="https://leks.com.pl/wp-content/uploads/GMI-Logo-40-KB-420x157.jpg" alt="GoodMills" class="partner-logo-img">
+                            </div>
+                            <span class="partner-name">GoodMills</span>
+                        </div>
+                        <div class="partner-card" data-partner="spp">
+                            <div class="partner-logo-wrapper">
+                                <img src="https://leks.com.pl/wp-content/uploads/SPP_logotyp_RGB-322x360.jpg" alt="Stowarzyszenie Piekarzy RP" class="partner-logo-img">
+                            </div>
+                            <span class="partner-name">Stowarzyszenie Piekarzy RP</span>
                         </div>
                     </div>
                 </div>
@@ -363,6 +606,8 @@
 
         <!-- Sekcja Kontakt -->
         <section id="contact" class="section-padding bg-alt">
+            <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
+            <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-contact" alt="">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">Napisz Do Nas</span>
@@ -373,10 +618,10 @@
                 <div class="contact-grid">
                     <div class="contact-info-panel">
                         <h3>Leks Sp. z o.o.</h3>
-                        <p class="contact-address">đź“Ť ul. Emilii Plater 4, 69-200 Sulęcin</p>
-                        <p class="contact-phone">đź“ž Tel: +48 95 755 24 55</p>
-                        <p class="contact-email">âś‰ Email: biuro@leks.com.pl</p>
-                        <p class="contact-hours">đź•’ Biuro obsługi klienta: Pn - Pt, 8:00 - 16:00</p>
+                        <p class="contact-address"><span class="icon-pin"></span> ul. Emilii Plater 4, 69-200 Sulęcin</p>
+                        <p class="contact-phone"><span class="icon-phone"></span> Tel: +48 95 755 24 55</p>
+                        <p class="contact-email"><span class="icon-email"></span> Email: biuro@leks.com.pl</p>
+                        <p class="contact-hours"><span class="icon-clock"></span> Biuro obsługi klienta: Pn - Pt, 8:00 - 16:00</p>
                     </div>
                     
                     <div class="contact-form-panel">
@@ -394,7 +639,7 @@
                             <div class="form-group">
                                 <label for="form-subject">Temat</label>
                                 <select id="form-subject">
-                                    <option value="wholesale">Współpraca Hurtowa (B2B)</option>
+                                    <option value="wholesale">Współpraca Hurtowa</option>
                                     <option value="career">Kariera i rekrutacja</option>
                                     <option value="general">Zapytanie Ogólne</option>
                                 </select>
@@ -412,19 +657,190 @@
     </main>
 
     <!-- Footer -->
-    <footer id="main-footer">
-        <div class="container footer-content text-center">
-            <p>&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
-            <p class="designer-tag">Projekt i wykonanie: <span class="architect-brand">Senior Developer & Architekt AI</span></p>
+    <footer id="main-footer" class="footer-minimalist">
+        <div class="container footer-container-minimal">
+            <div class="footer-brand">
+                <img src="img/leks_logo_smacznego.png" alt="Leks Logo" class="footer-logo-white">
+            </div>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#hero">Start</a></li>
+                    <li><a href="#about">O nas</a></li>
+                    <li><a href="#products">Produkty</a></li>
+                    <li><a href="#career">Kariera</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#" id="trigger-privacy-modal" class="privacy-link">RODO (Polityka prywatności)</a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-social-copyright">
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/LeksPiekarnia" class="social-icon" id="social-fb" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/leks-produkcja-piekarnicza-i-cukiernicza/" class="social-icon" id="social-ln" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/leks2ab/" class="social-icon" id="social-ig" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 4.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom-bar">
+                <p class="footer-copyright">&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Biblioteki GSAP & ScrollTrigger z oficjalnego CDN Cloudflare (Super Fast) -->
+    <!-- Modal RODO / Polityka Prywatności -->
+    <div id="privacy-modal" class="modal-backdrop">
+        <div class="modal-card privacy-modal-card">
+            <button id="close-privacy-modal" class="modal-close-btn" aria-label="Zamknij">&times;</button>
+            <div class="privacy-modal-body">
+                <span class="modal-badge">Dokumentacja RODO</span>
+                <h2 class="modal-title">Polityka Prywatności</h2>
+                <div class="modal-divider"></div>
+                
+                <div class="privacy-text-content">
+                    <p>W trosce o dane osobowe, które zostały nam przekazane informujemy, że jesteśmy odpowiednio przygotowani do ich ochrony, uwzględniając przepisy Rozporządzenia Parlamentu Europejskiego i Rady UE 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (zwanym dalej RODO).</p>
+                    <p>Chcąc zapewnić transparentność realizowanych przez nas procesów przetwarzania przedstawiamy obowiązujące w Leks Sp. z o. o. zasady ochrony danych osobowych, oraz informacje o prawach wynikających z przepisów, dla osób, które powierzyły nam swoje dane osobowe.</p>
+                    
+                    <h3>Klauzula informacyjna</h3>
+                    
+                    <h4>§ 1 Informacje ogólne</h4>
+                    <ol>
+                        <li>Niniejsza polityka dotyczy Serwisu www, funkcjonującego pod adresem url: <a href="https://leks.com.pl/" target="_blank">https://leks.com.pl</a></li>
+                        <li>Administratorem danych osobowych przetwarzanych w ramach Serwisu jest: Leks Sp. z o.o. Emilii Plater 4, 69-200 Sulęcin zarejestrowany w Sądzie Rejonowym w Zielonej Górze, VIII Wydział KRS pod nr KRS: 0000075552, REGON: 210217406, NIP: 5961000297 (zwany dalej Administrator/Operator)</li>
+                        <li><strong>Kontakt w sprawach związanych z przetwarzaniem danych osobowych:</strong><br>W razie pytań dotyczących zasad prywatności i przetwarzania danych osobowych należy kontaktować się pod adresem email: <a href="mailto:rodo@leks.com.pl">rodo@leks.com.pl</a></li>
+                    </ol>
+                    
+                    <h4>§ 2 Cele przetwarzania danych osobowych w ramach funkcjonowania serwisu</h4>
+                    <ol>
+                        <li>Serwis wykorzystuje dane osobowe w następujących celach:
+                            <ul>
+                                <li>Prowadzenie systemu komentarzy</li>
+                                <li>Prowadzenie systemu ogłoszeń drobnych</li>
+                                <li>Wyświetlanie ogłoszeń użytkowników</li>
+                                <li>Prezentacja oferty lub informacji</li>
+                            </ul>
+                        </li>
+                        <li>Serwis realizuje funkcje pozyskiwania informacji o użytkownikach i ich zachowaniu w następujący sposób:
+                            <ul>
+                                <li>Poprzez dobrowolnie wprowadzone dane w formularzach</li>
+                                <li>Poprzez zapisywanie w urządzeniach końcowych plików cookies (tzw. „ciasteczka”).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Wybrane metody ochrony danych stosowane przez Operatora:</strong>
+                            <ul>
+                                <li>Miejsca logowania i wprowadzania danych osobowych są chronione w warstwie transmisji (certyfikat SSL). Dzięki temu dane osobowe i dane logowania, wprowadzone na stronie, zostają zaszyfrowane w komputerze użytkownika i mogą być odczytane jedynie na docelowym serwerze.</li>
+                                <li>Hasła użytkowników są przechowywane w postaci hashowanej. Funkcja hashująca działa jednokierunkowo - nie jest możliwe odwrócenie jej działania, co stanowi obecnie współczesny standard w zakresie przechowywania haseł użytkowników.</li>
+                                <li>Operator okresowo zmienia swoje hasła administracyjne.</li>
+                                <li>W celu ochrony danych Operator regularnie wykonuje kopie bezpieczeństwa.</li>
+                                <li>Istotnym elementem ochrony danych jest regularna aktualizacja wszelkiego oprogramowania, wykorzystywanego przez Operatora do przetwarzania danych osobowych, co w szczególności oznacza regularne aktualizacje komponentów programistycznych.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    
+                    <h4>§ 3 Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych</h4>
+                    <ol>
+                        <li>Przysługuje Ci (z zastrzeżeniem przepisów RODO) prawo żądania od Administratora:
+                            <ul>
+                                <li>Dostępu do danych osobowych, które Ciebie dotyczą,</li>
+                                <li>Sprostowania danych osobowych, które Ciebie dotyczą,</li>
+                                <li>Usunięcia danych osobowych, które Ciebie dotyczą,</li>
+                                <li>Ograniczenia przetwarzania danych osobowych, które Ciebie dotyczą,</li>
+                                <li>Przenoszenia danych osobowych, które Ciebie dotyczą.</li>
+                                <li>Realizacji prawa do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania (jeżeli przetwarzanie odbywa się na podstawie zgody), którego dokonano na podstawie zgody przed jej cofnięciem.</li>
+                                <li>Prawo do złożenia sprzeciwu wobec przetwarzania danych osobowych, w tym profilowania, przy czym prawo sprzeciwu nie będzie mogło być wykonane w przypadku istnienia ważnych prawnie uzasadnionych podstaw do przetwarzania, nadrzędnych wobec Ciebie interesów, praw i wolności, w szczególności ustalenia, dochodzenia lub obrony roszczeń.</li>
+                            </ul>
+                        </li>
+                        <li>Na działania Administratora przysługuje skarga do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.</li>
+                    </ol>
+                    
+                    <h4>§ 4 Przekazywanie danych osobowych</h4>
+                    <ol>
+                        <li>Dane osobowe mogą być przekazywane do podmiotów lub organów upoważnionych na podstawie przepisów prawa, podmiotów lub organów, którym przekazanie danych jest konieczne dla wykonania określonej czynności.</li>
+                        <li>Dane osobowe mogą być ujawnione pracownikom lub współpracownikom Spółki, jak też podmiotom udzielającym wsparcia Spółce na zasadzie zleconych usług i zgodnie z zawartymi umowami powierzenia (np. firma hostingowa).</li>
+                        <li>Dane, poza przypadkami kiedy zachodzi taka wyraźna potrzeba o czym będziecie Państwo informowani, nie są przekazywane do Państw nienależących do Europejskiego Obszaru Gospodarczego („EOG”).</li>
+                    </ol>
+                    
+                    <h4>§ 5 Okres przetwarzania danych osobowych</h4>
+                    <ol>
+                        <li>Dane przetwarzane będą przez okres niezbędny do zrealizowania celu przetwarzania. Po upływie ww. okresu dane przechowuje się dodatkowo przez okres niezbędny do zabezpieczenia lub dochodzenia ewentualnych roszczeń wobec Spółki, czy też wypełnienia obowiązku prawnego ciążącego na Administratorze.</li>
+                    </ol>
+                    
+                    <h4>§ 6 Obowiązek podania danych osobowych</h4>
+                    <ol>
+                        <li>Podanie danych osobowych jest dobrowolne, lecz niezbędne do obsługi Serwisu.</li>
+                    </ol>
+                    
+                    <h4>§ 7 Przetwarzanie danych osobowych w sposób automatyczny (w tym profilowane)</h4>
+                    <ol>
+                        <li>W stosunku do Ciebie mogą być podejmowane czynności polegające na zautomatyzowanym podejmowaniu decyzji, w tym profilowaniu w celu świadczenia usług.</li>
+                    </ol>
+                    
+                    <h3>Informacje dodatkowe</h3>
+                    
+                    <h4>§ 8 Informacja o plikach cookies</h4>
+                    <ol>
+                        <li>Serwis korzysta z plików cookies.</li>
+                        <li>Pliki cookies (tzw. „ciasteczka”) stanowią dane informatyczne, w szczególności pliki tekstowe, które przechowywane są w urządzeniu końcowym Użytkownika Serwisu i przeznaczone są do korzystania ze stron internetowych Serwisu. Cookies zapisują nazwę strony, czas przechowywania oraz unikalny numer.</li>
+                        <li>Podmiotem zamieszczającym cookies na urządzeniu Użytkownika oraz uzyskującym do nich dostęp jest operator Serwisu.</li>
+                        <li>Cookies wykorzystywane są do utrzymania sesji użytkownika (po zalogowaniu) oraz realizacji celów marketingowych.</li>
+                        <li>Stosowane są pliki cookies „sesyjne” (tymczasowe, do czasu wylogowania lub zamknięcia przeglądarki) oraz „stałe” (przechowywane przez określony czas).</li>
+                        <li>Użytkownik może w każdej chwili zmienić ustawienia dotyczące cookies w swojej przeglądarce, w tym je zablokować lub usunąć.</li>
+                        <li>Ograniczenia stosowania cookies mogą wpłynąć na poprawność niektórych funkcjonalności Serwisu.</li>
+                        <li>Pliki cookies mogą być również wykorzystywane przez partnerów współpracujących z operatorem Serwisu (w szczególności Google, Facebook, Twitter).</li>
+                    </ol>
+                    
+                    <h4>§ 9 Zarządzanie plikami cookies – jak w praktyce wyrażać i cofać zgodę?</h4>
+                    <ol>
+                        <li>W celu zarządzania ustawieniami cookies, wybierz odpowiednią przeglądarkę z listy i postępuj zgodnie z instrukcjami jej producenta (np. Chrome, Firefox, Safari, Edge, Opera, Android, iOS).</li>
+                    </ol>
+                    
+                    <h4>§ 10 Informacje w formularzach</h4>
+                    <ol>
+                        <li>Serwis zbiera informacje podane dobrowolnie przez użytkownika. Może także zapisać parametry połączenia (oznaczenie czasu, adres IP). Dane są przetwarzane w celach wynikających z funkcji formularza.</li>
+                    </ol>
+                    
+                    <h4>§ 11 Logi Administratora</h4>
+                    <ol>
+                        <li>Zachowanie użytkowników w serwisie może podlegać logowaniu w celach administracyjnych.</li>
+                    </ol>
+                    
+                    <h4>§ 12 Istotne techniki marketingowe</h4>
+                    <ol>
+                        <li>Operator stosuje Google Analytics (analiza statystyczna ruchu, dane zanonimizowane) oraz Facebook Pixel (automatyczne dopasowanie reklam, bez przekazywania dodatkowych danych osobowych).</li>
+                    </ol>
+                    
+                    <p class="privacy-modal-update">Ostatnia aktualizacja treści: <strong>14 lutego 2020 r.</strong></p>
+                </div>
+                
+                <div class="modal-actions" style="margin-top: 30px; justify-content: flex-end;">
+                    <button id="close-privacy-action-btn" class="btn btn-primary">Rozumiem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Biblioteki GSAP & ScrollTrigger z oficjalnego CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
-    <!-- Główny kod JavaScript -->
-    <script src="js/products-data.js"></script>
-    <script src="js/app.js"></script>
+    <!-- Główne skrypty -->
+    <script src="js/products-data.js?v=18"></script>
+    <script src="js/app.js?v=21"></script>
 </body>
 </html>

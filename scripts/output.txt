@@ -1,0 +1,152 @@
+FOUND PARTNER SECTION AT LINE 1112
+
+Line 1062: <a href="https://leks.com.pl/klauzula-informacyjna-dla-kandydatow-do-pracy/">
+Line 1063: <span class="elementor-icon-list-icon">
+Line 1064: <i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+Line 1065: <span class="elementor-icon-list-text">Klauzula informacyjna dla kandydatów do pracy</span>
+Line 1066: </a>
+Line 1067: </li>
+Line 1068: <li class="elementor-icon-list-item">
+Line 1069: <a href="https://leks.com.pl/daneosobowe/">
+Line 1070: <span class="elementor-icon-list-icon">
+Line 1071: <i aria-hidden="true" class="fas fa-angle-right"></i>						</span>
+Line 1072: <span class="elementor-icon-list-text">Zarządzanie danymi osobowymi</span>
+Line 1073: </a>
+Line 1074: </li>
+Line 1075: </ul>
+Line 1076: </div>
+Line 1077: </div>
+Line 1078: </div>
+Line 1079: </div>
+Line 1080: <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-095ddd6" data-id="095ddd6" data-element_type="column">
+Line 1081: <div class="elementor-widget-wrap elementor-element-populated">
+Line 1082: <div class="elementor-element elementor-element-6bb76e0 elementor-widget elementor-widget-heading" data-id="6bb76e0" data-element_type="widget" data-widget_type="heading.default">
+Line 1083: <div class="elementor-widget-container">
+Line 1084: <h3 class="elementor-heading-title elementor-size-default">Sygnaliści</h3>				</div>
+Line 1085: </div>
+Line 1086: <div class="elementor-element elementor-element-33e230a elementor-tablet-align-center elementor-mobile-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="33e230a" data-element_type="widget" data-widget_type="icon-list.default">
+Line 1087: <div class="elementor-widget-container">
+Line 1088: <ul class="elementor-icon-list-items">
+Line 1089: <li class="elementor-icon-list-item">
+Line 1090: <span class="elementor-icon-list-text">Zgłoś nadużycie na adres:</span>
+Line 1091: </li>
+Line 1092: <li class="elementor-icon-list-item">
+Line 1093: <a href="mailto:zgloszenia@leks.com.pl">
+Line 1094: <span class="elementor-icon-list-icon">
+Line 1095: <i aria-hidden="true" class="far fa-envelope"></i>						</span>
+Line 1096: <span class="elementor-icon-list-text">zgloszenia@leks.com.pl</span>
+Line 1097: </a>
+Line 1098: </li>
+Line 1099: </ul>
+Line 1100: </div>
+Line 1101: </div>
+Line 1102: </div>
+Line 1103: </div>
+Line 1104: </div>
+Line 1105: </section>
+Line 1106: <section class="elementor-section elementor-inner-section elementor-element elementor-element-1460fd7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1460fd7" data-element_type="section">
+Line 1107: <div class="elementor-container elementor-column-gap-no">
+Line 1108: <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-35832d7" data-id="35832d7" data-element_type="column">
+Line 1109: <div class="elementor-widget-wrap elementor-element-populated">
+Line 1110: <div class="elementor-element elementor-element-0a966e1 elementor-widget elementor-widget-heading" data-id="0a966e1" data-element_type="widget" data-widget_type="heading.default">
+Line 1111: <div class="elementor-widget-container">
+Line 1112: <h3 class="elementor-heading-title elementor-size-default">Nasi partnerzy</h3>				</div>
+Line 1113: </div>
+Line 1114: <div class="elementor-element elementor-element-87414c3 elementor-widget elementor-widget-image-carousel" data-id="87414c3" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;5&quot;,&quot;slides_to_show_tablet&quot;:&quot;4&quot;,&quot;slides_to_show_mobile&quot;:&quot;2&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;slides_to_scroll_tablet&quot;:&quot;1&quot;,&quot;slides_to_scroll_mobile&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;pause_on_hover&quot;:&quot;no&quot;,&quot;pause_on_interaction&quot;:&quot;no&quot;,&quot;autoplay_speed&quot;:3000,&quot;speed&quot;:300,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:80,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
+Line 1115: <div class="elementor-widget-container">
+Line 1116: <div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel" aria-label="Karuzela obrazków" dir="ltr">
+Line 1117: <div class="elementor-image-carousel swiper-wrapper" aria-live="off">
+Line 1118: <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 z 5"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="https://leks.com.pl/wp-content/uploads/RZ_backaldrin_Logo_cmyk_Logoform-360x360.jpg" alt="RZ_backaldrin_Logo_cmyk_Logoform" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 z 5"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="https://leks.com.pl/wp-content/uploads/PURATOS_PL_S_RGB-420x203.png" alt="PURATOS_PL_S_RGB" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 z 5"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="https://leks.com.pl/wp-content/uploads/ULDO-Polska_logo-361x360.jpg" alt="ULDO Polska_logo" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 z 5"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="https://leks.com.pl/wp-content/uploads/GMI-Logo-40-KB-420x157.jpg" alt="20120427_GoodMills Polska_Logo_CMYK" /></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 z 5"><figure class="swiper-slide-inner"><img class="swiper-slide-image" src="https://leks.com.pl/wp-content/uploads/SPP_logotyp_RGB-322x360.jpg" alt="spp logotyp rgb" /></figure></div>			</div>
+Line 1119: </div>
+Line 1120: </div>
+Line 1121: </div>
+Line 1122: </div>
+Line 1123: </div>
+Line 1124: <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7172f5a" data-id="7172f5a" data-element_type="column">
+Line 1125: <div class="elementor-widget-wrap elementor-element-populated">
+Line 1126: <div class="elementor-element elementor-element-163284a elementor-widget elementor-widget-heading" data-id="163284a" data-element_type="widget" data-widget_type="heading.default">
+Line 1127: <div class="elementor-widget-container">
+Line 1128: <h3 class="elementor-heading-title elementor-size-default">Społeczność Leks</h3>				</div>
+Line 1129: </div>
+Line 1130: <div class="elementor-element elementor-element-78fe0b3 e-grid-align-right e-grid-align-tablet-left elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="78fe0b3" data-element_type="widget" data-widget_type="social-icons.default">
+Line 1131: <div class="elementor-widget-container">
+Line 1132: <div class="elementor-social-icons-wrapper elementor-grid" role="list">
+Line 1133: <span class="elementor-grid-item" role="listitem">
+Line 1134: <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-grow elementor-repeater-item-5df06fe" href="https://www.facebook.com/LeksPiekarnia/" target="_blank" rel="nofollow">
+Line 1135: <span class="elementor-screen-only">Facebook</span>
+Line 1136: <i class="fab fa-facebook"></i>					</a>
+Line 1137: </span>
+Line 1138: <span class="elementor-grid-item" role="listitem">
+Line 1139: <a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-animation-grow elementor-repeater-item-fb6ee7a" href="https://leks.olx.pl/" target="_blank" rel="nofollow">
+Line 1140: <span class="elementor-screen-only"></span>
+Line 1141: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><title>olxlogo</title><g><path d="M300,2C135.42,2,2,135.42,2,300S135.42,598,300,598,598,464.58,598,300,464.58,2,300,2ZM57.35,386.34C7.34,332.59,18.15,209.92,113,190c3.17-.67,6.36-.21,9.53-1a9.69,9.69,0,0,1,6.68.4c.12.06,54.42-1,82.49,61.51C260.07,358.57,144.51,480,57.35,386.34Zm201.83-36c-6.21.05-14-3.8-18.17-8.24-10.47-11.07-3.79-20.23-8.35-162.4-.08-2.61-1.42-3.3-.4-5.63s-.83-6.11,4.87-12.1c4.93-5.18,16.31-4.83,30.25-4.36,3.13.1,6.41.09,9.44,1.2,12,4.38,10.35,18.63,10.1,36.42-.2,14.43.93,28.84.7,43.28s-.1,29,0,43.45c.11,11.89,10.12,15,14.84,14.79,3.3-.13,27.89.2,39.17.62a59.43,59.43,0,0,1,9.07.88c5.75,1.15,8.22,7,8.14,11.2s.37,8.55-.16,12.73c-.59,4.75,0,9.53-.64,14.2-1.6,11.91-5.79,11.48-8.26,13.28C319.2,349.64,376.32,349.24,259.18,350.32Zm245.08,81.86c-10.13,2.69-21.84-2.57-27.05-12.47-3.15-6-38.62-71-40.17-73.6-56.22,81.82-47.33,73-56.56,78-6.71,0-9.73,1.26-16.36-9.1-13.83-21.6-17-26.6-17-33.34,0-20.55,5.71-19.42,26-44.16,2.36-2.86,36.87-41.26,37.85-43.17-43-88-40.82-81.39-41.13-86.27-.07-1.21-.78-2.51-.46-3.74.84-3.2,1.13-12.21,12.25-16.91,6.2-2.63,17.67-2,25.64,3.7a34.76,34.76,0,0,1,9,9.56c.08.12,26.82,40.1,31.8,48.12a1.41,1.41,0,0,0,1.29.77c.54-1,50.44-58.14,50.55-58.26,6.66-6.88,18.91-12,27.82-8.44,9.57,3.8,9.47,15.14,3.87,23.73-4.11,6.31-56.13,82.92-56.22,83C547.13,397.31,515.5,350.21,549,400.15c3.79,5.66,3,12.4.22,16.08C544.81,422.06,542.73,422,504.26,432.18Z" style="fill: #fff"></path><path d="M87,262.7c-18.18,49.66,2.1,124.51,43,118.85,12.57-1.74,23-14.07,28.84-25.34,15.83-30.4,15.39-76.52-.62-105.41C136.36,211.51,102.1,221.32,87,262.7Z" style="fill: #fff"></path></g></svg>					</a>
+Line 1142: </span>
+Line 1143: </div>
+Line 1144: </div>
+Line 1145: </div>
+Line 1146: </div>
+Line 1147: </div>
+Line 1148: </div>
+Line 1149: </section>
+Line 1150: </div>
+Line 1151: </div>
+Line 1152: </div>
+Line 1153: </section>
+Line 1154: <section class="elementor-section elementor-top-section elementor-element elementor-element-c04c33a sdbr elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c04c33a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_top&quot;:&quot;mountains&quot;}">
+Line 1155: <div class="elementor-background-overlay"></div>
+Line 1156: <div class="elementor-shape elementor-shape-top" aria-hidden="true" data-negative="false">
+Line 1157: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+Line 1158: <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"/>
+Line 1159: <path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"/>
+Line 1160: <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"/>
+Line 1161: </svg>		</div>
+Line 1162: <div class="elementor-container elementor-column-gap-no">
+Line 1163: <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-85c7e76" data-id="85c7e76" data-element_type="column">
+Line 1164: <div class="elementor-widget-wrap elementor-element-populated">
+Line 1165: <div class="elementor-element elementor-element-1cdb493 elementor-widget elementor-widget-text-editor" data-id="1cdb493" data-element_type="widget" data-widget_type="text-editor.default">
+Line 1166: <div class="elementor-widget-container">
+Line 1167: © 2026 <a href="http://www.leks.com.pl/">Leks Sp. z o.o.</a> &#x203a; enheartened by <a href="https://pictorial.pl" target="_blank" rel="noopener">Pictorial</a>								</div>
+Line 1168: </div>
+Line 1169: </div>
+Line 1170: </div>
+Line 1171: </div>
+Line 1172: </section>
+Line 1173: </div>
+Line 1174: <script type="speculationrules">
+Line 1175: {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/hello-theme-child-master\/*","\/wp-content\/themes\/hello-elementor\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+Line 1176: </script>
+Line 1177: <script>
+Line 1178: const lazyloadRunObserver = () => {
+Line 1179: const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+Line 1180: const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+Line 1181: entries.forEach( ( entry ) => {
+Line 1182: if ( entry.isIntersecting ) {
+Line 1183: let lazyloadBackground = entry.target;
+Line 1184: if( lazyloadBackground ) {
+Line 1185: lazyloadBackground.classList.add( 'e-lazyloaded' );
+Line 1186: }
+Line 1187: lazyloadBackgroundObserver.unobserve( entry.target );
+Line 1188: }
+Line 1189: });
+Line 1190: }, { rootMargin: '200px 0px 200px 0px' } );
+Line 1191: lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+Line 1192: lazyloadBackgroundObserver.observe( lazyloadBackground );
+Line 1193: } );
+Line 1194: };
+Line 1195: const events = [
+Line 1196: 'DOMContentLoaded',
+Line 1197: 'elementor/lazyload/observe',
+Line 1198: ];
+Line 1199: events.forEach( ( event ) => {
+Line 1200: document.addEventListener( event, lazyloadRunObserver );
+Line 1201: } );
+Line 1202: </script>
+Line 1203: <link rel='stylesheet' id='e-animation-fadeInDown-css' href='//leks.com.pl/wp-content/cache/wpfc-minified/e2f0eaf8/4nx6.css' media='all' />
+Line 1204: <link rel='stylesheet' id='elementor-post-493-css' href='https://leks.com.pl/wp-content/uploads/elementor/css/post-493.css' media='all' />
+Line 1205: <link rel='stylesheet' id='e-animation-zoomIn-css' href='//leks.com.pl/wp-content/cache/wpfc-minified/8ad961uy/4o9w.css' media='all' />
+Line 1206: <link rel='stylesheet' id='elementor-post-813-css' href='https://leks.com.pl/wp-content/uploads/elementor/css/post-813.css' media='all' />
+Line 1207: <link rel='stylesheet' id='widget-icon-list-css' href='//leks.com.pl/wp-content/cache/wpfc-minified/8ihjo212/c4l1d.css' media='all' />
+Line 1208: <link rel='stylesheet' id='widget-social-icons-css' href='//leks.com.pl/wp-content/cache/wpfc-minified/g4yuonxo/c4l1d.css' media='all' />
+Line 1209: <link rel='stylesheet' id='e-apple-webkit-css' href='//leks.com.pl/wp-content/cache/wpfc-minified/77wsr0zd/c4l1d.css' media='all' />
+Line 1210: <style id='core-block-supports-inline-css'>
+Line 1211: /**

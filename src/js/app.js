@@ -5,18 +5,58 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     // Rejestracja wtyczki ScrollTrigger w GSAP
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    try {
         gsap.registerPlugin(ScrollTrigger);
-    }
+    } catch(e) { console.error("GSAP register error:", e); }
     
-    initNavigation();
-    initHeroSlider();       // Inicjalizacja karuzeli slajdów GSAP
-    initTimeline();         // Interaktywna oś czasu w O Nas
-    initScrollAnimations(); // Animacje ScrollTrigger
-    initB2BModal();         // Modal specyfikacji B2B z delegacją zdarzeń
-    initCatalogLogic();     // Logika 5 kategorii i dynamicznego katalogu B2B
-    initWheatParallax();    // Efekt Parallax dla kłosów pszenicy
-    initAccordions();       // Harmonijki rekrutacyjne w sekcji Kariera
+
+    try {
+        initNavigation();
+    } catch(e) { console.error("initNavigation error:", e); }
+    
+    try {
+        initHeroAnimations();
+    } catch(e) { console.error("initHeroAnimations error:", e); }
+    
+    try {
+        initTimeline();
+    } catch(e) { console.error("initTimeline error:", e); }
+    
+    try {
+        renderKategorie();
+    } catch(e) { console.error("renderKategorie error:", e); }
+    
+    try {
+        renderCategoryProducts();
+    } catch(e) { console.error("renderCategoryProducts error:", e); }
+    
+    try {
+        initParallax();
+    } catch(e) { console.error("initParallax error:", e); }
+    
+    try {
+        initAccordions();
+    } catch(e) { console.error("initAccordions error:", e); }
+    
+    try {
+        initB2BModal();
+    } catch(e) { console.error("initB2BModal error:", e); }
+    
+    try {
+        initScrollAnimations();
+    } catch(e) { console.error("initScrollAnimations error:", e); }
+    
+    try {
+        initSwipers();
+    } catch(e) { console.error("initSwipers error:", e); }
+    
+    try {
+        initHotspots();
+    } catch(e) { console.error("initHotspots error:", e); }
+    
+    try {
+        initPrivacyModal();
+    } catch(e) { console.error("initPrivacyModal error:", e); }
 });
 
 /* ==============================================================================
@@ -55,584 +95,385 @@ function initNavigation() {
         });
     });
     
-    // Obsługa menu mobilnego
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", () => {
-            menuToggle.classList.toggle("active");
-            navMenu.classList.toggle("active");
-            
-            // Animacja linków przy wysuwaniu menu
-            if (navMenu.classList.contains("active")) {
-                gsap.fromTo(".nav-menu ul li", 
-                    { opacity: 0, x: 20 },
-                    { opacity: 1, x: 0, stagger: 0.08, duration: 0.4, ease: "power2.out" }
-                );
-            }
-        });
-    }
+    // Przełączanie menu mobilnego (Hamburger)
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+        
+        // Animacja pasków hamburgera
+        const bars = menuToggle.querySelectorAll(".bar");
+        if (menuToggle.classList.contains("active")) {
+            gsap.to(bars[0], { y: 8, rotate: 45, duration: 0.2 });
+            gsap.to(bars[1], { opacity: 0, duration: 0.2 });
+            gsap.to(bars[2], { y: -8, rotate: -45, duration: 0.2 });
+        } else {
+            gsap.to(bars[0], { y: 0, rotate: 0, duration: 0.2 });
+            gsap.to(bars[1], { opacity: 1, duration: 0.2 });
+            gsap.to(bars[2], { y: 0, rotate: 0, duration: 0.2 });
+        }
+    });
     
-    // Zamknięcie menu po kliknięciu w link
+    // Zamknięcie menu po kliknięciu w link mobilny
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
-            if (menuToggle && navMenu) {
-                menuToggle.classList.remove("active");
-                navMenu.classList.remove("active");
-            }
+            navMenu.classList.remove("active");
+            menuToggle.classList.remove("active");
+            const bars = menuToggle.querySelectorAll(".bar");
+            gsap.to(bars[0], { y: 0, rotate: 0, duration: 0.2 });
+            gsap.to(bars[1], { opacity: 1, duration: 0.2 });
+            gsap.to(bars[2], { y: 0, rotate: 0, duration: 0.2 });
         });
     });
 }
 
 /* ==============================================================================
-   2. HERO BANNER SLIDER (GSAP SMOOTH FADES & KEN BURNS ZOOM)
-   ============================================================================== */
-function initHeroSlider() {
-    const slider = document.getElementById("hero-slider");
-    if (!slider) return;
+   2. ANIMACJA WEJŚCIA HERO & SCROLL INDICATOR
+   ============================================================================= */
+function initHeroAnimations() {
+    // Delikatne, eleganckie wejście sekcji Hero przy załadowaniu strony
+    const tl = gsap.timeline();
     
-    const slides = slider.querySelectorAll(".hero-slide");
-    if (slides.length === 0) return;
-    
-    let currentIdx = 0;
-    const intervalTime = 6000; // 6 sekund na slajd
-    
-    // Konfiguracja kropek paginacji
-    const dotsContainer = document.createElement("div");
-    dotsContainer.className = "hero-dots";
-    slides.forEach((_, idx) => {
-        const dot = document.createElement("button");
-        dot.className = `hero-dot ${idx === 0 ? 'active' : ''}`;
-        dot.setAttribute("aria-label", `Przejdź do slajdu ${idx + 1}`);
-        dot.addEventListener("click", () => goToSlide(idx));
-        dotsContainer.appendChild(dot);
+    tl.from("#main-header", {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
     });
-    slider.appendChild(dotsContainer);
     
-    const dots = dotsContainer.querySelectorAll(".hero-dot");
+    tl.from(".hero-subtitle", {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        ease: "power2.out"
+    }, "-=0.4");
     
-    // Strzałki nawigacyjne
-    const prevBtn = document.createElement("button");
-    prevBtn.className = "hero-arrow hero-arrow-left";
-    prevBtn.innerHTML = "&lsaquo;";
-    prevBtn.setAttribute("aria-label", "Poprzedni slajd");
-    prevBtn.addEventListener("click", prevSlide);
+    tl.from(".hero-title", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power3.out"
+    }, "-=0.4");
     
-    const nextBtn = document.createElement("button");
-    nextBtn.className = "hero-arrow hero-arrow-right";
-    nextBtn.innerHTML = "&rsaquo;";
-    nextBtn.setAttribute("aria-label", "Następny slajd");
-    nextBtn.addEventListener("click", nextSlide);
+    tl.from(".hero-lead", {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        ease: "power2.out"
+    }, "-=0.5");
     
-    slider.appendChild(prevBtn);
-    slider.appendChild(nextBtn);
+    tl.from(".hero-actions .btn", {
+        opacity: 0,
+        y: 20,
+        stagger: 0.15,
+        duration: 0.6,
+        ease: "power2.out"
+    }, "-=0.4");
     
-    // Funkcja przejścia do konkretnego slajdu
-    function goToSlide(index) {
-        if (index === currentIdx) return;
-        
-        const currentSlide = slides[currentIdx];
-        const nextSlide = slides[index];
-        
-        // Zmień kropki
-        dots[currentIdx].classList.remove("active");
-        dots[index].classList.add("active");
-        
-        // Animacja chowania bieżącego slajdu
-        gsap.to(currentSlide, { opacity: 0, duration: 1, onComplete: () => {
-            currentSlide.classList.remove("active");
-        }});
-        
-        // Animacja pokazywania nowego slajdu
-        nextSlide.classList.add("active");
-        gsap.fromTo(nextSlide, 
-            { opacity: 0 }, 
-            { opacity: 1, duration: 1 }
-        );
-        
-        // Animacja zawartości nowego slajdu
-        gsap.fromTo(nextSlide.querySelector(".hero-slide-content"), 
-            { y: 40, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.8, delay: 0.2, ease: "power2.out" }
-        );
-        
-        currentIdx = index;
-    }
+    tl.from("#scroll-arrow", {
+        opacity: 0,
+        duration: 0.5
+    }, "-=0.2");
     
-    function nextSlide() {
-        let next = currentIdx + 1;
-        if (next >= slides.length) next = 0;
-        goToSlide(next);
-    }
-    
-    function prevSlide() {
-        let prev = currentIdx - 1;
-        if (prev < 0) prev = slides.length - 1;
-        goToSlide(prev);
-    }
-    
-    // Automatyczne przewijanie karuzeli
-    let autoSlideInterval = setInterval(nextSlide, intervalTime);
-    
-    // Zresetuj interwał przy kliknięciu strzałek/kropek
-    slider.addEventListener("click", () => {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(nextSlide, intervalTime);
+    // Efekt przybliżania tła Hero (parallax przy scrollowaniu)
+    gsap.to("#hero-zoom-bg", {
+        scale: 1.25,
+        xPercent: -2,
+        yPercent: -2,
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#hero",
+            start: "top top",
+            end: "bottom top",
+            scrub: true
+        }
     });
 }
 
 /* ==============================================================================
-   3. O NAS (INTERAKTYWNA OŚ CZASU)
+   3. INTERAKTYWNA OŚ CZASU (O NAS) - GSAP CARD SLIDE
    ============================================================================== */
+const timelineData = {
+    "1989": {
+        title: "Założenie Firmy w Sulęcinie",
+        desc: "Firma Leks rozpoczyna działalność jako mała piekarnia rodzinna z pasją do tradycyjnych chlebów na naturalnym zakwasie w Sulęcinie."
+    },
+    "1998": {
+        title: "Zdolność Produkcyjna: 50 000 / doba",
+        desc: "Wybudowanie pierwszego w pełni zautomatyzowanego zakładu w Sulęcinie. Zdolność produkcyjna wzrasta do 50 tysięcy bochenków na dobę, umożliwiając strategiczne wejście do pierwszych regionalnych sieci handlowych."
+    },
+    "2005": {
+        title: "Wdrożenie Standardów IFS & BRC",
+        desc: "Budowa nowoczesnego zakładu w Gorzowie Wielkopolskim. Wdrożenie rygorystycznych międzynarodowych standardów IFS Food oraz BRC Global Standard na poziomie Grade A, otwierające drzwi do współpracy z ogólnopolskimi i europejskimi sieciami supermarketów."
+    },
+    "2010": {
+        title: "Automatyzacja i Rozbudowa",
+        desc: "Oddanie do użytku nowoczesnego zaplecza logistyczno-magazynowego w Sulęcinie oraz wdrożenie zaawansowanych systemów zarządzania pakowaniem, gwarantujących bezbłędną realizację zamówień."
+    },
+    "2018": {
+        title: "Lider Bake-off & 1200+ Punktów",
+        desc: "Wdrożenie pionierskich linii technologii wypieku odroczonego i głębokiego mrożenia (Bake-off). Nasza zaawansowana flota logistyczna zapewnia codzienne, punktualne dostawy świeżego ciasta do ponad 1200 supermarketów w Europie."
+    },
+    "2026": {
+        title: "Piekarnia Przyszłości & Linia 2AB",
+        desc: "Pełna automatyzacja produkcji z zachowaniem tradycyjnego procesu 24-godzinnej fermentacji. Wdrożenie unikalnej linii pieczywa z pradawnej pszenicy 2AB oraz przejście naszych zakładów na 100% zrównoważoną energię odnawialną."
+    }
+};
+
 function initTimeline() {
-    const yearsNav = document.getElementById("timeline-years");
-    const timelineCard = document.getElementById("timeline-card");
-    if (!yearsNav || !timelineCard) return;
+    const yearButtons = document.querySelectorAll(".timeline-year-btn");
+    const card = document.getElementById("timeline-card");
+    const cardTitle = document.getElementById("timeline-title");
+    const cardDesc = document.getElementById("timeline-desc");
     
-    const yearButtons = yearsNav.querySelectorAll(".timeline-year-btn");
+    const percentages = { "1989": 0, "1998": 20, "2005": 40, "2010": 60, "2018": 80, "2026": 100 };
+    const nav = document.getElementById("timeline-years");
     
-    const timelineData = {
-        "1989": {
-            title: "Założenie Firmy",
-            desc: "Firma Leks rozpoczęła swoją działalność jako mała piekarnia rodzinna z pasją do tworzenia tradycyjnych chlebów na naturalnym zakwasie w Sulęcinie."
-        },
-        "1998": {
-            title: "Rozbudowa Zakładu w Sulęcinie",
-            desc: "Wzrost zapotrzebowania i wolumenu dostaw wymusił modernizację parku maszynowego i wdrożenie pierwszych zautomatyzowanych linii produkcyjnych."
-        },
-        "2005": {
-            title: "Nowy Zakład w Gorzowie Wlkp.",
-            desc: "Otwarcie drugiego, nowoczesnego zakładu piekarniczego specjalizującego się w wypieku bułek śniadaniowych i bagietek na ogromną skalę."
-        },
-        "2018": {
-            title: "Certyfikacja IFS & BRC Grade A",
-            desc: "Otrzymanie prestiżowych certyfikacji IFS Food i BRC Global Standard na najwyższym poziomie, co otworzyło firmie drogę do współpracy z międzynarodowymi sieciami handlowymi."
-        },
-        "2026": {
-            title: "Technologiczny Lider",
-            desc: "Leks dysponuje trzema fabrykami (Sulęcin, Gorzów, Tarnów Bycki) wypiekającymi ponad 100 000 sztuk pieczywa na dobę w technologii głębokiego mrożenia i Bake-off."
+    // Ustawienie początkowego postępu linii
+    const activeBtn = document.querySelector(".timeline-year-btn.active");
+    if (activeBtn && nav) {
+        const initYear = activeBtn.getAttribute("data-year");
+        if (percentages[initYear] !== undefined) {
+            nav.style.setProperty("--timeline-progress", percentages[initYear] + "%");
         }
-    };
+    }
     
     yearButtons.forEach(btn => {
         btn.addEventListener("click", () => {
-            // Zmień aktywny przycisk
+            // Usunięcie klasy aktywnej z innych przycisków
             yearButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
             
-            const year = btn.getAttribute("data-year");
-            const data = timelineData[year];
+            const targetYear = btn.getAttribute("data-year");
+            const data = timelineData[targetYear];
             
-            // Animacja zmiany karty w osi czasu
-            gsap.to(timelineCard, {
-                x: -30,
+            // Dynamiczne sterowanie kolorem linii
+            if (nav && percentages[targetYear] !== undefined) {
+                nav.style.setProperty("--timeline-progress", percentages[targetYear] + "%");
+            }
+            
+            // Elegancka animacja GSAP: zniknięcie, zmiana tekstu, pojawienie się
+            const timelineTl = gsap.timeline();
+            
+            timelineTl.to(card, {
                 opacity: 0,
+                x: -30,
                 duration: 0.25,
                 ease: "power2.in",
                 onComplete: () => {
-                    document.getElementById("timeline-title").textContent = data.title;
-                    document.getElementById("timeline-desc").textContent = data.desc;
-                    
-                    gsap.fromTo(timelineCard, 
-                        { x: 30, opacity: 0 },
-                        { x: 0, opacity: 1, duration: 0.35, ease: "power2.out" }
-                    );
+                    cardTitle.textContent = data.title;
+                    cardDesc.textContent = data.desc;
                 }
             });
-        });
-    });
-}
-
-/* ==============================================================================
-   4. LOGIKA 5 KATEGORII I DYNAMICZNEGO KATALOGU B2B
-   ============================================================================== */
-function initCatalogLogic() {
-    const categoryGrid = document.getElementById("homepage-category-grid");
-    const catalogWrapper = document.getElementById("catalog-dynamic-wrapper");
-    const container = document.getElementById("products-container");
-    const backBtn = document.getElementById("catalog-back-btn");
-    
-    if (!categoryGrid || !catalogWrapper || !container) return;
-    
-    // Dane o 5 głównych kategoriach do opisu w katalogu
-    const categoryMetadata = {
-        "2ab": {
-            title: "Pieczywo Leks 2ab",
-            desc: "Innowacyjna i lekkostrawna gama pieczywa premium wypiekanego z pradawnej odmiany pszenicy 2AB (prastare ziarno Triticum turgidum). Produkty te charakteryzują się bardzo niskim poziomem glutenu typu A, są bogate w selen i cynk i stanowią idealne rozwiązanie funkcjonalne dla wrażliwego układu pokarmowego. Certyfikowane standardami IFS/BRC."
-        },
-        "bread_rolls": {
-            title: "Pieczywo (Chleby i Bułki)",
-            desc: "Sercem naszej piekarni są klasyczne polskie chleby rzemieślnicze produkowane w 100% na naturalnym wielofazowym zakwasie żytnim wyhodowanym w Sulęcinie oraz bogata gama chrupiących bułek śniadaniowych, kajzerek i bagietek. Wszystkie wyroby są idealnie zoptymalizowane pod systemy odroczonego wypieku (Bake-off) w supermarketach."
-        },
-        "cakes": {
-            title: "Cukiernia (Ciasta i Torty)",
-            desc: "Wykwintna cukiernia B2B stworzona na potrzeby stoisk cukierniczych oraz sieci handlowych. Oferujemy luksusowe torty śmietankowe i czekoladowe, puszyste serniki rzemieślnicze, ciasta drożdżowe, placki z twarogiem oraz miniptysie. Wygodne rozwiązania mrożone w blachach (Thaw & Serve) gwarantujące zero strat."
-        },
-        "sweet": {
-            title: "Wyroby Półcukiernicze",
-            desc: "Kolekcja puszystych słodkich wypieków o wysokiej rotacji i marży. W jej skład wchodzą ręcznie plecione maślane warkocze z lukrem, puszyste pączki premium z nadzieniami wiśniowym, malinowym i pistacjowym oraz tradycyjne drożdżówki z kruszonką. Idealne pod dopiek Bake-off lub w technologii Thaw & Serve."
-        },
-        "bistro": {
-            title: "Kanapki i Słone Przekąski",
-            desc: "Kompleksowa strefa Bistro & Food-to-go dedykowana stacjom paliw i supermarketom. Obejmuje świeże kanapki przygotowywane na bazie pieczywa rzemieślniczego własnej produkcji, pakowane w atmosferze ochronnej MAP Flow-pack, a także chrupiące słone przekąski (ślimaki ze szpinakiem, paluchy z serem, przekąski warzywne)."
-        }
-    };
-
-    let activeCategory = "";
-    let activeSubcategory = "all";
-
-    // Obsługa kliknięcia w kafelki kategorii na głównej stronie
-    const categoryCards = categoryGrid.querySelectorAll(".category-card");
-    categoryCards.forEach(card => {
-        card.addEventListener("click", () => {
-            const catKey = card.getAttribute("data-category-link");
-            showCatalog(catKey);
-        });
-    });
-
-    // Płynne pokazanie katalogu i render produktów
-    function showCatalog(catKey) {
-        activeCategory = catKey;
-        activeSubcategory = "all";
-        
-        // Zaktualizuj tytuł i opis kategorii
-        const meta = categoryMetadata[catKey];
-        document.getElementById("catalog-current-title").textContent = meta.title;
-        document.getElementById("catalog-current-desc").textContent = meta.desc;
-
-        // Kontrola podkategorii (Tylko dla Pieczywo 'bread_rolls' - Chleby i Bułki)
-        const subFilterContainer = document.getElementById("subcategory-filters-container");
-        if (catKey === "bread_rolls") {
-            subFilterContainer.style.display = "flex";
-            // Ustaw "Wszystko" jako aktywny przycisk podkategorii
-            subFilterContainer.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
-            subFilterContainer.querySelector('[data-subcategory="all"]').classList.add("active");
-        } else {
-            subFilterContainer.style.display = "none";
-        }
-
-        // Wyrenderuj produkty
-        renderProducts(catKey, "all");
-
-        // Animacja GSAP: Ukrycie kafli kategorii, pokazanie katalogu
-        gsap.to(categoryGrid, {
-            opacity: 0,
-            y: -20,
-            duration: 0.3,
-            ease: "power2.in",
-            onComplete: () => {
-                categoryGrid.style.display = "none";
-                
-                catalogWrapper.style.display = "block";
-                gsap.fromTo(catalogWrapper, 
-                    { opacity: 0, y: 30, scale: 0.98 },
-                    { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "power2.out", onComplete: () => {
-                        ScrollTrigger.refresh();
-                    }}
-                );
-            }
-        });
-    }
-
-    // Obsługa przycisku powrotu do kategorii
-    if (backBtn) {
-        backBtn.addEventListener("click", () => {
-            gsap.to(catalogWrapper, {
-                opacity: 0,
-                y: 20,
-                duration: 0.3,
-                ease: "power2.in",
-                onComplete: () => {
-                    catalogWrapper.style.display = "none";
-                    
-                    categoryGrid.style.display = "grid";
-                    gsap.fromTo(categoryGrid, 
-                        { opacity: 0, y: -20 },
-                        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out", onComplete: () => {
-                            ScrollTrigger.refresh();
-                        }}
-                    );
-                }
-            });
-        });
-    }
-
-    // Obsługa filtrów podkategorii wewnątrz kategorii Pieczywo
-    const subFilterButtons = document.querySelectorAll(".subcategory-filters .filter-btn");
-    subFilterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            subFilterButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
             
-            const sub = btn.getAttribute("data-subcategory");
-            activeSubcategory = sub;
-            
-            // Animacja przełączenia
-            const cards = container.querySelectorAll(".product-card");
-            gsap.to(cards, {
-                scale: 0.9,
-                opacity: 0,
-                duration: 0.2,
-                stagger: 0.03,
-                ease: "power2.in",
-                onComplete: () => {
-                    renderProducts(activeCategory, activeSubcategory);
-                    
-                    const newCards = container.querySelectorAll(".product-card");
-                    gsap.fromTo(newCards,
-                        { scale: 0.9, opacity: 0 },
-                        { scale: 1, opacity: 1, duration: 0.35, stagger: 0.04, ease: "power2.out", onComplete: () => {
-                            ScrollTrigger.refresh();
-                        }}
-                    );
-                }
+            timelineTl.to(card, {
+                opacity: 1,
+                x: 0,
+                duration: 0.35,
+                ease: "power2.out"
             });
         });
     });
+}
 
-    // Funkcja renderująca produkty w katalogu
-    function renderProducts(catKey, subcatFilter) {
-        container.innerHTML = "";
-        
-        for (const [id, product] of Object.entries(PRODUCTS_DATA)) {
-            // Sprawdzenie głównej kategorii
-            if (product.category === catKey) {
-                // Sprawdzenie podkategorii (jeśli filtrujemy pieczywo)
-                if (subcatFilter !== "all" && product.subcategory !== subcatFilter) {
-                    continue;
+function initAllProductsCategory() {
+    if (typeof kategorieProduktow === 'undefined') return;
+    const allCategory = kategorieProduktow.find(k => k.id === "all");
+    if (allCategory) {
+        const allProducts = [];
+        kategorieProduktow.forEach(kat => {
+            try {
+                if (kat && kat.id !== "all" && Array.isArray(kat.products)) {
+                    // Skopiuj produkty z innych kategorii
+                    allProducts.push(...kat.products);
                 }
-                
-                const card = document.createElement("div");
-                card.className = "product-card";
-                card.setAttribute("data-category", product.category);
-                
-                const summary = product.desc.length > 120 
-                    ? product.desc.substring(0, 117) + "..." 
-                    : product.desc;
-                
-                card.innerHTML = `
-                    <div class="product-image-container">
-                        <img src="${product.image}" alt="${product.title}" class="product-img" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">${product.categoryLabel}</span>
-                        <h3 class="product-title">${product.title}</h3>
-                        <p class="product-desc">${summary}</p>
-                        <button class="btn btn-sm btn-primary open-spec-btn" data-product-id="${id}">Specyfikacja B2B</button>
-                    </div>
-                `;
-                container.appendChild(card);
+            } catch(e) {
+                console.error("Error aggregating products for category:", kat, e);
             }
-        }
+        });
+        allCategory.products = allProducts;
     }
 }
 
 /* ==============================================================================
-   5. DELEGACJA MODALA SPECYFIKACJI LOGISTYCZNEJ B2B
+   4. RENDEROWANIE KATEGORII (DYNAMICZNE) & PARALLAX
    ============================================================================== */
-function initB2BModal() {
-    const modal = document.getElementById("b2b-modal");
-    if (!modal) return;
-    
-    const modalCard = modal.querySelector(".modal-card");
+function renderKategorie() {
     const container = document.getElementById("products-container");
-    const closeButton = document.getElementById("close-modal");
+    if (!container || typeof kategorieProduktow === 'undefined') return;
+
+    container.textContent = '';
+    const fragment = document.createDocumentFragment();
+
+    kategorieProduktow.forEach(kat => {
+        try {
+            if (!kat || !kat.id) return; // Pomija niepoprawne lub puste elementy
+
+            const card = document.createElement("div");
+            card.className = "product-card category-card";
+
+            // Kontener zdjęcia z poprawną ścieżką z data.js i bezpiecznym fallbackiem
+            const imageContainer = document.createElement("div");
+            imageContainer.className = "image-container";
+            const imgSrc = kat.image || "img/kat_all.png";
+            imageContainer.style.backgroundImage = `url('${imgSrc}')`;
+
+            const infoDiv = document.createElement("div");
+            infoDiv.className = "product-info";
+
+            const catSpan = document.createElement("span");
+            catSpan.className = "product-category";
+            catSpan.textContent = "Kategoria";
+
+            const titleH3 = document.createElement("h3");
+            titleH3.className = "product-title";
+            titleH3.textContent = kat.name || "Bez nazwy";
+
+            const descP = document.createElement("p");
+            descP.className = "product-desc";
+            descP.textContent = kat.description || "";
+
+            const linkA = document.createElement("a");
+            linkA.className = "btn btn-sm btn-primary";
+            linkA.href = `category.html?cat=${kat.id}`;
+            linkA.textContent = "Zobacz produkty";
+
+            infoDiv.appendChild(catSpan);
+            infoDiv.appendChild(titleH3);
+            infoDiv.appendChild(descP);
+            infoDiv.appendChild(linkA);
+
+            card.appendChild(imageContainer);
+            card.appendChild(infoDiv);
+            fragment.appendChild(card);
+        } catch(e) {
+            console.error("Error rendering category card in loop:", kat, e);
+        }
+    });
+
+    container.appendChild(fragment);
+}
+
+
+function renderCategoryProducts() {
+    const container = document.getElementById("category-products-container");
+    if (!container || typeof kategorieProduktow === 'undefined') return;
     
-    // Elementy modala
-    const modalTitle = document.getElementById("modal-product-title");
-    const modalWeight = document.getElementById("modal-weight");
-    const modalPackaging = document.getElementById("modal-packaging");
-    const modalShelfLife = document.getElementById("modal-shelf-life");
-    const modalCert = document.getElementById("modal-cert");
-    const modalDescText = document.getElementById("modal-desc-text");
-    const modalEan = document.getElementById("modal-ean");
-    const modalTemp = document.getElementById("modal-temp");
-    const modalBake = document.getElementById("modal-bake");
+    const params = new URLSearchParams(window.location.search);
+    const catId = params.get('cat');
     
-    // 1. Delegacja zdarzeń: Nasłuchujemy kliknięcia przycisku otwierania modala na całym kontenerze siatki!
-    container.addEventListener("click", (e) => {
-        const btn = e.target.closest(".open-spec-btn");
-        if (!btn) return;
+    const category = kategorieProduktow.find(k => k.id === catId);
+    
+    if (!category) {
+        document.getElementById("cat-title").textContent = "Kategoria nie znaleziona";
+        return;
+    }
+    
+    document.getElementById("cat-title").textContent = category.name;
+    document.getElementById("cat-desc").textContent = category.description;
+    
+    // Czyszczenie za pomocą usuwania węzłów (bezpieczne przed XSS)
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    
+    if (!category.products || category.products.length === 0) {
+        const emptyMsg = document.createElement("p");
+        emptyMsg.style.gridColumn = "1/-1";
+        emptyMsg.style.textAlign = "center";
+        emptyMsg.style.color = "var(--color-text-muted)";
+        emptyMsg.textContent = "Brak produktów w tej kategorii.";
+        container.appendChild(emptyMsg);
+        return;
+    }
+    
+    const fragment = document.createDocumentFragment();
+    
+    category.products.forEach(prod => {
+        const card = document.createElement("div");
+        card.className = "product-card";
         
-        const productId = btn.getAttribute("data-product-id");
-        const product = PRODUCTS_DATA[productId];
+        // Zapisywanie danych specyfikacji
+        card.setAttribute("data-weight", prod.weight || "Zgodnie ze specyfikacją");
+        card.setAttribute("data-packaging", prod.packaging || "Według zamówienia");
+        card.setAttribute("data-shelf-life", "Zgodnie ze specyfikacją");
+        card.setAttribute("data-cert", "IFS, BRC (Grade A)");
+        card.setAttribute("data-desc-full", "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.");
         
-        if (!product) return;
+        const imgPlaceholder = document.createElement("div");
+        imgPlaceholder.className = "product-image-placeholder";
+        imgPlaceholder.style.backgroundImage = `url('${prod.image}')`;
+        imgPlaceholder.style.backgroundSize = "cover";
+        imgPlaceholder.style.backgroundPosition = "center";
+        imgPlaceholder.style.height = "200px";
         
-        // Podmiana zawartości w modalu
-        modalTitle.textContent = product.title;
-        modalWeight.textContent = product.weight || "-";
-        modalPackaging.textContent = product.packaging || "-";
-        modalShelfLife.textContent = product.shelfLife || "-";
-        modalCert.textContent = product.cert || "-";
-        modalDescText.textContent = product.desc || "-";
-        modalEan.textContent = product.ean || "-";
-        modalTemp.textContent = product.temp || "-";
-        modalBake.textContent = product.bake || "-";
+        const infoDiv = document.createElement("div");
+        infoDiv.className = "product-info";
         
-        // Dynamiczne powiązanie przycisku CTA w modalu
-        const modalContactBtn = document.getElementById("modal-contact-btn");
-        if (modalContactBtn) {
-            modalContactBtn.setAttribute("href", "#contact");
-            modalContactBtn.addEventListener("click", () => {
-                closeModal();
+        const catSpan = document.createElement("span");
+        catSpan.className = "product-category";
+        catSpan.textContent = category.name;
+        
+        const titleH3 = document.createElement("h3");
+        titleH3.className = "product-title";
+        titleH3.textContent = prod.name;
+        
+        const descP = document.createElement("p");
+        descP.className = "product-desc";
+        descP.textContent = `Waga: ${prod.weight} | Pakowanie: ${prod.packaging}`;
+        
+        const btn = document.createElement("button");
+        btn.className = "btn btn-sm btn-primary open-spec-btn";
+        btn.textContent = "Specyfikacja B2B";
+        
+        infoDiv.appendChild(catSpan);
+        infoDiv.appendChild(titleH3);
+        infoDiv.appendChild(descP);
+        infoDiv.appendChild(btn);
+        
+        card.appendChild(imgPlaceholder);
+        card.appendChild(infoDiv);
+        
+        fragment.appendChild(card);
+    });
+    
+    container.appendChild(fragment);
+}
+
+function initParallax() {
+    // Elegancki i ultra-płynny efekt parallax przy użyciu GSAP ScrollTrigger dla wszystkich grafik kłosów
+    const wheats = [
+        { id: "#wheat-1", y: -120, rotate: 20 },
+        { id: "#wheat-2", y: 100, rotate: -15 },
+        { id: "#wheat-about", y: -90, rotate: -30 },
+        { id: "#wheat-2ab", y: 130, rotate: 50 },
+        { id: "#wheat-blog", y: -100, rotate: -20 },
+        { id: "#wheat-career", y: 110, rotate: 35 },
+        { id: "#wheat-contact", y: -120, rotate: -45 }
+    ];
+    
+    wheats.forEach(item => {
+        const el = document.querySelector(item.id);
+        if (el) {
+            // Ustawienie punktu startowego bez przeskoków
+            gsap.set(el, { y: item.y * -0.3, rotation: item.rotate });
+            
+            gsap.to(el, {
+                y: item.y,
+                rotation: item.rotate * 1.2,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: el.parentElement,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 0.6 // Nadaje piękny, organiczny efekt opóźnienia ("liquid lag")
+                }
             });
         }
-        
-        // Otwieranie Modala z płynną animacją GSAP
-        modal.classList.add("active");
-        gsap.fromTo(modal, 
-            { opacity: 0 }, 
-            { opacity: 1, duration: 0.3, ease: "power2.out" }
-        );
-        gsap.fromTo(modalCard, 
-            { y: 60, scale: 0.9, opacity: 0 }, 
-            { y: 0, scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.1)" }
-        );
-    });
-    
-    // Zamykanie Modala
-    function closeModal() {
-        gsap.to(modalCard, {
-            y: 40,
-            scale: 0.95,
-            opacity: 0,
-            duration: 0.3,
-            ease: "power2.in"
-        });
-        gsap.to(modal, {
-            opacity: 0,
-            duration: 0.3,
-            ease: "power2.in",
-            onComplete: () => {
-                modal.classList.remove("active");
-            }
-        });
-    }
-    
-    if (closeButton) {
-        closeButton.addEventListener("click", closeModal);
-    }
-    
-    // Zamykanie przez kliknięcie w tło
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
     });
 }
 
 /* ==============================================================================
-   6. EFEKT PARALLAX DLA DEKORACYJNYCH KŁOSÓW PSZENICY
-   ============================================================================== */
-function initWheatParallax() {
-    const wheatLeft = document.querySelector(".wheat-left");
-    const wheatRight = document.querySelector(".wheat-right");
-    
-    if (!wheatLeft && !wheatRight) return;
-    
-    let lastScrollY = window.scrollY;
-    let ticking = false;
-    
-    function updateParallax() {
-        const scrollY = window.scrollY;
-        
-        // Płynne przesuwanie w pionie (klasa zwalniająca - kłosy przesuwają się o 15% prędkości scrolla)
-        if (wheatLeft) {
-            wheatLeft.style.transform = `translateY(${scrollY * 0.12}px) rotate(${scrollY * 0.02}deg)`;
-        }
-        if (wheatRight) {
-            wheatRight.style.transform = `translateY(${scrollY * 0.15}px) rotate(-${scrollY * 0.015}deg)`;
-        }
-        
-        ticking = false;
-    }
-    
-    window.addEventListener("scroll", () => {
-        if (!ticking) {
-            window.requestAnimationFrame(updateParallax);
-            ticking = true;
-        }
-    });
-}
-
-/* ==============================================================================
-   7. ANIMACJE SCROLLTRIGGER (PŁYNNE POJAWIANIE SIĘ ELEMENTÓW)
-   ============================================================================== */
-function initScrollAnimations() {
-    // Animacja pojawiania się nagłówków sekcji
-    const sectionHeaders = document.querySelectorAll(".section-header");
-    sectionHeaders.forEach(header => {
-        gsap.from(header, {
-            opacity: 0,
-            y: 40,
-            duration: 0.8,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: header,
-                start: "top 85%",
-                toggleActions: "play none none none"
-            }
-        });
-    });
-    
-    // Animacja kafli 5 kategorii na stronie głównej
-    if (document.querySelector(".category-card")) {
-        gsap.from(".category-card", {
-            opacity: 0,
-            y: 45,
-            scale: 0.96,
-            stagger: 0.15,
-            duration: 0.8,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: "#homepage-category-grid",
-                start: "top 85%",
-                toggleActions: "play none none none"
-            }
-        });
-    }
-    
-    // Animacja liczników KPI przy przewijaniu
-    const kpiSection = document.getElementById("kpi-section");
-    if (kpiSection) {
-        gsap.from(".kpi-card", {
-            opacity: 0,
-            y: 35,
-            stagger: 0.15,
-            duration: 0.8,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: kpiSection,
-                start: "top 85%",
-                onEnter: () => {
-                    const kpiNumbers = document.querySelectorAll(".kpi-number");
-                    kpiNumbers.forEach(num => {
-                        const target = parseInt(num.getAttribute("data-target"), 10);
-                        const suffix = num.parentNode.querySelector(".kpi-suffix") ? "" : "";
-                        
-                        let current = 0;
-                        const steps = 60;
-                        const stepVal = target / steps;
-                        let count = 0;
-                        
-                        const interval = setInterval(() => {
-                            count++;
-                            current += stepVal;
-                            if (count >= steps) {
-                                num.textContent = target;
-                                clearInterval(interval);
-                            } else {
-                                num.textContent = Math.round(current);
-                            }
-                        }, 16);
-                    });
-                }
-            }
-        });
-    }
-}
-
-/* ==============================================================================
-   8. HARMONIJKI REKRUTACYJNE (KARIERA ACCORDIONS)
+   5. HARMONIJKI REKRUTACYJNE (KARIERA ACCORDIONS)
    ============================================================================== */
 function initAccordions() {
     const accordionHeaders = document.querySelectorAll(".accordion-header");
@@ -660,5 +501,363 @@ function initAccordions() {
                 );
             }
         });
+    });
+}
+
+/* ==============================================================================
+   6. SCROLL REVEAL ANIMATIONS (GSAP SCROLLTRIGGER)
+   ============================================================================== */
+function initScrollAnimations() {
+    // Animacja pojawiania się nagłówków sekcji
+    const sectionHeaders = document.querySelectorAll(".section-header");
+    sectionHeaders.forEach(header => {
+        gsap.from(header, {
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: header,
+                start: "top 85%",
+                toggleActions: "play none none none"
+            }
+        });
+    });
+    
+    // Animacja siatki produktów przy pierwszym wejściu
+    gsap.from(".product-card", {
+        opacity: 0,
+        y: 50,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "power3.out",
+        clearProps: "opacity,transform",
+        scrollTrigger: {
+            trigger: ".products-grid",
+            start: "top 95%",
+            toggleActions: "play none none none"
+        }
+    });
+    
+    // Animacja formularza i panelu kontaktowego
+    gsap.from(".contact-info-panel", {
+        opacity: 0,
+        x: -50,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".contact-grid",
+            start: "top 80%"
+        }
+    });
+    
+    gsap.from(".contact-form-panel", {
+        opacity: 0,
+        x: 50,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".contact-grid",
+            start: "top 80%"
+        }
+    });
+}
+
+/* ==============================================================================
+   7. MODAL SPECYFIKACJI LOGISTYCZNEJ B2B (GSAP ANIMATION)
+   ============================================================================== */
+function initB2BModal() {
+    const modal = document.getElementById("b2b-modal");
+    if (!modal) return;
+    
+    const modalCard = modal.querySelector(".modal-card");
+    const closeButton = document.getElementById("close-modal");
+    const closeActionBtn = document.getElementById("modal-close-action");
+    
+    // Elementy modala do dynamicznej podmiany treści
+    const modalTitle = document.getElementById("modal-product-title");
+    const modalCat = document.getElementById("modal-product-cat");
+    const modalImg = document.getElementById("modal-product-img");
+    const modalWeight = document.getElementById("modal-weight");
+    const modalPackaging = document.getElementById("modal-packaging");
+    const modalShelfLife = document.getElementById("modal-shelf-life");
+    const modalCert = document.getElementById("modal-cert");
+    
+    // Event Delegation
+    document.addEventListener("click", (e) => {
+        if (e.target.matches(".open-spec-btn")) {
+            e.preventDefault();
+            const btn = e.target;
+            
+            // Znajdź najbliższą kartę produktu i wyciągnij z niej dane
+            const card = btn.closest(".product-card");
+            if (!card) return;
+            
+            // Pobieranie danych tekstowych
+            const title = card.querySelector(".product-title")?.textContent || "Brak nazwy";
+            const cat = card.querySelector(".product-category")?.textContent || "Kategoria";
+            
+            // Pobieranie obrazka z background-image
+            const imgDiv = card.querySelector(".product-image-placeholder");
+            let imgSrc = "";
+            if (imgDiv && imgDiv.style.backgroundImage) {
+                // Wyciąga adres z url("...")
+                imgSrc = imgDiv.style.backgroundImage.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+            }
+            
+            // Dane techniczne z atrybutów data-* (z przycisku lub z karty)
+            const weight = btn.dataset.weight || card.dataset.weight || "-";
+            const packaging = btn.dataset.packaging || card.dataset.packaging || "-";
+            const shelfLife = btn.dataset.shelfLife || card.dataset.shelfLife || "Zgodnie ze specyfikacją";
+            const cert = btn.dataset.cert || card.dataset.cert || "IFS, BRC (Grade A)";
+            
+            // Podmiana zawartości modala (wyłącznie bezpiecznymi metodami)
+            if (modalTitle) modalTitle.textContent = title;
+            if (modalCat) modalCat.textContent = cat;
+            if (modalImg && imgSrc) {
+                modalImg.src = imgSrc;
+                modalImg.alt = title;
+            }
+            if (modalWeight) modalWeight.textContent = weight;
+            if (modalPackaging) modalPackaging.textContent = packaging;
+            if (modalShelfLife) modalShelfLife.textContent = shelfLife;
+            if (modalCert) modalCert.textContent = cert;
+            
+            // Dynamiczne przewijanie przycisku CTA w modalu do kontaktu
+            const modalContactBtn = document.getElementById("modal-contact-btn");
+            if (modalContactBtn) {
+                modalContactBtn.addEventListener("click", () => {
+                    closeModal();
+                });
+            }
+            
+            // Zablokowanie scrollowania body
+            document.body.style.overflow = "hidden";
+            
+            // Otwieranie Modala z płynną animacją GSAP (Back Ease)
+            modal.classList.add("active");
+            gsap.fromTo(modal, 
+                { opacity: 0 }, 
+                { opacity: 1, duration: 0.3, ease: "power2.out" }
+            );
+            gsap.fromTo(modalCard, 
+                { y: 60, scale: 0.9, opacity: 0 }, 
+                { y: 0, scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.1)" }
+            );
+        }
+    });
+    
+    // Zamykanie Modala
+    function closeModal() {
+        if (!modal.classList.contains("active")) return;
+        
+        gsap.to(modalCard, {
+            y: 40,
+            scale: 0.95,
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.in"
+        });
+        
+        gsap.to(modal, {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.in",
+            onComplete: () => {
+                modal.classList.remove("active");
+                // Odblokowanie scrollowania body
+                document.body.style.overflow = "";
+            }
+        });
+    }
+    
+    if (closeButton) closeButton.addEventListener("click", closeModal);
+    if (closeActionBtn) closeActionBtn.addEventListener("click", closeModal);
+    
+    // Zamykanie przy kliknięciu w tło modala (overlay)
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Zamykanie modala klawiszem ESC
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+            closeModal();
+        }
+    });
+}
+
+/* ==============================================================================
+   9. INICJALIZACJA SWIPER.JS (Karuzele Premium)
+   ============================================================================== */
+function initSwipers() {
+    // Sprawdzenie, czy Swiper jest dostępny globalnie
+    if (typeof Swiper === 'undefined') return;
+
+    // Blog Swiper
+    if (document.querySelector('.blog-swiper')) {
+        new Swiper('.blog-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.blog-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.blog-next',
+                prevEl: '.blog-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            }
+        });
+    }
+
+    // Career Swiper
+    if (document.querySelector('.career-swiper')) {
+        new Swiper('.career-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            pagination: {
+                el: '.career-swiper .swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.career-next',
+                prevEl: '.career-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1200: { slidesPerView: 4 }
+            },
+            autoplay: {
+                delay: 6000, // Powolne i płynne przewijanie
+                disableOnInteraction: false,
+            }
+        });
+    }
+
+    // Partners Swiper
+    if (document.querySelector('.partners-swiper')) {
+        new Swiper('.partners-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+            breakpoints: {
+                576: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                1024: { slidesPerView: 5 }
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            }
+        });
+    }
+}
+
+/* ==============================================================================
+   10. HOTSPOT 2AB - INTERAKCJA
+   ============================================================================== */
+function initHotspots() {
+    const hotspots = document.querySelectorAll('.hotspot');
+    
+    hotspots.forEach(hotspot => {
+        // Toggle na kliknięcie dla urządzeń mobilnych (lub jako alternatywa hovera)
+        hotspot.addEventListener('click', function(e) {
+            e.stopPropagation();
+            // Usuń active z innych
+            hotspots.forEach(h => {
+                if(h !== this) h.classList.remove('active');
+            });
+            this.classList.toggle('active');
+        });
+    });
+
+    // Zamykanie tooltipów po kliknięciu w inne miejsce
+    document.addEventListener('click', () => {
+        hotspots.forEach(h => h.classList.remove('active'));
+    });
+}
+
+/* ==============================================================================
+   11. MODAL POLITYKI PRYWATNOŚCI RODO (GSAP ANIMATION)
+   ============================================================================== */
+function initPrivacyModal() {
+    const modal = document.getElementById("privacy-modal");
+    if (!modal) return;
+    
+    const trigger = document.getElementById("trigger-privacy-modal");
+    const closeBtn = document.getElementById("close-privacy-modal");
+    const closeActionBtn = document.getElementById("close-privacy-action-btn");
+    const modalCard = modal.querySelector(".privacy-modal-card");
+    
+    if (trigger) {
+        trigger.addEventListener("click", (e) => {
+            e.preventDefault();
+            
+            // Zablokowanie scrollowania body
+            document.body.style.overflow = "hidden";
+            
+            // Otwieranie Modala z płynną animacją GSAP
+            modal.classList.add("active");
+            gsap.fromTo(modal, 
+                { opacity: 0 }, 
+                { opacity: 1, duration: 0.3, ease: "power2.out" }
+            );
+            gsap.fromTo(modalCard, 
+                { y: 60, scale: 0.95, opacity: 0 }, 
+                { y: 0, scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" }
+            );
+        });
+    }
+    
+    function closeModal() {
+        if (!modal.classList.contains("active")) return;
+        
+        gsap.to(modalCard, {
+            y: 40,
+            scale: 0.97,
+            opacity: 0,
+            duration: 0.25,
+            ease: "power2.in"
+        });
+        
+        gsap.to(modal, {
+            opacity: 0,
+            duration: 0.25,
+            ease: "power2.in",
+            onComplete: () => {
+                modal.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+        });
+    }
+    
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    if (closeActionBtn) closeActionBtn.addEventListener("click", closeModal);
+    
+    // Zamykanie przy kliknięciu w tło
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Zamykanie klawiszem ESC
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+            closeModal();
+        }
     });
 }

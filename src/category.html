@@ -3,122 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Katalog produktów B2B Piekarni Leks Sp. z o.o. Wybierz kategorię i zobacz specyfikacje techniczne naszych chlebów, bułek oraz wyrobów słodkich.">
-    <title>Katalog B2B - Produkty Piekarni Leks</title>
+    <meta name="description" content="Leks Sp. z o.o. - Kategoria produktów">
+    <title>Kategoria - Leks Piekarnia</title>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Montserrat (Body) & Roboto (Headings) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Główne style CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/style.css?v=38">
     <style>
-        /* Specyficzne style dla podstrony kategorii */
+        body {
+            /* Inheriting premium body::before background from style.css */
+        }
         .category-hero {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            padding: 160px 0 80px;
+            padding: 120px 0 60px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--color-primary) 0%, #002244 100%);
-        }
-        .category-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('img/bakery_hero.png');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.12;
-            z-index: 1;
-        }
-        .category-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .category-hero .section-subtitle {
-            color: var(--color-accent);
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-        .category-hero-title {
-            font-family: var(--font-serif);
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .category-hero-desc {
-            font-size: 1.05rem;
-            opacity: 0.85;
-            line-height: 1.6;
-        }
-        .breadcrumb-container {
-            padding: 24px 0;
-            background-color: var(--color-bg-alt);
+            background-color: rgba(251, 249, 245, 0.85);
+            backdrop-filter: blur(5px);
             border-bottom: 1px solid var(--color-border);
-        }
-        .breadcrumb {
-            font-size: 0.88rem;
-            color: var(--color-text-muted);
-        }
-        .breadcrumb a {
-            color: var(--color-primary-light);
-            text-decoration: none;
-            transition: var(--transition-fast);
-        }
-        .breadcrumb a:hover {
-            color: var(--color-primary);
-        }
-        .category-navigation {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin: 40px 0 20px;
-            flex-wrap: wrap;
-        }
-        .cat-nav-btn {
-            background-color: var(--color-white);
-            border: 1px solid var(--color-border);
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--color-text);
-            cursor: pointer;
-            text-decoration: none;
-            transition: var(--transition-fast);
-        }
-        .cat-nav-btn:hover, .cat-nav-btn.active {
-            background-color: var(--color-primary);
-            border-color: var(--color-primary);
-            color: var(--color-white);
-        }
-        .catalog-section {
-            padding: 60px 0 100px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Szklany Header -->
-    <header id="main-header" class="header-glass">
+    <!-- Szklany, animowany Header (Nawigacja) -->
+    <header id="main-header" class="header-glass header-scrolled">
         <div class="header-container">
-            <a href="index.html" class="logo-link" id="nav-logo" aria-label="Leks Strona Główna">
-                <img src="img/leks_logo.svg" alt="Leks Logotyp" class="logo-img">
+            <a href="index.html" class="logo-link" id="nav-logo">
+                <img src="img/leks_logo_smacznego.png" alt="Leks Logo">
             </a>
             
             <nav id="main-nav" class="nav-menu">
@@ -126,14 +40,9 @@
                     <li><a href="index.html#hero" class="nav-link">Start</a></li>
                     <li><a href="index.html#about" class="nav-link">O nas</a></li>
                     <li><a href="index.html#products" class="nav-link active">Produkty</a></li>
-                    <li><a href="index.html#career" class="nav-link">Kariera</a></li>
                     <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
                 </ul>
             </nav>
-            
-            <div class="header-actions-right">
-                <a href="index.html#contact" class="btn btn-sm btn-primary header-cta-btn">Strefa B2B</a>
-            </div>
             
             <button id="menu-toggle" class="hamburger" aria-label="Otwórz menu">
                 <span class="bar"></span>
@@ -144,63 +53,244 @@
     </header>
 
     <main>
-        <!-- Dynamiczny Category Hero Banner -->
-        <section class="category-hero" id="cat-hero">
-            <div class="category-hero-content">
-                <span class="section-subtitle" id="cat-subtitle">Katalog B2B</span>
-                <h1 class="category-hero-title" id="cat-title">Nasze Pieczywo</h1>
-                <p class="category-hero-desc" id="cat-desc">Tradycyjne polskie receptury, naturalny zakwas i nowoczesna technologia wypieku odroczonego.</p>
+        <section class="category-hero" id="category-hero">
+            <div class="container">
+                <span class="section-subtitle">Kategoria Produktów</span>
+                <h1 class="section-title" id="cat-title">Wczytywanie...</h1>
+                <p class="hero-lead" id="cat-desc" style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;"></p>
             </div>
         </section>
 
-        <!-- Breadcrumbs -->
-        <div class="breadcrumb-container">
+        <!-- Sekcja Oferta / Produkty -->
+        <section id="products" class="section-padding">
+            <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
+            <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-1" alt="">
+            <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-2" alt="">
+
             <div class="container">
-                <div class="breadcrumb">
-                    <a href="index.html">Strona Główna</a> &nbsp;&raquo;&nbsp; 
-                    <a href="index.html#products">Produkty</a> &nbsp;&raquo;&nbsp; 
-                    <span id="breadcrumb-current" style="color: var(--color-text); font-weight: 600;">Kategoria</span>
+                <!-- Przycisk powrotu -->
+                <div style="margin-bottom: 40px;">
+                    <a href="index.html#products" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);">&larr; Wróć do kategorii</a>
+                </div>
+
+                <!-- Siatka Produktów (GSAP Animated Grid) -->
+                <div class="products-grid" id="category-products-container">
+                    <!-- Produkty będą ładowane dynamicznie przez JS -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dynamiczny Modal Specyfikacji B2B (Dla Kupców Sieci) -->
+        <div id="b2b-modal" class="modal-backdrop">
+            <div class="modal-card">
+                <button id="close-modal" class="modal-close-btn" aria-label="Zamknij">&times;</button>
+                <div class="modal-body-layout">
+                    <div class="modal-image-col">
+                        <img id="modal-product-img" src="" alt="Produkt" />
+                    </div>
+                    <div class="modal-content-col">
+                        <span id="modal-product-cat" class="modal-badge">Specyfikacja B2B</span>
+                        <h3 id="modal-product-title" class="modal-title">Nazwa Produktu</h3>
+                        <div class="modal-divider"></div>
+                        
+                        <ul class="modal-spec-list">
+                            <li><span class="spec-label">Waga:</span> <span id="modal-weight" class="spec-val">-</span></li>
+                            <li><span class="spec-label">Pakowanie:</span> <span id="modal-packaging" class="spec-val">-</span></li>
+                            <li><span class="spec-label">Przydatność:</span> <span id="modal-shelf-life" class="spec-val">-</span></li>
+                            <li><span class="spec-label">Certyfikaty:</span> <span id="modal-cert" class="spec-val">-</span></li>
+                        </ul>
+                        
+                        <div class="modal-actions">
+                            <a href="index.html#contact" class="btn btn-primary" id="modal-contact-btn">Zapytaj o wycenę hurtową (B2B)</a>
+                            <button id="modal-close-action" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-border);">Zamknij</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Główna siatka produktów w danej kategorii -->
-        <section class="catalog-section">
-            <div class="container">
-                <!-- Szybkie przełączanie kategorii w nagłówku sekcji -->
-                <div class="category-navigation">
-                    <a href="category.html?cat=all" class="cat-nav-btn" id="btn-cat-all">Wszystko</a>
-                    <a href="category.html?cat=2ab" class="cat-nav-btn" id="btn-cat-2ab">Pieczywo Leks 2ab</a>
-                    <a href="category.html?cat=bread_rolls" class="cat-nav-btn" id="btn-cat-bread_rolls">Pieczywo (Chleby i Bułki)</a>
-                    <a href="category.html?cat=cakes" class="cat-nav-btn" id="btn-cat-cakes">Cukiernia (Ciasta i Torty)</a>
-                    <a href="category.html?cat=sweet" class="cat-nav-btn" id="btn-cat-sweet">Półcukiernicze</a>
-                    <a href="category.html?cat=bistro" class="cat-nav-btn" id="btn-cat-bistro">Kanapki i Słone przekąski</a>
-                </div>
-
-                <!-- Siatka Produktów (GSAP Grid) -->
-                <div class="products-grid" id="products-container" style="margin-top: 50px;">
-                    <!-- Karty produktów ładowane dynamicznie przez category.js -->
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <footer id="main-footer">
-        <div class="container footer-content text-center">
-            <p>&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
-            <p class="designer-tag">Projekt i wykonanie: <span class="architect-brand">Senior Developer & Architekt AI</span></p>
+    <footer id="main-footer" class="footer-minimalist">
+        <div class="container footer-container-minimal">
+            <div class="footer-brand">
+                <img src="img/leks_logo_smacznego.png" alt="Leks Logo" class="footer-logo-white">
+            </div>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html#hero">Start</a></li>
+                    <li><a href="index.html#about">O nas</a></li>
+                    <li><a href="index.html#products">Produkty</a></li>
+                    <li><a href="index.html#career">Kariera</a></li>
+                    <li><a href="index.html#contact">Kontakt</a></li>
+                    <li><a href="#" id="trigger-privacy-modal" class="privacy-link">RODO (Polityka prywatności)</a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-social-copyright">
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/LeksPiekarnia" class="social-icon" id="social-fb" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/leks-produkcja-piekarnicza-i-cukiernicza/" class="social-icon" id="social-ln" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/leks2ab/" class="social-icon" id="social-ig" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 4.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom-bar">
+                <p class="footer-copyright">&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Modal RODO / Polityka Prywatności -->
+    <div id="privacy-modal" class="modal-backdrop">
+        <div class="modal-card privacy-modal-card">
+            <button id="close-privacy-modal" class="modal-close-btn" aria-label="Zamknij">&times;</button>
+            <div class="privacy-modal-body">
+                <span class="modal-badge">Dokumentacja RODO</span>
+                <h2 class="modal-title">Polityka Prywatności</h2>
+                <div class="modal-divider"></div>
+                
+                <div class="privacy-text-content">
+                    <p>W trosce o dane osobowe, które zostały nam przekazane informujemy, że jesteśmy odpowiednio przygotowani do ich ochrony, uwzględniając przepisy Rozporządzenia Parlamentu Europejskiego i Rady UE 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (zwanym dalej RODO).</p>
+                    <p>Chcąc zapewnić transparentność realizowanych przez nas procesów przetwarzania przedstawiamy obowiązujące w Leks Sp. z o. o. zasady ochrony danych osobowych, oraz informacje o prawach wynikających z przepisów, dla osób, które powierzyły nam swoje dane osobowe.</p>
+                    
+                    <h3>Klauzula informacyjna</h3>
+                    
+                    <h4>§ 1 Informacje ogólne</h4>
+                    <ol>
+                        <li>Niniejsza polityka dotyczy Serwisu www, funkcjonującego pod adresem url: <a href="https://leks.com.pl/" target="_blank">https://leks.com.pl</a></li>
+                        <li>Administratorem danych osobowych przetwarzanych w ramach Serwisu jest: Leks Sp. z o.o. Emilii Plater 4, 69-200 Sulęcin zarejestrowany w Sądzie Rejonowym w Zielonej Górze, VIII Wydział KRS pod nr KRS: 0000075552, REGON: 210217406, NIP: 5961000297 (zwany dalej Administrator/Operator)</li>
+                        <li><strong>Kontakt w sprawach związanych z przetwarzaniem danych osobowych:</strong><br>W razie pytań dotyczących zasad prywatności i przetwarzania danych osobowych należy kontaktować się pod adresem email: <a href="mailto:rodo@leks.com.pl">rodo@leks.com.pl</a></li>
+                    </ol>
+                    
+                    <h4>§ 2 Cele przetwarzania danych osobowych w ramach funkcjonowania serwisu</h4>
+                    <ol>
+                        <li>Serwis wykorzystuje dane osobowe w następujących celach:
+                            <ul>
+                                <li>Prowadzenie systemu komentarzy</li>
+                                <li>Prowadzenie systemu ogłoszeń drobnych</li>
+                                <li>Wyświetlanie ogłoszeń użytkowników</li>
+                                <li>Prezentacja oferty lub informacji</li>
+                            </ul>
+                        </li>
+                        <li>Serwis realizuje funkcje pozyskiwania informacji o użytkownikach i ich zachowaniu w następujący sposób:
+                            <ul>
+                                <li>Poprzez dobrowolnie wprowadzone dane w formularzach</li>
+                                <li>Poprzez zapisywanie w urządzeniach końcowych plików cookies (tzw. „ciasteczka”).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Wybrane metody ochrony danych stosowane przez Operatora:</strong>
+                            <ul>
+                                <li>Miejsca logowania i wprowadzania danych osobowych są chronione w warstwie transmisji (certyfikat SSL). Dzięki temu dane osobowe i dane logowania, wprowadzone na stronie, zostają zaszyfrowane w komputerze użytkownika i mogą być odczytane jedynie na docelowym serwerze.</li>
+                                <li>Hasła użytkowników są przechowywane w postaci hashowanej. Funkcja hashująca działa jednokierunkowo - nie jest możliwe odwrócenie jej działania, co stanowi obecnie współczesny standard w zakresie przechowywania haseł użytkowników.</li>
+                                <li>Operator okresowo zmienia swoje hasła administracyjne.</li>
+                                <li>W celu ochrony danych Operator regularnie wykonuje kopie bezpieczeństwa.</li>
+                                <li>Istotnym elementem ochrony danych jest regularna aktualizacja wszelkiego oprogramowania, wykorzystywanego przez Operatora do przetwarzania danych osobowych, co w szczególności oznacza regularne aktualizacje komponentów programistycznych.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    
+                    <h4>§ 3 Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych</h4>
+                    <ol>
+                        <li>Przysługuje Ci (z zastrzeżeniem przepisów RODO) prawo żądania od Administratora:
+                            <ul>
+                                <li>Dostępu do danych osobowych, które Ciebie dotyczą,</li>
+                                <li>Sprostowania danych osobowych, które Ciebie dotyczą,</li>
+                                <li>Usunięcia danych osobowych, które Ciebie dotyczą,</li>
+                                <li>Ograniczenia przetwarzania danych osobowych, które Ciebie dotyczą,</li>
+                                <li>Przenoszenia danych osobowych, które Ciebie dotyczą.</li>
+                                <li>Realizacji prawa do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania (jeżeli przetwarzanie odbywa się na podstawie zgody), którego dokonano na podstawie zgody przed jej cofnięciem.</li>
+                                <li>Prawo do złożenia sprzeciwu wobec przetwarzania danych osobowych, w tym profilowania, przy czym prawo sprzeciwu nie będzie mogło być wykonane w przypadku istnienia ważnych prawnie uzasadnionych podstaw do przetwarzania, nadrzędnych wobec Ciebie interesów, praw i wolności, w szczególności ustalenia, dochodzenia lub obrony roszczeń.</li>
+                            </ul>
+                        </li>
+                        <li>Na działania Administratora przysługuje skarga do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.</li>
+                    </ol>
+                    
+                    <h4>§ 4 Przekazywanie danych osobowych</h4>
+                    <ol>
+                        <li>Dane osobowe mogą być przekazywane do podmiotów lub organów upoważnionych na podstawie przepisów prawa, podmiotów lub organów, którym przekazanie danych jest konieczne dla wykonania określonej czynności.</li>
+                        <li>Dane osobowe mogą być ujawnione pracownikom lub współpracownikom Spółki, jak też podmiotom udzielającym wsparcia Spółce na zasadzie zleconych usług i zgodnie z zawartymi umowami powierzenia (np. firma hostingowa).</li>
+                        <li>Dane, poza przypadkami kiedy zachodzi taka wyraźna potrzeba o czym będziecie Państwo informowani, nie są przekazywane do Państw nienależących do Europejskiego Obszaru Gospodarczego („EOG”).</li>
+                    </ol>
+                    
+                    <h4>§ 5 Okres przetwarzania danych osobowych</h4>
+                    <ol>
+                        <li>Dane przetwarzane będą przez okres niezbędny do zrealizowania celu przetwarzania. Po upływie ww. okresu dane przechowuje się dodatkowo przez okres niezbędny do zabezpieczenia lub dochodzenia ewentualnych roszczeń wobec Spółki, czy też wypełnienia obowiązku prawnego ciążącego na Administratorze.</li>
+                    </ol>
+                    
+                    <h4>§ 6 Obowiązek podania danych osobowych</h4>
+                    <ol>
+                        <li>Podanie danych osobowych jest dobrowolne, lecz niezbędne do obsługi Serwisu.</li>
+                    </ol>
+                    
+                    <h4>§ 7 Przetwarzanie danych osobowych w sposób automatyczny (w tym profilowane)</h4>
+                    <ol>
+                        <li>W stosunku do Ciebie mogą być podejmowane czynności polegające na zautomatyzowanym podejmowaniu decyzji, w tym profilowaniu w celu świadczenia usług.</li>
+                    </ol>
+                    
+                    <h3>Informacje dodatkowe</h3>
+                    
+                    <h4>§ 8 Informacja o plikach cookies</h4>
+                    <ol>
+                        <li>Serwis korzysta z plików cookies.</li>
+                        <li>Pliki cookies (tzw. „ciasteczka”) stanowią dane informatyczne, w szczególności pliki tekstowe, które przechowywane są w urządzeniu końcowym Użytkownika Serwisu i przeznaczone są do korzystania ze stron internetowych Serwisu. Cookies zapisują nazwę strony, czas przechowywania oraz unikalny numer.</li>
+                        <li>Podmiotem zamieszczającym cookies na urządzeniu Użytkownika oraz uzyskującym do nich dostęp jest operator Serwisu.</li>
+                        <li>Cookies wykorzystywane są do utrzymania sesji użytkownika (po zalogowaniu) oraz realizacji celów marketingowych.</li>
+                        <li>Stosowane są pliki cookies „sesyjne” (tymczasowe, do czasu wylogowania lub zamknięcia przeglądarki) oraz „stałe” (przechowywane przez określony czas).</li>
+                        <li>Użytkownik może w każdej chwili zmienić ustawienia dotyczące cookies w swojej przeglądarce, w tym je zablokować lub usunąć.</li>
+                        <li>Ograniczenia stosowania cookies mogą wpłynąć na poprawność niektórych funkcjonalności Serwisu.</li>
+                        <li>Pliki cookies mogą być również wykorzystywane przez partnerów współpracujących z operatorem Serwisu (w szczególności Google, Facebook, Twitter).</li>
+                    </ol>
+                    
+                    <h4>§ 9 Zarządzanie plikami cookies – jak w praktyce wyrażać i cofać zgodę?</h4>
+                    <ol>
+                        <li>W celu zarządzania ustawieniami cookies, wybierz odpowiednią przeglądarkę z listy i postępuj zgodnie z instrukcjami jej producenta (np. Chrome, Firefox, Safari, Edge, Opera, Android, iOS).</li>
+                    </ol>
+                    
+                    <h4>§ 10 Informacje w formularzach</h4>
+                    <ol>
+                        <li>Serwis zbiera informacje podane dobrowolnie przez użytkownika. Może także zapisać parametry połączenia (oznaczenie czasu, adres IP). Dane są przetwarzane w celach wynikających z funkcji formularza.</li>
+                    </ol>
+                    
+                    <h4>§ 11 Logi Administratora</h4>
+                    <ol>
+                        <li>Zachowanie użytkowników w serwisie może podlegać logowaniu w celach administracyjnych.</li>
+                    </ol>
+                    
+                    <h4>§ 12 Istotne techniki marketingowe</h4>
+                    <ol>
+                        <li>Operator stosuje Google Analytics (analiza statystyczna ruchu, dane zanonimizowane) oraz Facebook Pixel (automatyczne dopasowanie reklam, bez przekazywania dodatkowych danych osobowych).</li>
+                    </ol>
+                    
+                    <p class="privacy-modal-update">Ostatnia aktualizacja treści: <strong>14 lutego 2020 r.</strong></p>
+                </div>
+                
+                <div class="modal-actions" style="margin-top: 30px; justify-content: flex-end;">
+                    <button id="close-privacy-action-btn" class="btn btn-primary">Rozumiem</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Biblioteki GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
-    <!-- Centralna baza danych produktów B2B -->
-    <script src="js/products-data.js"></script>
-    
-    <!-- Kod JavaScript dla strony kategorii -->
-    <script src="js/category.js"></script>
+    <!-- Główne skrypty -->
+    <script src="js/products-data.js?v=18"></script>
+    <script src="js/app.js?v=21"></script>
 </body>
 </html>
