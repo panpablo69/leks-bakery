@@ -2579,13 +2579,18 @@ body::before {
 }
 
 .team-banner-btn {
-    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent !important;
+    border: 2px solid var(--color-accent) !important;
+    color: var(--color-accent) !important;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.15) !important;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .team-banner-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(197, 160, 89, 0.4);
+    background-color: var(--color-accent) !important;
+    color: var(--color-primary) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.45) !important;
 }
 
 .team-banner-image-col {
