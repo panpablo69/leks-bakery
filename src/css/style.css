@@ -648,7 +648,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 370px 0 220px; /* Zwiększony margines, aby karta nie zasłaniała nagłówka na desktopie */
+    margin: 440px 0 200px; /* Zwiększony margines, aby wysokie kafelki nie zasłaniały nagłówka na desktopie */
     width: 100%;
     padding: 0 40px;
 }
@@ -721,7 +721,7 @@ body::before {
 /* Pływająca, świecąca karta opisu roku */
 .timeline-content-card {
     position: absolute;
-    bottom: 60px; /* Pozycja nad kropkami */
+    bottom: 50px; /* Obniżona krawędź dla ułatwienia dystansu z góry */
     left: 0; /* Dynamicznie ustawiane przez JS */
     transform: translate(-50%, -15px);
     width: 340px;
@@ -821,8 +821,8 @@ body::before {
         gap: 80px;
         overflow-x: auto;
         overflow-y: visible;
-        height: 640px; /* Zwiększona wysokość dla zmieszczenia powiększonego paddingu */
-        padding: 330px 180px 240px; /* Zwiększony padding-top z 260px na 330px, aby karta nie nachodziła na tytuł na komórkach */
+        height: 700px; /* Zwiększona wysokość dla zmieszczenia powiększonego paddingu */
+        padding: 390px 180px 240px; /* Zwiększony padding-top z 330px na 390px, aby karta nie nachodziła na tytuł na komórkach */
         scrollbar-width: none; /* Ukrycie suwaka dla Firefox */
         margin-top: 40px;
         margin-bottom: 20px;
