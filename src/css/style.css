@@ -648,7 +648,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 440px 0 200px; /* Zwiększony margines, aby wysokie kafelki nie zasłaniały nagłówka na desktopie */
+    margin: 80px 0 300px; /* Przesunięto timeline do góry (pod nagłówek), a pod nim zrobiono 300px miejsca na kafelek */
     width: 100%;
     padding: 0 40px;
 }
@@ -718,14 +718,14 @@ body::before {
     font-weight: 800;
 }
 
-/* Pływająca, świecąca karta opisu roku */
+/* Pływająca, świecąca karta opisu roku (Zoptymalizowana pod osi czasu) */
 .timeline-content-card {
     position: absolute;
-    bottom: 50px; /* Obniżona krawędź dla ułatwienia dystansu z góry */
+    top: 50px; /* Pozycja pod kropkami */
     left: 0; /* Dynamicznie ustawiane przez JS */
-    transform: translate(-50%, -15px);
-    width: 340px;
-    padding: 24px;
+    transform: translate(-50%, 15px);
+    width: 480px; /* Szeroki, premium layout dwukolumnowy */
+    padding: 20px 24px;
     border-radius: var(--radius-md);
     background-color: rgba(255, 248, 239, 0.98) !important; /* Ciepłe, kremowe tło */
     border: 2.5px solid var(--color-accent) !important; /* Złota ramka nadająca premium look */
@@ -735,6 +735,9 @@ body::before {
     visibility: hidden;
     transition: opacity 0.35s ease, transform 0.35s ease, left 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     pointer-events: none;
+    display: flex; /* Flexbox dla dwóch kolumn */
+    gap: 20px;
+    align-items: center;
 }
 
 .timeline-content-card.active {
@@ -743,16 +746,16 @@ body::before {
     transform: translate(-50%, 0);
 }
 
-/* Dekoracyjna strzałka skierowana w dół */
+/* Dekoracyjna strzałka skierowana w górę (do aktywnej kropki) */
 .timeline-content-card::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    top: -10px; /* Pozycja na górze */
     left: 50%;
     transform: translateX(-50%);
-    border-width: 10px 10px 0;
+    border-width: 0 10px 10px; /* Trójkąt skierowany w górę */
     border-style: solid;
-    border-color: var(--color-accent) transparent;
+    border-color: transparent transparent var(--color-accent);
     display: block;
     width: 0;
 }
@@ -760,58 +763,58 @@ body::before {
 .timeline-content-card::before {
     content: '';
     position: absolute;
-    bottom: -7px;
+    top: -7px; /* Pozycja na górze */
     left: 50%;
     transform: translateX(-50%);
-    border-width: 8px 8px 0;
+    border-width: 0 8px 8px; /* Trójkąt skierowany w górę */
     border-style: solid;
-    border-color: rgba(255, 248, 239, 0.98) transparent;
+    border-color: transparent transparent rgba(255, 248, 239, 0.98);
     z-index: 11;
     display: block;
     width: 0;
 }
 
+.timeline-card-text {
+    flex: 1;
+}
+
 .timeline-card-title {
     font-family: var(--font-serif);
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: var(--color-primary);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .timeline-card-desc {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 400; /* Klasyczna grubość */
     color: var(--color-text); /* Brandowy Prussian Blue */
-    line-height: 1.5;
+    line-height: 1.45;
     text-shadow: none !important;
     filter: none !important;
     opacity: 1 !important;
 }
 
-/* Przesuwający się animowany kłos pod osią czasu */
-.timeline-mascot-slider-wrapper {
-    position: absolute;
-    top: 50px; /* Pozycja pod linią */
-    left: 0; /* Dynamicznie ustawiane przez JS */
-    width: 200px;
-    height: 240px;
-    transform: translateX(-50%);
-    transition: left 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-    z-index: 5;
-    pointer-events: none;
+/* Kontener dla maskotki wewnątrz kafelka */
+.timeline-card-mascot {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    mix-blend-mode: screen; /* Mieszanie tła dla wyeliminowania czarnego tła wideo */
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background-color: transparent;
 }
 
 .timeline-mascot-video {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    mix-blend-mode: screen; /* Sprawia, że czarne tło wideo staje się całkowicie przezroczyste! */
-    filter: drop-shadow(0 10px 20px rgba(0, 55, 110, 0.15));
+    mix-blend-mode: screen; /* Sprawia, że czarne tło wideo staje się przezroczyste wewnątrz beżowej karty! */
+    filter: drop-shadow(0 4px 8px rgba(0, 55, 110, 0.12));
 }
 
 /* Responsywność dla osi czasu w timeline */
@@ -821,8 +824,8 @@ body::before {
         gap: 80px;
         overflow-x: auto;
         overflow-y: visible;
-        height: 700px; /* Zwiększona wysokość dla zmieszczenia powiększonego paddingu */
-        padding: 390px 180px 240px; /* Zwiększony padding-top z 330px na 390px, aby karta nie nachodziła na tytuł na komórkach */
+        height: 430px; /* Zmniejszona, kompaktowa wysokość (zamiast 700px) */
+        padding: 60px 180px 350px; /* Przeniesiona przestrzeń na dół dla pływającego pod osią kafelka */
         scrollbar-width: none; /* Ukrycie suwaka dla Firefox */
         margin-top: 40px;
         margin-bottom: 20px;
@@ -846,13 +849,21 @@ body::before {
     }
     
     .timeline-content-card {
-        width: 280px; /* Węższa karta na telefony */
-        padding: 18px;
+        width: 290px; /* Dopasowana szerokość na komórki */
+        flex-direction: column-reverse; /* Maskotka pod tekstem na mobilkach */
+        gap: 15px;
+        padding: 16px;
+        top: 50px;
+        transform: translate(-50%, 15px);
     }
     
-    .timeline-mascot-slider-wrapper {
-        width: 140px;
-        height: 170px;
+    .timeline-content-card.active {
+        transform: translate(-50%, 0);
+    }
+    
+    .timeline-card-mascot {
+        width: 90px;
+        height: 90px;
     }
 }
 
