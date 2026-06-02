@@ -2527,3 +2527,166 @@ body::before {
     position: relative;
     z-index: 1;
 }
+
+/* --- Sekcja Baneru Zespołu (Poznajmy się) --- */
+.team-banner-section {
+    background-color: var(--color-primary); /* Głęboki, elegancki brandowy granat */
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 80% 50%, rgba(197, 160, 89, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.team-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.team-banner-text-col {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.team-banner-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.team-banner-desc {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.team-banner-btn {
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-banner-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(197, 160, 89, 0.4);
+}
+
+.team-banner-image-col {
+    width: 420px;
+    height: 320px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stylowy kolaż zdjęć nakładających się na siebie */
+.team-banner-collage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.collage-item {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: var(--radius-sm);
+    border: 3px solid var(--color-accent);
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.3s ease;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collage-item.item-1 {
+    top: 10px;
+    left: 20px;
+    z-index: 1;
+    transform: rotate(-6deg);
+}
+
+.collage-item.item-2 {
+    bottom: 10px;
+    left: 130px;
+    z-index: 3;
+    transform: scale(1.05); /* Środkowa fotka lekko powiększona */
+}
+
+.collage-item.item-3 {
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    transform: rotate(8deg);
+}
+
+.collage-item:hover {
+    z-index: 10;
+    transform: scale(1.15) rotate(0deg) !important;
+    border-color: #e25c05;
+}
+
+@media (max-width: 991px) {
+    .team-banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .team-banner-text-col {
+        text-align: center;
+    }
+    
+    .team-banner-image-col {
+        width: 100%;
+        max-width: 420px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    
+    .collage-item {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .collage-item.item-1 {
+        left: 10px;
+    }
+    
+    .collage-item.item-2 {
+        left: 50%;
+        transform: translateX(-50%) scale(1.05);
+    }
+    
+    .collage-item.item-3 {
+        right: 10px;
+    }
+    
+    .collage-item:hover {
+        transform: scale(1.15) rotate(0deg) !important;
+    }
+}
