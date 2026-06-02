@@ -695,14 +695,14 @@ body::before {
     position: relative;
     margin: 80px 0 300px; /* Przesunięto timeline do góry (pod nagłówek), a pod nim zrobiono 300px miejsca na kafelek */
     width: 100%;
-    padding: 0 40px;
+    padding: 0 40px 0 200px; /* Przesunięta pierwsza kropka o 200px w prawo, aby zwolnić miejsce dla Kłosia po lewej */
 }
 
 .timeline-navigation::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 40px;
+    left: 200px; /* Linia postępu zaczyna się od pierwszej kropki (200px) */
     right: 40px;
     height: 4px; /* Grubsza, bardziej premium linia */
     background: linear-gradient(to right, var(--color-primary) var(--timeline-progress, 0%), var(--color-accent-light) var(--timeline-progress, 0%));
@@ -769,8 +769,8 @@ body::before {
     top: 50px; /* Pozycja pod kropkami */
     left: 0; /* Dynamicznie ustawiane przez JS */
     transform: translate(-50%, 15px);
-    width: 340px; /* Standardowa, elegancka szerokość karty tekstowej */
-    padding: 24px;
+    width: 460px; /* Zwiększona szerokość, aby cały nagłówek był w jednej linii bez łamania słów */
+    padding: 24px 28px;
     border-radius: var(--radius-md);
     background-color: rgba(255, 248, 239, 0.98) !important; /* Ciepłe, kremowe tło */
     border: 2.5px solid var(--color-accent) !important; /* Złota ramka nadająca premium look */
