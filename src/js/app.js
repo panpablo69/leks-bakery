@@ -219,26 +219,72 @@ const timelineData = {
     }
 };
 
+function positionTimelineElements(button) {
+    const card = document.getElementById("timeline-card");
+    const mascotSlider = document.getElementById("timeline-mascot-slider");
+    const mascotVideo = document.getElementById("timeline-mascot-video");
+    
+    if (!button || !card) return;
+    
+    // Oblicz środek przycisku relatywnie do timeline-navigation
+    const btnCenter = button.offsetLeft + button.offsetWidth / 2;
+    
+    // Ustaw dynamicznie współrzędne left
+    card.style.left = btnCenter + "px";
+    if (mascotSlider) {
+        mascotSlider.style.left = btnCenter + "px";
+    }
+    
+    // Aktywuj kartę i zresetuj wideo
+    card.classList.add("active");
+    if (mascotVideo) {
+        mascotVideo.currentTime = 0;
+        mascotVideo.play().catch(e => console.log("Video playback prevented:", e));
+    }
+}
+
 function initTimeline() {
     const yearButtons = document.querySelectorAll(".timeline-year-btn");
     const card = document.getElementById("timeline-card");
+    const mascotSlider = document.getElementById("timeline-mascot-slider");
     const cardTitle = document.getElementById("timeline-title");
     const cardDesc = document.getElementById("timeline-desc");
     
     const percentages = { "1989": 0, "1998": 20, "2005": 40, "2010": 60, "2018": 80, "2026": 100 };
     const nav = document.getElementById("timeline-years");
     
-    // Ustawienie początkowego postępu linii
+    if (!card || !nav) return;
+    
+    // Ustawienie początkowej pozycji bez animacji przejścia na start
     const activeBtn = document.querySelector(".timeline-year-btn.active");
-    if (activeBtn && nav) {
+    if (activeBtn) {
+        card.style.transition = "none";
+        if (mascotSlider) mascotSlider.style.transition = "none";
+        
         const initYear = activeBtn.getAttribute("data-year");
         if (percentages[initYear] !== undefined) {
             nav.style.setProperty("--timeline-progress", percentages[initYear] + "%");
         }
+        
+        const data = timelineData[initYear];
+        if (data && cardTitle && cardDesc) {
+            cardTitle.textContent = data.title;
+            cardDesc.textContent = data.desc;
+        }
+        
+        positionTimelineElements(activeBtn);
+        
+        // Przywrócenie transition po krótkiej chwili
+        setTimeout(() => {
+            card.style.transition = "";
+            if (mascotSlider) mascotSlider.style.transition = "";
+        }, 50);
     }
     
     yearButtons.forEach(btn => {
         btn.addEventListener("click", () => {
+            if (btn.classList.contains("active")) return;
+            
             // Usunięcie klasy aktywnej z innych przycisków
             yearButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
@@ -247,31 +293,50 @@ function initTimeline() {
             const data = timelineData[targetYear];
             
             // Dynamiczne sterowanie kolorem linii
-            if (nav && percentages[targetYear] !== undefined) {
+            if (percentages[targetYear] !== undefined) {
                 nav.style.setProperty("--timeline-progress", percentages[targetYear] + "%");
             }
             
-            // Elegancka animacja GSAP: zniknięcie, zmiana tekstu, pojawienie się
+            // Elegancka animacja GSAP: zniknięcie, zmiana tekstu i pozycji, pojawienie się
             const timelineTl = gsap.timeline();
             
-            timelineTl.to(card, {
+            timelineTl.to([cardTitle, cardDesc], {
                 opacity: 0,
-                x: -30,
-                duration: 0.25,
+                y: -10,
+                duration: 0.2,
                 ease: "power2.in",
                 onComplete: () => {
                     cardTitle.textContent = data.title;
                     cardDesc.textContent = data.desc;
+                    
+                    // Pozycjonuj całą kartę i suwak do nowego aktywnego przycisku
+                    positionTimelineElements(btn);
                 }
             });
             
-            timelineTl.to(card, {
+            timelineTl.to([cardTitle, cardDesc], {
                 opacity: 1,
-                x: 0,
-                duration: 0.35,
+                y: 0,
+                duration: 0.3,
                 ease: "power2.out"
             });
         });
+    });
+    
+    // Przeliczanie pozycji przy zmianie rozmiaru okna
+    window.addEventListener("resize", () => {
+        const currentActive = document.querySelector(".timeline-year-btn.active");
+        if (currentActive) {
+            card.style.transition = "none";
+            if (mascotSlider) mascotSlider.style.transition = "none";
+            
+            positionTimelineElements(currentActive);
+            
+            requestAnimationFrame(() => {
+                card.style.transition = "";
+                if (mascotSlider) mascotSlider.style.transition = "";
+            });
+        }
     });
 }
 

@@ -648,16 +648,17 @@ body::before {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 60px 0 50px; /* Margines na tekst roku powyżej kropki */
+    margin: 200px 0 260px; /* 200px space above for card, 260px space below for mascot video */
     width: 100%;
+    padding: 0 40px;
 }
 
 .timeline-navigation::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 0;
-    width: 100%;
+    left: 40px;
+    right: 40px;
     height: 4px; /* Grubsza, bardziej premium linia */
     background: linear-gradient(to right, var(--color-primary) var(--timeline-progress, 0%), var(--color-accent-light) var(--timeline-progress, 0%));
     transform: translateY(-50%);
@@ -717,56 +718,109 @@ body::before {
     font-weight: 800;
 }
 
-.timeline-body-layout {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-top: 40px;
+/* Pływająca, świecąca karta opisu roku */
+.timeline-content-card {
+    position: absolute;
+    bottom: 60px; /* Pozycja nad kropkami */
+    left: 0; /* Dynamicznie ustawiane przez JS */
+    transform: translate(-50%, -15px);
+    width: 340px;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 248, 239, 0.98) !important; /* Ciepłe, kremowe tło */
+    border: 2.5px solid var(--color-accent) !important; /* Złota ramka nadająca premium look */
+    box-shadow: 0 10px 30px rgba(0, 58, 115, 0.15), 0 0 25px rgba(197, 160, 89, 0.3) !important; /* Złoty efekt glow */
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, transform 0.35s ease, left 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    pointer-events: none;
 }
 
-.timeline-mascot-wrapper {
-    flex: 0 0 160px; /* Szerokość dopasowana do proporcji kafelka */
-    height: 180px; /* Wysokość zbliżona do kafelka */
+.timeline-content-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+/* Dekoracyjna strzałka skierowana w dół */
+.timeline-content-card::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: var(--color-accent) transparent;
+    display: block;
+    width: 0;
+}
+
+.timeline-content-card::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px 8px 0;
+    border-style: solid;
+    border-color: rgba(255, 248, 239, 0.98) transparent;
+    z-index: 11;
+    display: block;
+    width: 0;
+}
+
+.timeline-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.timeline-card-desc {
+    font-size: 0.95rem;
+    font-weight: 400; /* Klasyczna grubość */
+    color: var(--color-text); /* Brandowy Prussian Blue */
+    line-height: 1.5;
+    text-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+/* Przesuwający się animowany kłos pod osią czasu */
+.timeline-mascot-slider-wrapper {
+    position: absolute;
+    top: 50px; /* Pozycja pod linią */
+    left: 0; /* Dynamicznie ustawiane przez JS */
+    width: 200px;
+    height: 240px;
+    transform: translateX(-50%);
+    transition: left 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 5;
+    pointer-events: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--transition-smooth);
 }
 
-.timeline-mascot {
-    max-width: 100%;
-    max-height: 100%;
+.timeline-mascot-video {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 8px 16px rgba(0, 55, 110, 0.12));
-    animation: mascotFloat 4s ease-in-out infinite;
-}
-
-@keyframes mascotFloat {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
-.timeline-content-card {
-    background-color: transparent !important; /* Przezroczyste tło kafelka */
-    border: 1.5px dashed var(--color-accent); /* Złota przerywana ramka nadająca premium look */
-    border-radius: var(--radius-md);
-    padding: 30px;
-    transition: var(--transition-smooth);
-    min-height: 160px;
-    flex-grow: 1; /* Karta zajmuje resztę szerokości */
+    filter: drop-shadow(0 10px 20px rgba(0, 55, 110, 0.15));
 }
 
 /* Responsywność dla osi czasu w timeline */
 @media (max-width: 768px) {
     .timeline-navigation {
         justify-content: flex-start;
-        gap: 60px;
+        gap: 80px;
         overflow-x: auto;
-        padding: 40px 20px 20px;
+        overflow-y: visible;
+        height: 520px; /* Całkowita wysokość dla zmieszczenia karty, przycisków i wideo */
+        padding: 200px 180px 240px; /* Zapewnia brak obcinania przycisków i elementów pływających */
         scrollbar-width: none; /* Ukrycie suwaka dla Firefox */
         margin-top: 40px;
         margin-bottom: 20px;
@@ -779,41 +833,25 @@ body::before {
     }
     
     .timeline-navigation::before {
-        width: 700px; /* Sztywna szerokość linii postępu, aby rozciągała się poza ekran */
-        min-width: 700px;
-        left: 20px;
+        width: 800px; /* Sztywna szerokość linii postępu, aby rozciągała się poza ekran */
+        min-width: 800px;
+        left: 180px; /* Dopasowane do padding-left */
+        right: auto;
     }
     
     .timeline-year-btn {
         flex-shrink: 0; /* Zapobiega ściskaniu przycisków na komórce */
     }
     
-    .timeline-body-layout {
-        flex-direction: column;
-        gap: 20px;
+    .timeline-content-card {
+        width: 280px; /* Węższa karta na telefony */
+        padding: 18px;
     }
     
-    .timeline-mascot-wrapper {
-        height: 140px;
-        flex: 0 0 auto;
+    .timeline-mascot-slider-wrapper {
+        width: 140px;
+        height: 170px;
     }
-}
-
-.timeline-card-title {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 12px;
-}
-
-.timeline-card-desc {
-    font-size: 1rem;
-    font-weight: 400; /* Klasyczna grubość */
-    color: var(--color-text); /* Brandowy Prussian Blue */
-    text-shadow: none !important;
-    filter: none !important;
-    opacity: 1 !important;
 }
 
 /* ==============================================================================
