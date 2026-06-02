@@ -648,7 +648,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 200px 0 260px; /* 200px space above for card, 260px space below for mascot video */
+    margin: 370px 0 220px; /* Zwiększony margines, aby karta nie zasłaniała nagłówka na desktopie */
     width: 100%;
     padding: 0 40px;
 }
@@ -803,12 +803,14 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    mix-blend-mode: screen; /* Mieszanie tła dla wyeliminowania czarnego tła wideo */
 }
 
 .timeline-mascot-video {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    mix-blend-mode: screen; /* Sprawia, że czarne tło wideo staje się całkowicie przezroczyste! */
     filter: drop-shadow(0 10px 20px rgba(0, 55, 110, 0.15));
 }
 
@@ -819,8 +821,8 @@ body::before {
         gap: 80px;
         overflow-x: auto;
         overflow-y: visible;
-        height: 520px; /* Całkowita wysokość dla zmieszczenia karty, przycisków i wideo */
-        padding: 200px 180px 240px; /* Zapewnia brak obcinania przycisków i elementów pływających */
+        height: 640px; /* Zwiększona wysokość dla zmieszczenia powiększonego paddingu */
+        padding: 330px 180px 240px; /* Zwiększony padding-top z 260px na 330px, aby karta nie nachodziła na tytuł na komórkach */
         scrollbar-width: none; /* Ukrycie suwaka dla Firefox */
         margin-top: 40px;
         margin-bottom: 20px;
