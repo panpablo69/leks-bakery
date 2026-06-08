@@ -4,7 +4,8 @@
     "about": "O nas",
     "products": "Produkty",
     "career": "Kariera",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "shop": "Sklep"
   },
   "hero": {
     "subtitle": "Tradycja od 1989 roku",
@@ -79,7 +80,10 @@
     "f3_title": "Niższa zawartość FODMAP",
     "f3_desc": "doskonała dla osób z <strong>wrażliwymi jelitami</strong>, w tym przy <strong>IBS i SIBO</strong>. Dzięki temu <strong>minimalizuje</strong> wzdęcia i <strong>dyskomfort</strong> trawienny.",
     "f4_title": "Źródło Cynku i Selenu",
-    "f4_desc": "dla wzmocnienia organizmu i codziennej <strong>odporności</strong>."
+    "f4_desc": "dla wzmocnienia organizmu i codziennej <strong>odporności</strong>.",
+    "cta_title": "Wkrótce sklep z <strong>pieczywem 2AB</strong>.",
+    "cta_text": "Nasze unikalne <strong>pieczywo 2AB</strong> będzie dostępne w sprzedaży wysyłkowej. Pieczywo będzie zapakowane próżniowo, z długim terminem ważności. Zapisz się do newslettera – poinformujemy Cię, jak sklep ruszy.",
+    "cta_btn": "Zapisz się"
   },
   "blog": {
     "subtitle": "Wiedza i Inspiracje",
@@ -174,6 +178,7 @@
     "subject_wholesale": "Współpraca Hurtowa",
     "subject_career": "Kariera i rekrutacja",
     "subject_general": "Zapytanie Ogólne",
+    "subject_newsletter_2ab": "Poinformuj mnie o starcie sklepu z pieczywem 2AB",
     "label_message": "Treść wiadomości",
     "placeholder_message": "Wpisz treść swojej wiadomości...",
     "btn_send": "Wyślij wiadomość"

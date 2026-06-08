@@ -1527,6 +1527,98 @@ body::before {
     }
 }
 
+/* --- Nowoczesny Baner Informacyjny 2AB Online (CTA) --- */
+.features-2ab-cta {
+    margin-top: 55px;
+    padding: 40px 60px;
+    background: linear-gradient(135deg, rgba(197, 160, 89, 0.08) 0%, rgba(197, 160, 89, 0.22) 100%);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    box-shadow: var(--shadow-sm); /* Unifikacja: startowy cień taki sam jak u kart produktów */
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.features-2ab-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.features-2ab-cta:hover {
+    transform: translateY(-8px); /* Unifikacja z hoverem kart produktów/kariery */
+    box-shadow: var(--shadow-md); /* Unifikacja z hoverem kart produktów/kariery */
+    border-color: var(--color-accent); /* Unifikacja z hoverem kart produktów/kariery */
+}
+
+.features-2ab-cta .cta-content {
+    width: 100%;
+    max-width: 800px;
+}
+
+.features-2ab-cta .cta-title {
+    font-family: var(--font-serif);
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.features-2ab-cta .cta-text {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.features-2ab-cta .cta-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.features-2ab-cta .cta-action .btn {
+    min-width: 200px;
+    background-color: var(--color-accent); /* Klasyczne złoto piekarnicze z brandbooka */
+    color: var(--color-white) !important;
+    border: 2px solid var(--color-accent);
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.25);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.features-2ab-cta .cta-action .btn:hover {
+    background-color: var(--color-accent-light); /* Podświetlenie na jasne złoto */
+    border-color: var(--color-accent-light);
+    color: var(--color-primary) !important; /* Tekst w kolorze głębokiego granatu */
+    transform: translateY(-4px); /* Efekt uniesienia (wyniesienie o 4px) */
+    box-shadow: 0 8px 20px rgba(197, 160, 89, 0.45);
+}
+
+/* Responsywność dla baneru CTA */
+@media (max-width: 768px) {
+    .features-2ab-cta {
+        padding: 30px 24px;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    
+    .features-2ab-cta .cta-action .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
 /* ==============================================================================
    SWIPER CAROUSEL OVERRIDES & STYLES (BLOG, KARIERA, PARTNERZY)
    ============================================================================== */

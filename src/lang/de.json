@@ -4,7 +4,8 @@
     "about": "Über uns",
     "products": "Produkte",
     "career": "Karriere",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "shop": "Shop"
   },
   "hero": {
     "subtitle": "Tradition seit 1989",
@@ -79,7 +80,10 @@
     "f3_title": "Geringerer FODMAP-Gehalt",
     "f3_desc": "hervorragend für Menschen mit <strong>empfindlichem Darm</strong>, einschließlich <strong>Reizdarmsyndrom (IBS) und SIBO</strong>. Dies <strong>minimiert</strong> Blähungen und Magen-Darm-<strong>Beschwerden</strong>.",
     "f4_title": "Zink- und Selenquelle",
-    "f4_desc": "zur Stärkung des Körpers und zur täglichen Unterstützung des <strong>Immunsystems</strong>."
+    "f4_desc": "zur Stärkung des Körpers und zur täglichen Unterstützung des <strong>Immunsystems</strong>.",
+    "cta_title": "Online-Shop mit <strong>2AB-Brot</strong> demnächst verfügbar.",
+    "cta_text": "Unser einzigartiges <strong>2AB-Brot</strong> wird im Versandhandel erhältlich sein. Das Brot wird vakuumverpackt und hat eine lange Haltbarkeit. Melden Sie sich für unseren Newsletter an – wir informieren Sie, sobald der Shop startet.",
+    "cta_btn": "Anmelden"
   },
   "blog": {
     "subtitle": "Wissen & Inspiration",
@@ -174,6 +178,7 @@
     "subject_wholesale": "Großhandelskooperation",
     "subject_career": "Karriere & Rekrutierung",
     "subject_general": "Allgemeine Anfrage",
+    "subject_newsletter_2ab": "Informieren Sie mich, wenn der Shop mit 2AB-Brot startet",
     "label_message": "Inhalt der Nachricht",
     "placeholder_message": "Geben Sie hier Ihre Nachricht ein...",
     "btn_send": "Nachricht senden"

@@ -4,7 +4,8 @@
     "about": "About us",
     "products": "Products",
     "career": "Career",
-    "contact": "Contact"
+    "contact": "Contact",
+    "shop": "Shop"
   },
   "hero": {
     "subtitle": "Tradition since 1989",
@@ -79,7 +80,10 @@
     "f3_title": "Lower FODMAP content",
     "f3_desc": "excellent for people with <strong>sensitive intestines</strong>, including <strong>IBS and SIBO</strong>. This <strong>minimizes</strong> bloating and digestive <strong>discomfort</strong>.",
     "f4_title": "Source of Zinc & Selenium",
-    "f4_desc": "to strengthen the body and support daily <strong>immunity</strong>."
+    "f4_desc": "to strengthen the body and support daily <strong>immunity</strong>.",
+    "cta_title": "Online shop with <strong>2AB bread</strong> coming soon.",
+    "cta_text": "Our unique <strong>2AB bread</strong> will be available for mail order. The bread will be vacuum-packed, with a long shelf life. Sign up for our newsletter – we will inform you as soon as the shop launches.",
+    "cta_btn": "Sign up"
   },
   "blog": {
     "subtitle": "Knowledge & Inspiration",
@@ -174,6 +178,7 @@
     "subject_wholesale": "Wholesale Cooperation",
     "subject_career": "Career & Recruitment",
     "subject_general": "General Inquiry",
+    "subject_newsletter_2ab": "Inform me when the shop with 2AB bread launches",
     "label_message": "Message content",
     "placeholder_message": "Enter your message here...",
     "btn_send": "Send Message"

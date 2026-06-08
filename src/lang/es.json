@@ -4,7 +4,8 @@
     "about": "Sobre nosotros",
     "products": "Productos",
     "career": "Empleo",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "shop": "Tienda"
   },
   "hero": {
     "subtitle": "Tradición desde 1989",
@@ -79,7 +80,10 @@
     "f3_title": "Menor contenido de FODMAP",
     "f3_desc": "excelente para personas con <strong>intestinos sensibles</strong>, incluyendo <strong>SII y SIBO</strong>. Esto <strong>minimiza</strong> la hinchazón y las <strong>molestias</strong> digestivas.",
     "f4_title": "Fuente de Zinc y Selenio",
-    "f4_desc": "para fortalecer el cuerpo y apoyar la <strong>inmunidad</strong> diaria."
+    "f4_desc": "para fortalecer el cuerpo y apoyar la <strong>inmunidad</strong> diaria.",
+    "cta_title": "Próximamente tienda online con <strong>pan 2AB</strong>.",
+    "cta_text": "Nuestro <strong>pan único 2AB</strong> estará disponible para pedidos por correo. El pan estará envasado al vacío, con una larga vida útil. Suscríbete a nuestro boletín – te informaremos cuando se lance la tienda.",
+    "cta_btn": "Registrarse"
   },
   "blog": {
     "subtitle": "Conocimiento e Inspiración",
@@ -174,6 +178,7 @@
     "subject_wholesale": "Colaboración Mayorista",
     "subject_career": "Empleo y Reclutamiento",
     "subject_general": "Consulta General",
+    "subject_newsletter_2ab": "Infórmame cuando se lance la tienda con pan 2AB",
     "label_message": "Contenido del mensaje",
     "placeholder_message": "Escriba el contenido de su mensaje aquí...",
     "btn_send": "Enviar mensaje"
