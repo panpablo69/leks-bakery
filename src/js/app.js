@@ -3,17 +3,190 @@
    Author: Senior Developer & Architekt AI (15+ years experience)
    ============================================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+// Global translation variables
+let currentLang = localStorage.getItem("leks_lang");
+if (!currentLang) {
+    const userLang = navigator.language || navigator.userLanguage;
+    const shortLang = userLang.split('-')[0].toLowerCase();
+    currentLang = ["pl", "en", "de", "es"].includes(shortLang) ? shortLang : "pl";
+}
+let translations = {};
+
+async function loadInitialTranslations() {
+    try {
+        const response = await fetch(`lang/${currentLang}.json`);
+        if (response.ok) {
+            translations = await response.json();
+            applyTranslations();
+            updateLanguageSwitcherUI();
+        }
+    } catch (error) {
+        console.error("Failed to load initial translations:", error);
+    }
+}
+
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`lang/${lang}.json`);
+        if (!response.ok) throw new Error(`Could not load translations for ${lang}`);
+        translations = await response.json();
+        currentLang = lang;
+        localStorage.setItem("leks_lang", lang);
+        
+        applyTranslations();
+        updateLanguageSwitcherUI();
+        
+        // Re-render categories & products
+        renderKategorie();
+        renderCategoryProducts();
+        
+        // Re-render current year timeline card
+        const activeBtn = document.querySelector(".timeline-year-btn.active");
+        if (activeBtn) {
+            const year = activeBtn.getAttribute("data-year");
+            const cardTitle = document.getElementById("timeline-title");
+            const cardDesc = document.getElementById("timeline-desc");
+            if (cardTitle && cardDesc) {
+                const title = translations.about && translations.about.timeline && translations.about.timeline[year] 
+                    ? translations.about.timeline[year].title 
+                    : timelineData[year].title;
+                const desc = translations.about && translations.about.timeline && translations.about.timeline[year] 
+                    ? translations.about.timeline[year].desc 
+                    : timelineData[year].desc;
+                cardTitle.textContent = title;
+                cardDesc.textContent = desc;
+            }
+        }
+        
+        // Refresh ScrollTrigger to recalculate trigger positions after translations adjust content size
+        if (typeof ScrollTrigger !== 'undefined') {
+            setTimeout(() => {
+                ScrollTrigger.refresh();
+            }, 100);
+        }
+    } catch (error) {
+        console.error("i18n load error:", error);
+    }
+}
+
+function applyTranslations() {
+    if (!translations || Object.keys(translations).length === 0) return;
+    
+    // 1. data-i18n attributes
+    const i18nElements = document.querySelectorAll("[data-i18n]");
+    i18nElements.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const value = getTranslationValue(translations, key);
+        if (value !== undefined) {
+            if (el.tagName === 'OPTION' || el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.textContent = value;
+            } else {
+                el.innerHTML = value;
+            }
+        }
+    });
+    
+    // 2. data-i18n-placeholder attributes
+    const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]");
+    placeholderElements.forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        const value = getTranslationValue(translations, key);
+        if (value !== undefined) {
+            el.setAttribute("placeholder", value);
+        }
+    });
+
+    // 3. data-i18n-alt attributes
+    const altElements = document.querySelectorAll("[data-i18n-alt]");
+    altElements.forEach(el => {
+        const key = el.getAttribute("data-i18n-alt");
+        const value = getTranslationValue(translations, key);
+        if (value !== undefined) {
+            el.setAttribute("alt", value);
+        }
+    });
+}
+
+function getTranslationValue(obj, keyPath) {
+    if (!obj || !keyPath) return undefined;
+    const keys = keyPath.split('.');
+    let current = obj;
+    for (let key of keys) {
+        if (current[key] === undefined) return undefined;
+        current = current[key];
+    }
+    return current;
+}
+
+function updateLanguageSwitcherUI() {
+    const activeOption = document.querySelector(`.lang-dropdown-menu .lang-option[data-lang="${currentLang}"]`);
+    if (activeOption) {
+        const activeFlagContainer = document.getElementById("active-lang-flag");
+        const activeCodeContainer = document.getElementById("active-lang-code");
+        const optionFlag = activeOption.querySelector(".lang-flag");
+        
+        if (activeFlagContainer && optionFlag) {
+            activeFlagContainer.innerHTML = optionFlag.innerHTML;
+        }
+        if (activeCodeContainer) {
+            activeCodeContainer.textContent = currentLang.toUpperCase();
+        }
+        
+        const options = document.querySelectorAll(".lang-dropdown-menu .lang-option");
+        options.forEach(opt => {
+            if (opt.getAttribute("data-lang") === currentLang) {
+                opt.classList.add("active");
+            } else {
+                opt.classList.remove("active");
+            }
+        });
+    }
+}
+
+function initLanguageSwitcher() {
+    const dropdown = document.getElementById("lang-dropdown");
+    const trigger = document.getElementById("lang-trigger");
+    if (!dropdown || !trigger) return;
+    
+    trigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle("active-open");
+    });
+    
+    const options = dropdown.querySelectorAll(".lang-option");
+    options.forEach(opt => {
+        opt.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const lang = opt.getAttribute("data-lang");
+            if (lang && lang !== currentLang) {
+                loadTranslations(lang);
+            }
+            dropdown.classList.remove("active-open");
+        });
+    });
+    
+    document.addEventListener("click", () => {
+        dropdown.classList.remove("active-open");
+    });
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
     // Rejestracja wtyczki ScrollTrigger w GSAP
     try {
         gsap.registerPlugin(ScrollTrigger);
     } catch(e) { console.error("GSAP register error:", e); }
     
+    // Inicjalizacja języka
+    await loadInitialTranslations();
 
     try {
         initNavigation();
     } catch(e) { console.error("initNavigation error:", e); }
     
+    try {
+        initLanguageSwitcher();
+    } catch(e) { console.error("initLanguageSwitcher error:", e); }
+
     try {
         initHeroAnimations();
     } catch(e) { console.error("initHeroAnimations error:", e); }
@@ -57,6 +230,15 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
         initPrivacyModal();
     } catch(e) { console.error("initPrivacyModal error:", e); }
+    
+    // Odświeżenie na koniec załadowania okna
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            if (typeof ScrollTrigger !== 'undefined') {
+                ScrollTrigger.refresh();
+            }
+        }, 300);
+    });
 });
 
 /* ==============================================================================
@@ -268,8 +450,14 @@ function initTimeline() {
         
         const data = timelineData[initYear];
         if (data && cardTitle && cardDesc) {
-            cardTitle.textContent = data.title;
-            cardDesc.textContent = data.desc;
+            const title = translations.about && translations.about.timeline && translations.about.timeline[initYear] 
+                ? translations.about.timeline[initYear].title 
+                : data.title;
+            const desc = translations.about && translations.about.timeline && translations.about.timeline[initYear] 
+                ? translations.about.timeline[initYear].desc 
+                : data.desc;
+            cardTitle.textContent = title;
+            cardDesc.textContent = desc;
         }
         
         positionTimelineElements(activeBtn);
@@ -291,6 +479,12 @@ function initTimeline() {
             
             const targetYear = btn.getAttribute("data-year");
             const data = timelineData[targetYear];
+            const title = translations.about && translations.about.timeline && translations.about.timeline[targetYear] 
+                ? translations.about.timeline[targetYear].title 
+                : data.title;
+            const desc = translations.about && translations.about.timeline && translations.about.timeline[targetYear] 
+                ? translations.about.timeline[targetYear].desc 
+                : data.desc;
             
             // Dynamiczne sterowanie kolorem linii
             if (percentages[targetYear] !== undefined) {
@@ -306,8 +500,8 @@ function initTimeline() {
                 duration: 0.2,
                 ease: "power2.in",
                 onComplete: () => {
-                    cardTitle.textContent = data.title;
-                    cardDesc.textContent = data.desc;
+                    cardTitle.textContent = title;
+                    cardDesc.textContent = desc;
                     
                     // Pozycjonuj całą kartę i suwak do nowego aktywnego przycisku
                     positionTimelineElements(btn);
@@ -387,20 +581,24 @@ function renderKategorie() {
 
             const catSpan = document.createElement("span");
             catSpan.className = "product-category";
-            catSpan.textContent = "Kategoria";
+            catSpan.textContent = translations.products && translations.products.subtitle ? translations.products.subtitle : "Kategoria";
 
             const titleH3 = document.createElement("h3");
             titleH3.className = "product-title";
-            titleH3.textContent = kat.name || "Bez nazwy";
+            titleH3.textContent = translations.categories && translations.categories[kat.id] 
+                ? translations.categories[kat.id].name 
+                : (kat.name || "Bez nazwy");
 
             const descP = document.createElement("p");
             descP.className = "product-desc";
-            descP.textContent = kat.description || "";
+            descP.textContent = translations.categories && translations.categories[kat.id] 
+                ? translations.categories[kat.id].description 
+                : (kat.description || "");
 
             const linkA = document.createElement("a");
             linkA.className = "btn btn-sm btn-primary";
             linkA.href = `category.html?cat=${kat.id}`;
-            linkA.textContent = "Zobacz produkty";
+            linkA.textContent = translations.hero && translations.hero.btn_offer ? translations.hero.btn_offer : "Zobacz produkty";
 
             infoDiv.appendChild(catSpan);
             infoDiv.appendChild(titleH3);
@@ -416,6 +614,11 @@ function renderKategorie() {
     });
 
     container.appendChild(fragment);
+
+    // Refresh ScrollTrigger to ensure triggers are recalculating height
+    if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
+    }
 }
 
 
@@ -433,8 +636,15 @@ function renderCategoryProducts() {
         return;
     }
     
-    document.getElementById("cat-title").textContent = category.name;
-    document.getElementById("cat-desc").textContent = category.description;
+    const catName = translations.categories && translations.categories[catId] 
+        ? translations.categories[catId].name 
+        : category.name;
+    const catDesc = translations.categories && translations.categories[catId] 
+        ? translations.categories[catId].description 
+        : category.description;
+
+    document.getElementById("cat-title").textContent = catName;
+    document.getElementById("cat-desc").textContent = catDesc;
     
     // Czyszczenie za pomocą usuwania węzłów (bezpieczne przed XSS)
     while (container.firstChild) {
@@ -476,19 +686,23 @@ function renderCategoryProducts() {
         
         const catSpan = document.createElement("span");
         catSpan.className = "product-category";
-        catSpan.textContent = category.name;
+        catSpan.textContent = catName;
         
         const titleH3 = document.createElement("h3");
         titleH3.className = "product-title";
         titleH3.textContent = prod.name;
         
+        const weightLabel = translations.products && translations.products.weight ? translations.products.weight : "Waga:";
+        const packagingLabel = translations.products && translations.products.packaging ? translations.products.packaging : "Pakowanie:";
+        
         const descP = document.createElement("p");
         descP.className = "product-desc";
-        descP.textContent = `Waga: ${prod.weight} | Pakowanie: ${prod.packaging}`;
+        descP.textContent = `${weightLabel} ${prod.weight} | ${packagingLabel} ${prod.packaging}`;
         
+        const b2bLabel = translations.products && translations.products.b2b_badge ? translations.products.b2b_badge : "Specyfikacja B2B";
         const btn = document.createElement("button");
         btn.className = "btn btn-sm btn-primary open-spec-btn";
-        btn.textContent = "Specyfikacja B2B";
+        btn.textContent = b2bLabel;
         
         infoDiv.appendChild(catSpan);
         infoDiv.appendChild(titleH3);
@@ -502,6 +716,11 @@ function renderCategoryProducts() {
     });
     
     container.appendChild(fragment);
+
+    // Refresh ScrollTrigger to ensure triggers are recalculating height
+    if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
+    }
 }
 
 function initParallax() {
@@ -598,8 +817,8 @@ function initScrollAnimations() {
         ease: "power3.out",
         clearProps: "opacity,transform",
         scrollTrigger: {
-            trigger: ".products-grid",
-            start: "top 95%",
+            trigger: "#products",
+            start: "top 85%",
             toggleActions: "play none none none"
         }
     });
@@ -786,7 +1005,7 @@ function initSwipers() {
         });
     }
 
-    // Career Swiper
+    /* Career Swiper is disabled - replaced by static responsive CSS Grid
     if (document.querySelector('.career-swiper')) {
         new Swiper('.career-swiper', {
             slidesPerView: 1,
@@ -811,6 +1030,7 @@ function initSwipers() {
             }
         });
     }
+    */
 
     // Partners Swiper
     if (document.querySelector('.partners-swiper')) {

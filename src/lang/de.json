@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "start": "Startseite",
+    "about": "Über uns",
+    "products": "Produkte",
+    "career": "Karriere",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "subtitle": "Tradition seit 1989",
+    "title": "Der beste Partner in der Backwarenproduktion.<br><span class=\"accent-text\">Traditioneller Geschmack im Großformat.</span>",
+    "lead": "Wir liefern qualitativ hochwertige Brote, Brötchen und Konditoreiwaren an Tausende von Geschäften in Polen und Europa.",
+    "btn_offer": "Angebot kennenlernen",
+    "btn_history": "Unsere Geschichte",
+    "scroll_down": "Nach unten scrollen"
+  },
+  "about": {
+    "subtitle": "Über Leks",
+    "title": "Produktionskapazität auf europäischem Niveau",
+    "lead": "Wir sind ein strategischer und stabiler Partner für die größten Handelsketten in Polen und Europa.",
+    "p1": "Aus einer kleinen Handwerksbäckerei haben wir uns zu einem leistungsstarken Hersteller mit <strong>drei spezialisierten Produktionsstätten</strong> in Sulęcin, Gorzów Wielkopolski und Tarnów Bycki entwickelt. Unsere Werke verfügen über renommierte <strong>IFS Food</strong> und <strong>BRC Global Standard</strong> Zertifikate auf höchstem Niveau, was absolute Sicherheit und Liefertreue garantiert.",
+    "p2": "Unsere Frischlogistik und fortschrittliche Gärunterbrechungs-Technologie (Bake-off) ermöglichen es uns, täglich knusprige Backwaren pünktlich an Tausende von Filialen zu liefern.",
+    "team_badge": "Unser Team",
+    "timeline_title": "Unsere Geschichte",
+    "timeline_subtitle": "Klicken Sie auf einen beliebigen Punkt, um unsere Geschichte zu erfahren",
+    "timeline": {
+      "1989": {
+        "title": "Gründung in Sulęcin",
+        "desc": "Leks beginnt seine Tätigkeit als kleine Familienbäckerei mit Leidenschaft für traditionelle Sauerteigbrote in Sulęcin."
+      },
+      "1998": {
+        "title": "Produktionskapazität: 50.000 / Tag",
+        "desc": "Bau des ersten vollautomatisierten Werks in Sulęcin. Die Produktionskapazität steigt auf 50.000 Laibe pro Tag, was den strategischen Eintritt in die ersten regionalen Handelsketten ermöglicht."
+      },
+      "2005": {
+        "title": "Einführung der IFS- und BRC-Standards",
+        "desc": "Bau eines modernen Werks in Gorzów Wielkopolski. Einführung strenger internationaler IFS Food- und BRC Global Standard-Zertifizierungen auf Grade-A-Niveau, was die Türen für die Zusammenarbeit mit landesweiten und europäischen Supermarktketten öffnet."
+      },
+      "2010": {
+        "title": "Automatisierung & Erweiterung",
+        "desc": "Inbetriebnahme eines modernen Logistik- und Lagerzentrums in Sulęcin und Einführung fortschrittlicher Verpackungsmanagementsysteme, die eine fehlerfreie Auftragsabwicklung garantieren."
+      },
+      "2018": {
+        "title": "Bake-off Marktführer & 1200+ Verkaufsstellen",
+        "desc": "Einführung wegweisender Linien für die Gärunterbrechungs- und Tiefkühltechnologie (Bake-off). Unsere fortschrittliche Logistikflotte stellt die tägliche, pünktliche Lieferung von frischem Teig an über 1.200 Supermärkte in Europa sicher."
+      },
+      "2026": {
+        "title": "Bäckerei der Zukunft & 2AB-Linie",
+        "desc": "Vollständige Automatisierung der Produktion unter Beibehaltung der traditionellen 24-Stunden-Fermentation. Einführung einer einzigartigen Brotlinie aus 2AB-Urweizen und Umstellung unserer Werke auf 100% nachhaltige erneuerbare Energie."
+      }
+    }
+  },
+  "team_banner": {
+    "subtitle": "Menschen mit Leidenschaft",
+    "title": "Lernen wir uns näher kennen!",
+    "desc": "Hinter jedem duftenden Brotlaib und jedem knusprigen Brötchen stehen Menschen, die ihr Herz in ihre Arbeit stecken. Unser Team besteht nicht nur aus Bäckermeistern, sondern auch aus interessanten Persönlichkeiten mit außergewöhnlichen Leidenschaften. Sehen Sie, wer die Bäckerei Leks ausmacht und was uns nach Feierabend bewegt!",
+    "btn": "Unser Team kennenlernen &rarr;"
+  },
+  "products": {
+    "subtitle": "Unser Sortiment",
+    "title": "Produkte",
+    "b2b_badge": "B2B Spezifikation",
+    "weight": "Gewicht:",
+    "packaging": "Verpackung:",
+    "shelf_life": "Haltbarkeit:",
+    "cert": "Zertifikate:",
+    "b2b_cta": "Großhandelsangebot anfordern (B2B)",
+    "close": "Schließen",
+    "back": "&larr; Zurück zu den Kategorien"
+  },
+  "features_2ab": {
+    "subtitle": "Innovation & Gesundheit",
+    "title": "2AB Brot",
+    "lead": "Wir kreieren Brot <strong>auf Basis des einzigartigen 2AB-Mehls</strong>, das aus einer Urgetreidesorte gewonnen wird. Das ist eine echte Revolution im Backhandwerk",
+    "f1_title": "Natürliche Gärung",
+    "f1_desc": "verleiht dem Brötchen einen tiefen, authentischen Geschmack und erhöht seine <strong>Bekömmlichkeit</strong>.",
+    "f2_title": "Reich an Carotinen",
+    "f2_desc": "sie verleihen dem Brötchen seine natürliche gelbe Farbe und liefern <strong>Provitamin A</strong>, was Sehkraft und <strong>Immunsystem</strong> unterstützt.",
+    "f3_title": "Geringerer FODMAP-Gehalt",
+    "f3_desc": "hervorragend für Menschen mit <strong>empfindlichem Darm</strong>, einschließlich <strong>Reizdarmsyndrom (IBS) und SIBO</strong>. Dies <strong>minimiert</strong> Blähungen und Magen-Darm-<strong>Beschwerden</strong>.",
+    "f4_title": "Zink- und Selenquelle",
+    "f4_desc": "zur Stärkung des Körpers und zur täglichen Unterstützung des <strong>Immunsystems</strong>."
+  },
+  "blog": {
+    "subtitle": "Wissen & Inspiration",
+    "title": "Blog",
+    "more": "Mehr &rarr;",
+    "p1_title": "Frischelogistik: Ein europäischer Standard",
+    "p1_desc": "Im Jahr 2026 geht es bei der Qualität von Backwaren nicht nur um das Backen, sondern auch um eine blitzschnelle Logistik.",
+    "p2_title": "Brot in der Ernährung des modernen Verbrauchers",
+    "p2_desc": "Der Verbraucher sucht nach Produkten, die Gesundheit und Immunsystem unterstützen.",
+    "p3_title": "Vom Korn zum Laib. Tradition trifft Technologie",
+    "p3_desc": "Wie wir in unseren modernen Fabriken für authentischen Geschmack sorgen.",
+    "p4_title": "Öko-Bäckerei: Unser Weg zu 100% grüner Energie",
+    "p4_desc": "Im Jahr 2026 wurden unsere Produktionsstätten vollständig auf nachhaltige Energiequellen umgestellt, um Tradition mit Natur zu verbinden."
+  },
+  "career": {
+    "subtitle": "Werden Sie Teil unseres Teams",
+    "title": "Arbeiten bei Leks",
+    "apply": "Bewerben",
+    "send_cv": "Lebenslauf senden",
+    "location": {
+      "gorzow": "Gorzów Wielkopolski",
+      "zielona_gora": "Zielona Góra",
+      "tarnow": "Tarnów Bycki",
+      "any": "Beliebiger Standort"
+    },
+    "jobs": {
+      "production": {
+        "title": "Mitarbeiter in der Produktion",
+        "desc": "Aufgaben: Bedienung von Bäckereimaschinen und -anlagen, Überwachung der Parameter und Verpackung der Fertigprodukte."
+      },
+      "mechanic": {
+        "title": "Mechaniker-Elektriker",
+        "desc": "Aufgaben: Laufende Wartung des Maschinenparks, Diagnose und Behebung elektrischer und mechanischer Störungen."
+      },
+      "baker": {
+        "title": "Bäcker - St. Klemens Café",
+        "desc": "Aufgaben: Handwerkliches Backen von traditionellem Brot unter Café-Bedingungen, Sorge für Qualität und Ästhetik."
+      },
+      "warehouse_raw": {
+        "title": "Rohstofflagermitarbeiter",
+        "desc": "Aufgaben: Annahme und Qualitätskontrolle von Rohstoffen, Dokumentenführung und Produktionsversorgung."
+      },
+      "production_aux": {
+        "title": "Mitarbeiter in der Produktion",
+        "desc": "Aufgaben: Hilfsarbeiten beim Brotbacken, Bedienung automatisierter Linien, Einhaltung der Arbeitshygiene."
+      },
+      "oven_operator": {
+        "title": "Ofenbediener",
+        "desc": "Aufgaben: Überwachung des korrekten Backens in Tunnel- und Etagenöfen, Temperaturkontrolle."
+      },
+      "warehouse_ready": {
+        "title": "Fertigwarenlagermitarbeiter",
+        "desc": "Aufgaben: Zusammenstellung von Großhandelsaufträgen, Beladung von Verteilerfahrzeugen, Erfassung von Ausgängen."
+      },
+      "shift_leader": {
+        "title": "Produktionsmeister / Schichtleiter",
+        "desc": "Aufgaben: Führung des Produktionsteams, Koordination des Produktionsplans, Überwachung der IFS/BRC-Standards."
+      },
+      "warehouse_ready_aux": {
+        "title": "Fertigwarenlagermitarbeiter",
+        "desc": "Aufgaben: Übernahme fertiger Backwaren aus der Bäckerei, Vorbereitung von Sendungen für Handelsketten."
+      },
+      "oven_operator_aux": {
+        "title": "Ofenbediener",
+        "desc": "Aufgaben: Bedienung von Etagen- und Stikkenöfen, Kontrolle der Backphasen des Brotes."
+      },
+      "warehouse_raw_aux": {
+        "title": "Rohstofflagermitarbeiter",
+        "desc": "Aufgaben: Einlagerung von Mehl und Backzutaten, Entleeren von Silos, Erfassung von Lieferungen."
+      },
+      "spontaneous": {
+        "title": "Initiativbewerbung",
+        "desc": "Sie möchten Teil des Leks-Teams werden, finden aber keine passende Stelle? Senden Sie uns Ihre Initiativbewerbung – wir freuen uns darauf, Ihre Kompetenzen kennenzulernen!",
+        "location": "Beliebiger Standort"
+      }
+    }
+  },
+  "partners": {
+    "subtitle": "Kooperation",
+    "title": "Unsere Partner",
+    "intro": "Wir arbeiten mit bewährten, namhaften Lieferanten von Bäckereikomponenten sowie führenden Branchenverbänden in Polen und Europa zusammen:"
+  },
+  "contact": {
+    "subtitle": "Schreiben Sie uns",
+    "title": "Lassen Sie uns über Brot sprechen",
+    "hours": "Kundenservice: Mo - Fr, 8:00 - 16:00 Uhr",
+    "label_name": "Vor- und Nachname",
+    "placeholder_name": "z. B. Max Mustermann",
+    "label_email": "E-Mail-Adresse",
+    "placeholder_email": "z. B. max@domain.de",
+    "label_subject": "Betreff",
+    "subject_wholesale": "Großhandelskooperation",
+    "subject_career": "Karriere & Rekrutierung",
+    "subject_general": "Allgemeine Anfrage",
+    "label_message": "Inhalt der Nachricht",
+    "placeholder_message": "Geben Sie hier Ihre Nachricht ein...",
+    "btn_send": "Nachricht senden"
+  },
+  "footer": {
+    "privacy": "DSGVO (Datenschutzerklärung)",
+    "copyright": "&copy; 2026 Leks Sp. z o.o. Alle Rechte vorbehalten."
+  },
+  "categories": {
+    "pieczywo": {
+      "name": "Brot",
+      "description": "Traditionelles polnisches Brot auf Natursauerteigbasis – Brote, Brötchen und Baguettes."
+    },
+    "2ab": {
+      "name": "Leks 2AB Brot",
+      "description": "Brot aus Weizen-Urgetreide. Leicht verdaulich und reich an Nährwerten."
+    },
+    "cukiernia": {
+      "name": "Konditorei",
+      "description": "Feinste Konditoreiwaren, Torten und Kuchen für jeden Anlass."
+    },
+    "polcukiernicze": {
+      "name": "Feingebäck",
+      "description": "Traditionelle polnische Hefegebäcke und süße Brötchen mit Füllung."
+    },
+    "kanapki": {
+      "name": "Sandwiches",
+      "description": "Frische, täglich zubereitete nahrhafte Sandwiches und Baguettes mit knackigen Zutaten."
+    },
+    "przekaski": {
+      "name": "Salzige Snacks",
+      "description": "Knusprige und aromatische herzhafte Snacks direkt aus dem Ofen."
+    }
+  },
+  "privacy": {
+    "badge": "DSGVO Dokumentation",
+    "title": "Datenschutzerklärung",
+    "btn_understand": "Verstanden",
+    "update": "Letzte Aktualisierung: <strong>14. Februar 2020</strong>"
+  }
+}

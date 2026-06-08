@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "start": "Start",
+    "about": "O nas",
+    "products": "Produkty",
+    "career": "Kariera",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "subtitle": "Tradycja od 1989 roku",
+    "title": "Najlepszy partner w produkcji pieczywa.<br><span class=\"accent-text\">Tradycyjny smak w skali makro.</span>",
+    "lead": "Dostarczamy najwyższej jakości chleby, bułki i wyroby cukiernicze do tysięcy sklepów w Polsce i Europie.",
+    "btn_offer": "Poznaj ofertę",
+    "btn_history": "Nasza historia",
+    "scroll_down": "Przewiń w dół"
+  },
+  "about": {
+    "subtitle": "O Firmie Leks",
+    "title": "Zdolność produkcyjna na europejską skalę",
+    "lead": "Jesteśmy strategicznym i stabilnym partnerem dla największych sieci handlowych w Polsce i Europie.",
+    "p1": "Z małej piekarni rzemieślniczej przekształciliśmy się w potężnego producenta z <strong>trzema wyspecjalizowanymi zakładami produkcyjnymi</strong> w Sulęcinie, Gorzowie Wlkp. oraz Tarnowie Byckim. Nasze fabryki posiadają prestiżowe certyfikaty <strong>IFS Food</strong> oraz <strong>BRC Global Standard</strong> na najwyższym poziomie, co gwarantuje pełne bezpieczeństwo i powtarzalność dostaw.",
+    "p2": "Nasza logistyka świeżości oraz zaawansowana linia wypieku odroczonego (Bake-off) pozwala nam dostarczać chrupiące pieczywo na czas do tysięcy sklepów każdego dnia.",
+    "team_badge": "Nasz Zespół",
+    "timeline_title": "Nasza Historia",
+    "timeline_subtitle": "Kliknij na dowolny punkt, aby poznać naszą historię",
+    "timeline": {
+      "1989": {
+        "title": "Założenie Firmy w Sulęcinie",
+        "desc": "Firma Leks rozpoczyna działalność jako mała piekarnia rodzinna z pasją do tradycyjnych chlebów na naturalnym zakwasie w Sulęcinie."
+      },
+      "1998": {
+        "title": "Zdolność Produkcyjna: 50 000 / doba",
+        "desc": "Wybudowanie pierwszego w pełni zautomatyzowanego zakładu w Sulęcinie. Zdolność produkcyjna wzrasta do 50 tysięcy bochenków na dobę, umożliwiając strategiczne wejście do pierwszych regionalnych sieci handlowych."
+      },
+      "2005": {
+        "title": "Wdrożenie Standardów IFS & BRC",
+        "desc": "Budowa nowoczesnego zakładu w Gorzowie Wielkopolskim. Wdrożenie rygorystycznych międzynarodowych standardów IFS Food oraz BRC Global Standard na poziomie Grade A, otwierające drzwi do współpracy z ogólnopolskimi i europejskimi sieciami supermarketów."
+      },
+      "2010": {
+        "title": "Automatyzacja i Rozbudowa",
+        "desc": "Oddanie do użytku nowoczesnego zaplecza logistyczno-magazynowego w Sulęcinie oraz wdrożenie zaawansowanych systemów zarządzania pakowaniem, gwarantujących bezbłędną realizację zamówień."
+      },
+      "2018": {
+        "title": "Lider Bake-off & 1200+ Punktów",
+        "desc": "Wdrożenie pionierskich linii technologii wypieku odroczonego i głębokiego mrożenia (Bake-off). Nasza zaawansowana flota logistyczna zapewnia codzienne, punktualne dostawy świeżego ciasta do ponad 1200 supermarketów w Europie."
+      },
+      "2026": {
+        "title": "Piekarnia Przyszłości & Linia 2AB",
+        "desc": "Pełna automatyzacja produkcji z zachowaniem tradycyjnego procesu 24-godzinnej fermentacji. Wdrożenie unikalnej linii pieczywa z pradawnej pszenicy 2AB oraz przejście naszych zakładów na 100% zrównoważoną energię odnawialną."
+      }
+    }
+  },
+  "team_banner": {
+    "subtitle": "Ludzie z Pasją",
+    "title": "Poznajmy Się Bliżej!",
+    "desc": "Za każdym pachnącym bochenkiem chleba i chrupiącą bułką stoją ludzie, którzy wkładają serce w swoją pracę. Nasz zespół to nie tylko mistrzowie wypieków, ale też ciekawi ludzie z niezwykłymi pasjami. Zobacz, kto tworzy Piekarnię Leks i co nas kręci po godzinach!",
+    "btn": "Poznaj nasz zespół &rarr;"
+  },
+  "products": {
+    "subtitle": "Nasz Asortyment",
+    "title": "Produkty",
+    "b2b_badge": "Specyfikacja B2B",
+    "weight": "Waga:",
+    "packaging": "Pakowanie:",
+    "shelf_life": "Przydatność:",
+    "cert": "Certyfikaty:",
+    "b2b_cta": "Zapytaj o wycenę hurtową (B2B)",
+    "close": "Zamknij",
+    "back": "&larr; Wróć do kategorii"
+  },
+  "features_2ab": {
+    "subtitle": "Innowacja i Zdrowie",
+    "title": "Pieczywo 2AB",
+    "lead": "Tworzymy pieczywo <strong>na bazie unikatowej mąki 2AB</strong>, wytwarzanej z pradawnej odmiany pszenicy. To prawdziwa rewolucja w piekarstwie",
+    "f1_title": "Naturalna fermentacja",
+    "f1_desc": "nadaje bułce głęboki, autentyczny smak i podnosi jej <strong>lekkostrawność</strong>.",
+    "f2_title": "Bogactwo karotenów",
+    "f2_desc": "to dzięki nim bułka ma swój naturalny, żółty kolor oraz dostarcza <strong>prowitaminy A</strong>, wspierając wzrok i <strong>odporność</strong>.",
+    "f3_title": "Niższa zawartość FODMAP",
+    "f3_desc": "doskonała dla osób z <strong>wrażliwymi jelitami</strong>, w tym przy <strong>IBS i SIBO</strong>. Dzięki temu <strong>minimalizuje</strong> wzdęcia i <strong>dyskomfort</strong> trawienny.",
+    "f4_title": "Źródło Cynku i Selenu",
+    "f4_desc": "dla wzmocnienia organizmu i codziennej <strong>odporności</strong>."
+  },
+  "blog": {
+    "subtitle": "Wiedza i Inspiracje",
+    "title": "Blog",
+    "more": "Więcej &rarr;",
+    "p1_title": "Logistyka świeżości: Standard na europejską skalę",
+    "p1_desc": "W 2026 roku jakość pieczywa to nie tylko wypiek, to także błyskawiczna logistyka.",
+    "p2_title": "Pieczywo w diecie nowoczesnego konsumenta",
+    "p2_desc": "Konsument poszukuje produktów wspierających zdrowie i odporność.",
+    "p3_title": "Od ziarna do bochenka. Tradycja spotyka technologię",
+    "p3_desc": "Jak w naszych nowoczesnych fabrykach dbamy o autentyczny smak.",
+    "p4_title": "Eko-Piekarnia: Nasza droga do 100% zielonej energii",
+    "p4_desc": "W 2026 roku nasze zakłady produkcyjne przeszły całkowicie na zrównoważone źródła energii, łącząc tradycję z naturą."
+  },
+  "career": {
+    "subtitle": "Dołącz do Zespołu",
+    "title": "Praca w Leks",
+    "apply": "Aplikuj",
+    "send_cv": "Prześlij CV",
+    "location": {
+      "gorzow": "Gorzów Wielkopolski",
+      "zielona_gora": "Zielona Góra",
+      "tarnow": "Tarnów Bycki",
+      "any": "Dowolna lokalizacja"
+    },
+    "jobs": {
+      "production": {
+        "title": "Pracownik Produkcji",
+        "desc": "Zadania: Obsługa maszyn i urządzeń piekarniczych, kontrolowanie parametrów oraz pakowanie wyrobów gotowych."
+      },
+      "mechanic": {
+        "title": "Mechanik-Elektryk",
+        "desc": "Zadania: Bieżąca konserwacja parku maszynowego, diagnozowanie i usuwanie awarii elektryczno-mechanicznych."
+      },
+      "baker": {
+        "title": "Piekarz - kawiarnia St Klemens",
+        "desc": "Zadania: Rzemieślniczy wypiek tradycyjnego pieczywa w warunkach kawiarnianych, dbanie o jakość i estetykę."
+      },
+      "warehouse_raw": {
+        "title": "Magazynier Surowców",
+        "desc": "Zadania: Przyjęcie i kontrola jakości surowców, prowadzenie dokumentacji oraz zaopatrzenie produkcji."
+      },
+      "production_aux": {
+        "title": "Pracownik Produkcji",
+        "desc": "Zadania: Prace pomocnicze przy wypieku pieczywa, obsługa zautomatyzowanych linii, dbanie o higienę pracy."
+      },
+      "oven_operator": {
+        "title": "Operator Pieców Wsadowych",
+        "desc": "Zadania: Nadzór nad prawidłowym wypiekiem w piecach tunelowych i wsadowych, kontrola temperatur."
+      },
+      "warehouse_ready": {
+        "title": "Magazynier Wyrobów Gotowych",
+        "desc": "Zadania: Kompletacja zamówień hurtowych, załadunek samochodów dystrybucyjnych, ewidencja wydań."
+      },
+      "shift_leader": {
+        "title": "Mistrz Produkcji / Lider Zmiany",
+        "desc": "Zadania: Zarządzanie zespołem produkcyjnym, koordynacja planu produkcyjnego, nadzór standardów IFS/BRC."
+      },
+      "warehouse_ready_aux": {
+        "title": "Magazynier Wyrobów Gotowych",
+        "desc": "Zadania: Przyjmowanie gotowego pieczywa z piekarni, przygotowywanie wysyłek dla sieci handlowych."
+      },
+      "oven_operator_aux": {
+        "title": "Operator Pieców Wsadowych",
+        "desc": "Zadania: Obsługa pieców piekarniczych wsadowych i obrotowych, kontrola faz wypieku chlebów."
+      },
+      "warehouse_raw_aux": {
+        "title": "Magazynier Surowców",
+        "desc": "Zadania: Magazynowanie mąk i składników piekarskich, rozładunek silosów, ewidencja dostaw."
+      },
+      "spontaneous": {
+        "title": "Aplikacja Spontaniczna",
+        "desc": "Chcesz dołączyć do zespołu Leks, ale nie widzisz pasującej roli? Prześlij swoje CV – z wielką chęcią poznamy Twoje kompetencje!",
+        "location": "Dowolna lokalizacja"
+      }
+    }
+  },
+  "partners": {
+    "subtitle": "Współpraca",
+    "title": "Nasi Partnerzy",
+    "intro": "Współpracujemy ze sprawdzonymi, renomowanymi dostawcami komponentów piekarniczych oraz wiodącymi stowarzyszeniami branżowymi w Polsce i Europie:"
+  },
+  "contact": {
+    "subtitle": "Napisz Do Nas",
+    "title": "Porozmawiajmy o pieczywie",
+    "hours": "Biuro obsługi klienta: Pn - Pt, 8:00 - 16:00",
+    "label_name": "Imię i nazwisko",
+    "placeholder_name": "np. Jan Kowalski",
+    "label_email": "Adres e-mail",
+    "placeholder_email": "np. jan@domena.pl",
+    "label_subject": "Temat",
+    "subject_wholesale": "Współpraca Hurtowa",
+    "subject_career": "Kariera i rekrutacja",
+    "subject_general": "Zapytanie Ogólne",
+    "label_message": "Treść wiadomości",
+    "placeholder_message": "Wpisz treść swojej wiadomości...",
+    "btn_send": "Wyślij wiadomość"
+  },
+  "footer": {
+    "privacy": "RODO (Polityka prywatności)",
+    "copyright": "&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone."
+  },
+  "categories": {
+    "pieczywo": {
+      "name": "Pieczywo",
+      "description": "Tradycyjne polskie pieczywo na naturalnym zakwasie - chleby, bułki i bagietki."
+    },
+    "2ab": {
+      "name": "Pieczywo Leks 2AB",
+      "description": "Pieczywo z pradawnej odmiany pszenicy. Lekkostrawne i bogate w wartości odżywcze."
+    },
+    "cukiernia": {
+      "name": "Cukiernia",
+      "description": "Najwyższej jakości wyroby cukiernicze, torty i ciasta na każdą okazję."
+    },
+    "polcukiernicze": {
+      "name": "Produkty półcukierniczne",
+      "description": "Tradycyjne polskie drożdżówki i słodkie bułki z nadzieniem."
+    },
+    "kanapki": {
+      "name": "Kanapki",
+      "description": "Świeże, codzienne przygotowywane pożywne kanapki i bagietki z chrupiącymi dodatkami."
+    },
+    "przekaski": {
+      "name": "Słone przekąski",
+      "description": "Chrupiące i aromatyczne słone przekąski prosto z pieca."
+    }
+  },
+  "privacy": {
+    "badge": "Dokumentacja RODO",
+    "title": "Polityka Prywatności",
+    "btn_understand": "Rozumiem",
+    "update": "Ostatnia aktualizacja treści: <strong>14 lutego 2020 r.</strong>"
+  }
+}
