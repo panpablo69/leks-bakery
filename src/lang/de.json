@@ -218,5 +218,61 @@
     "title": "Datenschutzerklärung",
     "btn_understand": "Verstanden",
     "update": "Letzte Aktualisierung: <strong>14. Februar 2020</strong>"
+  },
+  "shop": {
+    "subtitle": "Nach Hause bestellen",
+    "title": "2AB Brot-Shop",
+    "lead": "Bestellen Sie frisches, vakuumverpacktes 2AB-Brot direkt zu Ihnen nach Hause. Magenfreundlich, gebacken aus Urweizen.",
+    "add_to_cart": "In den Warenkorb",
+    "cart_title": "Ihr Warenkorb",
+    "cart_empty": "Ihr Warenkorb ist leer",
+    "total": "Gesamt:",
+    "checkout": "Zur Kasse gehen",
+    "checkout_title": "Versand & Zahlung",
+    "checkout_subtitle": "Finalisierung",
+    "name": "Vor- und Nachname",
+    "placeholder_name": "z. B. Max Mustermann",
+    "email": "E-Mail-Adresse",
+    "placeholder_email": "z. B. max@domain.de",
+    "phone": "Telefonnummer",
+    "placeholder_phone": "z. B. +49 170 1234567",
+    "address": "Lieferadresse",
+    "placeholder_address": "Straße, Hausnummer, Postleitzahl, Ort",
+    "shipping": "Versandmethode",
+    "shipping_inpost_title": "InPost Schließfach (12.99 PLN)",
+    "shipping_inpost_desc": "Abholung an Ihrer ausgewählten Packstation in 1-2 Werktagen.",
+    "shipping_courier_title": "Kurier DPD / DHL (15.99 PLN)",
+    "shipping_courier_desc": "Direkte Lieferung an Ihre Adresse in ganz Polen.",
+    "payment": "Zahlungsmethode",
+    "payment_blik_title": "BLIK",
+    "payment_blik_desc": "Schnelle Zahlung mit einem Code aus Ihrer Mobile-Banking-App.",
+    "payment_card_title": "Kreditkarte (Visa / Mastercard)",
+    "payment_card_desc": "Sichere Online-Zahlung mit Kredit- oder Debitkarte.",
+    "summary_title": "Bestellübersicht",
+    "summary_subtotal": "Backwaren:",
+    "summary_shipping": "Versandkosten:",
+    "summary_total": "Gesamt:",
+    "buy_now": "Zahlungspflichtig bestellen",
+    "success_title": "Vielen Dank für Ihre Bestellung!",
+    "success_desc": "Ihre Bestellung wurde erfolgreich aufgegeben. Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
+    "success_btn": "Weiter einkaufen",
+    "products": {
+      "bulki_4": {
+        "name": "2AB-Brötchen vakuumverpackt (4 Stk.)",
+        "desc": "Goldgelbe, leicht verdauliche Brötchen aus dem Urgetreide 2AB. Unter Schutzatmosphäre vakuumverpackt, für langanhaltende Frische ohne künstliche Konservierungsstoffe."
+      },
+      "bulki_8": {
+        "name": "2AB-Brötchen vakuumverpackt (8 Stk.)",
+        "desc": "Sparpack mit 8 vakuumierten 2AB-Brötchen. Ideal für alle, die sich regelmäßig FODMAP-arm ernähren und ihre Darmgesundheit unterstützen."
+      },
+      "chleb": {
+        "name": "2AB-Brot vakuumverpackt (Geschnitten)",
+        "desc": "Saftiges, traditionelles 2AB-Brot aus Urweizen gebacken. In gleichmäßige Scheiben geschnitten und luftdicht vakuumverpackt, um die natürliche Feuchtigkeit zu bewahren."
+      },
+      "zestaw": {
+        "name": "2AB-Kennenlernpaket",
+        "desc": "Das komplette Mix-Paket zum Probieren der beiden 2AB-Klassiker. Enthält 1 Brot und 4 Brötchen."
+      }
+    }
   }
 }

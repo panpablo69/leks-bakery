@@ -218,5 +218,61 @@
     "title": "Política de Privacidad",
     "btn_understand": "Entendido",
     "update": "Última actualización de contenido: <strong>14 de febrero de 2020</strong>"
+  },
+  "shop": {
+    "subtitle": "Pedir a casa",
+    "title": "Tienda de Pan 2AB",
+    "lead": "Pida pan 2AB fresco y envasado al vacío directo a su puerta. Apto para la digestión, elaborado con trigo ancestral.",
+    "add_to_cart": "Añadir al carrito",
+    "cart_title": "Su Carrito",
+    "cart_empty": "Su carrito está vacío",
+    "total": "Total:",
+    "checkout": "Realizar Pedido",
+    "checkout_title": "Envío y Pago",
+    "checkout_subtitle": "Finalización",
+    "name": "Nombre y apellido",
+    "placeholder_name": "ej. Juan Pérez",
+    "email": "Correo electrónico",
+    "placeholder_email": "ej. juan@dominio.com",
+    "phone": "Teléfono",
+    "placeholder_phone": "ej. 555-666-777",
+    "address": "Dirección de envío",
+    "placeholder_address": "Calle, número de casa, código postal, ciudad",
+    "shipping": "Método de envío",
+    "shipping_inpost_title": "Locker InPost (12.99 PLN)",
+    "shipping_inpost_desc": "Recogida en el casillero seleccionado en 1-2 días hábiles.",
+    "shipping_courier_title": "Mensajería DPD / DHL (15.99 PLN)",
+    "shipping_courier_desc": "Entrega directa a su dirección en toda Polonia.",
+    "payment": "Método de pago",
+    "payment_blik_title": "BLIK",
+    "payment_blik_desc": "Pago rápido mediante código de su aplicación de banca móvil.",
+    "payment_card_title": "Tarjeta de pago (Visa / Mastercard)",
+    "payment_card_desc": "Pago seguro online con tarjeta de crédito o débito.",
+    "summary_title": "Resumen del pedido",
+    "summary_subtotal": "Productos panadería:",
+    "summary_shipping": "Gastos de envío:",
+    "summary_total": "Total:",
+    "buy_now": "Comprar y Pagar",
+    "success_title": "¡Gracias por su pedido!",
+    "success_desc": "Su pedido ha sido realizado con éxito. Recibirá un correo electrónico de confirmación en breve.",
+    "success_btn": "Continuar comprando",
+    "products": {
+      "bulki_4": {
+        "name": "Bollos 2AB al Vacío (4 uds.)",
+        "desc": "Bollos dorados y fácilmente digeribles de trigo ancestral 2AB. Envasados al vacío en atmósfera protectora para una frescura duradera sin conservantes."
+      },
+      "bulki_8": {
+        "name": "Bollos 2AB al Vacío (8 uds.)",
+        "desc": "Paquete económico de 8 bollos 2AB al vacío. Ideal para quienes siguen una dieta baja en FODMAP regularmente y cuidan su salud intestinal."
+      },
+      "chleb": {
+        "name": "Pan 2AB al Vacío (Rebanado)",
+        "desc": "Pan tradicional 2AB tierno horneado con trigo ancestral. Rebanado y envasado al vacío herméticamente para preservar su humedad natural."
+      },
+      "zestaw": {
+        "name": "Paquete de Inicio 2AB",
+        "desc": "Un paquete mixto completo para probar ambos productos exclusivos de 2AB. Incluye 1 hogaza de pan y 4 bollos."
+      }
+    }
   }
 }

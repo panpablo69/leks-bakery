@@ -218,5 +218,61 @@
     "title": "Polityka Prywatności",
     "btn_understand": "Rozumiem",
     "update": "Ostatnia aktualizacja treści: <strong>14 lutego 2020 r.</strong>"
+  },
+  "shop": {
+    "subtitle": "Zamów do domu",
+    "title": "Sklep z Pieczywem 2AB",
+    "lead": "Zamów świeże, próżniowo pakowane pieczywo 2AB z dostawą do Twojego domu. Bezpieczne dla jelit, wypiekane z pradawnej pszenicy.",
+    "add_to_cart": "Dodaj do koszyka",
+    "cart_title": "Twój koszyk",
+    "cart_empty": "Koszyk jest pusty",
+    "total": "Suma:",
+    "checkout": "Przejdź do kasy",
+    "checkout_title": "Dostawa i płatność",
+    "checkout_subtitle": "Finalizacja",
+    "name": "Imię i nazwisko",
+    "placeholder_name": "np. Jan Kowalski",
+    "email": "Adres e-mail",
+    "placeholder_email": "np. jan@domena.pl",
+    "phone": "Numer telefonu",
+    "placeholder_phone": "np. 500 600 700",
+    "address": "Adres dostawy",
+    "placeholder_address": "Ulica, numer domu, kod pocztowy, miasto",
+    "shipping": "Metoda dostawy",
+    "shipping_inpost_title": "InPost Paczkomat (12.99 PLN)",
+    "shipping_inpost_desc": "Odbiór w wybranym paczkomacie za 1-2 dni robocze.",
+    "shipping_courier_title": "Kurier DPD / DHL (15.99 PLN)",
+    "shipping_courier_desc": "Bezpośrednia dostawa pod Twój adres w całej Polsce.",
+    "payment": "Metoda płatności",
+    "payment_blik_title": "BLIK",
+    "payment_blik_desc": "Szybka płatność kodem z aplikacji bankowej.",
+    "payment_card_title": "Karta płatnicza (Visa / Mastercard)",
+    "payment_card_desc": "Bezpieczna płatność online za pomocą karty płatniczej.",
+    "summary_title": "Podsumowanie zamówienia",
+    "summary_subtotal": "Wypieki:",
+    "summary_shipping": "Koszt dostawy:",
+    "summary_total": "Razem:",
+    "buy_now": "Kupuję i płacę",
+    "success_title": "Dziękujemy za zamówienie!",
+    "success_desc": "Twoje zamówienie zostało pomyślnie złożone. Wkrótce otrzymasz e-mail z potwierdzeniem.",
+    "success_btn": "Kontynuuj zakupy",
+    "products": {
+      "bulki_4": {
+        "name": "Bułki 2AB Próżniowe (4 szt.)",
+        "desc": "Złociste, lekkostrawne bułki z pradawnego zboża 2AB. Pakowane próżniowo w atmosferze ochronnej, zachowują świeżość przez długi czas bez sztucznych konserwantów."
+      },
+      "bulki_8": {
+        "name": "Bułki 2AB Próżniowe (8 szt.)",
+        "desc": "Ekonomiczny zestaw bułek 2AB. Idealny dla osób dbających regularnie o dietę low-FODMAP i zdrowy układ trawienny."
+      },
+      "chleb": {
+        "name": "Chleb 2AB Próżniowy (Krojony)",
+        "desc": "Puszysty, tradycyjny chleb 2AB wypiekany z pradawnej pszenicy. Pokrojony na równe kromki, szczelnie zamknięty próżniowo."
+      },
+      "zestaw": {
+        "name": "Zestaw Startowy 2AB",
+        "desc": "Kompletny pakiet pozwalający przetestować oba flagowe wypieki 2AB. W zestawie 1 chleb + 4 bułki."
+      }
+    }
   }
 }

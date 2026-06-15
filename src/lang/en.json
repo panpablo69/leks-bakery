@@ -218,5 +218,61 @@
     "title": "Privacy Policy",
     "btn_understand": "Understood",
     "update": "Last content update: <strong>February 14, 2020</strong>"
+  },
+  "shop": {
+    "subtitle": "Order to home",
+    "title": "2AB Bread Shop",
+    "lead": "Order fresh, vacuum-packed 2AB bread delivered straight to your door. Digestive-friendly, baked from ancient wheat.",
+    "add_to_cart": "Add to Cart",
+    "cart_title": "Your Cart",
+    "cart_empty": "Your cart is empty",
+    "total": "Total:",
+    "checkout": "Proceed to Checkout",
+    "checkout_title": "Shipping & Payment",
+    "checkout_subtitle": "Finalization",
+    "name": "Full Name",
+    "placeholder_name": "e.g. John Smith",
+    "email": "Email Address",
+    "placeholder_email": "e.g. john@domain.com",
+    "phone": "Phone Number",
+    "placeholder_phone": "e.g. 555-123-456",
+    "address": "Shipping Address",
+    "placeholder_address": "Street, house number, zip code, city",
+    "shipping": "Delivery Method",
+    "shipping_inpost_title": "InPost Locker (12.99 PLN)",
+    "shipping_inpost_desc": "Pickup at your selected locker in 1-2 business days.",
+    "shipping_courier_title": "Courier DPD / DHL (15.99 PLN)",
+    "shipping_courier_desc": "Direct delivery to your address anywhere in Poland.",
+    "payment": "Payment Method",
+    "payment_blik_title": "BLIK",
+    "payment_blik_desc": "Quick payment using a code from your mobile banking app.",
+    "payment_card_title": "Payment Card (Visa / Mastercard)",
+    "payment_card_desc": "Secure online payment with credit or debit card.",
+    "summary_title": "Order Summary",
+    "summary_subtotal": "Bakery items:",
+    "summary_shipping": "Shipping fee:",
+    "summary_total": "Total:",
+    "buy_now": "Order and Pay",
+    "success_title": "Thank you for your order!",
+    "success_desc": "Your order has been successfully placed. You will receive a confirmation email shortly.",
+    "success_btn": "Continue shopping",
+    "products": {
+      "bulki_4": {
+        "name": "2AB Buns Vacuum-Packed (4 pcs.)",
+        "desc": "Golden, easily digestible rolls made from ancient 2AB wheat. Vacuum-sealed in a protective atmosphere, preserving freshness without artificial preservatives."
+      },
+      "bulki_8": {
+        "name": "2AB Buns Vacuum-Packed (8 pcs.)",
+        "desc": "Economical pack of 2AB buns. Ideal for those regularly following a low-FODMAP diet and supporting their gut health."
+      },
+      "chleb": {
+        "name": "2AB Bread Vacuum-Packed (Sliced)",
+        "desc": "Soft, traditional 2AB bread baked from ancient wheat. Pre-sliced and tightly vacuum-sealed to preserve natural moisture."
+      },
+      "zestaw": {
+        "name": "2AB Starter Pack",
+        "desc": "A complete mix package to try both signature 2AB products. Includes 1 loaf of bread and 4 rolls."
+      }
+    }
   }
 }
