@@ -132,6 +132,20 @@ body::before {
     box-shadow: var(--shadow-md);
 }
 
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border: 2px solid var(--color-accent);
+}
+
+.btn-accent:hover {
+    background-color: var(--color-accent-light);
+    border-color: var(--color-accent-light);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 .btn-outline {
     background-color: transparent;
     color: var(--color-white);
@@ -2097,7 +2111,7 @@ body::before {
     color: var(--color-primary);
 }
 
-.modern-form input, 
+.modern-form input:not([type="radio"]):not([type="checkbox"]), 
 .modern-form select, 
 .modern-form textarea {
     width: 100%;
@@ -2111,7 +2125,7 @@ body::before {
     transition: var(--transition-fast);
 }
 
-.modern-form input:focus, 
+.modern-form input:not([type="radio"]):not([type="checkbox"]):focus, 
 .modern-form select:focus, 
 .modern-form textarea:focus {
     outline: none;
@@ -3297,7 +3311,11 @@ body::before {
     position: absolute;
     top: 22px;
     right: 20px;
+    width: 18px;
+    height: 18px;
     accent-color: var(--color-accent);
+    cursor: pointer;
+    margin: 0;
 }
 
 .radio-card.active {
