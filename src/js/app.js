@@ -57,6 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
         initPrivacyModal();
     } catch(e) { console.error("initPrivacyModal error:", e); }
+    
+    try {
+        initCertificates();
+    } catch(e) { console.error("initCertificates error:", e); }
 });
 
 /* ==============================================================================
@@ -923,6 +927,78 @@ function initPrivacyModal() {
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && modal.classList.contains("active")) {
             closeModal();
+        }
+    });
+}
+
+/* ==============================================================================
+   11. SEKCJA CERTYFIKATÓW i NORM (ROZWIJANIE & STAGGER ANIMATION GSAP)
+   ============================================================================== */
+function initCertificates() {
+    const toggleBtn = document.getElementById("toggle-certs-btn");
+    const grid = document.getElementById("certificates-grid");
+    
+    if (!toggleBtn || !grid) return;
+    
+    const toggleText = toggleBtn.querySelector("span");
+    const certCards = grid.querySelectorAll(".cert-card");
+    
+    toggleBtn.addEventListener("click", () => {
+        const isActive = grid.classList.contains("active");
+        
+        if (!isActive) {
+            // Rozwijanie
+            grid.classList.add("active");
+            toggleBtn.classList.add("active");
+            if (toggleText) toggleText.textContent = "Ukryj Certyfikaty";
+            
+            // Animacja wejścia GSAP (stagger) dla kafelków
+            if (typeof gsap !== 'undefined') {
+                gsap.fromTo(certCards, 
+                    { opacity: 0, y: 30, scale: 0.95 },
+                    { 
+                        opacity: 1, 
+                        y: 0, 
+                        scale: 1, 
+                        duration: 0.5, 
+                        stagger: 0.08, 
+                        ease: "power2.out",
+                        clearProps: "transform,opacity", // Czyszczenie stylów po animacji dla hovera w CSS
+                        delay: 0.1
+                    }
+                );
+            }
+        } else {
+            // Zwijanie
+            // Najpierw animujemy zanikanie kart
+            if (typeof gsap !== 'undefined') {
+                gsap.to(certCards, {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.3,
+                    stagger: 0.04,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        grid.classList.remove("active");
+                        toggleBtn.classList.remove("active");
+                        if (toggleText) toggleText.textContent = "Pokaż Certyfikaty";
+                        
+                        // Scrollujemy lekko do baneru, jeśli po zwinięciu grid zniknął i użytkownik stracił orientację
+                        const bannerRect = toggleBtn.getBoundingClientRect();
+                        const absoluteBannerTop = window.pageYOffset + bannerRect.top - 120;
+                        if (window.scrollY > absoluteBannerTop) {
+                            window.scrollTo({
+                                top: absoluteBannerTop,
+                                behavior: "smooth"
+                            });
+                        }
+                    }
+                });
+            } else {
+                grid.classList.remove("active");
+                toggleBtn.classList.remove("active");
+                if (toggleText) toggleText.textContent = "Pokaż Certyfikaty";
+            }
         }
     });
 }
