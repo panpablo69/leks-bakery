@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Główne style CSS -->
-    <link rel="stylesheet" href="css/style.css?v=39">
+    <link rel="stylesheet" href="css/style.css?v=42">
     <style>
         body {
             /* Inheriting premium body::before background from style.css */
@@ -37,10 +37,48 @@
             
             <nav id="main-nav" class="nav-menu">
                 <ul>
-                    <li><a href="index.html#hero" class="nav-link">Start</a></li>
-                    <li><a href="index.html#about" class="nav-link">O nas</a></li>
-                    <li><a href="index.html#products" class="nav-link active">Produkty</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
+                    <li><a href="index.html#hero" class="nav-link" data-i18n="nav.start">Start</a></li>
+                    <li><a href="index.html#about" class="nav-link" data-i18n="nav.about">O nas</a></li>
+                    <li><a href="index.html#products" class="nav-link active" data-i18n="nav.products">Produkty</a></li>
+                    <li><a href="shop.html" class="nav-link" data-i18n="nav.shop">Sklep</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
+                    <li class="lang-dropdown-wrapper" id="lang-dropdown">
+                        <div class="lang-dropdown-trigger" id="lang-trigger">
+                            <span class="lang-flag-current" id="active-lang-flag">
+                                <!-- Dynamiczne SVG flagi -->
+                            </span>
+                            <span class="lang-code-current" id="active-lang-code">PL</span>
+                            <svg class="lang-chevron" viewBox="0 0 24 24" width="12" height="12">
+                                <path d="M7 10l5 5 5-5H7z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <ul class="lang-dropdown-menu">
+                            <li class="lang-option" data-lang="pl">
+                                <span class="lang-flag">
+                                    <svg class="flag-svg" viewBox="0 0 16 12" width="16" height="12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#dc143c"/></svg>
+                                </span>
+                                <span class="lang-text">Polski (PL)</span>
+                            </li>
+                            <li class="lang-option" data-lang="en">
+                                <span class="lang-flag">
+                                    <svg class="flag-svg" viewBox="0 0 16 12" width="16" height="12"><rect width="16" height="12" fill="#00247d"/><path d="M0 0 L16 12 M0 12 L16 0" stroke="#fff" stroke-width="2"/><path d="M0 0 L16 12 M0 12 L16 0" stroke="#cf142b" stroke-width="1.2"/><path d="M8 0 L8 12 M0 6 L16 6" stroke="#fff" stroke-width="3"/><path d="M8 0 L8 12 M0 6 L16 6" stroke="#cf142b" stroke-width="1.8"/></svg>
+                                </span>
+                                <span class="lang-text">English (EN)</span>
+                            </li>
+                            <li class="lang-option" data-lang="de">
+                                <span class="lang-flag">
+                                    <svg class="flag-svg" viewBox="0 0 16 12" width="16" height="12"><rect width="16" height="4" fill="#000"/><rect y="4" width="16" height="4" fill="#dd0000"/><rect y="8" width="16" height="4" fill="#ffce00"/></svg>
+                                </span>
+                                <span class="lang-text">Deutsch (DE)</span>
+                            </li>
+                            <li class="lang-option" data-lang="es">
+                                <span class="lang-flag">
+                                    <svg class="flag-svg" viewBox="0 0 16 12" width="16" height="12"><rect width="16" height="3" fill="#c60b1e"/><rect y="3" width="16" height="6" fill="#ffc400"/><rect y="9" width="16" height="3" fill="#c60b1e"/></svg>
+                                </span>
+                                <span class="lang-text">Español (ES)</span>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             
@@ -55,7 +93,7 @@
     <main>
         <section class="category-hero" id="category-hero">
             <div class="container">
-                <span class="section-subtitle">Kategoria Produktów</span>
+                <span class="section-subtitle" data-i18n="products.subtitle">Kategoria Produktów</span>
                 <h1 class="section-title" id="cat-title">Wczytywanie...</h1>
                 <p class="hero-lead" id="cat-desc" style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;"></p>
             </div>
@@ -70,7 +108,7 @@
             <div class="container">
                 <!-- Przycisk powrotu -->
                 <div style="margin-bottom: 40px;">
-                    <a href="index.html#products" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);">&larr; Wróć do kategorii</a>
+                    <a href="index.html#products" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="products.back">&larr; Wróć do kategorii</a>
                 </div>
 
                 <!-- Siatka Produktów (GSAP Animated Grid) -->
@@ -89,20 +127,20 @@
                         <img id="modal-product-img" src="" alt="Produkt" />
                     </div>
                     <div class="modal-content-col">
-                        <span id="modal-product-cat" class="modal-badge">Specyfikacja B2B</span>
+                        <span id="modal-product-cat" class="modal-badge" data-i18n="products.b2b_badge">Specyfikacja B2B</span>
                         <h3 id="modal-product-title" class="modal-title">Nazwa Produktu</h3>
                         <div class="modal-divider"></div>
                         
                         <ul class="modal-spec-list">
-                            <li><span class="spec-label">Waga:</span> <span id="modal-weight" class="spec-val">-</span></li>
-                            <li><span class="spec-label">Pakowanie:</span> <span id="modal-packaging" class="spec-val">-</span></li>
-                            <li><span class="spec-label">Przydatność:</span> <span id="modal-shelf-life" class="spec-val">-</span></li>
-                            <li><span class="spec-label">Certyfikaty:</span> <span id="modal-cert" class="spec-val">-</span></li>
+                            <li><span class="spec-label" data-i18n="products.weight">Waga:</span> <span id="modal-weight" class="spec-val">-</span></li>
+                            <li><span class="spec-label" data-i18n="products.packaging">Pakowanie:</span> <span id="modal-packaging" class="spec-val">-</span></li>
+                            <li><span class="spec-label" data-i18n="products.shelf_life">Przydatność:</span> <span id="modal-shelf-life" class="spec-val">-</span></li>
+                            <li><span class="spec-label" data-i18n="products.cert">Certyfikaty:</span> <span id="modal-cert" class="spec-val">-</span></li>
                         </ul>
                         
                         <div class="modal-actions">
-                            <a href="index.html#contact" class="btn btn-primary" id="modal-contact-btn">Zapytaj o wycenę hurtową (B2B)</a>
-                            <button id="modal-close-action" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-border);">Zamknij</button>
+                            <a href="index.html#contact" class="btn btn-primary" id="modal-contact-btn" data-i18n="products.b2b_cta">Zapytaj o wycenę hurtową (B2B)</a>
+                            <button id="modal-close-action" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-border);" data-i18n="products.close">Zamknij</button>
                         </div>
                     </div>
                 </div>
@@ -149,7 +187,7 @@
         </div>
         <div class="container">
             <div class="footer-bottom-bar">
-                <p class="footer-copyright">&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+                <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
             </div>
         </div>
     </footer>
@@ -159,8 +197,8 @@
         <div class="modal-card privacy-modal-card">
             <button id="close-privacy-modal" class="modal-close-btn" aria-label="Zamknij">&times;</button>
             <div class="privacy-modal-body">
-                <span class="modal-badge">Dokumentacja RODO</span>
-                <h2 class="modal-title">Polityka Prywatności</h2>
+                <span class="modal-badge" data-i18n="privacy.badge">Dokumentacja RODO</span>
+                <h2 class="modal-title" data-i18n="privacy.title">Polityka Prywatności</h2>
                 <div class="modal-divider"></div>
                 
                 <div class="privacy-text-content">
@@ -275,11 +313,11 @@
                         <li>Operator stosuje Google Analytics (analiza statystyczna ruchu, dane zanonimizowane) oraz Facebook Pixel (automatyczne dopasowanie reklam, bez przekazywania dodatkowych danych osobowych).</li>
                     </ol>
                     
-                    <p class="privacy-modal-update">Ostatnia aktualizacja treści: <strong>14 lutego 2020 r.</strong></p>
+                    <p class="privacy-modal-update" data-i18n="privacy.update">Ostatnia aktualizacja treści: <strong>14 lutego 2020 r.</strong></p>
                 </div>
                 
                 <div class="modal-actions" style="margin-top: 30px; justify-content: flex-end;">
-                    <button id="close-privacy-action-btn" class="btn btn-primary">Rozumiem</button>
+                    <button id="close-privacy-action-btn" class="btn btn-primary" data-i18n="privacy.btn_understand">Rozumiem</button>
                 </div>
             </div>
         </div>

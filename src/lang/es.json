@@ -1,0 +1,278 @@
+{
+  "nav": {
+    "start": "Inicio",
+    "about": "Sobre nosotros",
+    "products": "Productos",
+    "career": "Empleo",
+    "contact": "Contacto",
+    "shop": "Tienda"
+  },
+  "hero": {
+    "subtitle": "Tradición desde 1989",
+    "title": "El socio definitivo en la producción de panadería.<br><span class=\"accent-text\">Sabor tradicional a gran escala.</span>",
+    "lead": "Suministramos pan, bollos y productos de pastelería de la más alta calidad a miles de tiendas en Polonia y Europa.",
+    "btn_offer": "Conozca nuestra oferta",
+    "btn_history": "Nuestra historia",
+    "scroll_down": "Desplácese hacia abajo"
+  },
+  "about": {
+    "subtitle": "Sobre la empresa Leks",
+    "title": "Capacidad de producción a escala europea",
+    "lead": "Somos un socio estratégico y estable para las mayores cadenas comerciales de Polonia y Europa.",
+    "p1": "De una pequeña panadería artesanal nos hemos transformado en un productor potente con <strong>tres plantas de producción especializadas</strong> en Sulęcin, Gorzów Wielkopolski y Tarnów Bycki. Nuestras fábricas cuentan con los prestigiosos certificados <strong>IFS Food</strong> y <strong>BRC Global Standard</strong> al más alto nivel, garantizando plena seguridad y fiabilidad de las entregas.",
+    "p2": "Nuestra logística de frescura y la avanzada línea de cocción diferida (Bake-off) nos permiten entregar pan crujiente a tiempo a miles de tiendas cada día.",
+    "team_badge": "Nuestro equipo",
+    "timeline_title": "Nuestra historia",
+    "timeline_subtitle": "Haga clic en cualquier punto para conocer nuestra historia",
+    "timeline": {
+      "1989": {
+        "title": "Fundación en Sulęcin",
+        "desc": "Leks comienza su actividad como una pequeña panadería familiar con pasión por los panes de masa madre tradicionales en Sulęcin."
+      },
+      "1998": {
+        "title": "Capacidad de Producción: 50.000 / día",
+        "desc": "Construcción de la primera planta totalmente automatizada en Sulęcin. La capacidad de producción aumenta a 50.000 hogazas al día, lo que permite la entrada estratégica en las primeras cadenas comerciales regionales."
+      },
+      "2005": {
+        "title": "Implementación de Normas IFS y BRC",
+        "desc": "Construcción de una planta moderna en Gorzów Wielkopolski. Implementación de las estrictas certificaciones internacionales IFS Food y BRC Global Standard a nivel de Grado A, abriendo las puertas a la cooperación con cadenas de supermercados nacionales y europeas."
+      },
+      "2010": {
+        "title": "Automatización y Ampliación",
+        "desc": "Puesta en marcha de un moderno centro logístico y de almacenamiento en Sulęcin e implementación de sistemas avanzados de gestión de embalaje, garantizando el cumplimiento de pedidos sin errores."
+      },
+      "2018": {
+        "title": "Líder de Bake-off y 1200+ Puntos",
+        "desc": "Implementación de líneas pioneras de tecnología de cocción diferida y congelación rápida (Bake-off). Nuestra avanzada flota logística garantiza entregas diarias y puntuales de masa fresca a más de 1.200 supermercados en Europa."
+      },
+      "2026": {
+        "title": "Panadería del Futuro y Línea 2AB",
+        "desc": "Automatización total de la producción manteniendo el proceso tradicional de fermentación de 24 horas. Implementación de una línea única de pan de trigo ancestral 2AB y transición de nuestras plantas a energía 100% renovable y sostenible."
+      }
+    }
+  },
+  "team_banner": {
+    "subtitle": "Gente con pasión",
+    "title": "¡Conozcámonos mejor!",
+    "desc": "Detrás de cada fragante barra de pan y cada bollo crujiente hay personas que ponen su corazón en su trabajo. Nuestro equipo no solo está formado por maestros panaderos, sino también por personas interesantes con pasiones extraordinarias. ¡Vea quién crea la Panadería Leks y qué nos mueve fuera del horario laboral!",
+    "btn": "Conozca a nuestro equipo &rarr;"
+  },
+  "products": {
+    "subtitle": "Nuestro surtido",
+    "title": "Productos",
+    "b2b_badge": "Especificación B2B",
+    "weight": "Peso:",
+    "packaging": "Embalaje:",
+    "shelf_life": "Caducidad:",
+    "cert": "Certificados:",
+    "b2b_cta": "Solicite presupuesto para B2B",
+    "close": "Cerrar",
+    "back": "&larr; Volver a las categorías"
+  },
+  "features_2ab": {
+    "subtitle": "Innovación y Salud",
+    "title": "Pan 2AB",
+    "lead": "Creamos pan <strong>a base de la harina exclusiva 2AB</strong>, elaborada a partir de una variedad de trigo ancestral. Esta es una verdadera revolución en la panadería",
+    "f1_title": "Fermentación natural",
+    "f1_desc": "aporta al bollo un sabor profundo y auténtico, y mejora su <strong>digestibilidad</strong>.",
+    "f2_title": "Rico en carotenos",
+    "f2_desc": "estos le dan al bollo su color amarillo natural y proporcionan <strong>provitamina A</strong>, apoyando la vista y la <strong>inmunidad</strong>.",
+    "f3_title": "Menor contenido de FODMAP",
+    "f3_desc": "excelente para personas con <strong>intestinos sensibles</strong>, incluyendo <strong>SII y SIBO</strong>. Esto <strong>minimiza</strong> la hinchazón y las <strong>molestias</strong> digestivas.",
+    "f4_title": "Fuente de Zinc y Selenio",
+    "f4_desc": "para fortalecer el cuerpo y apoyar la <strong>inmunidad</strong> diaria.",
+    "cta_title": "Próximamente tienda online con <strong>pan 2AB</strong>.",
+    "cta_text": "Nuestro <strong>pan único 2AB</strong> estará disponible para pedidos por correo. El pan estará envasado al vacío, con una larga vida útil. Suscríbete a nuestro boletín – te informaremos cuando se lance la tienda.",
+    "cta_btn": "Registrarse"
+  },
+  "blog": {
+    "subtitle": "Conocimiento e Inspiración",
+    "title": "Blog",
+    "more": "Más &rarr;",
+    "p1_title": "Logística de la frescura: Un estándar europeo",
+    "p1_desc": "En 2026, la calidad de la panadería no es solo hornear, es también una logística ultrarrápida.",
+    "p2_title": "El pan en la dieta del consumidor moderno",
+    "p2_desc": "El consumidor busca productos que apoyen la salud y la inmunidad.",
+    "p3_title": "Del grano a la hogaza. La tradición se une a la tecnología",
+    "p3_desc": "Cómo cuidamos el sabor auténtico en nuestras modernas fábricas.",
+    "p4_title": "Eco-Panadería: Nuestro camino hacia el 100% de energía verde",
+    "p4_desc": "En 2026, nuestras plantas de producción pasaron por completo a fuentes de energía sostenibles, uniendo tradición y naturaleza."
+  },
+  "career": {
+    "subtitle": "Únase al equipo",
+    "title": "Trabajar en Leks",
+    "apply": "Postularse",
+    "send_cv": "Enviar CV",
+    "location": {
+      "gorzow": "Gorzów Wielkopolski",
+      "zielona_gora": "Zielona Góra",
+      "tarnow": "Tarnów Bycki",
+      "any": "Cualquier ubicación"
+    },
+    "jobs": {
+      "production": {
+        "title": "Operario de Producción",
+        "desc": "Tareas: Operación de maquinaria y equipos de panadería, control de parámetros y envasado de productos terminados."
+      },
+      "mechanic": {
+        "title": "Mecánico-Electricista",
+        "desc": "Tareas: Mantenimiento continuo del parque de maquinaria, diagnóstico y reparación de averías eléctricas y mecánicas."
+      },
+      "baker": {
+        "title": "Panadero - Cafetería St Klemens",
+        "desc": "Tareas: Elaboración artesanal de pan tradicional en condiciones de cafetería, cuidando la calidad y la estética."
+      },
+      "warehouse_raw": {
+        "title": "Almacenero de Materias Primas",
+        "desc": "Tareas: Recepción y control de calidad de materias primas, mantenimiento de documentación y suministro a producción."
+      },
+      "production_aux": {
+        "title": "Auxiliar de Producción",
+        "desc": "Tareas: Trabajos auxiliares en el horneado de pan, operación de líneas automatizadas, cuidado de la higiene laboral."
+      },
+      "oven_operator": {
+        "title": "Operador de Hornos",
+        "desc": "Tareas: Supervisión del correcto horneado en hornos de túnel y solera, control de temperaturas."
+      },
+      "warehouse_ready": {
+        "title": "Almacenero de Producto Terminado",
+        "desc": "Tareas: Preparación de pedidos al por mayor, carga de camiones de distribución, registro de salidas."
+      },
+      "shift_leader": {
+        "title": "Maestro de Producción / Jefe de Turno",
+        "desc": "Tareas: Gestión del equipo de producción, coordinación del plan de producción, supervisión de las normas IFS/BRC."
+      },
+      "warehouse_ready_aux": {
+        "title": "Almacenero de Producto Terminado",
+        "desc": "Tareas: Recepción del pan terminado de la panadería, preparación de envíos para cadenas minoristas."
+      },
+      "oven_operator_aux": {
+        "title": "Operador de Hornos",
+        "desc": "Tareas: Operación de hornos de panadería de solera y rotativos, control de las fases de cocción del pan."
+      },
+      "warehouse_raw_aux": {
+        "title": "Almacenero de Materias Primas",
+        "desc": "Tareas: Almacenamiento de harina e ingredientes de panadería, descarga de silos, registro de entregas."
+      },
+      "spontaneous": {
+        "title": "Candidatura Espontánea",
+        "desc": "¿Quiere unirse al equipo de Leks, pero no ve un puesto adecuado? ¡Envíenos su CV, estaremos encantados de conocer sus competencias!",
+        "location": "Cualquier ubicación"
+      }
+    }
+  },
+  "partners": {
+    "subtitle": "Colaboración",
+    "title": "Nuestros socios",
+    "intro": "Colaboramos con proveedores acreditados y de renombre de componentes de panadería y asociaciones líderes del sector en Polonia y Europa:"
+  },
+  "contact": {
+    "subtitle": "Escríbanos",
+    "title": "Hablemos de pan",
+    "hours": "Oficina de atención al cliente: Lunes a Viernes, de 8:00 a 16:00",
+    "label_name": "Nombre y apellido",
+    "placeholder_name": "ej. Juan Pérez",
+    "label_email": "Dirección de correo electrónico",
+    "placeholder_email": "ej. juan@dominio.com",
+    "label_subject": "Asunto",
+    "subject_wholesale": "Colaboración Mayorista",
+    "subject_career": "Empleo y Reclutamiento",
+    "subject_general": "Consulta General",
+    "subject_newsletter_2ab": "Infórmame cuando se lance la tienda con pan 2AB",
+    "label_message": "Contenido del mensaje",
+    "placeholder_message": "Escriba el contenido de su mensaje aquí...",
+    "btn_send": "Enviar mensaje"
+  },
+  "footer": {
+    "privacy": "RGPD (Política de privacidad)",
+    "copyright": "&copy; 2026 Leks Sp. z o.o. Todos los derechos reservados."
+  },
+  "categories": {
+    "pieczywo": {
+      "name": "Panadería",
+      "description": "Pan tradicional polaco con masa madre natural: hogazas, bollos y baguettes."
+    },
+    "2ab": {
+      "name": "Pan Leks 2AB",
+      "description": "Pan elaborado con trigo ancestral. Fácilmente digerible y rico en valores nutricionales."
+    },
+    "cukiernia": {
+      "name": "Pastelería",
+      "description": "Pastelería, pasteles y tartas de la más alta calidad para cada ocasión."
+    },
+    "polcukiernicze": {
+      "name": "Bollos Dulces",
+      "description": "Bollos de levadura polacos tradicionales y panecillos dulces con rellenos."
+    },
+    "kanapki": {
+      "name": "Bocadillos",
+      "description": "Bocadillos y baguettes nutritivos preparados frescos a diario con ingredientes crujientes."
+    },
+    "przekaski": {
+      "name": "Aperitivos Salados",
+      "description": "Aperitivos salados crujientes y aromáticos directos del horno."
+    }
+  },
+  "privacy": {
+    "badge": "Documentación de RGPD",
+    "title": "Política de Privacidad",
+    "btn_understand": "Entendido",
+    "update": "Última actualización de contenido: <strong>14 de febrero de 2020</strong>"
+  },
+  "shop": {
+    "subtitle": "Pedir a casa",
+    "title": "Tienda de Pan 2AB",
+    "lead": "Pida pan 2AB fresco y envasado al vacío directo a su puerta. Apto para la digestión, elaborado con trigo ancestral.",
+    "add_to_cart": "Añadir al carrito",
+    "cart_title": "Su Carrito",
+    "cart_empty": "Su carrito está vacío",
+    "total": "Total:",
+    "checkout": "Realizar Pedido",
+    "checkout_title": "Envío y Pago",
+    "checkout_subtitle": "Finalización",
+    "name": "Nombre y apellido",
+    "placeholder_name": "ej. Juan Pérez",
+    "email": "Correo electrónico",
+    "placeholder_email": "ej. juan@dominio.com",
+    "phone": "Teléfono",
+    "placeholder_phone": "ej. 555-666-777",
+    "address": "Dirección de envío",
+    "placeholder_address": "Calle, número de casa, código postal, ciudad",
+    "shipping": "Método de envío",
+    "shipping_inpost_title": "Locker InPost (12.99 PLN)",
+    "shipping_inpost_desc": "Recogida en el casillero seleccionado en 1-2 días hábiles.",
+    "shipping_courier_title": "Mensajería DPD / DHL (15.99 PLN)",
+    "shipping_courier_desc": "Entrega directa a su dirección en toda Polonia.",
+    "payment": "Método de pago",
+    "payment_blik_title": "BLIK",
+    "payment_blik_desc": "Pago rápido mediante código de su aplicación de banca móvil.",
+    "payment_card_title": "Tarjeta de pago (Visa / Mastercard)",
+    "payment_card_desc": "Pago seguro online con tarjeta de crédito o débito.",
+    "summary_title": "Resumen del pedido",
+    "summary_subtotal": "Productos panadería:",
+    "summary_shipping": "Gastos de envío:",
+    "summary_total": "Total:",
+    "buy_now": "Comprar y Pagar",
+    "success_title": "¡Gracias por su pedido!",
+    "success_desc": "Su pedido ha sido realizado con éxito. Recibirá un correo electrónico de confirmación en breve.",
+    "success_btn": "Continuar comprando",
+    "products": {
+      "bulki_4": {
+        "name": "Bollos 2AB al Vacío (4 uds.)",
+        "desc": "Bollos dorados y fácilmente digeribles de trigo ancestral 2AB. Envasados al vacío en atmósfera protectora para una frescura duradera sin conservantes."
+      },
+      "bulki_8": {
+        "name": "Bollos 2AB al Vacío (8 uds.)",
+        "desc": "Paquete económico de 8 bollos 2AB al vacío. Ideal para quienes siguen una dieta baja en FODMAP regularmente y cuidan su salud intestinal."
+      },
+      "chleb": {
+        "name": "Pan 2AB al Vacío (Rebanado)",
+        "desc": "Pan tradicional 2AB tierno horneado con trigo ancestral. Rebanado y envasado al vacío herméticamente para preservar su humedad natural."
+      },
+      "zestaw": {
+        "name": "Paquete de Inicio 2AB",
+        "desc": "Un paquete mixto completo para probar ambos productos exclusivos de 2AB. Incluye 1 hogaza de pan y 4 bollos."
+      }
+    }
+  }
+}

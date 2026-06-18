@@ -1,0 +1,278 @@
+{
+  "nav": {
+    "start": "Home",
+    "about": "About us",
+    "products": "Products",
+    "career": "Career",
+    "contact": "Contact",
+    "shop": "Shop"
+  },
+  "hero": {
+    "subtitle": "Tradition since 1989",
+    "title": "The ultimate partner in bakery production.<br><span class=\"accent-text\">Traditional taste on a macro scale.</span>",
+    "lead": "We deliver the highest quality bread, buns, and confectionery to thousands of stores in Poland and Europe.",
+    "btn_offer": "Explore our offer",
+    "btn_history": "Our story",
+    "scroll_down": "Scroll down"
+  },
+  "about": {
+    "subtitle": "About Leks Company",
+    "title": "Production capacity on a European scale",
+    "lead": "We are a strategic and stable partner for the largest retail chains in Poland and Europe.",
+    "p1": "From a small artisan bakery, we have transformed into a powerful producer with <strong>three specialized production plants</strong> in Sulęcin, Gorzów Wielkopolski, and Tarnów Bycki. Our factories hold prestigious <strong>IFS Food</strong> and <strong>BRC Global Standard</strong> certificates at the highest level, guaranteeing full safety and reliability of deliveries.",
+    "p2": "Our logistics of freshness and advanced deferred baking technology (Bake-off) allow us to deliver crispy bread on time to thousands of stores every single day.",
+    "team_badge": "Our Team",
+    "timeline_title": "Our History",
+    "timeline_subtitle": "Click on any point to learn our story",
+    "timeline": {
+      "1989": {
+        "title": "Establishment in Sulęcin",
+        "desc": "Leks begins its activity as a small family bakery with a passion for traditional sourdough breads in Sulęcin."
+      },
+      "1998": {
+        "title": "Production Capacity: 50,000 / day",
+        "desc": "Construction of the first fully automated plant in Sulęcin. Production capacity rises to 50,000 loaves per day, enabling strategic entry to the first regional retail chains."
+      },
+      "2005": {
+        "title": "Implementation of IFS & BRC Standards",
+        "desc": "Construction of a modern plant in Gorzów Wielkopolski. Implementation of strict international IFS Food and BRC Global Standard certifications at Grade A level, opening doors to cooperation with nationwide and European supermarket chains."
+      },
+      "2010": {
+        "title": "Automation & Expansion",
+        "desc": "Commissioning of a modern logistics and warehouse center in Sulęcin and implementation of advanced packaging management systems, guaranteeing error-free order fulfillment."
+      },
+      "2018": {
+        "title": "Bake-off Leader & 1200+ Points",
+        "desc": "Implementation of pioneering deferred baking and deep freezing (Bake-off) lines. Our advanced logistics fleet ensures daily, punctual deliveries of fresh dough to over 1,200 supermarkets in Europe."
+      },
+      "2026": {
+        "title": "Bakery of the Future & 2AB Line",
+        "desc": "Full production automation with the maintenance of the traditional 24-hour fermentation process. Implementation of a unique bread line from ancient 2AB wheat and transition of our plants to 100% sustainable renewable energy."
+      }
+    }
+  },
+  "team_banner": {
+    "subtitle": "People with Passion",
+    "title": "Let's Get to Know Each Other Better!",
+    "desc": "Behind every fragrant loaf of bread and crispy roll are people who put their hearts into their work. Our team consists not only of bakery masters but also of interesting individuals with extraordinary passions. See who creates the Leks Bakery and what drives us after hours!",
+    "btn": "Meet our team &rarr;"
+  },
+  "products": {
+    "subtitle": "Our Assortment",
+    "title": "Products",
+    "b2b_badge": "B2B Specification",
+    "weight": "Weight:",
+    "packaging": "Packaging:",
+    "shelf_life": "Shelf Life:",
+    "cert": "Certificates:",
+    "b2b_cta": "Request a wholesale quote (B2B)",
+    "close": "Close",
+    "back": "&larr; Back to categories"
+  },
+  "features_2ab": {
+    "subtitle": "Innovation & Health",
+    "title": "2AB Bread",
+    "lead": "We create bread <strong>based on unique 2AB flour</strong>, produced from an ancient variety of wheat. This is a true revolution in baking",
+    "f1_title": "Natural fermentation",
+    "f1_desc": "gives the roll a deep, authentic taste and increases its <strong>digestibility</strong>.",
+    "f2_title": "Rich in carotenes",
+    "f2_desc": "these give the roll its natural golden color and provide <strong>provitamin A</strong>, supporting vision and <strong>immunity</strong>.",
+    "f3_title": "Lower FODMAP content",
+    "f3_desc": "excellent for people with <strong>sensitive intestines</strong>, including <strong>IBS and SIBO</strong>. This <strong>minimizes</strong> bloating and digestive <strong>discomfort</strong>.",
+    "f4_title": "Source of Zinc & Selenium",
+    "f4_desc": "to strengthen the body and support daily <strong>immunity</strong>.",
+    "cta_title": "Online shop with <strong>2AB bread</strong> coming soon.",
+    "cta_text": "Our unique <strong>2AB bread</strong> will be available for mail order. The bread will be vacuum-packed, with a long shelf life. Sign up for our newsletter – we will inform you as soon as the shop launches.",
+    "cta_btn": "Sign up"
+  },
+  "blog": {
+    "subtitle": "Knowledge & Inspiration",
+    "title": "Blog",
+    "more": "More &rarr;",
+    "p1_title": "Freshness logistics: A European standard",
+    "p1_desc": "In 2026, bakery quality is not just about baking, it is also about lightning-fast logistics.",
+    "p2_title": "Bread in the diet of a modern consumer",
+    "p2_desc": "Consumers are looking for products that support health and immunity.",
+    "p3_title": "From grain to loaf. Tradition meets technology",
+    "p3_desc": "How we care for authentic taste in our modern factories.",
+    "p4_title": "Eco-Bakery: Our path to 100% green energy",
+    "p4_desc": "In 2026, our production facilities transitioned entirely to sustainable energy sources, combining tradition with nature."
+  },
+  "career": {
+    "subtitle": "Join our Team",
+    "title": "Work at Leks",
+    "apply": "Apply",
+    "send_cv": "Send CV",
+    "location": {
+      "gorzow": "Gorzów Wielkopolski",
+      "zielona_gora": "Zielona Góra",
+      "tarnow": "Tarnów Bycki",
+      "any": "Any location"
+    },
+    "jobs": {
+      "production": {
+        "title": "Production Worker",
+        "desc": "Tasks: Operation of bakery machinery and equipment, monitoring parameters, and packaging finished products."
+      },
+      "mechanic": {
+        "title": "Mechanic-Electrician",
+        "desc": "Tasks: Ongoing maintenance of the machinery park, diagnosing and repairing electrical-mechanical failures."
+      },
+      "baker": {
+        "title": "Baker - St Klemens Cafe",
+        "desc": "Tasks: Artisanal baking of traditional bread in cafe conditions, caring for quality and aesthetics."
+      },
+      "warehouse_raw": {
+        "title": "Raw Materials Warehouse Worker",
+        "desc": "Tasks: Receiving and quality control of raw materials, maintaining documentation, and supplying production."
+      },
+      "production_aux": {
+        "title": "Production Worker",
+        "desc": "Tasks: Auxiliary work during bread baking, operation of automated lines, maintaining occupational hygiene."
+      },
+      "oven_operator": {
+        "title": "Oven Operator",
+        "desc": "Tasks: Supervision of correct baking in tunnel and deck ovens, temperature control."
+      },
+      "warehouse_ready": {
+        "title": "Finished Goods Warehouse Worker",
+        "desc": "Tasks: Composing wholesale orders, loading distribution trucks, recording dispatches."
+      },
+      "shift_leader": {
+        "title": "Production Master / Shift Leader",
+        "desc": "Tasks: Managing the production team, coordinating the production schedule, supervising IFS/BRC standards."
+      },
+      "warehouse_ready_aux": {
+        "title": "Finished Goods Warehouse Worker",
+        "desc": "Tasks: Receiving finished bread from the bakery, preparing shipments for retail chains."
+      },
+      "oven_operator_aux": {
+        "title": "Oven Operator",
+        "desc": "Tasks: Operation of deck and rotary baking ovens, monitoring bread baking phases."
+      },
+      "warehouse_raw_aux": {
+        "title": "Raw Materials Warehouse Worker",
+        "desc": "Tasks: Warehousing flour and baking ingredients, unloading silos, recording deliveries."
+      },
+      "spontaneous": {
+        "title": "Spontaneous Application",
+        "desc": "Want to join the Leks team but don't see a matching role? Send us your CV – we would be delighted to learn about your skills!",
+        "location": "Any location"
+      }
+    }
+  },
+  "partners": {
+    "subtitle": "Cooperation",
+    "title": "Our Partners",
+    "intro": "We cooperate with proven, reputable suppliers of bakery components and leading industry associations in Poland and Europe:"
+  },
+  "contact": {
+    "subtitle": "Write to Us",
+    "title": "Let's talk about bread",
+    "hours": "Customer service office: Mon - Fri, 8:00 AM - 4:00 PM",
+    "label_name": "Full Name",
+    "placeholder_name": "e.g. John Smith",
+    "label_email": "Email address",
+    "placeholder_email": "e.g. john@domain.com",
+    "label_subject": "Subject",
+    "subject_wholesale": "Wholesale Cooperation",
+    "subject_career": "Career & Recruitment",
+    "subject_general": "General Inquiry",
+    "subject_newsletter_2ab": "Inform me when the shop with 2AB bread launches",
+    "label_message": "Message content",
+    "placeholder_message": "Enter your message here...",
+    "btn_send": "Send Message"
+  },
+  "footer": {
+    "privacy": "GDPR (Privacy Policy)",
+    "copyright": "&copy; 2026 Leks Sp. z o.o. All rights reserved."
+  },
+  "categories": {
+    "pieczywo": {
+      "name": "Bread",
+      "description": "Traditional Polish bread on natural sourdough - loaves, rolls, and baguettes."
+    },
+    "2ab": {
+      "name": "Leks 2AB Bread",
+      "description": "Bread made from ancient wheat. Easily digestible and rich in nutritional values."
+    },
+    "cukiernia": {
+      "name": "Confectionery",
+      "description": "Highest quality confectionery, cakes, and pastries for every occasion."
+    },
+    "polcukiernicze": {
+      "name": "Sweet Buns",
+      "description": "Traditional Polish sweet buns and rolls with various fillings."
+    },
+    "kanapki": {
+      "name": "Sandwiches",
+      "description": "Fresh, daily prepared nutritious sandwiches and baguettes with crispy toppings."
+    },
+    "przekaski": {
+      "name": "Salty Snacks",
+      "description": "Crispy and aromatic savory snacks straight from the oven."
+    }
+  },
+  "privacy": {
+    "badge": "GDPR Documentation",
+    "title": "Privacy Policy",
+    "btn_understand": "Understood",
+    "update": "Last content update: <strong>February 14, 2020</strong>"
+  },
+  "shop": {
+    "subtitle": "Order to home",
+    "title": "2AB Bread Shop",
+    "lead": "Order fresh, vacuum-packed 2AB bread delivered straight to your door. Digestive-friendly, baked from ancient wheat.",
+    "add_to_cart": "Add to Cart",
+    "cart_title": "Your Cart",
+    "cart_empty": "Your cart is empty",
+    "total": "Total:",
+    "checkout": "Proceed to Checkout",
+    "checkout_title": "Shipping & Payment",
+    "checkout_subtitle": "Finalization",
+    "name": "Full Name",
+    "placeholder_name": "e.g. John Smith",
+    "email": "Email Address",
+    "placeholder_email": "e.g. john@domain.com",
+    "phone": "Phone Number",
+    "placeholder_phone": "e.g. 555-123-456",
+    "address": "Shipping Address",
+    "placeholder_address": "Street, house number, zip code, city",
+    "shipping": "Delivery Method",
+    "shipping_inpost_title": "InPost Locker (12.99 PLN)",
+    "shipping_inpost_desc": "Pickup at your selected locker in 1-2 business days.",
+    "shipping_courier_title": "Courier DPD / DHL (15.99 PLN)",
+    "shipping_courier_desc": "Direct delivery to your address anywhere in Poland.",
+    "payment": "Payment Method",
+    "payment_blik_title": "BLIK",
+    "payment_blik_desc": "Quick payment using a code from your mobile banking app.",
+    "payment_card_title": "Payment Card (Visa / Mastercard)",
+    "payment_card_desc": "Secure online payment with credit or debit card.",
+    "summary_title": "Order Summary",
+    "summary_subtotal": "Bakery items:",
+    "summary_shipping": "Shipping fee:",
+    "summary_total": "Total:",
+    "buy_now": "Order and Pay",
+    "success_title": "Thank you for your order!",
+    "success_desc": "Your order has been successfully placed. You will receive a confirmation email shortly.",
+    "success_btn": "Continue shopping",
+    "products": {
+      "bulki_4": {
+        "name": "2AB Buns Vacuum-Packed (4 pcs.)",
+        "desc": "Golden, easily digestible rolls made from ancient 2AB wheat. Vacuum-sealed in a protective atmosphere, preserving freshness without artificial preservatives."
+      },
+      "bulki_8": {
+        "name": "2AB Buns Vacuum-Packed (8 pcs.)",
+        "desc": "Economical pack of 2AB buns. Ideal for those regularly following a low-FODMAP diet and supporting their gut health."
+      },
+      "chleb": {
+        "name": "2AB Bread Vacuum-Packed (Sliced)",
+        "desc": "Soft, traditional 2AB bread baked from ancient wheat. Pre-sliced and tightly vacuum-sealed to preserve natural moisture."
+      },
+      "zestaw": {
+        "name": "2AB Starter Pack",
+        "desc": "A complete mix package to try both signature 2AB products. Includes 1 loaf of bread and 4 rolls."
+      }
+    }
+  }
+}
