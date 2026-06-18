@@ -3414,14 +3414,18 @@ body::before {
 
 .certificates-banner-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
+    text-align: center;
 }
 
 .certificates-banner-text {
-    flex: 1;
-    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .certificates-badge {
@@ -3450,9 +3454,11 @@ body::before {
 .certificates-banner-desc {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.85);
-    margin: 0;
+    margin: 0 auto;
     max-width: 800px;
     line-height: 1.6;
+    text-align: justify;
+    text-align-last: center;
 }
 
 .certs-toggle-btn {
@@ -3646,12 +3652,16 @@ body::before {
     
     .certificates-banner-content {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         gap: 20px;
         text-align: center;
     }
     
     .certificates-banner-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
     
