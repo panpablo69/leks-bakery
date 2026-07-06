@@ -1,20 +1,17 @@
 # Active Context: Leks Bakery Website
 
 ## Stan Obecny
-Zakończyliśmy przygotowanie infrastruktury deweloperskiej:
-1. Utworzono katalog projektu: `Pan Pablo/Projekty/leks-bakery/`.
-2. Uruchomiono Playwright Crawler i wygenerowano techniczną specyfikację strony deweloperskiej (`specyfikacja_leks.md`).
-3. Zainicjalizowano repozytorium lokalne Git i pomyślnie utworzono publiczne repozytorium na profilu GitHub (`panpablo69/leks-bakery`).
-4. Utworzono plik `README.md` z opisem roli Senior Programisty.
-5. Wszystkie dotychczasowe pliki zostały pomyślnie wypchnięte (push) na GitHub!
+1. Przygotowano infrastrukturę deweloperską oraz repozytorium GitHub (`panpablo69/leks-bakery`).
+2. Wdrożono szkielet nowej witryny w standardzie premium z animacjami GSAP, w tym interaktywną oś czasu, katalog produktów, sekcję rekrutacji i formularz kontaktowy.
+3. Przeprowadzono aktualizację certyfikatów (lipiec 2026):
+   - Skopiowano nowe pliki certyfikatów z katalogu `memory/` do [src/pdf/](file:///c:/Users/pawel/Downloads/Pan Pablo/Projekty/leks-bakery/src/pdf).
+   - Zaktualizowano [index.html](file:///c:/Users/pawel/Downloads/Pan Pablo/Projekty/leks-bakery/src/index.html) podmieniając certyfikaty IFS Food na wersje 2026 (PL i EN) oraz podczepiając lokalny plik PDF dla certyfikatu ISO 22000.
+   - Usunięto przestarzałe lub niepotrzebne kafelki (Polityka Bezpieczeństwa, Deklaracja Zarządu, Ekogwarancja PTRE).
 
 ## Bieżący Cel
-Zaprojektowanie i wdrożenie szkieletu nowej witryny w standardzie premium z zjawiskowymi efektami GSAP.
+Dalszy rozwój i dopracowanie witryny premium dla Leks Bakery zgodnie z bieżącymi wytycznymi.
 
 ## Następne Kroki
-1. Stworzenie bazy kodu źródłowego (`src/`):
-   - `index.html` (Strona główna z zoptymalizowanym kodem)
-   - `css/style.css` (Nowoczesny, modularny system styli CSS)
-   - `js/app.js` (Logika i integracja animacji GSAP)
-2. Wdrożenie osi czasu ("Nasza Historia") z dynamicznymi animacjami przełączania lat przy użyciu GSAP.
-3. Wdrożenie catalogu produktów z płynnym filtrowaniem.
+1. Uruchomienie lokalnego serwera testowego i weryfikacja poprawności wyświetlania i działania witryny.
+2. Dalsze dostosowania i optymalizacje witryny (np. responsywność, SEO).
+3. Testy E2E z użyciem Playwright.

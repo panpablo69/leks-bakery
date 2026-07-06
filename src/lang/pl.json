@@ -3,9 +3,10 @@
     "start": "Start",
     "about": "O nas",
     "products": "Produkty",
-    "career": "Kariera",
+    "certificates": "Certyfikaty",
+    "career": "Praca",
     "contact": "Kontakt",
-    "shop": "Sklep"
+    "blog": "Blog"
   },
   "hero": {
     "subtitle": "Tradycja od 1989 roku",
@@ -49,6 +50,15 @@
         "title": "Piekarnia Przyszłości & Linia 2AB",
         "desc": "Pełna automatyzacja produkcji z zachowaniem tradycyjnego procesu 24-godzinnej fermentacji. Wdrożenie unikalnej linii pieczywa z pradawnej pszenicy 2AB oraz przejście naszych zakładów na 100% zrównoważoną energię odnawialną."
       }
+    },
+    "certificates": {
+      "view_cert": "Pokaż certyfikat",
+      "ifs_pl_title": "Certyfikat IFS 2026 (PL)",
+      "ifs_pl_desc": "IFS Food obowiązuje w zakładzie produkcyjnym w Gorzowie Wlkp. i obejmuje produkcję pieczywa pszennego, mieszanego i żytniego, wyrobów półcukierniczych oraz pieczywa głęboko mrożonego.",
+      "ifs_en_title": "Certyfikat IFS 2026 (EN)",
+      "ifs_en_desc": "Certyfikat IFS Food (ZP2 – Gorzów Wlkp.): produkcja pieczywa pszennego, mieszanego i żytniego, wyrobów półcukierniczych oraz pieczywa głęboko mrożonego.",
+      "iso_title": "Certyfikat ISO 22000:2018",
+      "iso_desc": "Norma jakości obowiązuje we wszystkich Zakładach Produkcyjnych Leks Sp. z o.o. System Zarządzania Bezpieczeństwem Żywności Organizacji został zatwierdzony przez ISOQAR."
     }
   },
   "team_banner": {

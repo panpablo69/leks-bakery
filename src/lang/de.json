@@ -3,9 +3,10 @@
     "start": "Startseite",
     "about": "Über uns",
     "products": "Produkte",
+    "certificates": "Zertifikate",
     "career": "Karriere",
     "contact": "Kontakt",
-    "shop": "Shop"
+    "blog": "Blog"
   },
   "hero": {
     "subtitle": "Tradition seit 1989",
@@ -49,6 +50,15 @@
         "title": "Bäckerei der Zukunft & 2AB-Linie",
         "desc": "Vollständige Automatisierung der Produktion unter Beibehaltung der traditionellen 24-Stunden-Fermentation. Einführung einer einzigartigen Brotlinie aus 2AB-Urweizen und Umstellung unserer Werke auf 100% nachhaltige erneuerbare Energie."
       }
+    },
+    "certificates": {
+      "view_cert": "Zertifikat anzeigen",
+      "ifs_pl_title": "IFS-Zertifikat 2026 (PL)",
+      "ifs_pl_desc": "IFS Food gilt für die Produktionsstätte in Gorzów Wlkp. und umfasst die Herstellung von Weizen-, Misch- und Roggenbrot, feinen Backwaren und tiefgefrorenem Brot.",
+      "ifs_en_title": "IFS-Zertifikat 2026 (EN)",
+      "ifs_en_desc": "IFS Food Zertifikat (ZP2 – Gorzów Wlkp.): Herstellung von Weizen-, Misch- und Roggenbrot, feinen Backwaren und tiefgefrorenem Brot.",
+      "iso_title": "ISO 22000:2018 Zertifikat",
+      "iso_desc": "Der Qualitätsstandard gilt für alle Produktionsstätten von Leks Sp. z o.o. Das Lebensmittelsicherheits-Managementsystem der Organisation wurde von ISOQAR zugelassen."
     }
   },
   "team_banner": {

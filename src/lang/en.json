@@ -3,9 +3,10 @@
     "start": "Home",
     "about": "About us",
     "products": "Products",
-    "career": "Career",
+    "certificates": "Certificates",
+    "career": "Careers",
     "contact": "Contact",
-    "shop": "Shop"
+    "blog": "Blog"
   },
   "hero": {
     "subtitle": "Tradition since 1989",
@@ -49,6 +50,15 @@
         "title": "Bakery of the Future & 2AB Line",
         "desc": "Full production automation with the maintenance of the traditional 24-hour fermentation process. Implementation of a unique bread line from ancient 2AB wheat and transition of our plants to 100% sustainable renewable energy."
       }
+    },
+    "certificates": {
+      "view_cert": "Show certificate",
+      "ifs_pl_title": "IFS Certificate 2026 (PL)",
+      "ifs_pl_desc": "IFS Food applies to the production facility in Gorzów Wlkp. and covers the production of wheat, mixed and rye bread, semi-confectionery products and deep-frozen bread.",
+      "ifs_en_title": "IFS Food Certificate 2026 (EN)",
+      "ifs_en_desc": "IFS Food Certificate (ZP2 – Gorzów Wlkp.): production of wheat, mixed and rye breads, semi-confectionery products and deep-frozen breads.",
+      "iso_title": "ISO 22000:2018 Certificate",
+      "iso_desc": "The quality standard applies to all Leks Sp. z o.o. production plants. The organization's Food Safety Management System has been approved by ISOQAR."
     }
   },
   "team_banner": {

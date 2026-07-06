@@ -3,9 +3,10 @@
     "start": "Inicio",
     "about": "Sobre nosotros",
     "products": "Productos",
+    "certificates": "Certificados",
     "career": "Empleo",
     "contact": "Contacto",
-    "shop": "Tienda"
+    "blog": "Blog"
   },
   "hero": {
     "subtitle": "Tradición desde 1989",
@@ -49,6 +50,15 @@
         "title": "Panadería del Futuro y Línea 2AB",
         "desc": "Automatización total de la producción manteniendo el proceso tradicional de fermentación de 24 horas. Implementación de una línea única de pan de trigo ancestral 2AB y transición de nuestras plantas a energía 100% renovable y sostenible."
       }
+    },
+    "certificates": {
+      "view_cert": "Ver certificado",
+      "ifs_pl_title": "Certificado IFS 2026 (PL)",
+      "ifs_pl_desc": "IFS Food se aplica en la planta de producción de Gorzów Wlkp. y abarca la producción de panes de trigo, mezcla y centeno, productos de bollería y pan ultracongelado.",
+      "ifs_en_title": "Certificado IFS 2026 (EN)",
+      "ifs_en_desc": "Certificado IFS Food (ZP2 – Gorzów Wlkp.): producción de panes de trigo, mezcla y centeno, productos de bollería y pan ultracongelado.",
+      "iso_title": "Certificado ISO 22000:2018",
+      "iso_desc": "La norma de calidad se aplica en todas las plantas de producción de Leks Sp. z o.o. El Sistema de Gestión de Inocuidad Alimentaria de la organización ha sido aprobado por ISOQAR."
     }
   },
   "team_banner": {

@@ -16,10 +16,11 @@
 - `[x]` Skonfigurowanie czcionek i zmiennych CSS w `style.css`
 
 ### 🎨 Projektowanie Podstron i Interakcji
-- `[ ]` **Strona Główna**: Imponujący baner hero z efektem dynamicznego przybliżania przy przewijaniu (GSAP ScrollTrigger)
-- `[ ]` **O Nas**: Wdrożenie interaktywnej osi czasu (1989-2026) z płynnym wysuwaniem opisów historycznych
-- `[ ]` **Oferta / Sklep**: Dynamiczny katalog ponad 300 produktów z funkcją natychmiastowego filtrowania (chleby, bułki, ciasta)
-- `[ ]` **Kariera**: Elegancka, czytelna sekcja rekrutacyjna z harmonijkami (Accordions) dla stanowisk
+- `[x]` **Strona Główna**: Imponujący baner hero z efektem dynamicznego przybliżania przy przewijaniu (GSAP ScrollTrigger)
+- `[x]` **O Nas**: Wdrożenie interaktywnej osi czasu (1989-2026) z płynnym wysuwaniem opisów historycznych
+- `[x]` **Certyfikaty (2026)**: Podmiana certyfikatów IFS PL/EN na 2026, podłączenie lokalnego certyfikatu ISO 22000, oraz usunięcie niepotrzebnych kart (Polityka Bezpieczeństwa, Deklaracja Zarządu, Ekogwarancja PTRE)
+- `[x]` **Oferta / Sklep**: Dynamiczny katalog ponad 300 produktów z funkcją natychmiastowego filtrowania (chleby, bułki, ciasta) oraz nowa podstrona sklepu B2C
+- `[x]` **Kariera**: Elegancka, czytelna sekcja rekrutacyjna z kafelkami stanowisk
 - `[ ]` **Kontakt**: Nowoczesny formularz zintegrowany z Gmail API z naszego systemu deweloperskiego
 
 ### 🔒 Testowanie i Weryfikacja

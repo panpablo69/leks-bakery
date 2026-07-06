@@ -14,7 +14,7 @@ let translations = {};
 
 async function loadInitialTranslations() {
     try {
-        const response = await fetch(`lang/${currentLang}.json`);
+        const response = await fetch(`lang/${currentLang}.json?v=43`);
         if (response.ok) {
             translations = await response.json();
             applyTranslations();
@@ -27,7 +27,7 @@ async function loadInitialTranslations() {
 
 async function loadTranslations(lang) {
     try {
-        const response = await fetch(`lang/${lang}.json`);
+        const response = await fetch(`lang/${lang}.json?v=43`);
         if (!response.ok) throw new Error(`Could not load translations for ${lang}`);
         translations = await response.json();
         currentLang = lang;
@@ -256,7 +256,8 @@ function initNavigation() {
     
     // Klasa dodawana przy scrollowaniu (glassmorphism/size change)
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
+        const hasHero = document.getElementById("hero") !== null;
+        if (!hasHero || window.scrollY > 50) {
             header.classList.add("header-scrolled");
         } else {
             header.classList.remove("header-scrolled");
@@ -316,6 +317,7 @@ function initNavigation() {
    2. ANIMACJA WEJŚCIA HERO & SCROLL INDICATOR
    ============================================================================= */
 function initHeroAnimations() {
+    if (!document.getElementById("hero")) return;
     // Delikatne, eleganckie wejście sekcji Hero przy załadowaniu strony
     const tl = gsap.timeline();
     
