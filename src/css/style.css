@@ -1194,7 +1194,7 @@ body::before {
     display: block;
     max-width: 100%;
     height: auto;
-    z-index: 1;
+    z-index: -10;
     border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
@@ -1335,12 +1335,12 @@ body::before {
     /* Lewa góra */
     .fl-top-left {
         top: 15%;
-        left: -2%; /* Spaced out outwards */
+        left: -15%; /* Shift further left to create a gap */
     }
     .fl-top-left .feature-line {
         top: 50%;
         left: 100%;
-        width: 160px; /* Long line to center */
+        width: 180px; /* Adjusted length to point to the bun */
         transform: rotate(15deg);
         transform-origin: left center;
     }
@@ -1368,12 +1368,12 @@ body::before {
     /* Prawa góra */
     .fl-top-right {
         top: 20%;
-        right: -2%; /* Spaced out outwards */
+        right: -15%; /* Shift further right to create a gap */
     }
     .fl-top-right .feature-line {
         top: 50%;
         right: 100%;
-        width: 140px;
+        width: 180px; /* Adjusted length to point to the bun */
         transform: rotate(-14deg);
         transform-origin: right center;
         background: linear-gradient(to left, var(--color-accent) 0%, rgba(197, 160, 89, 0.15) 100%);
@@ -1402,12 +1402,12 @@ body::before {
     /* Lewy dół */
     .fl-bottom-left {
         bottom: 22%;
-        left: -4%; /* Spaced out outwards */
+        left: -8%; /* Shifting outward further left */
     }
     .fl-bottom-left .feature-line {
         top: 50%;
         left: 100%;
-        width: 170px;
+        width: 155px; /* Adjusted length to touch the new bun */
         transform: rotate(-8deg);
         transform-origin: left center;
     }
@@ -1435,12 +1435,12 @@ body::before {
     /* Prawy dół */
     .fl-bottom-right {
         bottom: 18%;
-        right: -4%; /* Spaced out outwards */
+        right: -8%; /* Shifting outward further right */
     }
     .fl-bottom-right .feature-line {
         top: 50%;
         right: 100%;
-        width: 185px;
+        width: 165px; /* Adjusted length to touch the new bun */
         transform: rotate(22deg);
         transform-origin: right center;
         background: linear-gradient(to left, var(--color-accent) 0%, rgba(197, 160, 89, 0.15) 100%);
