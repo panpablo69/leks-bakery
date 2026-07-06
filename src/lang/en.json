@@ -198,9 +198,13 @@
     "copyright": "&copy; 2026 Leks Sp. z o.o. All rights reserved."
   },
   "categories": {
-    "pieczywo": {
-      "name": "Bread",
-      "description": "Traditional Polish bread on natural sourdough - loaves, rolls, and baguettes."
+    "chleby": {
+      "name": "Breads",
+      "description": "Traditional Polish breads baked on natural sourdough."
+    },
+    "bulki": {
+      "name": "Buns & Rolls",
+      "description": "Fresh, crispy daily buns, graham rolls, and kaisers."
     },
     "2ab": {
       "name": "Leks 2AB Bread",
@@ -211,15 +215,11 @@
       "description": "Highest quality confectionery, cakes, and pastries for every occasion."
     },
     "polcukiernicze": {
-      "name": "Sweet Buns",
+      "name": "Viennoiserie",
       "description": "Traditional Polish sweet buns and rolls with various fillings."
     },
-    "kanapki": {
-      "name": "Sandwiches",
-      "description": "Fresh, daily prepared nutritious sandwiches and baguettes with crispy toppings."
-    },
     "przekaski": {
-      "name": "Salty Snacks",
+      "name": "Savoury Snacks",
       "description": "Crispy and aromatic savory snacks straight from the oven."
     }
   },

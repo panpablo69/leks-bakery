@@ -198,9 +198,13 @@
     "copyright": "&copy; 2026 Leks Sp. z o.o. Alle Rechte vorbehalten."
   },
   "categories": {
-    "pieczywo": {
-      "name": "Brot",
-      "description": "Traditionelles polnisches Brot auf Natursauerteigbasis – Brote, Brötchen und Baguettes."
+    "chleby": {
+      "name": "Brote",
+      "description": "Traditionelle polnische Brote, gebacken auf Natursauerteigbasis."
+    },
+    "bulki": {
+      "name": "Brötchen",
+      "description": "Frische, knusprige tägliche Brötchen, Grahambrötchen und Kaisersemmeln."
     },
     "2ab": {
       "name": "Leks 2AB Brot",
@@ -214,12 +218,8 @@
       "name": "Feingebäck",
       "description": "Traditionelle polnische Hefegebäcke und süße Brötchen mit Füllung."
     },
-    "kanapki": {
-      "name": "Sandwiches",
-      "description": "Frische, täglich zubereitete nahrhafte Sandwiches und Baguettes mit knackigen Zutaten."
-    },
     "przekaski": {
-      "name": "Salzige Snacks",
+      "name": "Herzhafte Snacks",
       "description": "Knusprige und aromatische herzhafte Snacks direkt aus dem Ofen."
     }
   },

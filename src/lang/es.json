@@ -198,9 +198,13 @@
     "copyright": "&copy; 2026 Leks Sp. z o.o. Todos los derechos reservados."
   },
   "categories": {
-    "pieczywo": {
-      "name": "Panadería",
-      "description": "Pan tradicional polaco con masa madre natural: hogazas, bollos y baguettes."
+    "chleby": {
+      "name": "Panes",
+      "description": "Panes tradicionales polacos horneados con masa madre natural."
+    },
+    "bulki": {
+      "name": "Bollos y Panecillos",
+      "description": "Bollos frescos y crujientes de consumo diario, panecillos integrales y kayser."
     },
     "2ab": {
       "name": "Pan Leks 2AB",
@@ -211,12 +215,8 @@
       "description": "Pastelería, pasteles y tartas de la más alta calidad para cada ocasión."
     },
     "polcukiernicze": {
-      "name": "Bollos Dulces",
+      "name": "Bollería",
       "description": "Bollos de levadura polacos tradicionales y panecillos dulces con rellenos."
-    },
-    "kanapki": {
-      "name": "Bocadillos",
-      "description": "Bocadillos y baguettes nutritivos preparados frescos a diario con ingredientes crujientes."
     },
     "przekaski": {
       "name": "Aperitivos Salados",

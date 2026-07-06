@@ -1,13 +1,23 @@
 const kategorieProduktow = [
     {
-        id: "pieczywo",
-        name: "Pieczywo",
-        description: "Tradycyjne polskie pieczywo na naturalnym zakwasie - chleby, bułki i bagietki.",
-        image: "img/kat_pieczywo.png",
+        id: "chleby",
+        name: "Chleby",
+        description: "Tradycyjne polskie chleby wypiekane na naturalnym zakwasie.",
+        image: "img/kat_chleby.png",
         products: [
-            { name: "Chleb Sulęciński", weight: "500g", packaging: "Skrzynka 12 szt.", image: "img/chleb_sulecinski.png" },
-            { name: "Chleb Baltonowski", weight: "600g", packaging: "Skrzynka 10 szt.", image: "img/chleb_baltonowski.png" },
-            { name: "Bułka Grahamka", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka_grahamka.png" }
+            { name: "Chleb Sulęciński", weight: "500g", packaging: "Skrzynka 12 szt.", image: "img/chleb-cechy.png" },
+            { name: "Chleb Baltonowski", weight: "600g", packaging: "Skrzynka 10 szt.", image: "img/chleb-cechy.png" }
+        ]
+    },
+    {
+        id: "bulki",
+        name: "Bułki",
+        description: "Świeże, chrupiące bułki codzienne, grahamki i kajzerki.",
+        image: "img/kat_bulki.png",
+        products: [
+            { name: "Bułka Grahamka", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka-cechy.png" },
+            { name: "Bułka Kajzerka", weight: "60g", packaging: "Karton 80 szt.", image: "img/bulka-cechy.png" },
+            { name: "Bułka Maślana", weight: "80g", packaging: "Karton 40 szt.", image: "img/bulka-cechy.png" }
         ]
     },
     {
@@ -16,9 +26,9 @@ const kategorieProduktow = [
         description: "Pieczywo z pradawnej odmiany pszenicy. Lekkostrawne i bogate w wartości odżywcze.",
         image: "img/kat_2ab.png",
         products: [
-            { name: "Chleb z pradawnej odmiany pszenicy 2ab", weight: "400g", packaging: "Karton 10 szt.", image: "img/chleb_leks_2ab.png" },
-            { name: "Bułka z pradawnej odmiany pszenicy 2ab", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka_2ab.png" },
-            { name: "Bagietka z pradawnej odmiany pszenicy 2ab", weight: "250g", packaging: "Karton 20 szt.", image: "img/bagietka_2ab.png" }
+            { name: "Chleb z pradawnej odmiany pszenicy 2ab", weight: "400g", packaging: "Karton 10 szt.", image: "img/chleb_2ab_sliced.png" },
+            { name: "Bułka z pradawnej odmiany pszenicy 2ab", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka-cechy.png" },
+            { name: "Bagietka z pradawnej odmiany pszenicy 2ab", weight: "250g", packaging: "Karton 20 szt.", image: "img/bulka-cechy.png" }
         ]
     },
     {
@@ -33,27 +43,17 @@ const kategorieProduktow = [
     },
     {
         id: "polcukiernicze",
-        name: "Produkty półcukierniczne",
+        name: "Produkty Półcukiernicze",
         description: "Tradycyjne polskie drożdżówki i słodkie bułki z nadzieniem.",
         image: "img/kat_polcukiernicze.png",
         products: [
-            { name: "Drożdżówka z Kruszonką", weight: "90g", packaging: "Skrzynka 20 szt.", image: "img/drozdzowka.png" },
-            { name: "Pączek Malinowy", weight: "80g", packaging: "Skrzynka 30 szt.", image: "img/paczek_malinowy.png" }
-        ]
-    },
-    {
-        id: "kanapki",
-        name: "Kanapki",
-        description: "Świeże, codzienne przygotowywane pożywne kanapki i bagietki z chrupiącymi dodatkami.",
-        image: "img/kat_kanapki.png",
-        products: [
-            { name: "Kanapka Trójkąt z Szynką i Serem", weight: "160g", packaging: "Karton 12 szt.", image: "img/kat_kanapki.png" },
-            { name: "Bagietka Fitness z Twarożkiem", weight: "180g", packaging: "Karton 10 szt.", image: "img/kat_kanapki.png" }
+            { name: "Drożdżówka z Kruszonką", weight: "90g", packaging: "Skrzynka 20 szt.", image: "img/kat_polcukiernicze.png" },
+            { name: "Pączek Malinowy", weight: "80g", packaging: "Skrzynka 30 szt.", image: "img/kat_polcukiernicze.png" }
         ]
     },
     {
         id: "przekaski",
-        name: "Słone przekąski",
+        name: "Słone Przekąski",
         description: "Chrupiące i aromatyczne słone przekąski prosto z pieca.",
         image: "img/kat_przekaski.png",
         products: [

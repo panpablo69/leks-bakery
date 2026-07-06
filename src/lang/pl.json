@@ -198,9 +198,13 @@
     "copyright": "&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone."
   },
   "categories": {
-    "pieczywo": {
-      "name": "Pieczywo",
-      "description": "Tradycyjne polskie pieczywo na naturalnym zakwasie - chleby, bułki i bagietki."
+    "chleby": {
+      "name": "Chleby",
+      "description": "Tradycyjne polskie chleby wypiekane na naturalnym zakwasie."
+    },
+    "bulki": {
+      "name": "Bułki",
+      "description": "Świeże, chrupiące bułki codzienne, grahamki i kajzerki."
     },
     "2ab": {
       "name": "Pieczywo Leks 2AB",
@@ -211,15 +215,11 @@
       "description": "Najwyższej jakości wyroby cukiernicze, torty i ciasta na każdą okazję."
     },
     "polcukiernicze": {
-      "name": "Produkty półcukierniczne",
+      "name": "Produkty Półcukiernicze",
       "description": "Tradycyjne polskie drożdżówki i słodkie bułki z nadzieniem."
     },
-    "kanapki": {
-      "name": "Kanapki",
-      "description": "Świeże, codzienne przygotowywane pożywne kanapki i bagietki z chrupiącymi dodatkami."
-    },
     "przekaski": {
-      "name": "Słone przekąski",
+      "name": "Słone Przekąski",
       "description": "Chrupiące i aromatyczne słone przekąski prosto z pieca."
     }
   },
