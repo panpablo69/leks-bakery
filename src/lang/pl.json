@@ -5,8 +5,9 @@
     "products": "Produkty",
     "certificates": "Certyfikaty",
     "career": "Praca",
-    "contact": "Kontakt",
-    "blog": "Blog"
+    "blog": "Blog",
+    "b2b": "Współpraca B2B",
+    "contact": "Kontakt"
   },
   "hero": {
     "subtitle": "Tradycja od 1989 roku",
@@ -284,5 +285,37 @@
         "desc": "Kompletny pakiet pozwalający przetestować oba flagowe wypieki 2AB. W zestawie 1 chleb + 4 bułki."
       }
     }
+  },
+  "b2b": {
+    "subtitle": "Współpraca handlowa",
+    "title": "Solidny partner B2B z 35-letnim doświadczeniem",
+    "lead": "Firma Leks to nie tylko producent tradycyjnego pieczywa — to sprawdzony, skalowalny dostawca z systemem jakości na poziomie międzynarodowym. Działa od 1989 roku, a dziś obsługuje jedne z największych sieci handlowych w Europie, w tym Biedronkę i Netto.",
+    "why_title": "Dlaczego warto współpracować z Leks?",
+    "adv1_title": "1. Skalowalność i stabilność dostaw",
+    "adv1_desc": "<strong>3 zakłady produkcyjne:</strong> Sulęcin, Gorzów Wielkopolski, Tarnowo Byckie.<br><strong>Moc produkcyjna</strong> zapewniająca stałe zaopatrzenie nawet największych kontrahentów.<br><strong>Logistyka</strong> obejmująca całą Europę — gotowi do dostaw eksportowych.",
+    "adv2_title": "2. Międzynarodowe certyfikaty jakości",
+    "adv2_desc": "<strong>Certyfikat ISO 22000:2018</strong> — potwierdzenie systemowego zarządzania bezpieczeństwem żywności.<br><strong>Certyfikat IFS Food wersja 8 (Higher Level)</strong> z wynikiem 97,73% — standard wymagany przez sieci w całej Europie.<br><strong>Regularne audyty</strong>, w tym niezapowiedziane — gwarancja ciągłej kontroli jakości.",
+    "adv3_title": "3. Doświadczenie z liderami rynku",
+    "adv3_desc": "<strong>Długoterminowa współpraca</strong> z największymi sieciami handlowymi w Polsce i Europie.<br><strong>Elastyczność asortymentu:</strong> 300 produktów, w tym pieczywo świeże i głęboko mrożone (Bake-off), wyroby półcukiernicze.",
+    "adv4_title": "4. Prosty skład, naturalne wartości",
+    "adv4_desc": "<strong>Uczciwy skład:</strong> Klient końcowy szuka prostego pieczywa — my je produkujemy.<br><strong>Modyfikacje pod klienta:</strong> Możliwość dostosowania składu i opakowania do wymagań marki prywatnej (private label).",
+    "process_title": "Nasza infrastruktura",
+    "process_subtitle": "Technologia i zasoby",
+    "process_lead": "Dysponujemy zapleczem produkcyjnym i logistycznym, które pozwala sprostać wymaganiom największych odbiorców w Europie.",
+    "pillar1_title": "Nowoczesne linie",
+    "pillar1_desc": "W pełni zautomatyzowane linie wypiekowe gwarantujące powtarzalność i najwyższą wydajność.",
+    "pillar2_title": "Kontrola jakości",
+    "pillar2_desc": "Ścisły monitoring na każdym etapie produkcji od surowca po gotowy wyrób (HACCP, IFS, ISO).",
+    "pillar3_title": "Logistyka i magazyn",
+    "pillar3_desc": "Nowoczesne chłodnie i magazyny wysokiego składowania oraz wyspecjalizowana flota transportowa.",
+    "cta_title": "📦 Chcesz ofertę dla sieci handlowej?",
+    "cta_desc": "Skontaktuj się z nami — przygotujemy indywidualne warunki współpracy, dane techniczne i próbki.",
+    "cta_btn": "Formularz kontaktowy",
+    "download_title": "📄 Pobierz dokumenty",
+    "download_ifs": "Certyfikat IFS Food 2026",
+    "download_iso": "Certyfikat ISO 22000",
+    "download_offer": "Oferta B2B Leks – pełna specyfikacja techniczna",
+    "download_btn": "Pobierz PDF",
+    "download_view": "Zobacz asortyment online"
   }
 }

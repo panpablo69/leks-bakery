@@ -5,8 +5,9 @@
     "products": "Products",
     "certificates": "Certificates",
     "career": "Careers",
-    "contact": "Contact",
-    "blog": "Blog"
+    "blog": "Blog",
+    "b2b": "B2B Cooperation",
+    "contact": "Contact"
   },
   "hero": {
     "subtitle": "Tradition since 1989",
@@ -284,5 +285,37 @@
         "desc": "A complete mix package to try both signature 2AB products. Includes 1 loaf of bread and 4 rolls."
       }
     }
+  },
+  "b2b": {
+    "subtitle": "Commercial Cooperation",
+    "title": "Reliable B2B Partner with 35 Years of Experience",
+    "lead": "Leks is not just a producer of traditional bread — we are a proven, scalable supplier with an international quality system. Active since 1989, we now serve some of the largest retail chains in Europe, including Biedronka and Netto.",
+    "why_title": "Why Partner with Leks?",
+    "adv1_title": "1. Scalability and Supply Stability",
+    "adv1_desc": "<strong>3 production plants:</strong> Sulęcin, Gorzów Wielkopolski, Tarnowo Byckie.<br><strong>Production capacity</strong> ensuring steady supply even for the largest clients.<br><strong>Logistics</strong> covering all of Europe — export-ready.",
+    "adv2_title": "2. International Quality Certificates",
+    "adv2_desc": "<strong>ISO 22000:2018 certificate</strong> — proof of systematic food safety management.<br><strong>IFS Food version 8 (Higher Level)</strong> certificate with a score of 97.73% — the standard required by retail chains in Europe.<br><strong>Regular audits</strong>, including unannounced ones — a guarantee of continuous quality control.",
+    "adv3_title": "3. Experience with Market Leaders",
+    "adv3_desc": "<strong>Long-term cooperation</strong> with the largest retail chains in Poland and Europe.<br><strong>Assortment flexibility:</strong> 300 products, including fresh and deep-frozen bread (Bake-off), pastry products.",
+    "adv4_title": "4. Simple Ingredients, Natural Value",
+    "adv4_desc": "<strong>Clean label:</strong> The end customer looks for honest bread — we produce it.<br><strong>Customization:</strong> Ability to adapt composition and packaging to private label requirements.",
+    "process_title": "Our Infrastructure",
+    "process_subtitle": "Technology & Resources",
+    "process_lead": "We have the production and logistics facilities to meet the requirements of the largest buyers in Europe.",
+    "pillar1_title": "Modern Lines",
+    "pillar1_desc": "Fully automated baking lines guaranteeing consistency and maximum efficiency.",
+    "pillar2_title": "Quality Control",
+    "pillar2_desc": "Strict monitoring at every stage of production from raw material to finished product (HACCP, IFS, ISO).",
+    "pillar3_title": "Logistics & Warehouse",
+    "pillar3_desc": "Modern cold stores, high-bay warehouses, and a specialized transport fleet.",
+    "cta_title": "📦 Looking for an offer for a retail chain?",
+    "cta_desc": "Contact us — we will prepare individual cooperation terms, technical details, and samples.",
+    "cta_btn": "Contact Form",
+    "download_title": "📄 Download Documents",
+    "download_ifs": "IFS Food Certificate 2026",
+    "download_iso": "ISO 22000 Certificate",
+    "download_offer": "Leks B2B Offer – Full Technical Specification",
+    "download_btn": "Download PDF",
+    "download_view": "View Online Catalog"
   }
 }

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Współpraca B2B z Piekarnią Leks. Tradycyjny smak w skali makro, 3 nowoczesne zakłady produkcyjne, certyfikaty IFS Food i ISO 22000.">
+    <title>Współpraca B2B - Leks Piekarnia</title>
+    
+    <!-- Google Fonts: Montserrat (Body) & Roboto (Headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Główne style CSS -->
+    <link rel="stylesheet" href="css/style.css?v=43">
+    
+    <!-- Custom B2B Styles -->
+    <style>
+        /* Margines dla header-scrolled */
+        main {
+            padding-top: 90px;
+            background-color: var(--color-bg);
+        }
+        
+        /* B2B Hero Section */
+        .b2b-hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(0, 58, 115, 0.95) 0%, rgba(0, 30, 60, 0.98) 100%);
+            color: var(--color-white);
+            padding: 100px 0 80px 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .b2b-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('img/nasz_zespol.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.12;
+            z-index: 1;
+        }
+        
+        .b2b-hero .container {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+        
+        .b2b-hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .b2b-hero-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: var(--color-white);
+        }
+        
+        .b2b-hero-lead {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0;
+        }
+        
+        /* Advantages Cards Grid */
+        .b2b-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .b2b-grid {
+                grid-template-columns: 1fr;
+            }
+            .b2b-hero-title {
+                font-size: 2rem;
+            }
+        }
+        
+        .b2b-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .b2b-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--color-accent) 0%, rgba(197, 160, 89, 0.3) 100%);
+            transition: var(--transition-smooth);
+        }
+        
+        .b2b-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(197, 160, 89, 0.3);
+        }
+        
+        .b2b-card:hover::after {
+            width: 8px;
+        }
+        
+        .b2b-icon-wrapper {
+            margin-bottom: 25px;
+            color: var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .b2b-card-title {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .b2b-card-desc {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--color-text-muted);
+        }
+        
+        .b2b-card-desc strong {
+            color: var(--color-primary);
+        }
+        
+        /* Interactive Process Selector (Tabs / Hotspots) */
+        .process-section {
+            background-color: var(--color-bg-alt);
+            padding: 80px 0;
+        }
+        
+        .process-tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .process-tab-btn {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            color: var(--color-primary);
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .process-tab-btn:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+        
+        .process-tab-btn.active {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+            box-shadow: 0 4px 15px rgba(0, 58, 115, 0.2);
+        }
+        
+        .process-content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--color-border);
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .process-panel {
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        .process-panel.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .process-panel-title {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .process-panel-desc {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--color-text-muted);
+        }
+        
+        /* Documents Section */
+        .docs-section {
+            padding: 80px 0;
+            background-color: var(--color-bg);
+        }
+        
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 992px) {
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .doc-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            padding: 35px;
+            text-align: center;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 280px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-accent);
+        }
+        
+        .doc-icon {
+            color: #dc3545; /* PDF Red */
+            margin-bottom: 20px;
+        }
+        
+        .doc-card-title {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 25px;
+            line-height: 1.5;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .doc-actions {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .btn-doc-download {
+            background: var(--color-primary);
+            color: var(--color-white) !important;
+            border: 1px solid var(--color-primary);
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            width: 100%;
+        }
+        
+        .btn-doc-download:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+        
+        .btn-doc-view {
+            background: transparent;
+            color: var(--color-primary) !important;
+            border: 1px solid var(--color-primary);
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            width: 100%;
+        }
+        
+        .btn-doc-view:hover {
+            background: rgba(0, 58, 115, 0.05);
+        }
+        
+        /* B2B CTA Banner Section */
+        .b2b-cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #002244 100%);
+            color: var(--color-white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .b2b-cta-section::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+            top: -150px;
+            right: -150px;
+            pointer-events: none;
+        }
+        
+        .b2b-cta-section::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+            bottom: -150px;
+            left: -150px;
+            pointer-events: none;
+        }
+        
+        .b2b-cta-title {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-white);
+        }
+        
+        .b2b-cta-desc {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .b2b-cta-btn {
+            background: var(--color-accent);
+            color: var(--color-white) !important;
+            border: 2px solid var(--color-accent);
+            padding: 16px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+        }
+        
+        .b2b-cta-btn:hover {
+            background: var(--color-white);
+            color: var(--color-primary) !important;
+            border-color: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Szklany, animowany Header (Nawigacja) -->
+    <header id="main-header" class="header-glass header-scrolled">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" id="nav-logo">
+                <img src="img/leks_logo_smacznego.png" alt="Leks Logo">
+            </a>
+            
+            <nav id="main-nav" class="nav-menu">
+                <ul>
+                    <li><a href="index.html#hero" class="nav-link" id="link-home" data-i18n="nav.start">Start</a></li>
+                    <li><a href="about.html" class="nav-link" id="link-about" data-i18n="nav.about">O nas</a></li>
+                    <li><a href="index.html#products" class="nav-link" id="link-products" data-i18n="nav.products">Produkty</a></li>
+                    <li><a href="career.html" class="nav-link" id="link-career" data-i18n="nav.career">Kariera</a></li>
+                    <li><a href="blog.html" class="nav-link" id="link-blog" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="b2b.html" class="nav-link active" id="link-b2b" data-i18n="nav.b2b">Współpraca B2B</a></li>
+                    <li><a href="index.html#contact" class="nav-link" id="link-contact" data-i18n="nav.contact">Kontakt</a></li>
+                    <li class="lang-dropdown-wrapper" id="lang-dropdown">
+                        <div class="lang-dropdown-trigger" id="lang-trigger">
+                            <span class="lang-flag-current" id="active-lang-flag"></span>
+                            <span class="lang-code-current" id="active-lang-code">PL</span>
+                            <svg class="lang-chevron" viewBox="0 0 24 24" width="12" height="12">
+                                <path d="M7 10l5 5 5-5H7z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <ul class="lang-dropdown-menu">
+                            <li class="lang-option" data-lang="pl">
+                                <span class="lang-flag">
+                                    <svg class="flag-svg" viewBox="0 0 16 12" width="16" height="12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#dc143c"/></svg>
+                                </span>
+                                <span class="lang-text">Polski (PL)</span>
+                            </li>
+                            <li class="lang-option" data-lang="en">
+                                <span class="lang-flag">
+                                    <svg class="flag-svg" viewBox="0 0 16 12" width="16" height="12"><rect width="16" height="12" fill="#00247d"/><path d="M0 0 L16 12 M0 12 L16 0" stroke="#fff" stroke-width="2"/><path d="M0 0 L16 12 M0 12 L16 0" stroke="#cf142b" stroke-width="1.2"/><path d="M8 0 L8 12 M0 6 L16 6" stroke="#fff" stroke-width="3"/><path d="M8 0 L8 12 M0 6 L16 6" stroke="#cf142b" stroke-width="1.8"/></svg>
+                                </span>
+                                <span class="lang-text">English (EN)</span>
+                            </li>
+                            <li class="lang-option" data-lang="de">
+                                <span class="lang-flag">
+                                    <svg class="flag-svg" viewBox="0 0 16 12" width="16" height="12"><rect width="16" height="4" fill="#000"/><rect y="4" width="16" height="4" fill="#dd0000"/><rect y="8" width="16" height="4" fill="#ffce00"/></svg>
+                                </span>
+                                <span class="lang-text">Deutsch (DE)</span>
+                            </li>
+                            <li class="lang-option" data-lang="es">
+                                <span class="lang-flag">
+                                    <svg class="flag-svg" viewBox="0 0 16 12" width="16" height="12"><rect width="16" height="3" fill="#c60b1e"/><rect y="3" width="16" height="6" fill="#ffc400"/><rect y="9" width="16" height="3" fill="#c60b1e"/></svg>
+                                </span>
+                                <span class="lang-text">Español (ES)</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+            <button id="menu-toggle" class="hamburger" aria-label="Otwórz menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- B2B Hero Section -->
+        <section class="b2b-hero">
+            <div class="container">
+                <span class="b2b-hero-subtitle" data-i18n="b2b.subtitle">Współpraca handlowa</span>
+                <h1 class="b2b-hero-title" data-i18n="b2b.title">Solidny partner B2B z 35-letnim doświadczeniem</h1>
+                <p class="b2b-hero-lead" data-i18n="b2b.lead">Firma Leks to nie tylko producent tradycyjnego pieczywa — to sprawdzony, skalowalny dostawca z systemem jakości na poziomie międzynarodowym. Działa od 1989 roku, a dziś obsługuje jedne z największych sieci handlowych w Europie, w tym Biedronkę i Netto.</p>
+            </div>
+        </section>
+
+        <!-- Advantages Grid Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="b2b.subtitle">Dlaczego Leks?</span>
+                    <h2 class="section-title" data-i18n="b2b.why_title">Dlaczego warto współpracować z Leks?</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="b2b-grid">
+                    <!-- Advantage 1 -->
+                    <div class="b2b-card">
+                        <div class="b2b-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="b2b-card-title" data-i18n="b2b.adv1_title">1. Skalowalność i stabilność dostaw</h3>
+                        <p class="b2b-card-desc" data-i18n="b2b.adv1_desc"><strong>3 zakłady produkcyjne:</strong> Sulęcin, Gorzów Wielkopolski, Tarnowo Byckie.<br><strong>Moc produkcyjna</strong> zapewniająca stałe zaopatrzenie nawet największych kontrahentów.<br><strong>Logistyka</strong> obejmująca całą Europę — gotowi do dostaw eksportowych.</p>
+                    </div>
+                    
+                    <!-- Advantage 2 -->
+                    <div class="b2b-card">
+                        <div class="b2b-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="b2b-card-title" data-i18n="b2b.adv2_title">2. Międzynarodowe certyfikaty jakości</h3>
+                        <p class="b2b-card-desc" data-i18n="b2b.adv2_desc"><strong>Certyfikat ISO 22000:2018</strong> — potwierdzenie systemowego zarządzania bezpieczeństwem żywności.<br><strong>Certyfikat IFS Food wersja 8 (Higher Level)</strong> z wynikiem 97,73% — standard wymagany przez sieci w całej Europie.<br><strong>Regularne audyty</strong>, w tym niezapowiedziane — gwarancja ciągłej kontroli jakości.</p>
+                    </div>
+                    
+                    <!-- Advantage 3 -->
+                    <div class="b2b-card">
+                        <div class="b2b-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                <path d="M16 17.01V10h-2v7.01h-3L15 21l4-3.99h-3zM9 3L5 6.99h3V14h2V6.99h3L9 3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="b2b-card-title" data-i18n="b2b.adv3_title">3. Doświadczenie z liderami rynku</h3>
+                        <p class="b2b-card-desc" data-i18n="b2b.adv3_desc"><strong>Długoterminowa współpraca</strong> z największymi sieciami handlowymi w Polsce i Europie.<br><strong>Elastyczność asortymentu:</strong> 300 produktów, w tym pieczywo świeże i głęboko mrożone (Bake-off), wyroby półcukiernicze.</p>
+                    </div>
+                    
+                    <!-- Advantage 4 -->
+                    <div class="b2b-card">
+                        <div class="b2b-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                                <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="b2b-card-title" data-i18n="b2b.adv4_title">4. Prosty skład, naturalne wartości</h3>
+                        <p class="b2b-card-desc" data-i18n="b2b.adv4_desc"><strong>Uczciwy skład:</strong> Klient końcowy szuka prostego pieczywa — my je produkujemy.<br><strong>Modyfikacje pod klienta:</strong> Możliwość dostosowania składu i opakowania do wymagań marki prywatnej (private label).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Process / Hotspot Section -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="b2b.process_subtitle">Technologia i zasoby</span>
+                    <h2 class="section-title" data-i18n="b2b.process_title">Nasza infrastruktura</h2>
+                    <div class="section-line"></div>
+                    <p class="lead-text text-center" style="max-width: 600px; margin: 20px auto 0 auto;" data-i18n="b2b.process_lead">Dysponujemy zapleczem produkcyjnym i logistycznym, które pozwala sprostać wymaganiom największych odbiorców w Europie.</p>
+                </div>
+                
+                <div class="process-tab-nav">
+                    <button class="process-tab-btn active" data-tab="tab-lines" data-i18n="b2b.pillar1_title">Nowoczesne linie</button>
+                    <button class="process-tab-btn" data-tab="tab-quality" data-i18n="b2b.pillar2_title">Kontrola jakości</button>
+                    <button class="process-tab-btn" data-tab="tab-logistics" data-i18n="b2b.pillar3_title">Logistyka i magazyn</button>
+                </div>
+                
+                <div class="process-content-wrapper">
+                    <!-- Tab Panel 1 -->
+                    <div id="tab-lines" class="process-panel active">
+                        <h3 class="process-panel-title">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" style="color: var(--color-accent);">
+                                <path d="M19 13H5v-2h14v2z"/>
+                            </svg>
+                            <span data-i18n="b2b.pillar1_title">Nowoczesne linie</span>
+                        </h3>
+                        <p class="process-panel-desc" data-i18n="b2b.pillar1_desc">W pełni zautomatyzowane linie wypiekowe gwarantujące powtarzalność i najwyższą wydajność.</p>
+                    </div>
+                    
+                    <!-- Tab Panel 2 -->
+                    <div id="tab-quality" class="process-panel">
+                        <h3 class="process-panel-title">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" style="color: var(--color-accent);">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                            </svg>
+                            <span data-i18n="b2b.pillar2_title">Kontrola jakości</span>
+                        </h3>
+                        <p class="process-panel-desc" data-i18n="b2b.pillar2_desc">Ścisły monitoring na każdym etapie produkcji od surowca po gotowy wyrób (HACCP, IFS, ISO).</p>
+                    </div>
+                    
+                    <!-- Tab Panel 3 -->
+                    <div id="tab-logistics" class="process-panel">
+                        <h3 class="process-panel-title">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" style="color: var(--color-accent);">
+                                <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12.5-1.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5z"/>
+                            </svg>
+                            <span data-i18n="b2b.pillar3_title">Logistyka i magazyn</span>
+                        </h3>
+                        <p class="process-panel-desc" data-i18n="b2b.pillar3_desc">Nowoczesne chłodnie i magazyny wysokiego składowania oraz wyspecjalizowana flota transportowa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documents Section -->
+        <section class="docs-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="b2b.subtitle">Pliki do pobrania</span>
+                    <h2 class="section-title" data-i18n="b2b.download_title">Pobierz dokumenty</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="docs-grid">
+                    <!-- Doc 1: IFS Cert -->
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 6c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9zm5 8H7v-1c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5v1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="doc-card-title" data-i18n="b2b.download_ifs">Certyfikat IFS Food 2026</h3>
+                        <div class="doc-actions">
+                            <a href="pdf/certyfikat_ifs_2026_pl.pdf" class="btn-doc-download" target="_blank">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+                                <span data-i18n="b2b.download_btn">Pobierz PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Doc 2: ISO Cert -->
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 6c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9zm5 8H7v-1c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5v1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="doc-card-title" data-i18n="b2b.download_iso">Certyfikat ISO 22000</h3>
+                        <div class="doc-actions">
+                            <a href="pdf/certyfikat_iso_22000_pl.pdf" class="btn-doc-download" target="_blank">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+                                <span data-i18n="b2b.download_btn">Pobierz PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Doc 3: Oferta B2B -->
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" style="color: var(--color-accent);">
+                                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="doc-card-title" data-i18n="b2b.download_offer">Oferta B2B Leks – pełna specyfikacja techniczna</h3>
+                        <div class="doc-actions">
+                            <a href="category.html?cat=chleby" class="btn-doc-view">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                                <span data-i18n="b2b.download_view">Zobacz asortyment online</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="b2b-cta-section">
+            <div class="container">
+                <h2 class="b2b-cta-title" data-i18n="b2b.cta_title">📦 Chcesz ofertę dla sieci handlowej?</h2>
+                <p class="b2b-cta-desc" data-i18n="b2b.cta_desc">Skontaktuj się z nami — przygotujemy indywidualne warunki współpracy, dane techniczne i próbki.</p>
+                <a href="index.html#contact" class="b2b-cta-btn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span data-i18n="b2b.cta_btn">Formularz kontaktowy</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="footer-minimalist">
+        <div class="container footer-container-minimal">
+            <div class="footer-brand">
+                <img src="img/leks_logo_smacznego.png" alt="Leks Logo" class="footer-logo-white">
+            </div>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html#hero" data-i18n="nav.start">Start</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">O nas</a></li>
+                    <li><a href="index.html#products" data-i18n="nav.products">Produkty</a></li>
+                    <li><a href="career.html" data-i18n="nav.career">Kariera</a></li>
+                    <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                    <li><a href="b2b.html" data-i18n="nav.b2b">Współpraca B2B</a></li>
+                    <li><a href="index.html#contact" data-i18n="nav.contact">Kontakt</a></li>
+                    <li><a href="#" id="trigger-privacy-modal" class="privacy-link" data-i18n="footer.privacy">RODO (Polityka prywatności)</a></li>
+                </ul>
+            </nav>
+            
+            <div class="footer-social-copyright">
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/LeksPiekarnia" class="social-icon" id="social-fb" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/leks-produkcja-piekarnicza-i-cukiernicza/" class="social-icon" id="social-ln" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/leks2ab/" class="social-icon" id="social-ig" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 4.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom-bar">
+                <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal RODO / Polityka Prywatności -->
+    <div id="privacy-modal" class="modal-backdrop">
+        <div class="modal-card privacy-modal-card">
+            <button id="close-privacy-modal" class="modal-close-btn" aria-label="Zamknij">&times;</button>
+            <div class="privacy-modal-body">
+                <span class="modal-badge" data-i18n="privacy.badge">Dokumentacja RODO</span>
+                <h2 class="modal-title" data-i18n="privacy.title">Polityka Prywatności</h2>
+                <div class="modal-divider"></div>
+                
+                <div class="privacy-text-content">
+                    <p>W trosce o dane osobowe, które zostały nam przekazane informujemy, że jesteśmy odpowiednio przygotowani do ich ochrony, uwzględniając przepisy Rozporządzenia Parlamentu Europejskiego i Rady UE 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (zwanym dalej RODO).</p>
+                    <p>Chcąc zapewnić transparentność realizowanych przez nas procesów przetwarzania przedstawiamy obowiązujące w Leks Sp. z o. o. zasady ochrony danych osobowych, oraz informacje o prawach wynikających z przepisów, dla osób, które powierzyły nam swoje dane osobowe.</p>
+                    
+                    <h3>Klauzula informacyjna</h3>
+                    <p>Pełna treść polityki RODO dostępna jest na stronie głównej serwisu.</p>
+                </div>
+                
+                <div class="modal-actions" style="margin-top: 30px; justify-content: flex-end;">
+                    <button id="close-privacy-action-btn" class="btn btn-primary" data-i18n="privacy.btn_understand">Rozumiem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biblioteki GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Główne skrypty -->
+    <script src="js/products-data.js?v=18"></script>
+    <script src="js/app.js?v=43"></script>
+    
+    <!-- Custom B2B Interactive Scripts -->
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // GSAP Entry Animations
+            gsap.from(".b2b-card", {
+                opacity: 0,
+                y: 50,
+                stagger: 0.15,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+            
+            gsap.from(".process-tab-btn", {
+                opacity: 0,
+                scale: 0.9,
+                stagger: 0.1,
+                duration: 0.6,
+                ease: "back.out(1.5)"
+            });
+            
+            gsap.from(".doc-card", {
+                scrollTrigger: {
+                    trigger: ".docs-grid",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 40,
+                stagger: 0.15,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+
+            // Interactive Tab Control for Process Section
+            const tabButtons = document.querySelectorAll(".process-tab-btn");
+            const tabPanels = document.querySelectorAll(".process-panel");
+            
+            tabButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetTab = btn.getAttribute("data-tab");
+                    
+                    // Update active button
+                    tabButtons.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    
+                    // Animate transition between panels
+                    tabPanels.forEach(panel => {
+                        if (panel.id === targetTab) {
+                            panel.style.display = "block";
+                            gsap.fromTo(panel, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" });
+                        } else {
+                            panel.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

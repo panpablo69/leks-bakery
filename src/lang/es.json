@@ -5,8 +5,9 @@
     "products": "Productos",
     "certificates": "Certificados",
     "career": "Empleo",
-    "contact": "Contacto",
-    "blog": "Blog"
+    "blog": "Blog",
+    "b2b": "Cooperación B2B",
+    "contact": "Contacto"
   },
   "hero": {
     "subtitle": "Tradición desde 1989",
@@ -284,5 +285,37 @@
         "desc": "Un paquete mixto completo para probar ambos productos exclusivos de 2AB. Incluye 1 hogaza de pan y 4 bollos."
       }
     }
+  },
+  "b2b": {
+    "subtitle": "Cooperación Comercial",
+    "title": "Socio B2B Confiable con 35 Años de Experiencia",
+    "lead": "Leks no es solo un productor de pan tradicional — somos un proveedor probado y escalable con un sistema de calidad internacional. Activos desde 1989, hoy atendemos a algunas de las mayores cadenas de distribución de Europa, incluidas Biedronka y Netto.",
+    "why_title": "¿Por qué colaborar con Leks?",
+    "adv1_title": "1. Escalabilidad y Estabilidad de Suministro",
+    "adv1_desc": "<strong>3 plantas de producción:</strong> Sulęcin, Gorzów Wielkopolski, Tarnowo Byckie.<br><strong>Capacidad de producción</strong> que garantiza un suministro constante incluso para los mayores clientes.<br><strong>Logística</strong> que cubre toda Europa — listos para la exportación.",
+    "adv2_title": "2. Certificaciones de Calidad Internacionales",
+    "adv2_desc": "<strong>Certificado ISO 22000:2018</strong> — prueba de la gestión sistemática de la seguridad alimentaria.<br><strong>Certificado IFS Food versión 8 (Higher Level)</strong> con una puntuación del 97.73% — el estándar requerido por las cadenas en Europa.<br><strong>Auditorías periódicas</strong>, incluidas las no anunciadas — garantía de control de calidad continuo.",
+    "adv3_title": "3. Experiencia con Líderes del Mercado",
+    "adv3_desc": "<strong>Cooperación a largo plazo</strong> con las mayores cadenas de distribución en Polonia y Europa.<br><strong>Flexibilidad de surtido:</strong> 300 productos, incluidos panes frescos y ultracongelados (Bake-off), productos de pastelería.",
+    "adv4_title": "4. Ingredientes Simples, Valores Naturales",
+    "adv4_desc": "<strong>Etiqueta limpia:</strong> El consumidor final busca pan honesto — nosotros lo producimos.<br><strong>Personalización:</strong> Capacidad para adaptar la composición y el envasado a los requisitos de marca blanca (private label).",
+    "process_title": "Nuestra Infraestructura",
+    "process_subtitle": "Tecnología y Recursos",
+    "process_lead": "Disponemos de las instalaciones de producción y logística para cumplir con los requisitos de los mayores compradores de Europa.",
+    "pillar1_title": "Líneas Modernas",
+    "pillar1_desc": "Líneas de horneado totalmente automatizadas que garantizan consistencia y máxima eficiencia.",
+    "pillar2_title": "Control de Calidad",
+    "pillar2_desc": "Estricto control en cada etapa de producción, desde la materia prima hasta el producto terminado (HACCP, IFS, ISO).",
+    "pillar3_title": "Logística y Almacén",
+    "pillar3_desc": "Cámaras frigoríficas modernas, almacenes de gran altura y una flota de transporte especializada.",
+    "cta_title": "📦 ¿Busca una oferta para una cadena de supermercados?",
+    "cta_desc": "Contáctenos — prepararemos condiciones de cooperación personalizadas, detalles técnicos y muestras.",
+    "cta_btn": "Formulario de Contacto",
+    "download_title": "📄 Descargar Documentos",
+    "download_ifs": "Certificado IFS Food 2026",
+    "download_iso": "Certificado ISO 22000",
+    "download_offer": "Oferta B2B de Leks – Especificación Técnica Completa",
+    "download_btn": "Descargar PDF",
+    "download_view": "Ver Catálogo en Línea"
   }
 }
