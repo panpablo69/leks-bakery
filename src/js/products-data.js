@@ -6,10 +6,22 @@ const kategorieProduktow = [
         image: "img/kat_chleby.png",
         products: [
             { name: "Chleb Sulęciński", weight: "500g", packaging: "Skrzynka 12 szt.", image: "img/chleb-cechy.png" },
-            { name: "Chleb Baltonowski", weight: "600g", packaging: "Skrzynka 10 szt.", image: "img/chleb-cechy.png" },
+            { name: "Chleb Baltonowski", weight: "500g / 600g", packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek (576 szt.)", image: "img/chleb_baltonowski.png", shelfLife: "72h (Świeży) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC Grade A" },
             { name: "Chleb żytni z kiszoną kapustą", weight: "400g", packaging: "Skrzynka 12 szt.", image: "img/chleb_zytni_kapusta.png", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" },
             { name: "Chleb żytni z chrzanem", weight: "400g", packaging: "Skrzynka 12 szt.", image: "img/chleb_zytni_chrzan.png", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" },
-            { name: "Chleb żytni z papryką", weight: "250g", packaging: "Skrzynka 15 szt.", image: "img/chleb_zytni_papryka.jpg", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" }
+            { name: "Chleb żytni z papryką", weight: "250g", packaging: "Skrzynka 15 szt.", image: "img/chleb_zytni_papryka.jpg", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" },
+            { name: "Chleb żytni ze słonecznikiem", weight: "500g", packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek (576 szt.)", image: "img/chleb_zytni_slonecznik.png", shelfLife: "72h (Świeży) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC" },
+            { name: "Chleb żytni z ziarnami", weight: "500g", packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek", image: "img/chleb_zytni_ziarna.png", shelfLife: "72h (Świeży) / 9 miesięcy (Mrożony)", cert: "IFS Food, BRC" },
+            { name: "Chleb Geparda", weight: "400g", packaging: "Skrzynka 15 szt. / Paleta: 48 skrzynek", image: "img/chleb_geparda.png", shelfLife: "72h", cert: "IFS Food" },
+            { name: "Chleb IG", weight: "400g (Krojony / Pakowany)", packaging: "Karton 10 szt. / Paleta: 40 kartonów", image: "img/chleb_ig.png", shelfLife: "6 dni", cert: "IFS Food, BRC, Badanie Indeksu Glikemicznego" },
+            { name: "Chleb złoty kłos", weight: "400g", packaging: "Skrzynka 15 szt. / Paleta: 48 skrzynek", image: "img/chleb_zloty_klos.png", shelfLife: "72h", cert: "IFS Food" },
+            { name: "Chleb razowy", weight: "500g", packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek", image: "img/chleb_razowy.png", shelfLife: "72h (Świeży) / 9 miesięcy (Mrożony)", cert: "IFS Food, BRC" },
+            { name: "Chleb Przysmak Boryny", weight: "600g", packaging: "Skrzynka 10 szt. / Paleta: 48 skrzynek", image: "img/chleb_boryny.png", shelfLife: "72h", cert: "IFS Food" },
+            { name: "Chleb na naturalnym zakwasie", weight: "500g", packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek", image: "img/chleb_zakwas.png", shelfLife: "72h", cert: "IFS Food, BRC" },
+            { name: "Chleb żytni bez drożdży", weight: "500g (Krojony / Pakowany)", packaging: "Karton 10 szt. / Paleta: 48 kartonów", image: "img/chleb_zytni_bez_drozdzy.png", shelfLife: "6 dni", cert: "IFS Food, BRC" },
+            { name: "Chleb słonecznikowy", weight: "500g", packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek (576 szt.)", image: "img/chleb_slonecznikowy.png", shelfLife: "72h (Świeży) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC" },
+            { name: "Chleb wieloziarnisty", weight: "400g", packaging: "Skrzynka 15 szt. / Paleta: 40 skrzynek (600 szt.)", image: "img/chleb_wieloziarnisty.png", shelfLife: "72h (Świeży) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC" },
+            { name: "Chleb helios", weight: "500g", packaging: "Skrzynka 12 szt. / Paleta: 48 skrzynek (576 szt.)", image: "img/chleb_helios.png", shelfLife: "72h (Świeży) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC" }
         ]
     },
     {
