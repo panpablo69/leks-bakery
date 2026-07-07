@@ -676,8 +676,8 @@ function renderCategoryProducts() {
         // Zapisywanie danych specyfikacji
         card.setAttribute("data-weight", prod.weight || "Zgodnie ze specyfikacją");
         card.setAttribute("data-packaging", prod.packaging || "Według zamówienia");
-        card.setAttribute("data-shelf-life", "Zgodnie ze specyfikacją");
-        card.setAttribute("data-cert", "IFS, BRC (Grade A)");
+        card.setAttribute("data-shelf-life", prod.shelfLife || "Zgodnie ze specyfikacją");
+        card.setAttribute("data-cert", prod.cert || "IFS, BRC (Grade A)");
         card.setAttribute("data-desc-full", "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.");
         
         const imgPlaceholder = document.createElement("div");

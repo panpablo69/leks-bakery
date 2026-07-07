@@ -6,7 +6,10 @@ const kategorieProduktow = [
         image: "img/kat_chleby.png",
         products: [
             { name: "Chleb Sulęciński", weight: "500g", packaging: "Skrzynka 12 szt.", image: "img/chleb-cechy.png" },
-            { name: "Chleb Baltonowski", weight: "600g", packaging: "Skrzynka 10 szt.", image: "img/chleb-cechy.png" }
+            { name: "Chleb Baltonowski", weight: "600g", packaging: "Skrzynka 10 szt.", image: "img/chleb-cechy.png" },
+            { name: "Chleb żytni z kiszoną kapustą", weight: "400g", packaging: "Skrzynka 12 szt.", image: "img/chleb_zytni_kapusta.png", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" },
+            { name: "Chleb żytni z chrzanem", weight: "400g", packaging: "Skrzynka 12 szt.", image: "img/chleb_zytni_chrzan.png", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" },
+            { name: "Chleb żytni z papryką", weight: "250g", packaging: "Skrzynka 15 szt.", image: "img/chleb_zytni_papryka.jpg", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" }
         ]
     },
     {
@@ -17,7 +20,8 @@ const kategorieProduktow = [
         products: [
             { name: "Bułka Grahamka", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka-cechy.png" },
             { name: "Bułka Kajzerka", weight: "60g", packaging: "Karton 80 szt.", image: "img/bulka-cechy.png" },
-            { name: "Bułka Maślana", weight: "80g", packaging: "Karton 40 szt.", image: "img/bulka-cechy.png" }
+            { name: "Bułka Maślana", weight: "80g", packaging: "Karton 40 szt.", image: "img/bulka-cechy.png" },
+            { name: "Bułka wysokobiałkowa", weight: "80g", packaging: "Karton 50 szt.", image: "img/bulka_wysokobialkowa.jpg", shelfLife: "48h / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC" }
         ]
     },
     {
@@ -34,7 +38,7 @@ const kategorieProduktow = [
     {
         id: "cukiernia",
         name: "Cukiernia",
-        description: "Najwyższej jakości wyroby cukiernicze, torty i ciasta na każdą okazję.",
+        description: "Najwyższej jakości wyroby cukiernicze i ciasta na każdą okazję.",
         image: "img/kat_cukiernia.png",
         products: [
             { name: "Sernik Domowy", weight: "120g", packaging: "Skrzynka 15 szt.", image: "img/sernik_domowy.png" },
