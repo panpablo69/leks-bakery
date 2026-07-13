@@ -17,6 +17,7 @@ async function loadInitialTranslations() {
         const response = await fetch(`lang/${currentLang}.json?v=43`);
         if (response.ok) {
             translations = await response.json();
+            document.documentElement.setAttribute("lang", currentLang);
             applyTranslations();
             updateLanguageSwitcherUI();
         }
@@ -32,6 +33,7 @@ async function loadTranslations(lang) {
         translations = await response.json();
         currentLang = lang;
         localStorage.setItem("leks_lang", lang);
+        document.documentElement.setAttribute("lang", lang);
         
         applyTranslations();
         updateLanguageSwitcherUI();
@@ -678,7 +680,7 @@ function renderCategoryProducts() {
         card.setAttribute("data-packaging", prod.packaging || "Według zamówienia");
         card.setAttribute("data-shelf-life", prod.shelfLife || "Zgodnie ze specyfikacją");
         card.setAttribute("data-cert", prod.cert || "IFS, BRC (Grade A)");
-        card.setAttribute("data-desc-full", "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.");
+        card.setAttribute("data-desc-full", prod.description || "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.");
         
         const imgPlaceholder = document.createElement("div");
         imgPlaceholder.className = "product-image-placeholder";
@@ -872,6 +874,7 @@ function initB2BModal() {
     const modalPackaging = document.getElementById("modal-packaging");
     const modalShelfLife = document.getElementById("modal-shelf-life");
     const modalCert = document.getElementById("modal-cert");
+    const modalDesc = document.getElementById("modal-product-desc");
     
     // Event Delegation
     document.addEventListener("click", (e) => {
@@ -900,6 +903,7 @@ function initB2BModal() {
             const packaging = btn.dataset.packaging || card.dataset.packaging || "-";
             const shelfLife = btn.dataset.shelfLife || card.dataset.shelfLife || "Zgodnie ze specyfikacją";
             const cert = btn.dataset.cert || card.dataset.cert || "IFS, BRC (Grade A)";
+            const descFull = card.getAttribute("data-desc-full") || "";
             
             // Podmiana zawartości modala (wyłącznie bezpiecznymi metodami)
             if (modalTitle) modalTitle.textContent = title;
@@ -912,6 +916,7 @@ function initB2BModal() {
             if (modalPackaging) modalPackaging.textContent = packaging;
             if (modalShelfLife) modalShelfLife.textContent = shelfLife;
             if (modalCert) modalCert.textContent = cert;
+            if (modalDesc) modalDesc.textContent = descFull;
             
             // Dynamiczne przewijanie przycisku CTA w modalu do kontaktu
             const modalContactBtn = document.getElementById("modal-contact-btn");

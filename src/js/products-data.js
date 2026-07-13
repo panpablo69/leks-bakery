@@ -30,10 +30,20 @@ const kategorieProduktow = [
         description: "Świeże, chrupiące bułki codzienne, grahamki i kajzerki.",
         image: "img/kat_bulki.png",
         products: [
-            { name: "Bułka Grahamka", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka-cechy.png" },
-            { name: "Bułka Kajzerka", weight: "60g", packaging: "Karton 80 szt.", image: "img/bulka-cechy.png" },
-            { name: "Bułka Maślana", weight: "80g", packaging: "Karton 40 szt.", image: "img/bulka-cechy.png" },
-            { name: "Bułka wysokobiałkowa", weight: "80g", packaging: "Karton 50 szt.", image: "img/bulka_wysokobialkowa.jpg", shelfLife: "48h / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC" }
+            { name: "Bułka Grahamka", weight: "70g", packaging: "Karton 60 szt. / Paleta: 40 kartonów", image: "img/bulka_grahamka.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC Grade A", description: "Klasyczna ciemna bułka grahamka bogata w błonnik, o tradycyjnym smaku." },
+            { name: "Bułka Kajzerka", weight: "60g", packaging: "Karton 80 szt. / Paleta: 40 kartonów", image: "img/bulka_kajzerka.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC Grade A", description: "Tradycyjna, chrupiąca bułka pszenna kajzerka z pięcioma nacięciami." },
+            { name: "Bułka Grahamka z ziarnem słonecznika", weight: "75g", packaging: "Karton 60 szt. / Paleta: 40 kartonów", image: "img/bulka_grahamka_slonecznik.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Ciemna bułka grahamka wzbogacona chrupiącymi ziarnami słonecznika." },
+            { name: "Bułka z ziarnem", weight: "75g", packaging: "Karton 60 szt. / Paleta: 40 kartonów", image: "img/bulka_z_ziarnem.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Puszysta bułka pszenna obficie pokryta ziarnami sezamu, lnu i słonecznika." },
+            { name: "Bułka z dynią", weight: "80g", packaging: "Karton 60 szt. / Paleta: 40 kartonów", image: "img/bulka_z_dynia.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Smakowita bułka pszenno-żytnia posypana aromatycznymi pestkami dyni." },
+            { name: "Bułka poznańska", weight: "70g", packaging: "Karton 60 szt. / Paleta: 40 kartonów", image: "img/bulka_poznanska.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Klasyczna bułka poznańska z charakterystycznym przedziałkiem pośrodku." },
+            { name: "Bułka mleczna", weight: "80g", packaging: "Karton 50 szt. / Paleta: 40 kartonów", image: "img/bulka_mleczna.png", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Delikatna, puszysta bułka maślana wypiekana z dodatkiem mleka." },
+            { name: "Bułka Maślana", weight: "80g", packaging: "Karton 40 szt.", image: "img/bulka_mleczna.png", shelfLife: "48h (Świeża)", cert: "IFS Food", description: "Aromatyczna, lekko słodkawa bułka maślana, doskonała na śniadanie." },
+            { name: "Bułka activ", weight: "75g", packaging: "Karton 60 szt. / Paleta: 40 kartonów", image: "img/bulka_activ.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Wieloziarnista bułka funkcyjna bogata w błonnik dla osób aktywnych." },
+            { name: "Bułka z warzywami", weight: "80g", packaging: "Karton 50 szt. / Paleta: 40 kartonów", image: "img/bulka_z_warzywami.png", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Oryginalna, wytrawna bułka z kawałkami suszonych warzyw." },
+            { name: "Paluch z serem", weight: "90g", packaging: "Karton 40 szt. / Paleta: 48 kartonów", image: "img/paluch_z_serem.jpg", shelfLife: "48h (Świeży)", cert: "IFS Food, BRC", description: "Chrupiący drożdżowy paluch pokryty zapieczonym żółtym serem." },
+            { name: "Bułka wysokobiałkowa", weight: "80g", packaging: "Karton 50 szt.", image: "img/bulka_wysokobialkowa.jpg", shelfLife: "48h / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Specjalna bułka o podwyższonej zawartości białka, polecana w diecie aktywnych." },
+            { name: "Bułka z pradawnej odmiany pszenicy 2ab", weight: "70g", packaging: "Karton 60 szt. / Paleta: 40 kartonów", image: "img/bulka_2ab.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC, Certyfikat 2AB", description: "Lekkostrawna bułka z pradawnej pszenicy 2AB, przyjazna dla wrażliwych jelit." },
+            { name: "Bułka duża", weight: "90g", packaging: "Karton 50 szt. / Paleta: 40 kartonów", image: "img/bulka_duza.jpg", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC", description: "Duża bułka pszenna śniadaniowa o puszystym wnętrzu i chrupiącej skórce." }
         ]
     },
     {
@@ -43,7 +53,7 @@ const kategorieProduktow = [
         image: "img/kat_2ab.png",
         products: [
             { name: "Chleb z pradawnej odmiany pszenicy 2ab", weight: "400g", packaging: "Karton 10 szt.", image: "img/chleb_2ab_sliced.png" },
-            { name: "Bułka z pradawnej odmiany pszenicy 2ab", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka-cechy.png" },
+            { name: "Bułka z pradawnej odmiany pszenicy 2ab", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka_2ab.jpg" },
             { name: "Bagietka z pradawnej odmiany pszenicy 2ab", weight: "250g", packaging: "Karton 20 szt.", image: "img/bulka-cechy.png" }
         ]
     },

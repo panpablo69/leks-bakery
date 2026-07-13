@@ -82,9 +82,25 @@
         /* Advantages Cards Grid */
         .b2b-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             margin-top: 40px;
+        }
+        
+        .container-wide {
+            max-width: 1440px !important;
+            width: 95%;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 1024px) {
+            .b2b-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .b2b-card-title {
+                min-height: auto !important;
+                display: block !important;
+            }
         }
         
         @media (max-width: 768px) {
@@ -94,20 +110,27 @@
             .b2b-hero-title {
                 font-size: 2rem;
             }
+            .b2b-card {
+                padding: 30px 20px !important;
+            }
         }
         
         .b2b-card {
             background: var(--color-white);
             border-radius: var(--radius-lg);
-            padding: 40px;
+            padding: 35px 28px;
             box-shadow: var(--shadow-md);
             border: 1px solid var(--color-border);
-            transition: var(--transition-smooth);
+            transition: box-shadow 0.4s ease, border-color 0.4s ease;
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+        }
+        
+        .b2b-card.animated {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
         }
         
         .b2b-card::after {
@@ -129,6 +152,7 @@
         
         .b2b-card:hover::after {
             width: 8px;
+            background: var(--color-primary) !important;
         }
         
         .b2b-icon-wrapper {
@@ -145,12 +169,50 @@
             color: var(--color-primary);
             margin-bottom: 20px;
             font-weight: 700;
+            min-height: 3.8rem;
+            display: flex;
+            align-items: center;
         }
         
         .b2b-card-desc {
             font-size: 0.95rem;
             line-height: 1.65;
             color: var(--color-text-muted);
+        }
+        
+        .b2b-card-desc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .b2b-card-desc li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 14px;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            word-break: break-word;
+        }
+        
+        .b2b-card-desc li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .b2b-card-desc li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.35rem;
+            line-height: 1.4;
         }
         
         .b2b-card-desc strong {
@@ -252,12 +314,18 @@
         
         .docs-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
         
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
+            .docs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
             .docs-grid {
                 grid-template-columns: 1fr;
             }
@@ -446,7 +514,7 @@
                     <li><a href="career.html" class="nav-link" id="link-career" data-i18n="nav.career">Kariera</a></li>
                     <li><a href="blog.html" class="nav-link" id="link-blog" data-i18n="nav.blog">Blog</a></li>
                     <li><a href="b2b.html" class="nav-link active" id="link-b2b" data-i18n="nav.b2b">Współpraca B2B</a></li>
-                    <li><a href="index.html#contact" class="nav-link" id="link-contact" data-i18n="nav.contact">Kontakt</a></li>
+                    <li><a href="#contact" class="nav-link" id="link-contact" data-i18n="nav.contact">Kontakt</a></li>
                     <li class="lang-dropdown-wrapper" id="lang-dropdown">
                         <div class="lang-dropdown-trigger" id="lang-trigger">
                             <span class="lang-flag-current" id="active-lang-flag"></span>
@@ -505,7 +573,7 @@
 
         <!-- Advantages Grid Section -->
         <section class="section-padding">
-            <div class="container">
+            <div class="container container-wide">
                 <div class="section-header text-center">
                     <span class="section-subtitle" data-i18n="b2b.subtitle">Dlaczego Leks?</span>
                     <h2 class="section-title" data-i18n="b2b.why_title">Dlaczego warto współpracować z Leks?</h2>
@@ -521,7 +589,7 @@
                             </svg>
                         </div>
                         <h3 class="b2b-card-title" data-i18n="b2b.adv1_title">1. Skalowalność i stabilność dostaw</h3>
-                        <p class="b2b-card-desc" data-i18n="b2b.adv1_desc"><strong>3 zakłady produkcyjne:</strong> Sulęcin, Gorzów Wielkopolski, Tarnowo Byckie.<br><strong>Moc produkcyjna</strong> zapewniająca stałe zaopatrzenie nawet największych kontrahentów.<br><strong>Logistyka</strong> obejmująca całą Europę — gotowi do dostaw eksportowych.</p>
+                        <div class="b2b-card-desc" data-i18n="b2b.adv1_desc"><strong>3 zakłady produkcyjne:</strong> Sulęcin, Gorzów Wielkopolski, Tarnowo Byckie.<br><strong>Moc produkcyjna</strong> zapewniająca stałe zaopatrzenie nawet największych kontrahentów.<br><strong>Logistyka</strong> obejmująca całą Europę — gotowi do dostaw eksportowych.</div>
                     </div>
                     
                     <!-- Advantage 2 -->
@@ -532,7 +600,7 @@
                             </svg>
                         </div>
                         <h3 class="b2b-card-title" data-i18n="b2b.adv2_title">2. Międzynarodowe certyfikaty jakości</h3>
-                        <p class="b2b-card-desc" data-i18n="b2b.adv2_desc"><strong>Certyfikat ISO 22000:2018</strong> — potwierdzenie systemowego zarządzania bezpieczeństwem żywności.<br><strong>Certyfikat IFS Food wersja 8 (Higher Level)</strong> z wynikiem 97,73% — standard wymagany przez sieci w całej Europie.<br><strong>Regularne audyty</strong>, w tym niezapowiedziane — gwarancja ciągłej kontroli jakości.</p>
+                        <div class="b2b-card-desc" data-i18n="b2b.adv2_desc"><strong>Certyfikat ISO 22000:2018</strong> — potwierdzenie systemowego zarządzania bezpieczeństwem żywności.<br><strong>Certyfikat IFS Food wersja 8 (Higher Level)</strong> z wynikiem 97,73% — standard wymagany przez sieci w całej Europie.<br><strong>Regularne audyty</strong>, w tym niezapowiedziane — gwarancja ciągłej kontroli jakości.</div>
                     </div>
                     
                     <!-- Advantage 3 -->
@@ -543,7 +611,7 @@
                             </svg>
                         </div>
                         <h3 class="b2b-card-title" data-i18n="b2b.adv3_title">3. Doświadczenie z liderami rynku</h3>
-                        <p class="b2b-card-desc" data-i18n="b2b.adv3_desc"><strong>Długoterminowa współpraca</strong> z największymi sieciami handlowymi w Polsce i Europie.<br><strong>Elastyczność asortymentu:</strong> 300 produktów, w tym pieczywo świeże i głęboko mrożone (Bake-off), wyroby półcukiernicze.</p>
+                        <div class="b2b-card-desc" data-i18n="b2b.adv3_desc"><strong>Długoterminowa współpraca</strong> z największymi sieciami handlowymi w Polsce i Europie.<br><strong>Elastyczność asortymentu:</strong> 300 produktów, w tym pieczywo świeże i głęboko mrożone (Bake-off), wyroby półcukiernicze.</div>
                     </div>
                     
                     <!-- Advantage 4 -->
@@ -554,7 +622,7 @@
                             </svg>
                         </div>
                         <h3 class="b2b-card-title" data-i18n="b2b.adv4_title">4. Prosty skład, naturalne wartości</h3>
-                        <p class="b2b-card-desc" data-i18n="b2b.adv4_desc"><strong>Uczciwy skład:</strong> Klient końcowy szuka prostego pieczywa — my je produkujemy.<br><strong>Modyfikacje pod klienta:</strong> Możliwość dostosowania składu i opakowania do wymagań marki prywatnej (private label).</p>
+                        <div class="b2b-card-desc" data-i18n="b2b.adv4_desc"><strong>Uczciwy skład:</strong> Klient końcowy szuka prostego pieczywa — my je produkujemy.<br><strong>Modyfikacje pod klienta:</strong> Możliwość dostosowania składu i opakowania do wymagań marki prywatnej (private label).</div>
                     </div>
                 </div>
             </div>
@@ -623,39 +691,55 @@
                 </div>
                 
                 <div class="docs-grid">
-                    <!-- Doc 1: IFS Cert -->
+                    <!-- Doc 1: IFS Cert PL -->
                     <div class="doc-card">
                         <div class="doc-icon">
                             <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" style="color: var(--color-accent);">
                                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                             </svg>
                         </div>
-                        <h3 class="doc-card-title" data-i18n="b2b.download_ifs">Certyfikat IFS Food 2026</h3>
+                        <h3 class="doc-card-title" data-i18n="about.certificates.ifs_pl_title">Certyfikat IFS 2026 (PL)</h3>
                         <div class="doc-actions">
-                            <button class="btn-doc-download btn-view-cert" id="ifs-pdf-link" data-pdf="pdf/certyfikat_ifs_2026_pl.pdf" data-title-key="b2b.download_ifs">
+                            <button class="btn-doc-download btn-view-cert" data-pdf="pdf/certyfikat_ifs_2026_pl.pdf" data-title-key="about.certificates.ifs_pl_title">
                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
                                 <span data-i18n="b2b.download_btn">Podgląd / Pobierz</span>
                             </button>
                         </div>
                     </div>
-                    
-                    <!-- Doc 2: ISO Cert -->
+
+                    <!-- Doc 2: IFS Cert EN -->
                     <div class="doc-card">
                         <div class="doc-icon">
                             <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" style="color: var(--color-accent);">
                                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                             </svg>
                         </div>
-                        <h3 class="doc-card-title" data-i18n="b2b.download_iso">Certyfikat ISO 22000</h3>
+                        <h3 class="doc-card-title" data-i18n="about.certificates.ifs_en_title">Certyfikat IFS 2026 (EN)</h3>
                         <div class="doc-actions">
-                            <button class="btn-doc-download btn-view-cert" id="iso-pdf-link" data-pdf="pdf/certyfikat_iso_22000_pl.pdf" data-title-key="b2b.download_iso">
+                            <button class="btn-doc-download btn-view-cert" data-pdf="pdf/certyfikat_ifs_2026_en.pdf" data-title-key="about.certificates.ifs_en_title">
                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
                                 <span data-i18n="b2b.download_btn">Podgląd / Pobierz</span>
                             </button>
                         </div>
                     </div>
                     
-                    <!-- Doc 3: Oferta B2B -->
+                    <!-- Doc 3: ISO Cert -->
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" style="color: var(--color-accent);">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="doc-card-title" data-i18n="about.certificates.iso_title">Certyfikat ISO 22000</h3>
+                        <div class="doc-actions">
+                            <button class="btn-doc-download btn-view-cert" data-pdf="pdf/certyfikat_iso_22000_pl.pdf" data-title-key="about.certificates.iso_title">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                                <span data-i18n="b2b.download_btn">Podgląd / Pobierz</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Doc 4: Oferta B2B -->
                     <div class="doc-card">
                         <div class="doc-icon">
                             <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor" style="color: var(--color-accent);">
@@ -674,17 +758,65 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="b2b-cta-section">
+        <!-- B2B Contact Section -->
+        <section id="contact" class="section-padding bg-alt">
             <div class="container">
-                <h2 class="b2b-cta-title" data-i18n="b2b.cta_title">📦 Chcesz ofertę dla sieci handlowej?</h2>
-                <p class="b2b-cta-desc" data-i18n="b2b.cta_desc">Skontaktuj się z nami — przygotujemy indywidualne warunki współpracy, dane techniczne i próbki.</p>
-                <a href="index.html#contact" class="b2b-cta-btn">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                    <span data-i18n="b2b.cta_btn">Formularz kontaktowy</span>
-                </a>
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="b2b.subtitle">Napisz Do Nas</span>
+                    <h2 class="section-title" data-i18n="b2b.cta_title">📦 Chcesz ofertę dla sieci handlowej?</h2>
+                    <div class="section-line"></div>
+                    <p class="lead-text text-center" style="max-width: 600px; margin: 20px auto 0 auto;" data-i18n="b2b.cta_desc">Skontaktuj się z nami — przygotujemy indywidualne warunki współpracy, dane techniczne i próbki.</p>
+                </div>
+                
+                <div class="contact-grid" style="margin-top: 40px;">
+                    <div class="contact-info-panel">
+                        <div class="contact-info-item">
+                            <h3 style="color: var(--color-accent-light); font-family: var(--font-serif); margin-bottom: 20px;" data-i18n="b2b.contact_info_title">Dział Sprzedaży B2B</h3>
+                            <p class="contact-address" style="margin-bottom: 18px;"><strong data-i18n="b2b.contact_address_label">Adres:</strong> ul. Emilii Plater 4, 69-200 Sulęcin</p>
+                            <p class="contact-phone" style="margin-bottom: 18px;"><strong data-i18n="b2b.contact_phone_label">Tel:</strong> +48 95 755 24 55</p>
+                            <p class="contact-email" style="margin-bottom: 18px;"><strong data-i18n="b2b.contact_email_label">Email:</strong> biuro@leks.com.pl</p>
+                            <p class="contact-hours" style="margin-bottom: 0;"><strong data-i18n="contact.hours">Biuro obsługi klienta: Pn - Pt, 8:00 - 16:00</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel">
+                        <form id="b2b-contact-form" class="modern-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="b2b-name" data-i18n="contact.label_name">Imię i nazwisko</label>
+                                    <input type="text" id="b2b-name" required placeholder="np. Jan Kowalski" data-i18n-placeholder="contact.placeholder_name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="b2b-company" data-i18n="b2b.contact_company_label">Nazwa firmy</label>
+                                    <input type="text" id="b2b-company" required placeholder="np. Twoja Firma Sp. z o.o." data-i18n-placeholder="b2b.contact_company_placeholder">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="b2b-email" data-i18n="contact.label_email">Adres e-mail</label>
+                                    <input type="email" id="b2b-email" required placeholder="np. jan@domena.pl" data-i18n-placeholder="contact.placeholder_email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="b2b-phone" data-i18n="b2b.contact_phone_field_label">Numer telefonu</label>
+                                    <input type="tel" id="b2b-phone" placeholder="np. +48 123 456 789" data-i18n-placeholder="b2b.contact_phone_field_placeholder">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="b2b-subject" data-i18n="contact.label_subject">Temat</label>
+                                <select id="b2b-subject">
+                                    <option value="wholesale" data-i18n="contact.subject_wholesale" selected>Współpraca Hurtowa</option>
+                                    <option value="samples" data-i18n="b2b.subject_samples">Zapytanie o próbki wypieków</option>
+                                    <option value="general" data-i18n="contact.subject_general">Zapytanie Ogólne</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="b2b-message" data-i18n="contact.label_message">Treść wiadomości</label>
+                                <textarea id="b2b-message" required placeholder="Wpisz treść swojej wiadomości..." data-i18n-placeholder="contact.placeholder_message" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="b2b-submit-btn" data-i18n="contact.btn_send">Wyślij zapytanie</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -704,7 +836,7 @@
                     <li><a href="career.html" data-i18n="nav.career">Kariera</a></li>
                     <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
                     <li><a href="b2b.html" data-i18n="nav.b2b">Współpraca B2B</a></li>
-                    <li><a href="index.html#contact" data-i18n="nav.contact">Kontakt</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
                     <li><a href="#" id="trigger-privacy-modal" class="privacy-link" data-i18n="footer.privacy">RODO (Polityka prywatności)</a></li>
                 </ul>
             </nav>
@@ -723,7 +855,11 @@
                     </a>
                     <a href="https://www.instagram.com/leks2ab/" class="social-icon" id="social-ig" aria-label="Instagram" target="_blank" rel="noopener">
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 4.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2M12 7a5 5 0 1 1 0 10 5            </div>
+                            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 4.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="footer-bottom-bar">
@@ -788,14 +924,23 @@
     <!-- Custom B2B Interactive Scripts -->
     <script>
         window.addEventListener("DOMContentLoaded", () => {
-            // GSAP Entry Animations
-            gsap.from(".b2b-card", {
-                opacity: 0,
-                y: 50,
-                stagger: 0.15,
-                duration: 0.8,
-                ease: "power3.out"
-            });
+            gsap.fromTo(".b2b-card", 
+                { opacity: 0, y: 50 },
+                { 
+                    scrollTrigger: {
+                        trigger: ".b2b-grid",
+                        start: "top 85%"
+                    },
+                    opacity: 1, 
+                    y: 0, 
+                    stagger: 0.15, 
+                    duration: 0.8, 
+                    ease: "power3.out",
+                    onComplete: function() {
+                        this.targets().forEach(el => el.classList.add("animated"));
+                    }
+                }
+            );
             
             gsap.from(".process-tab-btn", {
                 opacity: 0,
@@ -853,9 +998,26 @@
                     e.preventDefault();
                     const pdfUrl = btn.getAttribute("data-pdf");
                     const titleKey = btn.getAttribute("data-title-key");
-                    const titleText = translations.b2b && translations.b2b[titleKey.split('.')[1]] 
-                        ? translations.b2b[titleKey.split('.')[1]] 
-                        : "Podgląd Certyfikatu";
+                    
+                    // Use getTranslationValue to resolve path keys like 'about.certificates.ifs_pl_title'
+                    let titleText = "Podgląd Certyfikatu";
+                    if (typeof getTranslationValue === "function" && typeof translations !== "undefined") {
+                        titleText = getTranslationValue(translations, titleKey) || titleText;
+                    } else if (typeof translations !== "undefined") {
+                        const parts = titleKey.split('.');
+                        let current = translations;
+                        for (const part of parts) {
+                            if (current && current[part]) {
+                                current = current[part];
+                            } else {
+                                current = null;
+                                break;
+                            }
+                        }
+                        if (typeof current === "string") {
+                            titleText = current;
+                        }
+                    }
                     
                     certModalTitle.textContent = titleText;
                     certIframeContainer.innerHTML = `<iframe src="${pdfUrl}" width="100%" height="100%" style="border: none; background: #fff;"></iframe>`;
@@ -880,28 +1042,39 @@
                 }
             });
 
-            // Dynamic PDF paths switcher based on language
-            function updatePdfPaths() {
-                const isPl = (currentLang === 'pl');
-                const ifsPdf = isPl ? 'pdf/certyfikat_ifs_2026_pl.pdf' : 'pdf/certyfikat_ifs_2026_en.pdf';
-                const isoPdf = 'pdf/certyfikat_iso_22000_pl.pdf';
-                
-                const ifsLink = document.getElementById("ifs-pdf-link");
-                const isoLink = document.getElementById("iso-pdf-link");
-                
-                if (ifsLink) ifsLink.setAttribute("data-pdf", ifsPdf);
-                if (isoLink) isoLink.setAttribute("data-pdf", isoPdf);
-            }
-            
-            // Watch language options for switches
-            document.querySelectorAll(".lang-option").forEach(opt => {
-                opt.addEventListener("click", () => {
-                    setTimeout(updatePdfPaths, 150);
+            // B2B Contact Form submission handler
+            const b2bForm = document.getElementById("b2b-contact-form");
+            if (b2bForm) {
+                b2bForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    
+                    const submitBtn = document.getElementById("b2b-submit-btn");
+                    const originalBtnText = submitBtn.innerHTML;
+                    
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = "Wysyłanie...";
+                    
+                    setTimeout(() => {
+                        // Success visual feedback
+                        submitBtn.classList.remove("btn-primary");
+                        submitBtn.classList.add("btn-success");
+                        
+                        submitBtn.innerHTML = `
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right: 8px; vertical-align: middle;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Wysłano pomyślnie!
+                        `;
+                        
+                        // Reset form after delay
+                        setTimeout(() => {
+                            b2bForm.reset();
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove("btn-success");
+                            submitBtn.classList.add("btn-primary");
+                            submitBtn.innerHTML = originalBtnText;
+                        }, 3000);
+                    }, 1200);
                 });
-            });
-            
-            // Initial call
-            setTimeout(updatePdfPaths, 100);
+            }
         });
     </script>
 </body>
