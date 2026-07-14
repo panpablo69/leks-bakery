@@ -675,12 +675,30 @@ function renderCategoryProducts() {
         const card = document.createElement("div");
         card.className = "product-card";
         
+        // Dynamic translation and fallbacks
+        let prodName = prod.name;
+        let prodWeight = prod.weight || "Zgodnie ze specyfikacją";
+        let prodPackaging = prod.packaging || "Według zamówienia";
+        let prodShelfLife = prod.shelfLife || "Zgodnie ze specyfikacją";
+        let prodCert = prod.cert || "IFS, BRC (Grade A)";
+        let prodDesc = prod.description || "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.";
+        
+        if (prod.id && translations.products_2ab && translations.products_2ab[prod.id]) {
+            const tProd = translations.products_2ab[prod.id];
+            if (tProd.name) prodName = tProd.name;
+            if (tProd.weight) prodWeight = tProd.weight;
+            if (tProd.packaging) prodPackaging = tProd.packaging;
+            if (tProd.shelfLife) prodShelfLife = tProd.shelfLife;
+            if (tProd.cert) prodCert = tProd.cert;
+            if (tProd.description) prodDesc = tProd.description;
+        }
+        
         // Zapisywanie danych specyfikacji
-        card.setAttribute("data-weight", prod.weight || "Zgodnie ze specyfikacją");
-        card.setAttribute("data-packaging", prod.packaging || "Według zamówienia");
-        card.setAttribute("data-shelf-life", prod.shelfLife || "Zgodnie ze specyfikacją");
-        card.setAttribute("data-cert", prod.cert || "IFS, BRC (Grade A)");
-        card.setAttribute("data-desc-full", prod.description || "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.");
+        card.setAttribute("data-weight", prodWeight);
+        card.setAttribute("data-packaging", prodPackaging);
+        card.setAttribute("data-shelf-life", prodShelfLife);
+        card.setAttribute("data-cert", prodCert);
+        card.setAttribute("data-desc-full", prodDesc);
         
         const imgPlaceholder = document.createElement("div");
         imgPlaceholder.className = "product-image-placeholder";
@@ -698,14 +716,14 @@ function renderCategoryProducts() {
         
         const titleH3 = document.createElement("h3");
         titleH3.className = "product-title";
-        titleH3.textContent = prod.name;
+        titleH3.textContent = prodName;
         
         const weightLabel = translations.products && translations.products.weight ? translations.products.weight : "Waga:";
         const packagingLabel = translations.products && translations.products.packaging ? translations.products.packaging : "Pakowanie:";
         
         const descP = document.createElement("p");
         descP.className = "product-desc";
-        descP.textContent = `${weightLabel} ${prod.weight} | ${packagingLabel} ${prod.packaging}`;
+        descP.textContent = `${weightLabel} ${prodWeight} | ${packagingLabel} ${prodPackaging}`;
         
         const b2bLabel = translations.products && translations.products.b2b_badge ? translations.products.b2b_badge : "Specyfikacja B2B";
         const btn = document.createElement("button");

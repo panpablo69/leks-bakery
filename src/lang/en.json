@@ -326,5 +326,31 @@
     "contact_phone_field_label": "Phone Number",
     "contact_phone_field_placeholder": "e.g. +48 123 456 789",
     "subject_samples": "Request for bakery samples"
+  },
+  "products_2ab": {
+    "chleb_2ab": {
+      "name": "Ancient Wheat 2AB Bread",
+      "weight": "400g",
+      "packaging": "Box of 10 pcs.",
+      "shelfLife": "6 days",
+      "cert": "IFS Food, BRC, 2AB Certificate",
+      "description": "Easily digestible bread made from ancient wheat 2AB, baked on natural sourdough. Ideal for people with sensitive digestive systems, including those suffering from IBS or SIBO (low-FODMAP diet)."
+    },
+    "bulka_2ab": {
+      "name": "Ancient Wheat 2AB Bun",
+      "weight": "70g",
+      "packaging": "Box of 60 pcs. / Palette: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC, 2AB Certificate",
+      "description": "Easily digestible, crispy daily bun made from ancient wheat 2AB. Characterized by a natural golden crust, low FODMAP content, and reduced gluten."
+    },
+    "bagietka_2ab": {
+      "name": "Ancient Wheat 2AB Baguette",
+      "weight": "250g",
+      "packaging": "Box of 20 pcs. / Palette: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC, 2AB Certificate",
+      "description": "Classic, crispy baguette in an easily digestible version. Baked with unique flour from ancient wheat 2AB, gentle on the stomach and gut."
+    }
   }
 }

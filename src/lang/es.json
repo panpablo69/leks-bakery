@@ -326,5 +326,31 @@
     "contact_phone_field_label": "Número de teléfono",
     "contact_phone_field_placeholder": "p. ej. +48 123 456 789",
     "subject_samples": "Solicitud de muestras de panadería"
+  },
+  "products_2ab": {
+    "chleb_2ab": {
+      "name": "Pan de Trigo Ancestral 2AB",
+      "weight": "400g",
+      "packaging": "Caja de 10 unidades",
+      "shelfLife": "6 días",
+      "cert": "IFS Food, BRC, Certificado 2AB",
+      "description": "Pan de trigo ancestral 2AB de fácil digestión, horneado con masa madre natural. Ideal para personas con sistemas digestivos sensibles, incluidos quienes padecen de colon irritable o SIBO (dieta baja en FODMAP)."
+    },
+    "bulka_2ab": {
+      "name": "Panecillo de Trigo Ancestral 2AB",
+      "weight": "70g",
+      "packaging": "Caja de 60 unidades / Paleta: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC, Certificado 2AB",
+      "description": "Panecillo diario crujiente y de fácil digestión, elaborado con trigo ancestral 2AB. Se caracteriza por su corteza dorada natural, bajo contenido de FODMAP y gluten reducido."
+    },
+    "bagietka_2ab": {
+      "name": "Bagguette de Trigo Ancestral 2AB",
+      "weight": "250g",
+      "packaging": "Caja de 20 unidades / Paleta: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC, Certificado 2AB",
+      "description": "Bagguette clásica y crujiente en una versión de fácil digestión. Horneada con harina única de trigo ancestral 2AB, suave para el estómago y el intestino."
+    }
   }
 }

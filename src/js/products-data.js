@@ -52,9 +52,9 @@ const kategorieProduktow = [
         description: "Pieczywo z pradawnej odmiany pszenicy. Lekkostrawne i bogate w wartości odżywcze.",
         image: "img/kat_2ab.png",
         products: [
-            { name: "Chleb z pradawnej odmiany pszenicy 2ab", weight: "400g", packaging: "Karton 10 szt.", image: "img/chleb_2ab_sliced.png" },
-            { name: "Bułka z pradawnej odmiany pszenicy 2ab", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka_2ab.jpg" },
-            { name: "Bagietka z pradawnej odmiany pszenicy 2ab", weight: "250g", packaging: "Karton 20 szt.", image: "img/bulka-cechy.png" }
+            { id: "chleb_2ab", name: "Chleb z pradawnej odmiany pszenicy 2ab", weight: "400g", packaging: "Karton 10 szt.", image: "img/chleb_2ab.png", shelfLife: "6 dni", cert: "IFS Food, BRC, Certyfikat 2AB" },
+            { id: "bulka_2ab", name: "Bułka z pradawnej odmiany pszenicy 2ab", weight: "70g", packaging: "Karton 60 szt.", image: "img/bulka_2ab.png", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC, Certyfikat 2AB" },
+            { id: "bagietka_2ab", name: "Bagietka z pradawnej odmiany pszenicy 2ab", weight: "250g", packaging: "Karton 20 szt.", image: "img/bagietka_2ab.png", shelfLife: "48h (Świeża) / 9 miesięcy (Bake-off)", cert: "IFS Food, BRC, Certyfikat 2AB" }
         ]
     },
     {

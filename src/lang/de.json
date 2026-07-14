@@ -325,6 +325,32 @@
     "contact_company_placeholder": "z.B. Ihre Firma GmbH",
     "contact_phone_field_label": "Telefonnummer",
     "contact_phone_field_placeholder": "z.B. +48 123 456 789",
-    "subject_samples": "Musteranfrage für Backwaren"
+    "subject_samples": "Musteranfrage for Backwaren"
+  },
+  "products_2ab": {
+    "chleb_2ab": {
+      "name": "Urbrot 2AB Brot",
+      "weight": "400g",
+      "packaging": "Karton 10 Stk.",
+      "shelfLife": "6 Tage",
+      "cert": "IFS Food, BRC, 2AB Zertifikat",
+      "description": "Leicht verdauliches Brot aus dem Urgetreide 2AB, gebacken auf natürlichem Sauerteig. Ideal für Personen mit empfindlichem Verdauungssystem, einschließlich derer, die an IBS oder SIBO leiden (Low-FODMAP-Diät)."
+    },
+    "bulka_2ab": {
+      "name": "Urbrot 2AB Brötchen",
+      "weight": "70g",
+      "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48 Std. (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC, 2AB Zertifikat",
+      "description": "Leicht verdauliches, knuspriges Alltagsbrötchen aus dem Urgetreide 2AB. Ausgezeichnet durch eine natürliche goldene Kruste, niedrigen FODMAP-Gehalt und reduzierten Glutengehalt."
+    },
+    "bagietka_2ab": {
+      "name": "Urbrot 2AB Baguette",
+      "weight": "250g",
+      "packaging": "Karton 20 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48 Std. (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC, 2AB Zertifikat",
+      "description": "Klassisches, knuspriges Baguette in einer leicht verdaulichen Version. Gebacken mit dem einzigartigen Urweizenmehl 2AB, magen- und darmfreundlich."
+    }
   }
 }
