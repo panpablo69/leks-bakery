@@ -352,5 +352,63 @@
       "cert": "IFS Food, BRC, 2AB Certificate",
       "description": "Classic, crispy baguette in an easily digestible version. Baked with unique flour from ancient wheat 2AB, gentle on the stomach and gut."
     }
+  },
+  "products_cukiernia": {
+    "placek_z_twarogiem": {
+      "name": "Yeast cake with curd cheese",
+      "weight": "approx. 2.0 kg",
+      "packaging": "Box 1 pc. / Crate",
+      "shelfLife": "48h (Fresh delivery)",
+      "cert": "IFS Food, BRC",
+      "description": "Traditional yeast cake generously covered with sweet curd cheese and crunchy crumble. A perfect classic bake made according to a homemade recipe."
+    },
+    "ciasto_karpatka": {
+      "name": "Karpatka cream cake",
+      "weight": "approx. 1.8 kg",
+      "packaging": "Box 1 pc. (Tray)",
+      "shelfLife": "48h (Keep at 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Classic Polish cream cake filled with fluffy vanilla custard cream, layered between wavy choux pastry resembling the Carpathian Mountains, dusted with powdered sugar."
+    },
+    "skubaniec_z_beza": {
+      "name": "Skubaniec cake with meringue",
+      "weight": "approx. 2.0 kg",
+      "packaging": "Box 1 pc. (Tray)",
+      "shelfLife": "72h",
+      "cert": "IFS Food, BRC",
+      "description": "Rich and crumbly shortcrust pastry with cocoa, layered with tart fruit jam and a fluffy, crispy baked meringue. A traditional Polish delicacy."
+    },
+    "sernik_puszysty": {
+      "name": "Fluffy baked cheesecake",
+      "weight": "approx. 2.0 kg",
+      "packaging": "Box 1 pc. (Tray)",
+      "shelfLife": "48h (Keep at 2-6°C)",
+      "cert": "IFS Food, BRC",
+      "description": "Extremely light and fluffy baked cheesecake on a delicate crust, prepared with the highest quality Polish curd cheese and a hint of vanilla."
+    },
+    "miniptysie": {
+      "name": "Mini cream puffs",
+      "weight": "approx. 1.0 kg",
+      "packaging": "Bulk box",
+      "shelfLife": "24h (Keep at 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Delicate miniature choux pastry puffs filled with light whipped cream or custard. A perfect sweet bite to accompany your coffee."
+    },
+    "ciasto_krowka": {
+      "name": "Toffee caramel cake",
+      "weight": "approx. 1.8 kg",
+      "packaging": "Box 1 pc. (Tray)",
+      "shelfLife": "48h (Keep at 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Exceedingly sweet and creamy cake layered with soft sponge cake, fluffy whipped cream, and rich dulce de leche (toffee) caramel filling."
+    },
+    "ciasto_z_galaretka": {
+      "name": "Strawberry jelly cake",
+      "weight": "approx. 2.0 kg",
+      "packaging": "Box 1 pc. (Tray)",
+      "shelfLife": "48h (Keep at 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Refreshing dessert on a fluffy sponge cake base with a light cream layer, generously topped with juicy strawberries in strawberry jelly."
+    }
   }
 }

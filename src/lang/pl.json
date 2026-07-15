@@ -352,5 +352,63 @@
       "cert": "IFS Food, BRC, Certyfikat 2AB",
       "description": "Klasyczna, chrupiąca bagietka w wersji lekkostrawnej. Wypiekana z unikalnej mąki z pradawnej pszenicy 2AB, przyjazna dla żołądka i jelit."
     }
+  },
+  "products_cukiernia": {
+    "placek_z_twarogiem": {
+      "name": "Placek z twarogiem",
+      "weight": "ok. 2.0 kg",
+      "packaging": "Karton 1 szt. / Skrzynka",
+      "shelfLife": "48h (Dostawa świeża)",
+      "cert": "IFS Food, BRC",
+      "description": "Tradycyjne ciasto drożdżowe obficie pokryte słodkim twarogiem i chrupiącą kruszonką. Idealny klasyczny wypiek według domowej receptury."
+    },
+    "ciasto_karpatka": {
+      "name": "Ciasto karpatka",
+      "weight": "ok. 1.8 kg",
+      "packaging": "Karton 1 szt. (Blacha)",
+      "shelfLife": "48h (Przechowywać w temp. 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Klasyczne ciasto z puszystym kremem budyniowym, przełożone charakterystycznym, pofalowanym ciastem parzonym przypominającym góry Karpaty, posypane cukrem pudrem."
+    },
+    "skubaniec_z_beza": {
+      "name": "Ciasto skubaniec z bezą",
+      "weight": "ok. 2.0 kg",
+      "packaging": "Karton 1 szt. (Blacha)",
+      "shelfLife": "72h",
+      "cert": "IFS Food, BRC",
+      "description": "Kruche ciasto o bogatym smaku z dodatkiem kakao, przełożone kwaśnym dżemem owocowym oraz puszystą, chrupiącą bezą. Tradycyjny polski przysmak."
+    },
+    "sernik_puszysty": {
+      "name": "Sernik puszysty",
+      "weight": "ok. 2.0 kg",
+      "packaging": "Karton 1 szt. (Blacha)",
+      "shelfLife": "48h (Przechowywać w temp. 2-6°C)",
+      "cert": "IFS Food, BRC",
+      "description": "Niezwykle lekki i puszysty sernik pieczony na delikatnym spodzie, przygotowany z najwyższej jakości polskiego twarogu z dodatkiem nuty waniliowej."
+    },
+    "miniptysie": {
+      "name": "Miniptysie",
+      "weight": "ok. 1.0 kg",
+      "packaging": "Karton zbiorczy",
+      "shelfLife": "24h (Przechowywać w temp. 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Delikatne miniaturowe ptysie z ciasta parzonego, napełnione puszystą bitą śmietaną lub kremem. Idealna słodka przekąska do kawy."
+    },
+    "ciasto_krowka": {
+      "name": "Ciasto krówka",
+      "weight": "ok. 1.8 kg",
+      "packaging": "Karton 1 szt. (Blacha)",
+      "shelfLife": "48h (Przechowywać w temp. 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Wyjątkowo słodkie i kremowe ciasto przełożone warstwami delikatnego biszkoptu, puszystego kremu śmietankowego oraz bogatej masy kajmakowej o smaku tradycyjnej krówki."
+    },
+    "ciasto_z_galaretka": {
+      "name": "Ciasto z galaretką i truskawkami",
+      "weight": "ok. 2.0 kg",
+      "packaging": "Karton 1 szt. (Blacha)",
+      "shelfLife": "48h (Przechowywać w temp. 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Orzeźwiający deser na puszystym biszkopcie z lekką pianką śmietankową, obficie pokryty soczystymi truskawkami w truskawkowej galaretce."
+    }
   }
 }

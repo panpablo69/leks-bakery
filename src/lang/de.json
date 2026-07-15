@@ -352,5 +352,63 @@
       "cert": "IFS Food, BRC, 2AB Zertifikat",
       "description": "Klassisches, knuspriges Baguette in einer leicht verdaulichen Version. Gebacken mit dem einzigartigen Urweizenmehl 2AB, magen- und darmfreundlich."
     }
+  },
+  "products_cukiernia": {
+    "placek_z_twarogiem": {
+      "name": "Hefekuchen mit Quark",
+      "weight": "ca. 2.0 kg",
+      "packaging": "Karton 1 Stk. / Kiste",
+      "shelfLife": "48 Std. (Frische Lieferung)",
+      "cert": "IFS Food, BRC",
+      "description": "Traditioneller Hefekuchen, reichlich belegt mit süßem Quark und knusprigen Streuseln. Ein perfektes klassisches Gebäck nach Omas Rezept."
+    },
+    "ciasto_karpatka": {
+      "name": "Karpatka Cremeschnitte",
+      "weight": "ca. 1.8 kg",
+      "packaging": "Karton 1 Stk. (Blech)",
+      "shelfLife": "48 Std. (Kühl lagern bei 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Klassische polnische Cremetorte gefüllt mit luftiger Vanille-Puddingcreme zwischen gewelltem Brandteig, der an die Karpaten erinnert, mit Puderzucker bestäubt."
+    },
+    "skubaniec_z_beza": {
+      "name": "Mürbeteigkuchen mit Baiser",
+      "weight": "ca. 2.0 kg",
+      "packaging": "Karton 1 Stk. (Blech)",
+      "shelfLife": "72 Std.",
+      "cert": "IFS Food, BRC",
+      "description": "Mürbeteigkuchen mit Kakao, geschichtet with säuerlicher Fruchtmarmelade und luftigem, knusprigem Baiser. Eine traditionelle polnische Spezialität."
+    },
+    "sernik_puszysty": {
+      "name": "Fluffiger Käsekuchen",
+      "weight": "ca. 2.0 kg",
+      "packaging": "Karton 1 Stk. (Blech)",
+      "shelfLife": "48 Std. (Kühl lagern bei 2-6°C)",
+      "cert": "IFS Food, BRC",
+      "description": "Sehr leichter und luftiger gebackener Käsekuchen auf feinem Mürbeteigboden, zubereitet aus bestem polnischen Quark mit einer feinen Vanillenote."
+    },
+    "miniptysie": {
+      "name": "Mini Windbeutel",
+      "weight": "ca. 1.0 kg",
+      "packaging": "Sammelkarton",
+      "shelfLife": "24 Std. (Kühl lagern bei 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Feine Mini-Windbeutel aus Brandteig, gefüllt mit luftiger Schlagsahne oder Creme. Der perfekte süße Happen zum Kaffee."
+    },
+    "ciasto_krowka": {
+      "name": "Karamell-Kajmak-Schnitt",
+      "weight": "ca. 1.8 kg",
+      "packaging": "Karton 1 Stk. (Blech)",
+      "shelfLife": "48 Std. (Kühl lagern bei 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Besonders süße und cremige Schnitte mit Schichten aus feinem Biskuit, luftiger Sahnecreme und einer reichhaltigen Karamell-Kajmak-Füllung."
+    },
+    "ciasto_z_galaretka": {
+      "name": "Erdbeer-Gelee-Kuchen",
+      "weight": "ca. 2.0 kg",
+      "packaging": "Karton 1 Stk. (Blech)",
+      "shelfLife": "48 Std. (Kühl lagern bei 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Erfrischendes Dessert auf luftigem Biskuitboden mit leichter Sahnecreme, reich belegt mit saftigen Erdbeeren in Erdbeergelee."
+    }
   }
 }

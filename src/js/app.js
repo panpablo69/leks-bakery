@@ -683,7 +683,15 @@ function renderCategoryProducts() {
         let prodCert = prod.cert || "IFS, BRC (Grade A)";
         let prodDesc = prod.description || "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.";
         
-        if (prod.id && translations.products_2ab && translations.products_2ab[prod.id]) {
+        if (prod.id && translations.products_cukiernia && translations.products_cukiernia[prod.id]) {
+            const tProd = translations.products_cukiernia[prod.id];
+            if (tProd.name) prodName = tProd.name;
+            if (tProd.weight) prodWeight = tProd.weight;
+            if (tProd.packaging) prodPackaging = tProd.packaging;
+            if (tProd.shelfLife) prodShelfLife = tProd.shelfLife;
+            if (tProd.cert) prodCert = tProd.cert;
+            if (tProd.description) prodDesc = tProd.description;
+        } else if (prod.id && translations.products_2ab && translations.products_2ab[prod.id]) {
             const tProd = translations.products_2ab[prod.id];
             if (tProd.name) prodName = tProd.name;
             if (tProd.weight) prodWeight = tProd.weight;

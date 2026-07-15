@@ -63,8 +63,13 @@ const kategorieProduktow = [
         description: "Najwyższej jakości wyroby cukiernicze i ciasta na każdą okazję.",
         image: "img/kat_cukiernia.png",
         products: [
-            { name: "Sernik Domowy", weight: "120g", packaging: "Skrzynka 15 szt.", image: "img/sernik_domowy.png" },
-            { name: "Szarlotka z Kruszonką", weight: "130g", packaging: "Skrzynka 15 szt.", image: "img/szarlotka.png" }
+            { id: "placek_z_twarogiem", name: "Placek z twarogiem", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. / Skrzynka", image: "img/cukiernia_placek_z_twarogiem.png", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" },
+            { id: "ciasto_karpatka", name: "Ciasto karpatka", weight: "ok. 1.8 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_karpatka.png", shelfLife: "48h (Przechowywać w temp. 2-6°C)", cert: "IFS Food" },
+            { id: "skubaniec_z_beza", name: "Ciasto skubaniec z bezą", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_skubaniec_z_beza.png", shelfLife: "72h", cert: "IFS Food, BRC" },
+            { id: "sernik_puszysty", name: "Sernik puszysty", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_sernik_puszysty.png", shelfLife: "48h (Przechowywać w temp. 2-6°C)", cert: "IFS Food, BRC" },
+            { id: "miniptysie", name: "Miniptysie", weight: "ok. 1.0 kg", packaging: "Karton zbiorczy", image: "img/cukiernia_miniptysie.png", shelfLife: "24h (Przechowywać w temp. 2-6°C)", cert: "IFS Food" },
+            { id: "ciasto_krowka", name: "Ciasto krówka", weight: "ok. 1.8 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_krowka.png", shelfLife: "48h (Przechowywać w temp. 2-6°C)", cert: "IFS Food" },
+            { id: "ciasto_z_galaretka", name: "Ciasto z galaretką i truskawkami", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_z_galaretka.png", shelfLife: "48h (Przechowywać w temp. 2-6°C)", cert: "IFS Food" }
         ]
     },
     {
