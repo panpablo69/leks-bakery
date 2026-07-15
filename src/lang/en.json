@@ -410,5 +410,151 @@
       "cert": "IFS Food",
       "description": "Refreshing dessert on a fluffy sponge cake base with a light cream layer, generously topped with juicy strawberries in strawberry jelly."
     }
+  },
+  "products_polcukiernicze": {
+    "paczek_twarogowy": {
+      "name": "Curd cheese donut",
+      "weight": "80g",
+      "packaging": "Box 24 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Fluffy donut with natural curd cheese added to the dough, giving it exceptional moisture and softness."
+    },
+    "paczek_z_budyniem": {
+      "name": "Custard donut",
+      "weight": "90g",
+      "packaging": "Box 24 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Fluffy donut filled with thick, vanilla custard cream, dusted with powdered sugar."
+    },
+    "paczek_delikatesowy": {
+      "name": "Delikatesowy donut",
+      "weight": "90g",
+      "packaging": "Box 24 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Classic delikatesowy donut of excellent fluffiness, perfect for every day."
+    },
+    "gniazdko_z_lukrem": {
+      "name": "Viennese donut with icing",
+      "weight": "80g",
+      "packaging": "Box 20 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Fluffy choux pastry donut (Spanish style), fried to a golden color and covered with sweet icing."
+    },
+    "warkocz_z_lukrem": {
+      "name": "Yeast braid with icing",
+      "weight": "100g",
+      "packaging": "Box 20 pcs. / Crate",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Traditional yeast braid, fluffy and light, topped with sweet icing."
+    },
+    "bite": {
+      "name": "Bite mini donuts",
+      "weight": "120g",
+      "packaging": "Bulk box",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Set of mini donuts in four delicious flavors: cinnamon, chocolate-hazelnut, fruit, and white chocolate."
+    },
+    "racuch_z_jablkiem": {
+      "name": "Apple yeast pancake",
+      "weight": "90g",
+      "packaging": "Box 20 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Traditional yeast pancake with juicy apple pieces, perfect for a sweet snack."
+    },
+    "paczek_z_marmolada": {
+      "name": "Marmalade donut",
+      "weight": "90g",
+      "packaging": "Box 24 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Traditional donut with multi-fruit marmalade, iced and sprinkled with orange peel."
+    },
+    "calusek": {
+      "name": "Całusek pastry",
+      "weight": "90g",
+      "packaging": "Box 20 pcs.",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Delicate yeast pastry with fruit filling, rolled into a characteristic kiss shape."
+    },
+    "paczek_premium_z_nadzieniem_wisniowym": {
+      "name": "Premium cherry donut",
+      "weight": "100g",
+      "packaging": "Box 24 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food, BRC",
+      "description": "Premium donut with a slightly tart cherry filling, glazed and sprinkled with almond flakes."
+    },
+    "gniazdko_z_cukrem_pudrem": {
+      "name": "Viennese donut with powdered sugar",
+      "weight": "80g",
+      "packaging": "Box 20 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Delicate and light choux pastry donut, dusted with powdered sugar."
+    },
+    "paczek_z_nadzieniem_karpatkowym": {
+      "name": "Karpatka cream donut",
+      "weight": "100g",
+      "packaging": "Box 24 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Exceptional donut filled with rich and fluffy custard cream reminiscent of traditional Karpatka cake."
+    },
+    "drozdzowka_z_makiem": {
+      "name": "Poppy seed sweet bun",
+      "weight": "110g",
+      "packaging": "Box 15 pcs. / Crate",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Classic yeast bun filled with aromatic, sweet blue poppy seed mass and dried fruits, iced."
+    },
+    "rogal_swiateczny_z_bialym_makiem": {
+      "name": "Christmas croissant with white poppy seeds",
+      "weight": "170g",
+      "packaging": "Box 12 pcs.",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Premium Danish pastry croissant filled to the brim with exclusive white poppy seeds, nuts, marzipan, and raisins, iced and topped with nuts."
+    },
+    "drozdzowka_z_serem_i_kruszonka": {
+      "name": "Sweet bun with curd cheese and crumble",
+      "weight": "130g",
+      "packaging": "Box 15 pcs. / Crate",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Traditional yeast bun with a sweet curd cheese filling, sprinkled with crunchy butter crumble."
+    },
+    "rozek_z_jablkiem": {
+      "name": "Apple turnover",
+      "weight": "100g",
+      "packaging": "Box 20 pcs.",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Triangular pastry made of crispy dough with a generous filling of roasted apples and a hint of cinnamon."
+    },
+    "paczek_z_nadzieniem_pistacjowym": {
+      "name": "Pistachio donut",
+      "weight": "100g",
+      "packaging": "Box 24 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Modern premium donut filled with velvety pistachio cream, decorated with crushed pistachios."
+    },
+    "paczek_z_nadzieniem_malinowym": {
+      "name": "Raspberry donut",
+      "weight": "100g",
+      "packaging": "Box 24 pcs.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Classic fluffy donut with an aromatic filling of ripe raspberries, dusted with powdered sugar."
+    }
   }
 }

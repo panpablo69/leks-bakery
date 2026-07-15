@@ -410,5 +410,151 @@
       "cert": "IFS Food",
       "description": "Erfrischendes Dessert auf luftigem Biskuitboden mit leichter Sahnecreme, reich belegt mit saftigen Erdbeeren in Erdbeergelee."
     }
+  },
+  "products_polcukiernicze": {
+    "paczek_twarogowy": {
+      "name": "Quarkkrapfen",
+      "weight": "80g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Fluffiger Krapfen mit natürlichem Quark im Teig, der ihm eine besondere Saftigkeit und Weichheit verleiht."
+    },
+    "paczek_z_budyniem": {
+      "name": "Krapfen mit Vanillecreme",
+      "weight": "90g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Fluffiger Krapfen gefüllt mit dickflüssiger Vanille-Puddingcreme, mit Puderzucker bestäubt."
+    },
+    "paczek_delikatesowy": {
+      "name": "Delikatesse-Krapfen",
+      "weight": "90g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Klassischer Delikatesse-Krapfen von hervorragender Luftigkeit, perfekt für jeden Tag."
+    },
+    "gniazdko_z_lukrem": {
+      "name": "Spritzkuchen mit Glasur",
+      "weight": "80g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Luftiger Brandteig-Krapfen (spanischer Stil), goldgelb ausgebacken und mit süßer Zuckerglasur überzogen."
+    },
+    "warkocz_z_lukrem": {
+      "name": "Hefezopf mit Glasur",
+      "weight": "100g",
+      "packaging": "Karton 20 Stk. / Kiste",
+      "shelfLife": "48 Std.",
+      "cert": "IFS Food",
+      "description": "Traditioneller Hefe-Flechtzopf, locker und leicht, mit süßer Zuckerglasur verziert."
+    },
+    "bite": {
+      "name": "Bite Mini-Krapfen",
+      "weight": "120g",
+      "packaging": "Sammelkarton",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Set aus Mini-Krapfen in vier leckeren Geschmacksrichtungen: Zimt, Schoko-Nuss, Frucht und weiße Schokolade."
+    },
+    "racuch_z_jablkiem": {
+      "name": "Hefe-Apfelpuffer",
+      "weight": "90g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Traditioneller Hefe-Puffer mit saftigen Apfelstücken, ideal als süßer Snack."
+    },
+    "paczek_z_marmolada": {
+      "name": "Krapfen mit Marmelade",
+      "weight": "90g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Traditioneller Krapfen mit Mehrfruchtmarmelade, glasiert und mit Orangenschale bestreut."
+    },
+    "calusek": {
+      "name": "Küsschen-Hefegebäck",
+      "weight": "90g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "48 Std.",
+      "cert": "IFS Food",
+      "description": "Feines Hefegebäck mit Fruchtfüllung, geformt in ein charakteristisches Küsschen."
+    },
+    "paczek_premium_z_nadzieniem_wisniowym": {
+      "name": "Premium-Krapfen mit Kirschfüllung",
+      "weight": "100g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food, BRC",
+      "description": "Premium-Krapfen mit leicht säuerlicher Kirschfüllung, glasiert und mit Mandelblättchen bestreut."
+    },
+    "gniazdko_z_cukrem_pudrem": {
+      "name": "Spritzkuchen mit Puderzucker",
+      "weight": "80g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Zartes und leichtes Brandteig-Gniazdko, mit feinem Puderzucker bestäubt."
+    },
+    "paczek_z_nadzieniem_karpatkowym": {
+      "name": "Krapfen mit Karpatka-Creme",
+      "weight": "100g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Besonderer Krapfen gefüllt mit reichhaltiger und fluffiger Creme nach Art des traditionellen Karpatka-Kuchens."
+    },
+    "drozdzowka_z_makiem": {
+      "name": "Mohnschnecke",
+      "weight": "110g",
+      "packaging": "Karton 15 Stk. / Kiste",
+      "shelfLife": "48 Std.",
+      "cert": "IFS Food",
+      "description": "Klassische Hefeschnecke gefüllt mit aromatischer, süßer Blaumohnmasse und Rosinen, glasiert."
+    },
+    "rogal_swiateczny_z_bialym_makiem": {
+      "name": "Weihnachtshörnchen mit weißem Mohn",
+      "weight": "170g",
+      "packaging": "Karton 12 Stk.",
+      "shelfLife": "48 Std.",
+      "cert": "IFS Food, BRC",
+      "description": "Exquisites Plundergebäck-Hörnchen, reich gefüllt mit einer exklusiven Füllung aus weißem Mohn, Nüssen, Marzipan und Rosinen, glasiert und mit gehackten Nüssen bestreut."
+    },
+    "drozdzowka_z_serem_i_kruszonka": {
+      "name": "Hefetasche mit Quark und Streuseln",
+      "weight": "130g",
+      "packaging": "Karton 15 Stk. / Kiste",
+      "shelfLife": "48 Std.",
+      "cert": "IFS Food, BRC",
+      "description": "Traditionelle Hefetasche mit einer süßen Quarkfüllung, bestreut mit knusprigen Butterstreuseln."
+    },
+    "rozek_z_jablkiem": {
+      "name": "Apfeltasche",
+      "weight": "100g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "48 Std.",
+      "cert": "IFS Food",
+      "description": "Dreieckige Blätterteigtasche aus knusprigem Teig mit einer großzügigen Füllung aus gedünsteten Äpfeln und einer Prise Zimt."
+    },
+    "paczek_z_nadzieniem_pistacjowym": {
+      "name": "Pistazienkrapfen",
+      "weight": "100g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Moderner Premium-Krapfen gefüllt mit samtiger Pistaziencreme, dekoriert mit gehackten Pistazien."
+    },
+    "paczek_z_nadzieniem_malinowym": {
+      "name": "Himbeerkrapfen",
+      "weight": "100g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std.",
+      "cert": "IFS Food",
+      "description": "Klassischer fluffiger Krapfen mit einer aromatischen Füllung aus reifen Himbeeren, mit Puderzucker bestäubt."
+    }
   }
 }

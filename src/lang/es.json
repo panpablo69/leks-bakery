@@ -410,5 +410,151 @@
       "cert": "IFS Food",
       "description": "Postre refrescante sobre una base esponjosa de bizcocho con una capa ligera de crema de nata, generosamente cubierto con fresas jugosas en gelatina de fresa."
     }
+  },
+  "products_polcukiernicze": {
+    "paczek_twarogowy": {
+      "name": "Berlina de requesón",
+      "weight": "80g",
+      "packaging": "Caja 24 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Berlina esponjosa con requesón natural añadido a la masa, lo que le otorga una jugosidad y suavidad excepcionales."
+    },
+    "paczek_z_budyniem": {
+      "name": "Berlina rellena de crema pastelera",
+      "weight": "90g",
+      "packaging": "Caja 24 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Berlina esponjosa rellena de una densa crema pastelera de vainilla, espolvoreada con azúcar glas."
+    },
+    "paczek_delikatesowy": {
+      "name": "Berlina delikatesowa",
+      "weight": "90g",
+      "packaging": "Caja 24 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Clásica berlina delikatesowa de excelente esponjosidad, perfecta para el día a día."
+    },
+    "gniazdko_z_lukrem": {
+      "name": "Rosquilla de viento glaseada",
+      "weight": "80g",
+      "packaging": "Caja 20 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Rosquilla esponjosa de pasta choux (estilo español), frita hasta obtener un color dorado y cubierta con glaseado dulce."
+    },
+    "warkocz_z_lukrem": {
+      "name": "Trenza de levadura glaseada",
+      "weight": "100g",
+      "packaging": "Caja 20 ud. / Caja plástica",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Trenza de levadura tradicional, esponjosa y ligera, decorada con glaseado dulce."
+    },
+    "bite": {
+      "name": "Mini berlinas Bite",
+      "weight": "120g",
+      "packaging": "Caja colectiva",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Juego de mini berlinas en cuatro deliciosos sabores: canela, chocolate con avellanas, frutas y chocolate blanco."
+    },
+    "racuch_z_jablkiem": {
+      "name": "Tortita de levadura con manzana",
+      "weight": "90g",
+      "packaging": "Caja 20 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Tortita tradicional de levadura con trozos jugosos de manzana, ideal para una merienda dulce."
+    },
+    "paczek_z_marmolada": {
+      "name": "Berlina con mermelada",
+      "weight": "90g",
+      "packaging": "Caja 24 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Berlina tradicional con mermelada de varias frutas, glaseada y decorada con ralladura de naranja."
+    },
+    "calusek": {
+      "name": "Dulce Całusek",
+      "weight": "90g",
+      "packaging": "Caja 20 ud.",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Delicado bollo de levadura con relleno de frutas, enrollado con la forma característica de un beso."
+    },
+    "paczek_premium_z_nadzieniem_wisniowym": {
+      "name": "Berlina premium de cereza",
+      "weight": "100g",
+      "packaging": "Caja 24 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food, BRC",
+      "description": "Berlina premium con un relleno de cereza ligeramente ácido, glaseada y decorada con almendras laminadas."
+    },
+    "gniazdko_z_cukrem_pudrem": {
+      "name": "Rosquilla de viento con azúcar glas",
+      "weight": "80g",
+      "packaging": "Caja 20 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Rosquilla de pasta choux delicada y ligera, espolvoreada con azúcar glas."
+    },
+    "paczek_z_nadzieniem_karpatkowym": {
+      "name": "Berlina de crema Karpatka",
+      "weight": "100g",
+      "packaging": "Caja 24 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Berlina excepcional rellena de crema rica y esponjosa al estilo del pastel tradicional Karpatka."
+    },
+    "drozdzowka_z_makiem": {
+      "name": "Bollo de semilla de amapola",
+      "weight": "110g",
+      "packaging": "Caja 15 ud. / Caja plástica",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Clásico bollo de levadura relleno de una masa aromática y dulce de semilla de amapola azul y pasas, glaseado."
+    },
+    "rogal_swiateczny_z_bialym_makiem": {
+      "name": "Cruasán navideño de amapola blanca",
+      "weight": "170g",
+      "packaging": "Caja 12 ud.",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Cruasán de masa hojaldrada premium, relleno hasta el borde con una exclusiva mezcla de semilla de amapola blanca, frutos secos, mazapán y pasas, glaseado y decorado con nueces picadas."
+    },
+    "drozdzowka_z_serem_i_kruszonka": {
+      "name": "Bollo de queso y crumble",
+      "weight": "130g",
+      "packaging": "Caja 15 ud. / Caja plástica",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Bollo de levadura tradicional con relleno dulce de requesón, cubierto con crujiente crumble de mantequilla."
+    },
+    "rozek_z_jablkiem": {
+      "name": "Hoja de manzana",
+      "weight": "100g",
+      "packaging": "Caja 20 ud.",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Bollo triangular de masa crujiente con un abundante relleno de manzanas asadas con un toque de canela."
+    },
+    "paczek_z_nadzieniem_pistacjowym": {
+      "name": "Berlina de pistacho",
+      "weight": "100g",
+      "packaging": "Caja 24 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Moderna berlina premium rellena de una aterciopelada crema de pistacho, decorada con pistachos picados."
+    },
+    "paczek_z_nadzieniem_malinowym": {
+      "name": "Berlina de frambuesa",
+      "weight": "100g",
+      "packaging": "Caja 24 ud.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Berlina clásica esponjosa con un aromático relleno de frambuesas maduras, espolvoreada con azúcar glas."
+    }
   }
 }

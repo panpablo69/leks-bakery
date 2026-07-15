@@ -78,8 +78,24 @@ const kategorieProduktow = [
         description: "Tradycyjne polskie drożdżówki i słodkie bułki z nadzieniem.",
         image: "img/kat_polcukiernicze.png",
         products: [
-            { name: "Drożdżówka z Kruszonką", weight: "90g", packaging: "Skrzynka 20 szt.", image: "img/kat_polcukiernicze.png" },
-            { name: "Pączek Malinowy", weight: "80g", packaging: "Skrzynka 30 szt.", image: "img/kat_polcukiernicze.png" }
+            { id: "paczek_twarogowy", name: "Pączek twarogowy", weight: "80g", packaging: "Karton 24 szt.", image: "img/polcukiernicze_paczek_twarogowy.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "paczek_z_budyniem", name: "Pączek z budyniem", weight: "90g", packaging: "Karton 24 szt.", image: "img/polcukiernicze_paczek_z_budyniem.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "paczek_delikatesowy", name: "Pączek delikatesowy", weight: "90g", packaging: "Karton 24 szt.", image: "img/polcukiernicze_paczek_delikatesowy.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "gniazdko_z_lukrem", name: "Gniazdko z lukrem", weight: "80g", packaging: "Karton 20 szt.", image: "img/polcukiernicze_gniazdko_z_lukrem.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "warkocz_z_lukrem", name: "Warkocz z lukrem", weight: "100g", packaging: "Karton 20 szt. / Skrzynka", image: "img/polcukiernicze_warkocz_z_lukrem.png", shelfLife: "48h", cert: "IFS Food" },
+            { id: "bite", name: "Bite", weight: "120g", packaging: "Karton zbiorczy", image: "img/polcukiernicze_bite.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "racuch_z_jablkiem", name: "Racuch z jabłkiem", weight: "90g", packaging: "Karton 20 szt.", image: "img/polcukiernicze_racuch_z_jablkiem.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "paczek_z_marmolada", name: "Pączek z marmoladą", weight: "90g", packaging: "Karton 24 szt.", image: "img/polcukiernicze_paczek_z_marmolada.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "calusek", name: "Całusek", weight: "90g", packaging: "Karton 20 szt.", image: "img/polcukiernicze_calusek.png", shelfLife: "48h", cert: "IFS Food" },
+            { id: "paczek_premium_z_nadzieniem_wisniowym", name: "Pączek premium z nadzieniem wiśniowym", weight: "100g", packaging: "Karton 24 szt.", image: "img/polcukiernicze_paczek_premium_z_nadzieniem_wisniowym.png", shelfLife: "24h", cert: "IFS Food, BRC" },
+            { id: "gniazdko_z_cukrem_pudrem", name: "Gniazdko z cukrem pudrem", weight: "80g", packaging: "Karton 20 szt.", image: "img/polcukiernicze_gniazdko_z_cukrem_pudrem.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "paczek_z_nadzieniem_karpatkowym", name: "Pączek z nadzieniem karpatkowym", weight: "100g", packaging: "Karton 24 szt.", image: "img/polcukiernicze_paczek_z_nadzieniem_karpatkowym.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "drozdzowka_z_makiem", name: "Drożdżówka z makiem", weight: "110g", packaging: "Karton 15 szt. / Skrzynka", image: "img/polcukiernicze_drozdzowka_z_makiem.png", shelfLife: "48h", cert: "IFS Food" },
+            { id: "rogal_swiateczny_z_bialym_makiem", name: "Rogal świąteczny z białym makiem", weight: "170g", packaging: "Karton 12 szt.", image: "img/polcukiernicze_rogal_swiateczny_z_bialym_makiem.png", shelfLife: "48h", cert: "IFS Food, BRC" },
+            { id: "drozdzowka_z_serem_i_kruszonka", name: "Drożdżówka z serem i kruszonką", weight: "130g", packaging: "Karton 15 szt. / Skrzynka", image: "img/polcukiernicze_drozdzowka_z_serem_i_kruszonka.png", shelfLife: "48h", cert: "IFS Food, BRC" },
+            { id: "rozek_z_jablkiem", name: "Rożek z jabłkiem", weight: "100g", packaging: "Karton 20 szt.", image: "img/polcukiernicze_rozek_z_jablkiem.png", shelfLife: "48h", cert: "IFS Food" },
+            { id: "paczek_z_nadzieniem_pistacjowym", name: "Pączek z nadzieniem pistacjowym", weight: "100g", packaging: "Karton 24 szt.", image: "img/polcukiernicze_paczek_z_nadzieniem_pistacjowym.png", shelfLife: "24h", cert: "IFS Food" },
+            { id: "paczek_z_nadzieniem_malinowym", name: "Pączek z nadzieniem malinowym", weight: "100g", packaging: "Karton 24 szt.", image: "img/polcukiernicze_paczek_z_nadzieniem_malinowym.png", shelfLife: "24h", cert: "IFS Food" }
         ]
     },
     {

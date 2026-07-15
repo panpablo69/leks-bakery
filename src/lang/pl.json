@@ -410,5 +410,151 @@
       "cert": "IFS Food",
       "description": "Orzeźwiający deser na puszystym biszkopcie z lekką pianką śmietankową, obficie pokryty soczystymi truskawkami w truskawkowej galaretce."
     }
+  },
+  "products_polcukiernicze": {
+    "paczek_twarogowy": {
+      "name": "Pączek twarogowy",
+      "weight": "80g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Puszysty pączek z dodatkiem naturalnego twarogu w cieście, co nadaje mu wyjątkową wilgotność i miękkość."
+    },
+    "paczek_z_budyniem": {
+      "name": "Pączek z budyniem",
+      "weight": "90g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Puszysty pączek wypełniony gęstym, waniliowym kremem budyniowym, oprószony cukrem pudrem."
+    },
+    "paczek_delikatesowy": {
+      "name": "Pączek delikatesowy",
+      "weight": "90g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Klasyczny pączek delikatesowy o doskonałej puszystości, idealny na co dzień."
+    },
+    "gniazdko_z_lukrem": {
+      "name": "Gniazdko z lukrem",
+      "weight": "80g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Puszyste ciastko parzone (tzw. pączek hiszpański), smażone na złoty kolor i pokryte słodkim lukrem."
+    },
+    "warkocz_z_lukrem": {
+      "name": "Warkocz z lukrem",
+      "weight": "100g",
+      "packaging": "Karton 20 szt. / Skrzynka",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Tradycyjna drożdżowa plecionka, puszysta i lekka, polana słodkim lukrem."
+    },
+    "bite": {
+      "name": "Bite",
+      "weight": "120g",
+      "packaging": "Karton zbiorczy",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Zestaw mini pączków w czterech wyjątkowych smakach: cynamonowym, czekoladowo-orzechowym, owocowym oraz z białą czekoladą."
+    },
+    "racuch_z_jablkiem": {
+      "name": "Racuch z jabłkiem",
+      "weight": "90g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Tradycyjny racuch drożdżowy z soczystymi kawałkami jabłek, idealny na słodką przekąskę."
+    },
+    "paczek_z_marmolada": {
+      "name": "Pączek z marmoladą",
+      "weight": "90g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Tradycyjny pączek z wieloowocową marmoladą, lukrowany i posypany skórką pomarańczową."
+    },
+    "calusek": {
+      "name": "Całusek",
+      "weight": "90g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Delikatne ciastko drożdżowe z nadzieniem owocowym, zwinięte w charakterystyczny kształt całuska."
+    },
+    "paczek_premium_z_nadzieniem_wisniowym": {
+      "name": "Pączek premium z nadzieniem wiśniowym",
+      "weight": "100g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food, BRC",
+      "description": "Pączek premium z lekko kwaskowatym nadzieniem z wiśni, glazurowany i posypany płatkami migdałowymi."
+    },
+    "gniazdko_z_cukrem_pudrem": {
+      "name": "Gniazdko z cukrem pudrem",
+      "weight": "80g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Delikatne i lekkie gniazdko z ciasta parzonego, posypane cukrem pudrem."
+    },
+    "paczek_z_nadzieniem_karpatkowym": {
+      "name": "Pączek z nadzieniem karpatkowym",
+      "weight": "100g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Wyjątkowy pączek z bogatym i puszystym nadzieniem o smaku tradycyjnego kremu karpatkowego."
+    },
+    "drozdzowka_z_makiem": {
+      "name": "Drożdżówka z makiem",
+      "weight": "110g",
+      "packaging": "Karton 15 szt. / Skrzynka",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Klasyczna drożdżówka wypełniona aromatyczną, słodką masą z niebieskiego maku i bakalii, lukrowana."
+    },
+    "rogal_swiateczny_z_bialym_makiem": {
+      "name": "Rogal świąteczny z białym makiem",
+      "weight": "170g",
+      "packaging": "Karton 12 szt.",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Wyjątkowy rogal z ciasta półfrancuskiego z bogatym nadzieniem z białego maku, bakalii i marcepanu."
+    },
+    "drozdzowka_z_serem_i_kruszonka": {
+      "name": "Drożdżówka z serem i kruszonką",
+      "weight": "130g",
+      "packaging": "Karton 15 szt. / Skrzynka",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Tradycyjna drożdżówka z nadzieniem ze słodkiego twarogu, posypana chrupiącą maślaną kruszonką."
+    },
+    "rozek_z_jablkiem": {
+      "name": "Rożek z jabłkiem",
+      "weight": "100g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "48h",
+      "cert": "IFS Food",
+      "description": "Trójkątny rożek z chrupiącego ciasta z obfitym nadzieniem z prażonych jabłek z nutą cynamonu."
+    },
+    "paczek_z_nadzieniem_pistacjowym": {
+      "name": "Pączek z nadzieniem pistacjowym",
+      "weight": "100g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Nowoczesny pączek premium wypełniony aksamitnym kremem pistacjowym, ozdobiony posypką z kruszonych pistacji."
+    },
+    "paczek_z_nadzieniem_malinowym": {
+      "name": "Pączek z nadzieniem malinowym",
+      "weight": "100g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h",
+      "cert": "IFS Food",
+      "description": "Klasyczny puszysty pączek z aromatycznym nadzieniem z dojrzałych malin, posypany cukrem pudrem."
+    }
   }
 }
