@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksplorator Mediów St Klemens | Leks Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #120d0a;
+            --card-bg: rgba(30, 24, 20, 0.6);
+            --border-color: rgba(255, 253, 245, 0.08);
+            --text-color: #fdfaf6;
+            --accent-color: #d4a373;
+            --accent-hover: #e9c46a;
+            --glass-blur: blur(12px);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(212, 163, 115, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(233, 196, 106, 0.03) 0%, transparent 50%);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        header {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: var(--accent-color);
+            letter-spacing: -0.5px;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: rgba(253, 250, 246, 0.7);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: var(--text-color);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .media-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: var(--glass-blur);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 163, 115, 0.3);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .media-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9/16;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .media-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .media-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .media-info {
+            padding: 16px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .media-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            color: rgba(253, 250, 246, 0.95);
+            word-break: break-all;
+        }
+
+        .media-meta {
+            font-size: 0.8rem;
+            color: rgba(253, 250, 246, 0.5);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: rgba(212, 163, 115, 0.15);
+            color: var(--accent-color);
+            margin-top: 8px;
+            align-self: flex-start;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .media-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eksplorator Mediów St Klemens</h1>
+        <p class="subtitle">Podgląd wszystkich dostępnych materiałów wideo i zdjęć w katalogu projektu, ułatwiający dopasowanie ujęć do scenariusza roolki.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">Materiały z rwaniec/</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata">
+                            <source src="../memory/st klemens/rwaniec/1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">rwaniec/1.mp4</h3>
+                            <span class="tag-badge">Rwaniec - Wejście slow-motion</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 12.2s</span>
+                            <span>2160x3840</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata">
+                            <source src="../memory/st klemens/rwaniec/2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">rwaniec/2.mp4</h3>
+                            <span class="tag-badge">Rwaniec - Degustacja</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 5.0s</span>
+                            <span>2160x3840</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata">
+                            <source src="../memory/st klemens/rwaniec/3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">rwaniec/3.mp4</h3>
+                            <span class="tag-badge">Rwaniec - Migdały i lukier</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 5.0s</span>
+                            <span>2160x3840</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Nagrania wideo w st klemens/</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.00.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.00.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.00</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 2.8s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.01.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.01.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.01</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 4.0s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.02.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.02.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.02</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 4.7s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.03 (1).mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.03 (1).mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.03 (1)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 4.9s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.03.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.03.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.03 (Kawa/Espresso)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 2.6s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.04.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.04.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.04 (Ciasto/Pusty Rwaniec)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 3.2s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.05.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.05.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.05</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 5.3s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.10.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.10.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.10</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 3.2s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.11.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.11.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.11</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 2.1s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.12 (1).mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.12 (1).mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.12 (1) (BIG Gorzów)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 4.8s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.12.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.12.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.12</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 3.1s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.22.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.22.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.22 (Witryna/Wnętrze)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 4.8s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.23.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.23.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.23</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 2.4s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <video controls preload="metadata"><source src="../memory/st klemens/WhatsApp Video 2026-07-17 at 14.08.24.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Video 2026-07-17 at 14.08.24.mp4</h3>
+                            <span class="tag-badge">Wideo 14.08.24</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Czas: 8.6s</span>
+                            <span>576x1024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Zdjęcia w st klemens/</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-container">
+                        <img src="../memory/st klemens/WhatsApp Image 2026-07-17 at 14.42.12.jpeg" alt="Zdjęcie 14.42.12">
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Image 2026-07-17 at 14.42.12.jpeg</h3>
+                            <span class="tag-badge">Zdjęcie 14.42.12</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Wymiary: 1536x2048</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <img src="../memory/st klemens/WhatsApp Image 2026-07-17 at 14.42.13.jpeg" alt="Zdjęcie 14.42.13">
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Image 2026-07-17 at 14.42.13.jpeg</h3>
+                            <span class="tag-badge">Zdjęcie 14.42.13</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Wymiary: 1536x2048</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <img src="../memory/st klemens/WhatsApp Image 2026-07-17 at 14.42.13 (1).jpeg" alt="Zdjęcie 14.42.13 (1)">
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Image 2026-07-17 at 14.42.13 (1).jpeg</h3>
+                            <span class="tag-badge">Zdjęcie 14.42.13 (1)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Wymiary: 1536x2048</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <img src="../memory/st klemens/WhatsApp Image 2026-07-17 at 14.42.13 (2).jpeg" alt="Zdjęcie 14.42.13 (2)">
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Image 2026-07-17 at 14.42.13 (2).jpeg</h3>
+                            <span class="tag-badge">Zdjęcie 14.42.13 (2)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Wymiary: 1536x2048</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <img src="../memory/st klemens/WhatsApp Image 2026-07-17 at 14.42.47.jpeg" alt="Zdjęcie 14.42.47">
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Image 2026-07-17 at 14.42.47.jpeg</h3>
+                            <span class="tag-badge">Zdjęcie 14.42.47</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Wymiary: 1536x2048</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <img src="../memory/st klemens/WhatsApp Image 2026-07-17 at 14.42.47 (1).jpeg" alt="Zdjęcie 14.42.47 (1)">
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Image 2026-07-17 at 14.42.47 (1).jpeg</h3>
+                            <span class="tag-badge">Zdjęcie 14.42.47 (1)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Wymiary: 1536x2048</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <div class="media-container">
+                        <img src="../memory/st klemens/WhatsApp Image 2026-07-17 at 14.42.47 (2).jpeg" alt="Zdjęcie 14.42.47 (2)">
+                    </div>
+                    <div class="media-info">
+                        <div>
+                            <h3 class="media-name">WhatsApp Image 2026-07-17 at 14.42.47 (2).jpeg</h3>
+                            <span class="tag-badge">Zdjęcie 14.42.47 (2)</span>
+                        </div>
+                        <div class="media-meta">
+                            <span>Wymiary: 1536x2048</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

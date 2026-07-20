@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podgląd Roolki St Klemens | Leks Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f0a07;
+            --card-bg: rgba(28, 22, 18, 0.7);
+            --border-color: rgba(212, 163, 115, 0.12);
+            --text-color: #fdfaf6;
+            --accent-color: #d4a373;
+            --accent-hover: #e9c46a;
+            --phone-border: #221c18;
+            --glass-blur: blur(16px);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(212, 163, 115, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(233, 196, 106, 0.04) 0%, transparent 50%);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        header {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 24px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(212, 163, 115, 0.08);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 1.3rem;
+        }
+
+        .back-btn {
+            background: rgba(255, 253, 245, 0.04);
+            border: 1px solid rgba(255, 253, 245, 0.08);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(212, 163, 115, 0.15);
+            border-color: var(--accent-color);
+            color: var(--accent-hover);
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* Phone mockup container */
+        .phone-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .phone-case {
+            width: 360px;
+            height: 740px;
+            background: var(--phone-border);
+            border-radius: 48px;
+            padding: 12px;
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.7),
+                0 0 0 4px rgba(212, 163, 115, 0.15),
+                inset 0 4px 6px rgba(255, 255, 255, 0.1);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* Speaker & Camera Notch */
+        .notch {
+            position: absolute;
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110px;
+            height: 28px;
+            background: #000;
+            border-radius: 14px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .notch-camera {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #111;
+            border: 2px solid #222;
+        }
+
+        .notch-speaker {
+            width: 40px;
+            height: 4px;
+            border-radius: 2px;
+            background: #333;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 38px;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #111;
+            box-sizing: border-box;
+        }
+
+        /* Video element sizing */
+        .reel-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Overlay layers inside the phone screen */
+        .phone-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 15%, transparent 75%, rgba(0,0,0,0.6) 100%);
+            z-index: 10;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 20px 24px 20px;
+            box-sizing: border-box;
+        }
+
+        .overlay-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .overlay-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            pointer-events: auto;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #120d0a;
+        }
+
+        .profile-username {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .follow-badge {
+            border: 1px solid #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .caption-text {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        .audio-track {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .audio-track i {
+            animation: rotateDisk 4s linear infinite;
+        }
+
+        /* Action sidebar inside the screen */
+        .sidebar-actions {
+            position: absolute;
+            right: 12px;
+            bottom: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            z-index: 20;
+            color: #fff;
+        }
+
+        .sidebar-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .sidebar-icon:active {
+            transform: scale(0.9);
+        }
+
+        .sidebar-icon i {
+            font-size: 1.5rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .sidebar-icon span {
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Custom Play/Mute controls overlay */
+        .controls-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 30;
+            display: flex;
+            gap: 20px;
+        }
+
+        .control-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(22, 16, 12, 0.75);
+            border: 1px solid rgba(212, 163, 115, 0.3);
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+
+        .control-btn:hover {
+            background: var(--accent-color);
+            color: #120d0a;
+            border-color: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        /* Sound Mode Banner */
+        .sound-banner {
+            position: absolute;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(212, 163, 115, 0.15);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-hover);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            backdrop-filter: blur(6px);
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulseBanner 2s infinite alternate;
+        }
+
+        /* Left Side Dashboard / Scenario details */
+        .details-panel {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: var(--glass-blur);
+            box-sizing: border-box;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .badge {
+            background: rgba(212, 163, 115, 0.12);
+            color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+            border: 1px solid rgba(212, 163, 115, 0.2);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin: 0 0 20px 0;
+            color: #fff;
+        }
+
+        .scenario-step {
+            margin-bottom: 24px;
+            border-left: 2px solid var(--accent-color);
+            padding-left: 16px;
+        }
+
+        .step-num {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            margin-bottom: 4px;
+        }
+
+        .step-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: rgba(253, 250, 246, 0.7);
+            margin: 0;
+        }
+
+        .cta-box {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(212, 163, 115, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .copy-block {
+            background: rgba(255, 253, 245, 0.02);
+            border: 1px solid rgba(255, 253, 245, 0.04);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .copy-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .copy-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+            font-style: italic;
+        }
+
+        .action-button {
+            background: var(--accent-color);
+            color: #120d0a;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(212, 163, 115, 0.2);
+        }
+
+        .action-button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 196, 106, 0.3);
+        }
+
+        /* Audio synthesis indicator status */
+        .audio-status {
+            font-size: 0.75rem;
+            color: rgba(253, 250, 246, 0.4);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        @keyframes rotateDisk {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseBanner {
+            0% { opacity: 0.7; transform: translateX(-50%) scale(0.98); }
+            100% { opacity: 1; transform: translateX(-50%) scale(1.02); }
+        }
+
+        /* Responsive styling */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .phone-wrapper {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-mug-hot"></i>
+            St Klemens
+        </a>
+        <a href="reel-explorer.html" class="back-btn">
+            <i class="fa-solid fa-images"></i> Otwórz Eksplorator Mediów
+        </a>
+    </header>
+
+    <div class="container">
+        <!-- Details Panel -->
+        <div class="details-panel">
+            <span class="badge">Roolka Social Media 9:16</span>
+            <h2>St Klemens: Twój Azyl w BIG Gorzów</h2>
+            
+            <div class="scenario-step">
+                <div class="step-num">Faza 1: Hook (Attract)</div>
+                <div class="step-title">Zgiełk Galerii i Wejście Slow-motion</div>
+                <p class="step-desc">Szybkie, rozmazane, dynamiczne ujęcia zgiełku zakupowego. Szum w tle. Nagle cięcie, zapada cisza i płynnie wchodzimy do przytulnego świata St Klemens.</p>
+            </div>
+
+            <div class="scenario-step">
+                <div class="step-num">Faza 2: Interest (Zainteresowanie)</div>
+                <div class="step-title">Czas Zwalnia</div>
+                <p class="step-desc">Ciepłe, nastrojowe światło kawiarni, w kadrze paruje błękitny kubek w dłoniach. Napis: „W CH BIG Gorzów biega się szybko. Tutaj czas zwalnia.”</p>
+            </div>
+
+            <div class="scenario-step">
+                <div class="step-num">Faza 3: Desire (Pożądanie)</div>
+                <div class="step-title">Zbliżenia Makro (Food-Porn)</div>
+                <p class="step-desc">Aromatyczne ujęcia: nacinanie nożem puszystego, maślanego croissanta (para unosi się znad ciasta) oraz leniwe mieszanie spienionego mleka z espresso w glinianej ceramice.</p>
+            </div>
+
+            <div class="scenario-step">
+                <div class="step-num">Faza 4: Action (Działanie)</div>
+                <div class="step-title">Zaproszenie & CTA</div>
+                <p class="step-desc">Prezentacja przytulnego wnętrza i plansza z wezwaniem do znalezienia chwili tylko dla siebie.</p>
+            </div>
+
+            <div class="cta-box">
+                <div class="copy-block">
+                    <div class="copy-title">Tekst w opisie posta (Instagram / TikTok)</div>
+                    <p class="copy-text">„Znajdź swój azyl w St Klemens. Zapraszamy na chwilę tylko dla siebie. ✨ Smacznego Dnia! ☕🥐 #StKlemens #Gorzow #CHBIGGorzow #KawiarniaGorzow”</p>
+                </div>
+                <button class="action-button" onclick="togglePlay()">
+                    <i class="fa-solid fa-circle-play"></i> Odtwórz z Muzyką & Dźwiękami
+                </button>
+                <div class="audio-status">
+                    Dźwięk generowany jest dynamicznie przez Web Audio API (chaotyczny szum przechodzący w spokojny jazz-drone).
+                </div>
+            </div>
+        </div>
+
+        <!-- Phone Wrapper / Interactive Reel Mockup -->
+        <div class="phone-wrapper">
+            <div class="phone-case">
+                <div class="notch">
+                    <div class="notch-speaker"></div>
+                    <div class="notch-camera"></div>
+                </div>
+
+                <div class="sound-banner" id="sound-indicator">
+                    <i class="fa-solid fa-volume-high"></i> Dźwięk dynamiczny aktywny
+                </div>
+
+                <div class="phone-screen">
+                    <!-- Reel Video Player -->
+                    <video class="reel-video" id="reel-player" loop playsinline>
+                        <source src="../st_klemens_stock_reel.mp4" type="video/mp4">
+                        Twój system nie obsługuje wideo.
+                    </video>
+
+                    <!-- Control overlay -->
+                    <div class="controls-overlay" id="play-overlay">
+                        <div class="control-btn" onclick="togglePlay()" title="Odtwórz wideo z syntezą dźwięku">
+                            <i class="fa-solid fa-play" id="play-icon"></i>
+                        </div>
+                    </div>
+
+                    <!-- Actions sidebar (Instagram style) -->
+                    <div class="sidebar-actions">
+                        <div class="sidebar-icon" onclick="likeReel()">
+                            <i class="fa-solid fa-heart" id="heart-icon"></i>
+                            <span id="like-count">1.2k</span>
+                        </div>
+                        <div class="sidebar-icon">
+                            <i class="fa-solid fa-comment"></i>
+                            <span>42</span>
+                        </div>
+                        <div class="sidebar-icon">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>156</span>
+                        </div>
+                        <div class="sidebar-icon" onclick="toggleMute()">
+                            <i class="fa-solid fa-volume-xmark" id="mute-icon"></i>
+                            <span>Audio</span>
+                        </div>
+                    </div>
+
+                    <!-- Overlay Texts & Profile (Instagram style) -->
+                    <div class="phone-overlay">
+                        <div class="overlay-top">
+                            <span>Dla Ciebie</span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        <div class="overlay-bottom">
+                            <div class="profile-section">
+                                <div class="profile-img">St</div>
+                                <span class="profile-username">st.klemens</span>
+                                <span class="follow-badge">Obserwuj</span>
+                            </div>
+                            <p class="caption-text" id="caption-ticker">
+                                Znajdź swój azyl w St Klemens. Zapraszamy na chwilę tylko dla siebie. ☕🥐
+                            </p>
+                            <div class="audio-track">
+                                <i class="fa-solid fa-music"></i>
+                                <span>Oryginalny dźwięk - st.klemens (Kawiarniany ton)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Web Audio API Ambient Sound Synthesizer Script -->
+    <script>
+        const video = document.getElementById('reel-player');
+        const playIcon = document.getElementById('play-icon');
+        const playOverlay = document.getElementById('play-overlay');
+        const muteIcon = document.getElementById('mute-icon');
+        const soundIndicator = document.getElementById('sound-indicator');
+        
+        let audioCtx = null;
+        let isPlaying = false;
+        let isMuted = false;
+        let soundSourceNode = null;
+        let ambientNode = null;
+        let noiseFilter = null;
+        let gainNode = null;
+
+        // Initialize Web Audio API nodes
+        function initAudio() {
+            if (audioCtx) return;
+            
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            audioCtx = new AudioContext();
+            
+            // Master gain node
+            gainNode = audioCtx.createGain();
+            gainNode.gain.value = isMuted ? 0.0 : 0.8;
+            gainNode.connect(audioCtx.destination);
+            
+            // Start clock/sound scheduling loop based on video playback
+            video.addEventListener('timeupdate', handleTimeUpdate);
+        }
+
+        function handleTimeUpdate() {
+            if (!audioCtx || isMuted || !isPlaying) return;
+            
+            const t = video.currentTime;
+            
+            // FAZA 1: Hook (0.0s do 2.0s) -> Chaotyczny, głośny szum tłumu
+            if (t >= 0.0 && t < 2.0) {
+                playHookSound();
+                soundIndicator.innerHTML = '<i class="fa-solid fa-volume-high"></i> Zgiełk zakupów w galerii...';
+            } 
+            // FAZA 2+ (od 2.0s) -> Cięcie, cisza, a po chwili ciepła muzyka ambient
+            else {
+                playCafeAmbient();
+                soundIndicator.innerHTML = '<i class="fa-solid fa-mug-hot"></i> Cisza i ciepły ambient St Klemens';
+            }
+        }
+
+        // Generate synthetic chaotic crowd rumble/noise for the Hook
+        function playHookSound() {
+            if (soundSourceNode && soundSourceNode.label === 'hook') return;
+            
+            stopRunningSounds();
+            
+            // Create white noise buffer
+            const bufferSize = audioCtx.sampleRate * 2;
+            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const data = buffer.getChannelData(0);
+            for (let i = 0; i < bufferSize; i++) {
+                data[i] = Math.random() * 2 - 1;
+            }
+            
+            const noise = audioCtx.createBufferSource();
+            noise.buffer = buffer;
+            noise.loop = true;
+            
+            // Low-pass filter to make it rumble
+            noiseFilter = audioCtx.createBiquadFilter();
+            noiseFilter.type = 'lowpass';
+            noiseFilter.frequency.setValueAtTime(300, audioCtx.currentTime);
+            noiseFilter.Q.setValueAtTime(10, audioCtx.currentTime);
+            
+            // Dynamic modulation of filter frequency to simulate crowd murmuring
+            const modulator = audioCtx.createOscillator();
+            modulator.frequency.value = 8; // 8 Hz modulation
+            const modulatorGain = audioCtx.createGain();
+            modulatorGain.gain.value = 150;
+            
+            modulator.connect(modulatorGain);
+            modulatorGain.connect(noiseFilter.frequency);
+            modulator.start();
+            
+            // Gain envelope for hook noise (fades in slightly)
+            const noiseGain = audioCtx.createGain();
+            noiseGain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            
+            noise.connect(noiseFilter);
+            noiseFilter.connect(noiseGain);
+            noiseGain.connect(gainNode);
+            noise.start();
+            
+            soundSourceNode = noise;
+            soundSourceNode.label = 'hook';
+            soundSourceNode.modulator = modulator;
+        }
+
+        // Generate peaceful, warm, chordal drone for St Klemens cafe entry
+        function playCafeAmbient() {
+            if (soundSourceNode && soundSourceNode.label === 'ambient') return;
+            
+            stopRunningSounds();
+            
+            // We synthesize a soft major 7th chord (F major 7 / C major 7) using 3 oscillators
+            const osc1 = audioCtx.createOscillator();
+            const osc2 = audioCtx.createOscillator();
+            const osc3 = audioCtx.createOscillator();
+            
+            osc1.type = 'triangle';
+            osc2.type = 'sine';
+            osc3.type = 'sine';
+            
+            // Root frequencies (soft, deep frequencies)
+            // F3 (174.61 Hz), A3 (220.00 Hz), C4 (261.63 Hz) - cozy F major chord
+            osc1.frequency.setValueAtTime(174.61, audioCtx.currentTime);
+            osc2.frequency.setValueAtTime(220.00, audioCtx.currentTime);
+            osc3.frequency.setValueAtTime(261.63, audioCtx.currentTime);
+            
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(500, audioCtx.currentTime);
+            
+            const oscGain = audioCtx.createGain();
+            // Płynne podgłośnienie (fade-in) od ciszy
+            oscGain.gain.setValueAtTime(0.0, audioCtx.currentTime);
+            oscGain.gain.linearRampToValueAtTime(0.2, audioCtx.currentTime + 1.2);
+            
+            osc1.connect(filter);
+            osc2.connect(filter);
+            osc3.connect(filter);
+            filter.connect(oscGain);
+            oscGain.connect(gainNode);
+            
+            osc1.start();
+            osc2.start();
+            osc3.start();
+            
+            soundSourceNode = {
+                stop: () => {
+                    osc1.stop();
+                    osc2.stop();
+                    osc3.stop();
+                },
+                label: 'ambient'
+            };
+        }
+
+        function stopRunningSounds() {
+            if (soundSourceNode) {
+                try {
+                    soundSourceNode.stop();
+                    if (soundSourceNode.modulator) soundSourceNode.modulator.stop();
+                } catch(e) {}
+                soundSourceNode = null;
+            }
+        }
+
+        function togglePlay() {
+            initAudio();
+            
+            if (isPlaying) {
+                video.pause();
+                stopRunningSounds();
+                playIcon.className = "fa-solid fa-play";
+                playOverlay.style.opacity = "1";
+                isPlaying = false;
+            } else {
+                if (audioCtx && audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                video.play();
+                playIcon.className = "fa-solid fa-pause";
+                // Hide play icon after click
+                playOverlay.style.opacity = "0.0";
+                isPlaying = true;
+            }
+        }
+
+        function toggleMute() {
+            initAudio();
+            isMuted = !isMuted;
+            
+            if (isMuted) {
+                gainNode.gain.setValueAtTime(0.0, audioCtx.currentTime);
+                muteIcon.className = "fa-solid fa-volume-xmark";
+                soundIndicator.style.display = "none";
+            } else {
+                gainNode.gain.setValueAtTime(0.8, audioCtx.currentTime);
+                muteIcon.className = "fa-solid fa-volume-high";
+                soundIndicator.style.display = "flex";
+            }
+        }
+
+        // Like Reel animation
+        let liked = false;
+        function likeReel() {
+            const heart = document.getElementById('heart-icon');
+            const count = document.getElementById('like-count');
+            
+            if (!liked) {
+                heart.style.color = '#e63946';
+                heart.className = "fa-solid fa-heart fa-bounce";
+                count.innerText = "1.3k";
+                liked = true;
+                setTimeout(() => {
+                    heart.className = "fa-solid fa-heart";
+                }, 1000);
+            } else {
+                heart.style.color = '#fff';
+                count.innerText = "1.2k";
+                liked = false;
+            }
+        }
+
+        // Make sure audio closes when leaving page
+        window.addEventListener('beforeunload', () => {
+            stopRunningSounds();
+            if (audioCtx) audioCtx.close();
+        });
+    </script>
+</body>
+</html>

@@ -14,7 +14,7 @@ let translations = {};
 
 async function loadInitialTranslations() {
     try {
-        const response = await fetch(`lang/${currentLang}.json?v=43`);
+        const response = await fetch(`lang/${currentLang}.json?v=45`);
         if (response.ok) {
             translations = await response.json();
             document.documentElement.setAttribute("lang", currentLang);
@@ -28,7 +28,7 @@ async function loadInitialTranslations() {
 
 async function loadTranslations(lang) {
     try {
-        const response = await fetch(`lang/${lang}.json?v=43`);
+        const response = await fetch(`lang/${lang}.json?v=45`);
         if (!response.ok) throw new Error(`Could not load translations for ${lang}`);
         translations = await response.json();
         currentLang = lang;
