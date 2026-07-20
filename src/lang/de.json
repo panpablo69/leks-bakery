@@ -428,14 +428,6 @@
       "cert": "IFS Food",
       "description": "Fluffiger Krapfen gefüllt mit dickflüssiger Vanille-Puddingcreme, mit Puderzucker bestäubt."
     },
-    "paczek_delikatesowy": {
-      "name": "Delikatesse-Krapfen",
-      "weight": "90g",
-      "packaging": "Karton 24 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Klassischer Delikatesse-Krapfen von hervorragender Luftigkeit, perfekt für jeden Tag."
-    },
     "gniazdko_z_lukrem": {
       "name": "Spritzkuchen mit Glasur",
       "weight": "80g",
@@ -451,14 +443,6 @@
       "shelfLife": "48 Std.",
       "cert": "IFS Food",
       "description": "Traditioneller Hefe-Flechtzopf, locker und leicht, mit süßer Zuckerglasur verziert."
-    },
-    "bite": {
-      "name": "Bite Mini-Krapfen",
-      "weight": "120g",
-      "packaging": "Sammelkarton",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Set aus Mini-Krapfen in vier leckeren Geschmacksrichtungen: Zimt, Schoko-Nuss, Frucht und weiße Schokolade."
     },
     "racuch_z_jablkiem": {
       "name": "Hefe-Apfelpuffer",
@@ -531,14 +515,6 @@
       "shelfLife": "48 Std.",
       "cert": "IFS Food, BRC",
       "description": "Traditionelle Hefetasche mit einer süßen Quarkfüllung, bestreut mit knusprigen Butterstreuseln."
-    },
-    "rozek_z_jablkiem": {
-      "name": "Apfeltasche",
-      "weight": "100g",
-      "packaging": "Karton 20 Stk.",
-      "shelfLife": "48 Std.",
-      "cert": "IFS Food",
-      "description": "Dreieckige Blätterteigtasche aus knusprigem Teig mit einer großzügigen Füllung aus gedünsteten Äpfeln und einer Prise Zimt."
     },
     "paczek_z_nadzieniem_pistacjowym": {
       "name": "Pistazienkrapfen",

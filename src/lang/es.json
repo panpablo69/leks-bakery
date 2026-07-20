@@ -428,14 +428,6 @@
       "cert": "IFS Food",
       "description": "Berlina esponjosa rellena de una densa crema pastelera de vainilla, espolvoreada con azúcar glas."
     },
-    "paczek_delikatesowy": {
-      "name": "Berlina delikatesowa",
-      "weight": "90g",
-      "packaging": "Caja 24 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Clásica berlina delikatesowa de excelente esponjosidad, perfecta para el día a día."
-    },
     "gniazdko_z_lukrem": {
       "name": "Rosquilla de viento glaseada",
       "weight": "80g",
@@ -451,14 +443,6 @@
       "shelfLife": "48h",
       "cert": "IFS Food",
       "description": "Trenza de levadura tradicional, esponjosa y ligera, decorada con glaseado dulce."
-    },
-    "bite": {
-      "name": "Mini berlinas Bite",
-      "weight": "120g",
-      "packaging": "Caja colectiva",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Juego de mini berlinas en cuatro deliciosos sabores: canela, chocolate con avellanas, frutas y chocolate blanco."
     },
     "racuch_z_jablkiem": {
       "name": "Tortita de levadura con manzana",
@@ -531,14 +515,6 @@
       "shelfLife": "48h",
       "cert": "IFS Food, BRC",
       "description": "Bollo de levadura tradicional con relleno dulce de requesón, cubierto con crujiente crumble de mantequilla."
-    },
-    "rozek_z_jablkiem": {
-      "name": "Hoja de manzana",
-      "weight": "100g",
-      "packaging": "Caja 20 ud.",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Bollo triangular de masa crujiente con un abundante relleno de manzanas asadas con un toque de canela."
     },
     "paczek_z_nadzieniem_pistacjowym": {
       "name": "Berlina de pistacho",

@@ -428,14 +428,7 @@
       "cert": "IFS Food",
       "description": "Puszysty pączek wypełniony gęstym, waniliowym kremem budyniowym, oprószony cukrem pudrem."
     },
-    "paczek_delikatesowy": {
-      "name": "Pączek delikatesowy",
-      "weight": "90g",
-      "packaging": "Karton 24 szt.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Klasyczny pączek delikatesowy o doskonałej puszystości, idealny na co dzień."
-    },
+
     "gniazdko_z_lukrem": {
       "name": "Gniazdko z lukrem",
       "weight": "80g",
@@ -451,14 +444,6 @@
       "shelfLife": "48h",
       "cert": "IFS Food",
       "description": "Tradycyjna drożdżowa plecionka, puszysta i lekka, polana słodkim lukrem."
-    },
-    "bite": {
-      "name": "Bite",
-      "weight": "120g",
-      "packaging": "Karton zbiorczy",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Zestaw mini pączków w czterech wyjątkowych smakach: cynamonowym, czekoladowo-orzechowym, owocowym oraz z białą czekoladą."
     },
     "racuch_z_jablkiem": {
       "name": "Racuch z jabłkiem",
@@ -531,14 +516,6 @@
       "shelfLife": "48h",
       "cert": "IFS Food, BRC",
       "description": "Tradycyjna drożdżówka z nadzieniem ze słodkiego twarogu, posypana chrupiącą maślaną kruszonką."
-    },
-    "rozek_z_jablkiem": {
-      "name": "Rożek z jabłkiem",
-      "weight": "100g",
-      "packaging": "Karton 20 szt.",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Trójkątny rożek z chrupiącego ciasta z obfitym nadzieniem z prażonych jabłek z nutą cynamonu."
     },
     "paczek_z_nadzieniem_pistacjowym": {
       "name": "Pączek z nadzieniem pistacjowym",

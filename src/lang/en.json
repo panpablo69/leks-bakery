@@ -428,14 +428,6 @@
       "cert": "IFS Food",
       "description": "Fluffy donut filled with thick, vanilla custard cream, dusted with powdered sugar."
     },
-    "paczek_delikatesowy": {
-      "name": "Delikatesowy donut",
-      "weight": "90g",
-      "packaging": "Box 24 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Classic delikatesowy donut of excellent fluffiness, perfect for every day."
-    },
     "gniazdko_z_lukrem": {
       "name": "Viennese donut with icing",
       "weight": "80g",
@@ -451,14 +443,6 @@
       "shelfLife": "48h",
       "cert": "IFS Food",
       "description": "Traditional yeast braid, fluffy and light, topped with sweet icing."
-    },
-    "bite": {
-      "name": "Bite mini donuts",
-      "weight": "120g",
-      "packaging": "Bulk box",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Set of mini donuts in four delicious flavors: cinnamon, chocolate-hazelnut, fruit, and white chocolate."
     },
     "racuch_z_jablkiem": {
       "name": "Apple yeast pancake",
@@ -525,20 +509,12 @@
       "description": "Premium Danish pastry croissant filled to the brim with exclusive white poppy seeds, nuts, marzipan, and raisins, iced and topped with nuts."
     },
     "drozdzowka_z_serem_i_kruszonka": {
-      "name": "Sweet bun with curd cheese and crumble",
+      "name": "Sweet cheese bun with crumble",
       "weight": "130g",
       "packaging": "Box 15 pcs. / Crate",
       "shelfLife": "48h",
       "cert": "IFS Food, BRC",
-      "description": "Traditional yeast bun with a sweet curd cheese filling, sprinkled with crunchy butter crumble."
-    },
-    "rozek_z_jablkiem": {
-      "name": "Apple turnover",
-      "weight": "100g",
-      "packaging": "Box 20 pcs.",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Triangular pastry made of crispy dough with a generous filling of roasted apples and a hint of cinnamon."
+      "description": "Traditional yeast bun filled with sweet cottage cheese, topped with crispy butter crumble."
     },
     "paczek_z_nadzieniem_pistacjowym": {
       "name": "Pistachio donut",
