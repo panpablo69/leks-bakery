@@ -76,7 +76,7 @@
     "packaging": "Pakowanie:",
     "shelf_life": "Przydatność:",
     "cert": "Certyfikaty:",
-    "b2b_cta": "Zapytaj o wycenę hurtową (B2B)",
+    "b2b_cta": "Wyślij zapytanie",
     "close": "Zamknij",
     "back": "&larr; Wróć do kategorii"
   },
@@ -204,8 +204,8 @@
       "description": "Tradycyjne polskie chleby wypiekane na naturalnym zakwasie."
     },
     "bulki": {
-      "name": "Bułki",
-      "description": "Świeże, chrupiące bułki codzienne, grahamki i kajzerki."
+      "name": "Bułki i rogale",
+      "description": "Świeże, chrupiące bułki codzienne, grahamki, kajzerki oraz tradycyjne rogale."
     },
     "2ab": {
       "name": "Pieczywo Leks 2AB",
@@ -428,7 +428,6 @@
       "cert": "IFS Food",
       "description": "Puszysty pączek wypełniony gęstym, waniliowym kremem budyniowym, oprószony cukrem pudrem."
     },
-
     "gniazdko_z_lukrem": {
       "name": "Gniazdko z lukrem",
       "weight": "80g",
@@ -532,6 +531,145 @@
       "shelfLife": "24h",
       "cert": "IFS Food",
       "description": "Klasyczny puszysty pączek z aromatycznym nadzieniem z dojrzałych malin, posypany cukrem pudrem."
+    }
+  },
+  "illustrative_photo": "Zdjęcie poglądowe",
+  "products_bulki": {
+    "bulka_kajzerka": {
+      "name": "Bułka Kajzerka",
+      "weight": "60g",
+      "packaging": "Karton 80 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC Grade A",
+      "description": "Tradycyjna, chrupiąca bułka pszenna kajzerka z pięcioma nacięciami."
+    },
+    "bulka_z_ziarnem": {
+      "name": "Bułka z ziarnem",
+      "weight": "75g",
+      "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Puszysta bułka pszenna obficie pokryta ziarnami sezamu, lnu i słonecznika."
+    },
+    "bulka_wysokobialkowa": {
+      "name": "Bułka wysokobiałkowa",
+      "weight": "80g",
+      "packaging": "Karton 50 szt.",
+      "shelfLife": "48h / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Specjalistyczna bułka o podwyższonej zawartości białka roślinnego i obniżonej zawartości węglowodanów."
+    },
+    "bulka_z_warzywami": {
+      "name": "Bułka z warzywami",
+      "weight": "80g",
+      "packaging": "Karton 50 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Oryginalna, wytrawna bułka z kawałkami suszonych warzyw."
+    },
+    "bulka_grahamka_slonecznik": {
+      "name": "Bułka grahamka ze słonecznikiem",
+      "weight": "75g",
+      "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Ciemna bułka grahamka wzbogacona chrupiącymi ziarnami słonecznika."
+    },
+    "bulka_mleczna": {
+      "name": "Bułka mleczna",
+      "weight": "80g",
+      "packaging": "Karton 50 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Delikatna, puszysta bułka maślana wypiekana z dodatkiem mleka."
+    },
+    "bulka_duza": {
+      "name": "Bułka duża",
+      "weight": "90g",
+      "packaging": "Karton 50 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Duża bułka pszenna śniadaniowa o puszystym wnętrzu i chrupiącej skórce."
+    },
+    "bulka_grahamka": {
+      "name": "Bułka grahamka",
+      "weight": "70g",
+      "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC Grade A",
+      "description": "Klasyczna ciemna bułka grahamka bogata w błonnik, o tradycyjnym smaku."
+    },
+    "bulka_z_marchewka": {
+      "name": "Bułka z marchewką",
+      "weight": "80g",
+      "packaging": "Karton 50 szt.",
+      "shelfLife": "48h (Świeża)",
+      "cert": "IFS Food, BRC",
+      "description": "Aromatyczna bułka pszenna z dodatkiem utartej marchewki o delikatnie słodkawym smaku."
+    },
+    "bulka_poznanska": {
+      "name": "Bułka poznańska",
+      "weight": "70g",
+      "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Klasyczna bułka poznańska z charakterystycznym przedziałkiem pośrodku."
+    },
+    "rogal_z_makiem": {
+      "name": "Rogal z makiem",
+      "weight": "90g",
+      "packaging": "Karton 40 szt. / Skrzynka",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Tradycyjny maślany rogal obficie posypany ziarnami niebieskiego maku."
+    },
+    "ciabatta_80g": {
+      "name": "Ciabatta 80g.",
+      "weight": "80g",
+      "packaging": "Karton 50 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Włoska bułka ciabatta z chrupiącą skórką i dużymi porami w puszystym miąższu."
+    },
+    "rogal_klasyczny": {
+      "name": "Rogal",
+      "weight": "80g",
+      "packaging": "Karton 40 szt. / Skrzynka",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Klasyczny, delikatny rogal drożdżowy o maślanym zapachu i miękkim wnętrzu."
+    },
+    "rogal_swiateczny_z_bialym_makiem": {
+      "name": "Rogal świąteczny z białym makiem",
+      "weight": "170g",
+      "packaging": "Karton 12 szt.",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Wyjątkowy rogal z bogatym nadzieniem z białego maku, bakalii i orzechów."
+    },
+    "chleb_2ab": {
+      "name": "Chleb z pradawnej odmiany pszenicy 2ab",
+      "weight": "400g",
+      "packaging": "Karton 10 szt.",
+      "shelfLife": "6 dni",
+      "cert": "IFS Food, BRC, Certyfikat 2AB",
+      "description": "Lekkostrawny chleb z pradawnej pszenicy 2AB, pieczony na naturalnym zakwasie."
+    },
+    "bulka_2ab": {
+      "name": "Bułka z pradawnej odmiany pszenicy 2ab",
+      "weight": "70g",
+      "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC, Certyfikat 2AB",
+      "description": "Lekkostrawna bułka z pradawnej pszenicy 2AB, przyjazna dla wrażliwych jelit."
+    },
+    "bagietka_2ab": {
+      "name": "Bagietka z pradawnej odmiany pszenicy 2ab",
+      "weight": "250g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "cert": "IFS Food, BRC, Certyfikat 2AB",
+      "description": "Chrupiąca bagietka z pradawnej pszenicy 2AB o unikalnym aromacie."
     }
   }
 }

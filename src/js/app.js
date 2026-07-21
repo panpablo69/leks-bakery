@@ -683,7 +683,15 @@ function renderCategoryProducts() {
         let prodCert = prod.cert || "IFS, BRC (Grade A)";
         let prodDesc = prod.description || "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.";
         
-        if (prod.id && translations.products_polcukiernicze && translations.products_polcukiernicze[prod.id]) {
+        if (prod.id && translations.products_bulki && translations.products_bulki[prod.id]) {
+            const tProd = translations.products_bulki[prod.id];
+            if (tProd.name) prodName = tProd.name;
+            if (tProd.weight) prodWeight = tProd.weight;
+            if (tProd.packaging) prodPackaging = tProd.packaging;
+            if (tProd.shelfLife) prodShelfLife = tProd.shelfLife;
+            if (tProd.cert) prodCert = tProd.cert;
+            if (tProd.description) prodDesc = tProd.description;
+        } else if (prod.id && translations.products_polcukiernicze && translations.products_polcukiernicze[prod.id]) {
             const tProd = translations.products_polcukiernicze[prod.id];
             if (tProd.name) prodName = tProd.name;
             if (tProd.weight) prodWeight = tProd.weight;
@@ -715,13 +723,24 @@ function renderCategoryProducts() {
         card.setAttribute("data-shelf-life", prodShelfLife);
         card.setAttribute("data-cert", prodCert);
         card.setAttribute("data-desc-full", prodDesc);
+        card.setAttribute("data-overview-image", prod.isOverviewImage ? "true" : "false");
         
         const imgPlaceholder = document.createElement("div");
         imgPlaceholder.className = "product-image-placeholder";
         imgPlaceholder.style.backgroundImage = `url('${prod.image}')`;
-        imgPlaceholder.style.backgroundSize = "cover";
+        imgPlaceholder.style.backgroundSize = "contain";
+        imgPlaceholder.style.backgroundRepeat = "no-repeat";
         imgPlaceholder.style.backgroundPosition = "center";
+        imgPlaceholder.style.backgroundColor = "#ffffff";
         imgPlaceholder.style.height = "200px";
+        imgPlaceholder.style.position = "relative";
+        
+        if (prod.isOverviewImage) {
+            const badge = document.createElement("span");
+            badge.className = "overview-badge";
+            badge.textContent = translations.illustrative_photo || "Zdjęcie poglądowe";
+            imgPlaceholder.appendChild(badge);
+        }
         
         const infoDiv = document.createElement("div");
         infoDiv.className = "product-info";
@@ -951,6 +970,13 @@ function initB2BModal() {
             if (modalShelfLife) modalShelfLife.textContent = shelfLife;
             if (modalCert) modalCert.textContent = cert;
             if (modalDesc) modalDesc.textContent = descFull;
+            
+            const modalOverviewBadge = document.getElementById("modal-overview-badge");
+            if (modalOverviewBadge) {
+                const isOverview = card.getAttribute("data-overview-image") === "true";
+                modalOverviewBadge.style.display = isOverview ? "inline-block" : "none";
+                modalOverviewBadge.textContent = translations.illustrative_photo || "Zdjęcie poglądowe";
+            }
             
             // Dynamiczne przewijanie przycisku CTA w modalu do kontaktu
             const modalContactBtn = document.getElementById("modal-contact-btn");

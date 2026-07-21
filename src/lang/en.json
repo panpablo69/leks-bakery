@@ -76,7 +76,7 @@
     "packaging": "Packaging:",
     "shelf_life": "Shelf Life:",
     "cert": "Certificates:",
-    "b2b_cta": "Request a wholesale quote (B2B)",
+    "b2b_cta": "Send inquiry",
     "close": "Close",
     "back": "&larr; Back to categories"
   },
@@ -201,26 +201,26 @@
   "categories": {
     "chleby": {
       "name": "Breads",
-      "description": "Traditional Polish breads baked on natural sourdough."
+      "description": "Traditional Polish sourdough breads."
     },
     "bulki": {
-      "name": "Buns & Rolls",
-      "description": "Fresh, crispy daily buns, graham rolls, and kaisers."
+      "name": "Rolls & Croissants",
+      "description": "Fresh, crispy daily rolls, graham rolls, kaiser rolls, and traditional Polish croissants."
     },
     "2ab": {
       "name": "Leks 2AB Bread",
-      "description": "Bread made from ancient wheat. Easily digestible and rich in nutritional values."
+      "description": "Baked from ancient wheat species. Easy to digest and rich in nutrients."
     },
     "cukiernia": {
-      "name": "Confectionery",
-      "description": "Highest quality confectionery and pastries for every occasion."
+      "name": "Patisserie",
+      "description": "Highest quality confectionery and cakes for any occasion."
     },
     "polcukiernicze": {
-      "name": "Viennoiserie",
-      "description": "Traditional Polish sweet buns and rolls with various fillings."
+      "name": "Sweet Bakes",
+      "description": "Traditional Polish sweet buns and filled pastries."
     },
     "przekaski": {
-      "name": "Savoury Snacks",
+      "name": "Savory Snacks",
       "description": "Crispy and aromatic savory snacks straight from the oven."
     }
   },
@@ -531,6 +531,145 @@
       "shelfLife": "24h",
       "cert": "IFS Food",
       "description": "Classic fluffy donut with an aromatic filling of ripe raspberries, dusted with powdered sugar."
+    }
+  },
+  "illustrative_photo": "Illustrative photo",
+  "products_bulki": {
+    "bulka_kajzerka": {
+      "name": "Kaiser Roll",
+      "weight": "60g",
+      "packaging": "Box 80 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC Grade A",
+      "description": "Traditional, crispy wheat kaiser roll with five characteristic cuts."
+    },
+    "bulka_z_ziarnem": {
+      "name": "Seeded Roll",
+      "weight": "75g",
+      "packaging": "Box 60 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Fluffy wheat roll generously coated with sesame, flax, and sunflower seeds."
+    },
+    "bulka_wysokobialkowa": {
+      "name": "High-Protein Roll",
+      "weight": "80g",
+      "packaging": "Box 50 pcs",
+      "shelfLife": "48h / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Specialty roll with high plant protein content and low carbohydrates."
+    },
+    "bulka_z_warzywami": {
+      "name": "Vegetable Roll",
+      "weight": "80g",
+      "packaging": "Box 50 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Savory wheat roll blended with dried vegetable pieces."
+    },
+    "bulka_grahamka_slonecznik": {
+      "name": "Graham Roll with Sunflower",
+      "weight": "75g",
+      "packaging": "Box 60 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Wholesome dark graham roll topped with crunchy sunflower seeds."
+    },
+    "bulka_mleczna": {
+      "name": "Milk Bun",
+      "weight": "80g",
+      "packaging": "Box 50 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Soft and fluffy buttery sweet roll baked with natural milk."
+    },
+    "bulka_duza": {
+      "name": "Large Breakfast Roll",
+      "weight": "90g",
+      "packaging": "Box 50 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Large, satisfying wheat roll with a crispy crust."
+    },
+    "bulka_grahamka": {
+      "name": "Graham Roll",
+      "weight": "70g",
+      "packaging": "Box 60 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC Grade A",
+      "description": "Classic dark wholemeal graham roll rich in fiber."
+    },
+    "bulka_z_marchewka": {
+      "name": "Carrot Roll",
+      "weight": "80g",
+      "packaging": "Box 50 pcs",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC",
+      "description": "Aromatic wheat roll with grated carrot and a subtly sweet taste."
+    },
+    "bulka_poznanska": {
+      "name": "Poznań Roll",
+      "weight": "70g",
+      "packaging": "Box 60 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Traditional Polish roll with a distinctive split along the top."
+    },
+    "rogal_z_makiem": {
+      "name": "Poppy Seed Crescent",
+      "weight": "90g",
+      "packaging": "Box 40 pcs",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Traditional butter crescent topped generously with blue poppy seeds."
+    },
+    "ciabatta_80g": {
+      "name": "Ciabatta 80g",
+      "weight": "80g",
+      "packaging": "Box 50 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Italian ciabatta roll with a crispy crust and porous crumb."
+    },
+    "rogal_klasyczny": {
+      "name": "Classic Crescent Roll",
+      "weight": "80g",
+      "packaging": "Box 40 pcs",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Soft and buttery traditional yeast crescent roll."
+    },
+    "rogal_swiateczny_z_bialym_makiem": {
+      "name": "White Poppy Seed Crescent",
+      "weight": "170g",
+      "packaging": "Box 12 pcs",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Festive crescent pastry rich in white poppy seed, dried fruit, and almond paste."
+    },
+    "chleb_2ab": {
+      "name": "Ancient Wheat 2AB Bread",
+      "weight": "400g",
+      "packaging": "Box 10 pcs",
+      "shelfLife": "6 days",
+      "cert": "IFS Food, BRC, 2AB Certified",
+      "description": "Easily digestible bread made from ancient 2AB wheat and natural sourdough."
+    },
+    "bulka_2ab": {
+      "name": "Ancient Wheat 2AB Roll",
+      "weight": "70g",
+      "packaging": "Box 60 pcs / Pallet: 40 boxes",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC, 2AB Certified",
+      "description": "Digestive-friendly roll baked with ancient 2AB wheat flour."
+    },
+    "bagietka_2ab": {
+      "name": "Ancient Wheat 2AB Baguette",
+      "weight": "250g",
+      "packaging": "Box 20 pcs",
+      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
+      "cert": "IFS Food, BRC, 2AB Certified",
+      "description": "Crispy baguette made from ancient 2AB wheat with a distinctive aroma."
     }
   }
 }

@@ -76,7 +76,7 @@
     "packaging": "Embalaje:",
     "shelf_life": "Caducidad:",
     "cert": "Certificados:",
-    "b2b_cta": "Solicite presupuesto para B2B",
+    "b2b_cta": "Enviar consulta",
     "close": "Cerrar",
     "back": "&larr; Volver a las categorías"
   },
@@ -201,27 +201,27 @@
   "categories": {
     "chleby": {
       "name": "Panes",
-      "description": "Panes tradicionales polacos horneados con masa madre natural."
+      "description": "Panes tradicionales polacos elaborados con masa madre."
     },
     "bulki": {
-      "name": "Bollos y Panecillos",
-      "description": "Bollos frescos y crujientes de consumo diario, panecillos integrales y kayser."
+      "name": "Panecillos y Croissants",
+      "description": "Panecillos frescos diarios, panecillos integrales, kaiser y croissants tradicionales."
     },
     "2ab": {
       "name": "Pan Leks 2AB",
-      "description": "Pan elaborado con trigo ancestral. Fácilmente digerible y rico en valores nutricionales."
+      "description": "Elaborado con variedad ancestral de trigo. De fácil digestión y rico en nutrientes."
     },
     "cukiernia": {
       "name": "Pastelería",
-      "description": "Pastelería y pasteles de la más alta calidad para cada ocasión."
+      "description": "Productos de repostería y tartas de la máxima calidad para cualquier ocasión."
     },
     "polcukiernicze": {
-      "name": "Bollería",
-      "description": "Bollos de levadura polacos tradicionales y panecillos dulces con rellenos."
+      "name": "Bollería Dulce",
+      "description": "Bollería tradicional polaca y panecillos dulces rellenos."
     },
     "przekaski": {
-      "name": "Aperitivos Salados",
-      "description": "Aperitivos salados crujientes y aromáticos directos del horno."
+      "name": "Snacks Salados",
+      "description": "Crujientes y aromáticos snacks salados recién horneados."
     }
   },
   "privacy": {
@@ -531,6 +531,145 @@
       "shelfLife": "24h",
       "cert": "IFS Food",
       "description": "Berlina clásica esponjosa con un aromático relleno de frambuesas maduras, espolvoreada con azúcar glas."
+    }
+  },
+  "illustrative_photo": "Foto orientativa",
+  "products_bulki": {
+    "bulka_kajzerka": {
+      "name": "Panecillo Kaiser",
+      "weight": "60g",
+      "packaging": "Caja 80 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC Grade A",
+      "description": "Tradicional panecillo de trigo kaiser con sus característicos cortes en estrella."
+    },
+    "bulka_z_ziarnem": {
+      "name": "Panecillo con Semillas",
+      "weight": "75g",
+      "packaging": "Caja 60 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Esponjoso panecillo de trigo cubierto de semillas de sésamo, lino y girasol."
+    },
+    "bulka_wysokobialkowa": {
+      "name": "Panecillo Alto en Proteínas",
+      "weight": "80g",
+      "packaging": "Caja 50 ud",
+      "shelfLife": "48h / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Panecillo especial rico en proteínas vegetales y bajo en carbohidratos."
+    },
+    "bulka_z_warzywami": {
+      "name": "Panecillo de Hortalizas",
+      "weight": "80g",
+      "packaging": "Caja 50 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Sabroso panecillo de trigo enriquecido con trozos de verduras deshidratadas."
+    },
+    "bulka_grahamka_slonecznik": {
+      "name": "Panecillo Graham con Girasol",
+      "weight": "75g",
+      "packaging": "Caja 60 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Panecillo integral oscuro elaborado con semillas de girasol."
+    },
+    "bulka_mleczna": {
+      "name": "Panecillo de Leche",
+      "weight": "80g",
+      "packaging": "Caja 50 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Pan dulce muy tierno y esponjoso horneado con leche natural."
+    },
+    "bulka_duza": {
+      "name": "Panecillo Grande de Desayuno",
+      "weight": "90g",
+      "packaging": "Caja 50 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Panecillo grande de trigo con corteza crujiente."
+    },
+    "bulka_grahamka": {
+      "name": "Panecillo Graham Integral",
+      "weight": "70g",
+      "packaging": "Caja 60 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC Grade A",
+      "description": "Panecillo integral clásico muy rico en fibra natural."
+    },
+    "bulka_z_marchewka": {
+      "name": "Panecillo de Zanahoria",
+      "weight": "80g",
+      "packaging": "Caja 50 ud",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC",
+      "description": "Panecillo de trigo aromatizado con zanahoria rallada de sabor suave y dulce."
+    },
+    "bulka_poznanska": {
+      "name": "Panecillo Poznań",
+      "weight": "70g",
+      "packaging": "Caja 60 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Panecillo tradicional polaco con hendidura central longitudinal."
+    },
+    "rogal_z_makiem": {
+      "name": "Croissant con Semillas de Amapola",
+      "weight": "90g",
+      "packaging": "Caja 40 ud",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Croissant tradicional de mantequilla espolvoreado con semillas de amapola."
+    },
+    "ciabatta_80g": {
+      "name": "Chiapata 80g",
+      "weight": "80g",
+      "packaging": "Caja 50 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Chiapata de estilo italiano con corteza crujiente y miga muy alveolada."
+    },
+    "rogal_klasyczny": {
+      "name": "Croissant Clásico",
+      "weight": "80g",
+      "packaging": "Caja 40 ud",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Tierno croissant de levadura con suave aroma a mantequilla."
+    },
+    "rogal_swiateczny_z_bialym_makiem": {
+      "name": "Croissant Festivo de Amapola Blanca",
+      "weight": "170g",
+      "packaging": "Caja 12 ud",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Especialidad festiva rellena de amapola blanca, frutos secos y mazapán."
+    },
+    "chleb_2ab": {
+      "name": "Pan de Trigo Ancestral 2AB",
+      "weight": "400g",
+      "packaging": "Caja 10 ud",
+      "shelfLife": "6 días",
+      "cert": "IFS Food, BRC, Certificado 2AB",
+      "description": "Pan de muy fácil digestión elaborado con trigo ancestral 2AB y masa madre."
+    },
+    "bulka_2ab": {
+      "name": "Panecillo de Trigo Ancestral 2AB",
+      "weight": "70g",
+      "packaging": "Caja 60 ud / Palet: 40 cajas",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC, Certificado 2AB",
+      "description": "Panecillo ligero digestivo de harina de trigo ancestral 2AB."
+    },
+    "bagietka_2ab": {
+      "name": "Baguette de Trigo Ancestral 2AB",
+      "weight": "250g",
+      "packaging": "Caja 20 ud",
+      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "cert": "IFS Food, BRC, Certificado 2AB",
+      "description": "Crujiente baguette de trigo ancestral 2AB de aroma inconfundible."
     }
   }
 }

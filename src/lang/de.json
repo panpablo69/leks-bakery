@@ -76,7 +76,7 @@
     "packaging": "Verpackung:",
     "shelf_life": "Haltbarkeit:",
     "cert": "Zertifikate:",
-    "b2b_cta": "Großhandelsangebot anfordern (B2B)",
+    "b2b_cta": "Anfrage senden",
     "close": "Schließen",
     "back": "&larr; Zurück zu den Kategorien"
   },
@@ -201,27 +201,27 @@
   "categories": {
     "chleby": {
       "name": "Brote",
-      "description": "Traditionelle polnische Brote, gebacken auf Natursauerteigbasis."
+      "description": "Traditionelle polnische Sauerteigbrote."
     },
     "bulki": {
-      "name": "Brötchen",
-      "description": "Frische, knusprige tägliche Brötchen, Grahambrötchen und Kaisersemmeln."
+      "name": "Brötchen & Hörnchen",
+      "description": "Frische, knusprige Tagesbrötchen, Grahambrot, Kaiserbrötchen und traditionelle Hörnchen."
     },
     "2ab": {
-      "name": "Leks 2AB Brot",
-      "description": "Brot aus Weizen-Urgetreide. Leicht verdaulich und reich an Nährwerten."
+      "name": "Leks 2AB Gebäck",
+      "description": "Gebäck aus Urweizen. Leicht verdaulich und nährstoffreich."
     },
     "cukiernia": {
       "name": "Konditorei",
       "description": "Feinste Konditoreiwaren und Kuchen für jeden Anlass."
     },
     "polcukiernicze": {
-      "name": "Feingebäck",
-      "description": "Traditionelle polnische Hefegebäcke und süße Brötchen mit Füllung."
+      "name": "Süßgebäck",
+      "description": "Traditionelle polnische Hefeschnecken und gefülltes Süßgebäck."
     },
     "przekaski": {
       "name": "Herzhafte Snacks",
-      "description": "Knusprige und aromatische herzhafte Snacks direkt aus dem Ofen."
+      "description": "Knusprige und aromatische herzhafte Snacks frisch aus dem Ofen."
     }
   },
   "privacy": {
@@ -531,6 +531,145 @@
       "shelfLife": "24 Std.",
       "cert": "IFS Food",
       "description": "Klassischer fluffiger Krapfen mit einer aromatischen Füllung aus reifen Himbeeren, mit Puderzucker bestäubt."
+    }
+  },
+  "illustrative_photo": "Symbolfoto",
+  "products_bulki": {
+    "bulka_kajzerka": {
+      "name": "Kaisersemmel",
+      "weight": "60g",
+      "packaging": "Karton 80 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC Grade A",
+      "description": "Klassische, knusprige Weizenkaisersemmel mit typischer Fünf-Stern-Einkerbung."
+    },
+    "bulka_z_ziarnem": {
+      "name": "Körnerbrötchen",
+      "weight": "75g",
+      "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Fluffiges Weizenbrötchen reichlich bestreut mit Sesam, Lein- und Sonnenblumenkernen."
+    },
+    "bulka_wysokobialkowa": {
+      "name": "Eiweißbrötchen",
+      "weight": "80g",
+      "packaging": "Karton 50 Stk.",
+      "shelfLife": "48h / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Spezialbrötchen mit hohem pflanzlichem Eiweißgehalt und reduziertem Kohlenhydratanteil."
+    },
+    "bulka_z_warzywami": {
+      "name": "Gemüsebrötchen",
+      "weight": "80g",
+      "packaging": "Karton 50 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Aromatisches Weizenbrötchen verfeinert mit getrockneten Gemüsestücken."
+    },
+    "bulka_grahamka_slonecznik": {
+      "name": "Grahambrötchen mit Sonnenblumenkernen",
+      "weight": "75g",
+      "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Dunkles Grahambrötchen mit knusprigen Sonnenblumenkernen."
+    },
+    "bulka_mleczna": {
+      "name": "Milchbrötchen",
+      "weight": "80g",
+      "packaging": "Karton 50 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Zartes und weiches Milchbrötchen aus feinem Hefeteig."
+    },
+    "bulka_duza": {
+      "name": "Großes Frühstücksbrötchen",
+      "weight": "90g",
+      "packaging": "Karton 50 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Großes Weizenbrötchen mit knuspriger Kruste."
+    },
+    "bulka_grahamka": {
+      "name": "Grahambrötchen",
+      "weight": "70g",
+      "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC Grade A",
+      "description": "Klassisches Vollkorn-Grahambrötchen reich an Ballaststoffen."
+    },
+    "bulka_z_marchewka": {
+      "name": "Karottenbrötchen",
+      "weight": "80g",
+      "packaging": "Karton 50 Stk.",
+      "shelfLife": "48h (Frisch)",
+      "cert": "IFS Food, BRC",
+      "description": "Aromatisches Weizenbrötchen mit geraspelten Karotten und leicht süßlichem Geschmack."
+    },
+    "bulka_poznanska": {
+      "name": "Posener Brötchen",
+      "weight": "70g",
+      "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Traditionelles polnisches Brötchen mit charakteristischem Längsschnitt."
+    },
+    "rogal_z_makiem": {
+      "name": "Mohnhörnchen",
+      "weight": "90g",
+      "packaging": "Karton 40 Stk.",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Traditionelles Butterhörnchen reichlich bestreut mit Blaumohn."
+    },
+    "ciabatta_80g": {
+      "name": "Ciabatta 80g",
+      "weight": "80g",
+      "packaging": "Karton 50 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC",
+      "description": "Italienische Ciabatta mit knuspriger Kruste und großporiger Krume."
+    },
+    "rogal_klasyczny": {
+      "name": "Klassisches Hörnchen",
+      "weight": "80g",
+      "packaging": "Karton 40 Stk.",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Zartes und butterweiches Hefehörnchen."
+    },
+    "rogal_swiateczny_z_bialym_makiem": {
+      "name": "Festtags-Hörnchen mit Weißmohn",
+      "weight": "170g",
+      "packaging": "Karton 12 Stk.",
+      "shelfLife": "48h",
+      "cert": "IFS Food, BRC",
+      "description": "Festliches Hörnchen reich gefüllt mit Weißmohn, Nüssen und Marzipan."
+    },
+    "chleb_2ab": {
+      "name": "Urweizen 2AB Brot",
+      "weight": "400g",
+      "packaging": "Karton 10 Stk.",
+      "shelfLife": "6 Tage",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert",
+      "description": "Gut bekömmliches Sauerteigbrot aus der Urweizensorte 2AB."
+    },
+    "bulka_2ab": {
+      "name": "Urweizen 2AB Brötchen",
+      "weight": "70g",
+      "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert",
+      "description": "Magenfreundliches Brötchen gebacken aus 2AB Urweizenmehl."
+    },
+    "bagietka_2ab": {
+      "name": "Urweizen 2AB Baguette",
+      "weight": "250g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert",
+      "description": "Knuspriges Baguette aus 2AB Urweizen mit einzigartigem Aroma."
     }
   }
 }

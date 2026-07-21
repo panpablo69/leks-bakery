@@ -136,6 +136,7 @@
                 <div class="modal-body-layout">
                     <div class="modal-image-col">
                         <img id="modal-product-img" src="" alt="Produkt" />
+                        <span id="modal-overview-badge" class="modal-overview-badge" style="display: none;" data-i18n="illustrative_photo">Zdjęcie poglądowe</span>
                     </div>
                     <div class="modal-content-col">
                         <span id="modal-product-cat" class="modal-badge" data-i18n="products.b2b_badge">Specyfikacja B2B</span>
@@ -144,13 +145,12 @@
                         
                         <ul class="modal-spec-list">
                             <li><span class="spec-label" data-i18n="products.weight">Waga:</span> <span id="modal-weight" class="spec-val">-</span></li>
-                            <li><span class="spec-label" data-i18n="products.packaging">Pakowanie:</span> <span id="modal-packaging" class="spec-val">-</span></li>
-                            <li><span class="spec-label" data-i18n="products.shelf_life">Przydatność:</span> <span id="modal-shelf-life" class="spec-val">-</span></li>
-                            <li><span class="spec-label" data-i18n="products.cert">Certyfikaty:</span> <span id="modal-cert" class="spec-val">-</span></li>
                         </ul>
                         
+                        <p id="modal-product-desc" class="modal-product-desc"></p>
+                        
                         <div class="modal-actions">
-                            <a href="#contact" class="btn btn-primary" id="modal-contact-btn" data-i18n="products.b2b_cta">Zapytaj o wycenę hurtową (B2B)</a>
+                            <a href="#contact" class="btn btn-primary" id="modal-contact-btn" data-i18n="products.b2b_cta">Wyślij zapytanie</a>
                             <button id="modal-close-action" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-border);" data-i18n="products.close">Zamknij</button>
                         </div>
                     </div>
