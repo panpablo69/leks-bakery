@@ -78,7 +78,9 @@
     "cert": "Zertifikate:",
     "b2b_cta": "Anfrage senden",
     "close": "Schließen",
-    "back": "&larr; Zurück zu den Kategorien"
+    "back": "&larr; Zurück zu den Kategorien",
+    "badge_fresh": "Frisch",
+    "badge_frozen": "Tiefgekühlt"
   },
   "features_2ab": {
     "subtitle": "Innovation & Gesundheit",

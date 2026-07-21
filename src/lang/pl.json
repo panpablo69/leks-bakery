@@ -78,7 +78,9 @@
     "cert": "Certyfikaty:",
     "b2b_cta": "Wyślij zapytanie",
     "close": "Zamknij",
-    "back": "&larr; Wróć do kategorii"
+    "back": "&larr; Wróć do kategorii",
+    "badge_fresh": "Świeże",
+    "badge_frozen": "Mrożone"
   },
   "features_2ab": {
     "subtitle": "Innowacja i Zdrowie",
@@ -670,6 +672,108 @@
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC, Certyfikat 2AB",
       "description": "Chrupiąca bagietka z pradawnej pszenicy 2AB o unikalnym aromacie."
+    }
+  },
+  "products_chleby": {
+    "chleb_helios": {
+      "name": "Chleb helios",
+      "weight": "500g",
+      "description": "Tradycyjny chleb pszenno-żytni o delikatnym miąższu i wypieczonej skórce."
+    },
+    "chleb_zytni_ziarna": {
+      "name": "Chleb żytni z ziarnami",
+      "weight": "500g",
+      "description": "Aromatyczny chleb żytni obficie posypany wartościową mieszanką ziaren."
+    },
+    "chleb_pajda": {
+      "name": "Chleb Pajda",
+      "weight": "500g",
+      "description": "Wiejski chleb o chrupiącej skórce, idealny do smarowania masłem i tradycyjnych wędlin."
+    },
+    "chleb_baltonowski": {
+      "name": "Chleb Baltonowski",
+      "weight": "500g / 600g",
+      "description": "Kultowy polski chleb Baltonowski na zakwasie o niepowtarzalnym smaku."
+    },
+    "chleb_geparda": {
+      "name": "Chleb Geparda",
+      "weight": "400g",
+      "description": "Oryginalny chleb o puszystym miąższu i chrupiącej, wzorzystej skórce."
+    },
+    "chleb_zloty_klos": {
+      "name": "Chleb złoty kłos",
+      "weight": "400g",
+      "description": "Złocisty chleb śniadaniowy o miękkiej strukturze z najwyższej jakości mąki."
+    },
+    "chleb_zytni_slonecznik": {
+      "name": "Chleb żytni ze słonecznikiem",
+      "weight": "500g",
+      "description": "Sycący chleb żytni na naturalnym zakwasie wzbogacony ziarnami słonecznika."
+    },
+    "chleb_z_maka": {
+      "name": "Chleb z mąką",
+      "weight": "500g",
+      "description": "Tradycyjnie oprószony mąką chleb wiejski o głębokim maślanym aromacie."
+    },
+    "chleb_razowy": {
+      "name": "Chleb razowy",
+      "weight": "500g",
+      "description": "Pełnoziarnisty chleb razowy bogaty w błonnik i minerały."
+    },
+    "chleb_wiosenny": {
+      "name": "Chleb wiosenny z przyprawami i czosnkiem",
+      "weight": "450g",
+      "description": "Wytrawny chleb ziołowo-czosnkowy o wyrazistym aromacie świeżych ziół."
+    },
+    "chleb_wieloziarnisty": {
+      "name": "Chleb wieloziarnisty",
+      "weight": "400g",
+      "description": "Zdrowy chleb pełen kompozycji ziaren lnu, słonecznika i sezamu."
+    },
+    "chlebek_swieconka": {
+      "name": "Chlebek do święconki",
+      "weight": "150g",
+      "description": "Niewielki, dekoracyjny chlebek przeznaczony do koszyczka wielkanocnego."
+    },
+    "chleb_ig": {
+      "name": "Chleb IG",
+      "weight": "400g",
+      "description": "Specjalistyczny chleb o niskim indeksie glikemicznym dla dbających o poziom cukru."
+    },
+    "chleb_boryny": {
+      "name": "Chleb Przysmak Boryny",
+      "weight": "600g",
+      "description": "Tradycyjny duży bochen chleba wg dawnej receptury wiejskiej."
+    },
+    "chleb_zytni_bez_drozdzy": {
+      "name": "Chleb żytni bez drożdży",
+      "weight": "500g",
+      "description": "Czysto żytni chleb wypiekany wyłącznie na naturalnym zakwasie bez dodatku drożdży."
+    },
+    "chleb_zakwas": {
+      "name": "Chleb na naturalnym zakwasie",
+      "weight": "500g",
+      "description": "Klasyczny chleb zakwasowy o sprężystym miąższu i długiej świeżości."
+    },
+    "chleb_zytni_kapusta": {
+      "name": "Chleb żytni z kiszoną kapustą",
+      "weight": "400g",
+      "description": "Unikalny chleb żytni z dodatkiem kiszonej kapusty dla wyjątkowej soczystości."
+    },
+    "chleb_zytni_chrzan": {
+      "name": "Chleb żytni z chrzanem",
+      "weight": "400g",
+      "description": "Pikantny chleb żytni ze staronym chrzanem, idealna baza do wędlin."
+    },
+    "chleb_zytni_papryka": {
+      "name": "Chleb żytni z papryką",
+      "weight": "250g",
+      "description": "Aromatyczny chleb żytni przekładany suszoną czerwoną papryką."
+    },
+    "chleb_baltonowski_z_makiem": {
+      "name": "Chleb Baltonowski z makiem",
+      "weight": "550g",
+      "description": "Tradycyjny chleb Baltonowski posypany chrupiącymi ziarnami maku."
     }
   }
 }

@@ -78,7 +78,9 @@
     "cert": "Certificados:",
     "b2b_cta": "Enviar consulta",
     "close": "Cerrar",
-    "back": "&larr; Volver a las categorías"
+    "back": "&larr; Volver a las categorías",
+    "badge_fresh": "Fresco",
+    "badge_frozen": "Congelado"
   },
   "features_2ab": {
     "subtitle": "Innovación y Salud",

@@ -2621,17 +2621,18 @@ body::before {
 }
 
 .modal-image-col {
-    background-color: var(--color-bg-alt);
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .modal-image-col img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     min-height: 340px;
     max-height: 440px;
 }
@@ -2667,6 +2668,50 @@ body::before {
     white-space: nowrap;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     pointer-events: none;
+}
+
+/* Delivery State Badges (Świeże / Mrożone) */
+.delivery-badges-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    z-index: 5;
+}
+
+.modal-delivery-badges-container {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    z-index: 10;
+}
+
+.delivery-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 4px;
+    letter-spacing: 0.4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.delivery-badge-fresh {
+    background-color: #2E7D32;
+    color: #ffffff;
+}
+
+.delivery-badge-frozen {
+    background-color: #0277BD;
+    color: #ffffff;
 }
 
 .modal-content-col {

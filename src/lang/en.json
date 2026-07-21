@@ -78,7 +78,9 @@
     "cert": "Certificates:",
     "b2b_cta": "Send inquiry",
     "close": "Close",
-    "back": "&larr; Back to categories"
+    "back": "&larr; Back to categories",
+    "badge_fresh": "Fresh",
+    "badge_frozen": "Frozen"
   },
   "features_2ab": {
     "subtitle": "Innovation & Health",

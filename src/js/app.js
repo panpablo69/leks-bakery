@@ -683,7 +683,15 @@ function renderCategoryProducts() {
         let prodCert = prod.cert || "IFS, BRC (Grade A)";
         let prodDesc = prod.description || "Skontaktuj się z naszym działem handlowym w celu uzyskania pełnej specyfikacji technologicznej i logistycznej produktu.";
         
-        if (prod.id && translations.products_bulki && translations.products_bulki[prod.id]) {
+        if (prod.id && translations.products_chleby && translations.products_chleby[prod.id]) {
+            const tProd = translations.products_chleby[prod.id];
+            if (tProd.name) prodName = tProd.name;
+            if (tProd.weight) prodWeight = tProd.weight;
+            if (tProd.packaging) prodPackaging = tProd.packaging;
+            if (tProd.shelfLife) prodShelfLife = tProd.shelfLife;
+            if (tProd.cert) prodCert = tProd.cert;
+            if (tProd.description) prodDesc = tProd.description;
+        } else if (prod.id && translations.products_bulki && translations.products_bulki[prod.id]) {
             const tProd = translations.products_bulki[prod.id];
             if (tProd.name) prodName = tProd.name;
             if (tProd.weight) prodWeight = tProd.weight;
@@ -724,6 +732,8 @@ function renderCategoryProducts() {
         card.setAttribute("data-cert", prodCert);
         card.setAttribute("data-desc-full", prodDesc);
         card.setAttribute("data-overview-image", prod.isOverviewImage ? "true" : "false");
+        card.setAttribute("data-is-fresh", prod.isFresh ? "true" : "false");
+        card.setAttribute("data-is-frozen", prod.isFrozen ? "true" : "false");
         
         const imgPlaceholder = document.createElement("div");
         imgPlaceholder.className = "product-image-placeholder";
@@ -734,6 +744,27 @@ function renderCategoryProducts() {
         imgPlaceholder.style.backgroundColor = "#ffffff";
         imgPlaceholder.style.height = "200px";
         imgPlaceholder.style.position = "relative";
+        
+        const badgesContainer = document.createElement("div");
+        badgesContainer.className = "delivery-badges-container";
+        
+        if (prod.isFresh) {
+            const freshBadge = document.createElement("span");
+            freshBadge.className = "delivery-badge delivery-badge-fresh";
+            freshBadge.textContent = (translations.products && translations.products.badge_fresh) || "Świeże";
+            badgesContainer.appendChild(freshBadge);
+        }
+        
+        if (prod.isFrozen) {
+            const frozenBadge = document.createElement("span");
+            frozenBadge.className = "delivery-badge delivery-badge-frozen";
+            frozenBadge.textContent = (translations.products && translations.products.badge_frozen) || "Mrożone";
+            badgesContainer.appendChild(frozenBadge);
+        }
+        
+        if (badgesContainer.children.length > 0) {
+            imgPlaceholder.appendChild(badgesContainer);
+        }
         
         if (prod.isOverviewImage) {
             const badge = document.createElement("span");
@@ -976,6 +1007,36 @@ function initB2BModal() {
                 const isOverview = card.getAttribute("data-overview-image") === "true";
                 modalOverviewBadge.style.display = isOverview ? "inline-block" : "none";
                 modalOverviewBadge.textContent = translations.illustrative_photo || "Zdjęcie poglądowe";
+            }
+            
+            let modalBadgesContainer = document.getElementById("modal-delivery-badges");
+            if (!modalBadgesContainer) {
+                const modalImageCol = document.querySelector(".modal-image-col");
+                if (modalImageCol) {
+                    modalBadgesContainer = document.createElement("div");
+                    modalBadgesContainer.id = "modal-delivery-badges";
+                    modalBadgesContainer.className = "modal-delivery-badges-container";
+                    modalImageCol.appendChild(modalBadgesContainer);
+                }
+            }
+            
+            if (modalBadgesContainer) {
+                modalBadgesContainer.innerHTML = '';
+                const isFresh = card.getAttribute("data-is-fresh") === "true";
+                const isFrozen = card.getAttribute("data-is-frozen") === "true";
+                
+                if (isFresh) {
+                    const freshBadge = document.createElement("span");
+                    freshBadge.className = "delivery-badge delivery-badge-fresh";
+                    freshBadge.textContent = (translations.products && translations.products.badge_fresh) || "Świeże";
+                    modalBadgesContainer.appendChild(freshBadge);
+                }
+                if (isFrozen) {
+                    const frozenBadge = document.createElement("span");
+                    frozenBadge.className = "delivery-badge delivery-badge-frozen";
+                    frozenBadge.textContent = (translations.products && translations.products.badge_frozen) || "Mrożone";
+                    modalBadgesContainer.appendChild(frozenBadge);
+                }
             }
             
             // Dynamiczne przewijanie przycisku CTA w modalu do kontaktu
