@@ -784,21 +784,14 @@ function renderCategoryProducts() {
         titleH3.className = "product-title";
         titleH3.textContent = prodName;
         
-        const weightLabel = translations.products && translations.products.weight ? translations.products.weight : "Waga:";
-        const packagingLabel = translations.products && translations.products.packaging ? translations.products.packaging : "Pakowanie:";
-        
-        const descP = document.createElement("p");
-        descP.className = "product-desc";
-        descP.textContent = `${weightLabel} ${prodWeight} | ${packagingLabel} ${prodPackaging}`;
-        
-        const b2bLabel = translations.products && translations.products.b2b_badge ? translations.products.b2b_badge : "Specyfikacja B2B";
+        const b2bLabel = translations.products && translations.products.b2b_badge ? translations.products.b2b_badge : "Opis";
         const btn = document.createElement("button");
         btn.className = "btn btn-sm btn-primary open-spec-btn";
+        btn.style.marginTop = "12px";
         btn.textContent = b2bLabel;
         
         infoDiv.appendChild(catSpan);
         infoDiv.appendChild(titleH3);
-        infoDiv.appendChild(descP);
         infoDiv.appendChild(btn);
         
         card.appendChild(imgPlaceholder);
