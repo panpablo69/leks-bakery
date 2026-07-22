@@ -24,7 +24,7 @@ const kategorieProduktow = [
             { id: "chleb_zytni_kapusta", name: "Chleb żytni z kiszoną kapustą", weight: "400g", packaging: "Skrzynka 12 szt.", image: "img/chleb_zytni_kapusta.png", shelfLife: "9 miesięcy (Mrożony)", cert: "IFS Food, BRC", isFresh: false, isFrozen: true, description: "Unikalny chleb żytni z dodatkiem kiszonej kapusty dla wyjątkowej soczystości." },
             { id: "chleb_zytni_chrzan", name: "Chleb żytni z chrzanem", weight: "400g", packaging: "Skrzynka 12 szt.", image: "img/chleb_zytni_chrzan.png", shelfLife: "9 miesięcy (Mrożony)", cert: "IFS Food, BRC", isFresh: false, isFrozen: true, description: "Pikantny chleb żytni ze staronym chrzanem, idealna baza do wędlin." },
             { id: "chleb_zytni_papryka", name: "Chleb żytni z papryką", weight: "250g", packaging: "Skrzynka 15 szt.", image: "img/chleb_zytni_papryka.jpg", shelfLife: "9 miesięcy (Mrożony)", cert: "IFS Food, BRC", isFresh: false, isFrozen: true, description: "Aromatyczny chleb żytni przekładany suszoną czerwoną papryką." },
-            { id: "chleb_baltonowski_z_makiem", name: "Chleb Baltonowski z makiem", weight: "550g", packaging: "Skrzynka 12 szt.", image: "img/chleb_baltonowski_z_makiem.jpg", shelfLife: "72h (Świeży)", cert: "IFS Food, BRC", isFresh: true, isFrozen: false, isOverviewImage: true, description: "Tradycyjny chleb Baltonowski posypany chrupiącymi ziarnami maku." }
+            { id: "chleb_baltonowski_z_makiem", name: "Chleb Baltonowski z makiem", weight: "550g", packaging: "Skrzynka 12 szt.", image: "img/chleb_baltonowski_z_makiem.png", shelfLife: "72h (Świeży)", cert: "IFS Food, BRC", isFresh: true, isFrozen: false, description: "Tradycyjny chleb Baltonowski posypany chrupiącymi ziarnami maku." }
         ]
     },
     {
