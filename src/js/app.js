@@ -747,11 +747,32 @@ function renderCategoryProducts() {
         
         const badgesContainer = document.createElement("div");
         badgesContainer.className = "delivery-badges-container";
+        badgesContainer.style.position = "absolute";
+        badgesContainer.style.top = "8px";
+        badgesContainer.style.right = "8px";
+        badgesContainer.style.display = "flex";
+        badgesContainer.style.flexDirection = "column";
+        badgesContainer.style.alignItems = "flex-end";
+        badgesContainer.style.gap = "4px";
+        badgesContainer.style.zIndex = "10";
         
         if (prod.isFresh) {
             const freshBadge = document.createElement("span");
             freshBadge.className = "delivery-badge delivery-badge-fresh";
             freshBadge.textContent = (translations.products && translations.products.badge_fresh) || "Świeże";
+            freshBadge.style.backgroundColor = "#2E7D32";
+            freshBadge.style.color = "#ffffff";
+            freshBadge.style.fontSize = "11px";
+            freshBadge.style.fontWeight = "700";
+            freshBadge.style.padding = "3px 8px";
+            freshBadge.style.borderRadius = "12px";
+            freshBadge.style.letterSpacing = "0.5px";
+            freshBadge.style.textTransform = "uppercase";
+            freshBadge.style.boxShadow = "0 2px 4px rgba(0,0,0,0.2)";
+            freshBadge.style.whiteSpace = "nowrap";
+            freshBadge.style.lineHeight = "1";
+            freshBadge.style.pointerEvents = "none";
+            freshBadge.style.display = "inline-block";
             badgesContainer.appendChild(freshBadge);
         }
         
@@ -759,6 +780,19 @@ function renderCategoryProducts() {
             const frozenBadge = document.createElement("span");
             frozenBadge.className = "delivery-badge delivery-badge-frozen";
             frozenBadge.textContent = (translations.products && translations.products.badge_frozen) || "Mrożone";
+            frozenBadge.style.backgroundColor = "#0277BD";
+            frozenBadge.style.color = "#ffffff";
+            frozenBadge.style.fontSize = "11px";
+            frozenBadge.style.fontWeight = "700";
+            frozenBadge.style.padding = "3px 8px";
+            frozenBadge.style.borderRadius = "12px";
+            frozenBadge.style.letterSpacing = "0.5px";
+            frozenBadge.style.textTransform = "uppercase";
+            frozenBadge.style.boxShadow = "0 2px 4px rgba(0,0,0,0.2)";
+            frozenBadge.style.whiteSpace = "nowrap";
+            frozenBadge.style.lineHeight = "1";
+            frozenBadge.style.pointerEvents = "none";
+            frozenBadge.style.display = "inline-block";
             badgesContainer.appendChild(frozenBadge);
         }
         
@@ -770,6 +804,21 @@ function renderCategoryProducts() {
             const badge = document.createElement("span");
             badge.className = "overview-badge";
             badge.textContent = translations.illustrative_photo || "Zdjęcie poglądowe";
+            badge.style.position = "absolute";
+            badge.style.bottom = "8px";
+            badge.style.left = "8px";
+            badge.style.backgroundColor = "rgba(44, 30, 22, 0.85)";
+            badge.style.color = "#ffffff";
+            badge.style.fontSize = "11px";
+            badge.style.fontWeight = "500";
+            badge.style.padding = "3px 8px";
+            badge.style.borderRadius = "4px";
+            badge.style.letterSpacing = "0.5px";
+            badge.style.zIndex = "5";
+            badge.style.whiteSpace = "nowrap";
+            badge.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+            badge.style.pointerEvents = "none";
+            badge.style.display = "inline-block";
             imgPlaceholder.appendChild(badge);
         }
         
@@ -1018,16 +1067,51 @@ function initB2BModal() {
                 const isFresh = card.getAttribute("data-is-fresh") === "true";
                 const isFrozen = card.getAttribute("data-is-frozen") === "true";
                 
+                modalBadgesContainer.style.position = "absolute";
+                modalBadgesContainer.style.top = "10px";
+                modalBadgesContainer.style.right = "10px";
+                modalBadgesContainer.style.display = "flex";
+                modalBadgesContainer.style.flexDirection = "column";
+                modalBadgesContainer.style.alignItems = "flex-end";
+                modalBadgesContainer.style.gap = "4px";
+                modalBadgesContainer.style.zIndex = "10";
+                
                 if (isFresh) {
                     const freshBadge = document.createElement("span");
                     freshBadge.className = "delivery-badge delivery-badge-fresh";
                     freshBadge.textContent = (translations.products && translations.products.badge_fresh) || "Świeże";
+                    freshBadge.style.backgroundColor = "#2E7D32";
+                    freshBadge.style.color = "#ffffff";
+                    freshBadge.style.fontSize = "11px";
+                    freshBadge.style.fontWeight = "700";
+                    freshBadge.style.padding = "3px 8px";
+                    freshBadge.style.borderRadius = "12px";
+                    freshBadge.style.letterSpacing = "0.5px";
+                    freshBadge.style.textTransform = "uppercase";
+                    freshBadge.style.boxShadow = "0 2px 4px rgba(0,0,0,0.2)";
+                    freshBadge.style.whiteSpace = "nowrap";
+                    freshBadge.style.lineHeight = "1";
+                    freshBadge.style.pointerEvents = "none";
+                    freshBadge.style.display = "inline-block";
                     modalBadgesContainer.appendChild(freshBadge);
                 }
                 if (isFrozen) {
                     const frozenBadge = document.createElement("span");
                     frozenBadge.className = "delivery-badge delivery-badge-frozen";
                     frozenBadge.textContent = (translations.products && translations.products.badge_frozen) || "Mrożone";
+                    frozenBadge.style.backgroundColor = "#0277BD";
+                    frozenBadge.style.color = "#ffffff";
+                    frozenBadge.style.fontSize = "11px";
+                    frozenBadge.style.fontWeight = "700";
+                    frozenBadge.style.padding = "3px 8px";
+                    frozenBadge.style.borderRadius = "12px";
+                    frozenBadge.style.letterSpacing = "0.5px";
+                    frozenBadge.style.textTransform = "uppercase";
+                    frozenBadge.style.boxShadow = "0 2px 4px rgba(0,0,0,0.2)";
+                    frozenBadge.style.whiteSpace = "nowrap";
+                    frozenBadge.style.lineHeight = "1";
+                    frozenBadge.style.pointerEvents = "none";
+                    frozenBadge.style.display = "inline-block";
                     modalBadgesContainer.appendChild(frozenBadge);
                 }
             }
