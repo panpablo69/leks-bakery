@@ -403,6 +403,14 @@
       "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food, BRC",
       "description": "Fluffiger Zupf-Hefekuchen gefüllt mit süßem Quark, glasiert mit Zuckerguss und feinen Butterstreuseln."
+    },
+    "baton_coco_crunch": {
+      "name": "Coco-Crunch Riegel",
+      "weight": "ca. 1.5 kg",
+      "packaging": "Karton 1 Stk. / Tablett",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC",
+      "description": "Köstliche Schoko-Kokos-Riegel mit knusprigen Crispies und Kokosraspeln."
     }
   },
   "products_polcukiernicze": {

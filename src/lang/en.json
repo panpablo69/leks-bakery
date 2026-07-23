@@ -403,6 +403,14 @@
       "shelfLife": "48h (Fresh)",
       "cert": "IFS Food, BRC",
       "description": "Soft pull-apart yeast cake filled with sweet cottage cheese curd, drizzled with glaze icing and fine crumble topping."
+    },
+    "baton_coco_crunch": {
+      "name": "Coco-Crunch Bars",
+      "weight": "approx. 1.5 kg",
+      "packaging": "Box 1 pc. / Tray",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC",
+      "description": "Delicious chocolate and coconut bars with crispy pops and coconut flakes."
     }
   },
   "products_polcukiernicze": {

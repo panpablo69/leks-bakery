@@ -403,6 +403,14 @@
       "shelfLife": "48h (Świeży)",
       "cert": "IFS Food, BRC",
       "description": "Puszysty drożdżowy rwaniec z nadzieniem z sera twarogowego, polany lukrem i posypany chrupiącą maślaną kruszonką."
+    },
+    "baton_coco_crunch": {
+      "name": "Batony Coco-Crunch",
+      "weight": "ok. 1.5 kg",
+      "packaging": "Karton 1 szt. / Tacka",
+      "shelfLife": "72h (Świeże)",
+      "cert": "IFS Food, BRC",
+      "description": "Pyszne batony czekoladowo-kokosowe z chrupiącymi kuleczkami i płatkami kokosowymi."
     }
   },
   "products_polcukiernicze": {

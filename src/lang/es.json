@@ -403,6 +403,14 @@
       "shelfLife": "48h (Fresco)",
       "cert": "IFS Food, BRC",
       "description": "Esponjoso pastel de levadura desgranable relleno de requesón dulce, glaseado con azúcar y crujientes migas de mantequilla."
+    },
+    "baton_coco_crunch": {
+      "name": "Barritas Coco-Crunch",
+      "weight": "aprox. 1.5 kg",
+      "packaging": "Caja 1 ud. / Bandeja",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC",
+      "description": "Deliciosas barritas de chocolate y coco con bolitas crujientes y virutas de coco."
     }
   },
   "products_polcukiernicze": {
