@@ -108,7 +108,9 @@ const kategorieProduktow = [
         description: "Chrupiące i aromatyczne słone przekąski prosto z pieca.",
         image: "img/kat_przekaski.png",
         products: [
-            { id: "paluch_z_serem", name: "Paluch z serem", weight: "90g", packaging: "Karton 40 szt. / Paleta: 48 kartonów", image: "img/paluch_z_serem.png", shelfLife: "48h (Świeży)", cert: "IFS Food, BRC", isFresh: true, isFrozen: false, description: "Chrupiący drożdżowy paluch pokryty zapieczonym żółtym serem." }
+            { id: "paluch_z_serem", name: "Paluch z serem", weight: "80g", packaging: "Karton 40 szt. / Paleta: 48 kartonów", image: "img/paluch_z_serem.png", shelfLife: "48h (Świeży)", cert: "IFS Food, BRC", isFresh: true, isFrozen: false, description: "Chrupiący drożdżowy paluch pokryty zapieczonym żółtym serem Gouda." },
+            { id: "przekaska_z_serem", name: "Przekąska z serem", weight: "70g", packaging: "Karton 40 szt.", image: "img/przekaska_z_serem.png", shelfLife: "9 miesięcy (Mrożona)", cert: "IFS Food, BRC", isFresh: false, isFrozen: true, description: "Wytrawna przekąska pszenna z zapieczonym serem Gouda." },
+            { id: "wianek_ze_szpinakiem", name: "Wianek ze szpinakiem", weight: "100g", packaging: "Karton 20 szt.", image: "img/wianek_ze_szpinakiem.png", shelfLife: "48h (Świeży)", cert: "IFS Food, BRC", isFresh: true, isFrozen: false, description: "Aromatyczna drożdżówka pszenna w kształcie wieńca z delikatnym nadzieniem szpinakowo-beszamelowym." }
         ]
     }
 ];
