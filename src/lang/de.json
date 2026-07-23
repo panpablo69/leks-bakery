@@ -356,51 +356,27 @@
     }
   },
   "products_cukiernia": {
-    "placek_z_twarogiem": {
-      "name": "Hefekuchen mit Quark",
+    "skubaniec_z_beza": {
+      "name": "Mürbeteigkuchen mit Baiser",
       "weight": "ca. 2.0 kg",
-      "packaging": "Karton 1 Stk. / Kiste",
-      "shelfLife": "48 Std. (Frische Lieferung)",
+      "packaging": "Karton 1 Stk. (Blech)",
+      "shelfLife": "72 Std. (Frisch)",
       "cert": "IFS Food, BRC",
-      "description": "Traditioneller Hefekuchen, reichlich belegt mit süßem Quark und knusprigen Streuseln. Ein perfektes klassisches Gebäck nach Omas Rezept."
+      "description": "Mürbeteigkuchen mit Kakao, geschichtet mit säuerlicher Fruchtmarmelade und luftigem, knusprigem Baiser. Eine traditionelle polnische Spezialität."
     },
     "ciasto_karpatka": {
       "name": "Karpatka Cremeschnitte",
       "weight": "ca. 1.8 kg",
       "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "48 Std. (Kühl lagern bei 2-6°C)",
+      "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food",
       "description": "Klassische polnische Cremetorte gefüllt mit luftiger Vanille-Puddingcreme zwischen gewelltem Brandteig, der an die Karpaten erinnert, mit Puderzucker bestäubt."
-    },
-    "skubaniec_z_beza": {
-      "name": "Mürbeteigkuchen mit Baiser",
-      "weight": "ca. 2.0 kg",
-      "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "72 Std.",
-      "cert": "IFS Food, BRC",
-      "description": "Mürbeteigkuchen mit Kakao, geschichtet with säuerlicher Fruchtmarmelade und luftigem, knusprigem Baiser. Eine traditionelle polnische Spezialität."
-    },
-    "sernik_puszysty": {
-      "name": "Fluffiger Käsekuchen",
-      "weight": "ca. 2.0 kg",
-      "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "48 Std. (Kühl lagern bei 2-6°C)",
-      "cert": "IFS Food, BRC",
-      "description": "Sehr leichter und luftiger gebackener Käsekuchen auf feinem Mürbeteigboden, zubereitet aus bestem polnischen Quark mit einer feinen Vanillenote."
-    },
-    "miniptysie": {
-      "name": "Mini Windbeutel",
-      "weight": "ca. 1.0 kg",
-      "packaging": "Sammelkarton",
-      "shelfLife": "24 Std. (Kühl lagern bei 2-6°C)",
-      "cert": "IFS Food",
-      "description": "Feine Mini-Windbeutel aus Brandteig, gefüllt mit luftiger Schlagsahne oder Creme. Der perfekte süße Happen zum Kaffee."
     },
     "ciasto_krowka": {
       "name": "Karamell-Kajmak-Schnitt",
       "weight": "ca. 1.8 kg",
       "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "48 Std. (Kühl lagern bei 2-6°C)",
+      "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food",
       "description": "Besonders süße und cremige Schnitte mit Schichten aus feinem Biskuit, luftiger Sahnecreme und einer reichhaltigen Karamell-Kajmak-Füllung."
     },
@@ -408,9 +384,25 @@
       "name": "Erdbeer-Gelee-Kuchen",
       "weight": "ca. 2.0 kg",
       "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "48 Std. (Kühl lagern bei 2-6°C)",
+      "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food",
       "description": "Erfrischendes Dessert auf luftigem Biskuitboden mit leichter Sahnecreme, reich belegt mit saftigen Erdbeeren in Erdbeergelee."
+    },
+    "sernik_puszysty": {
+      "name": "Fluffiger Käsekuchen",
+      "weight": "ca. 2.0 kg",
+      "packaging": "Karton 1 Stk. (Blech)",
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food, BRC",
+      "description": "Sehr leichter und luftiger gebackener Käsekuchen auf feinem Mürbeteigboden, zubereitet aus bestem polnischen Quark mit einer feinen Vanillenote."
+    },
+    "rwaniec_drozdzowy_z_twarogiem": {
+      "name": "Zupfkuchen Hefebrot mit Quark",
+      "weight": "ca. 1.5 kg",
+      "packaging": "Karton 1 Stk.",
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food, BRC",
+      "description": "Fluffiger Zupf-Hefekuchen gefüllt mit süßem Quark, glasiert mit Zuckerguss und feinen Butterstreuseln."
     }
   },
   "products_polcukiernicze": {

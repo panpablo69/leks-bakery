@@ -69,12 +69,12 @@ const kategorieProduktow = [
         description: "Najwyższej jakości wyroby cukiernicze i ciasta na każdą okazję.",
         image: "img/kat_cukiernia.png",
         products: [
-            { id: "placek_z_twarogiem", name: "Placek z twarogiem", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. / Skrzynka", image: "img/cukiernia_placek_z_twarogiem.png", shelfLife: "48h (Dostawa świeża)", cert: "IFS Food, BRC" },
-            { id: "ciasto_karpatka", name: "Ciasto karpatka", weight: "ok. 1.8 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_karpatka.png", shelfLife: "48h (Przechowywać w temp. 2-6°C)", cert: "IFS Food" },
-            { id: "skubaniec_z_beza", name: "Ciasto skubaniec z bezą", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_skubaniec_z_beza.png", shelfLife: "72h", cert: "IFS Food, BRC" },
-            { id: "sernik_puszysty", name: "Sernik puszysty", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_sernik_puszysty.png", shelfLife: "48h (Przechowywać w temp. 2-6°C)", cert: "IFS Food, BRC" },
-            { id: "ciasto_krowka", name: "Ciasto krówka", weight: "ok. 1.8 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_krowka.png", shelfLife: "48h (Przechowywać w temp. 2-6°C)", cert: "IFS Food" },
-            { id: "ciasto_z_galaretka", name: "Ciasto z galaretką i truskawkami", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_z_galaretka.png", shelfLife: "48h (Przechowywać w temp. 2-6°C)", cert: "IFS Food" }
+            { id: "skubaniec_z_beza", name: "Ciasto Skubaniec", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_skubaniec_z_beza.png", shelfLife: "72h (Świeże)", cert: "IFS Food, BRC", isFresh: true, isFrozen: false, description: "Tradycyjne kruche ciasto z owocami, bezą i maślaną kruszonką." },
+            { id: "ciasto_karpatka", name: "Ciasto Karpatka", weight: "ok. 1.8 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_karpatka.png", shelfLife: "48h (Świeże)", cert: "IFS Food", isFresh: true, isFrozen: false, description: "Kultowe ciasto parzone przekładane aksamitnym kremem budyniowym." },
+            { id: "ciasto_krowka", name: "Ciasto Krówka", weight: "ok. 1.8 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_krowka.png", shelfLife: "48h (Świeże)", cert: "IFS Food", isFresh: true, isFrozen: false, description: "Wyśmienite ciasto przełożone maślanym masą krówkową i kremem." },
+            { id: "ciasto_z_galaretka", name: "Ciasto z galaretką i truskawkami", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_ciasto_z_galaretka.png", shelfLife: "48h (Świeże)", cert: "IFS Food", isFresh: true, isFrozen: false, description: "Lekkie ciasto biszkoptowe z truskawkami i orzeźwiającą galaretką." },
+            { id: "sernik_puszysty", name: "Sernik puszysty", weight: "ok. 2.0 kg", packaging: "Karton 1 szt. (Blacha)", image: "img/cukiernia_sernik_puszysty.png", shelfLife: "48h (Świeże)", cert: "IFS Food, BRC", isFresh: true, isFrozen: false, description: "Klasyczny, delikatny sernik z najwyższej jakości twarogu." },
+            { id: "rwaniec_drozdzowy_z_twarogiem", name: "Rwaniec drożdżowy z twarogiem", weight: "ok. 1.5 kg", packaging: "Karton 1 szt.", image: "img/cukiernia_rwaniec_drozdzowy_z_twarogiem.png", shelfLife: "48h (Świeży)", cert: "IFS Food, BRC", isFresh: true, isFrozen: false, isOverviewImage: true, description: "Puszysty drożdżowy rwaniec z nadzieniem z sera twarogowego, polany lukrem i posypany kruszonką." }
         ]
     },
     {

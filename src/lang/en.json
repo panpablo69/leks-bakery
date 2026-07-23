@@ -356,51 +356,27 @@
     }
   },
   "products_cukiernia": {
-    "placek_z_twarogiem": {
-      "name": "Yeast cake with curd cheese",
+    "skubaniec_z_beza": {
+      "name": "Skubaniec cake with meringue",
       "weight": "approx. 2.0 kg",
-      "packaging": "Box 1 pc. / Crate",
-      "shelfLife": "48h (Fresh delivery)",
+      "packaging": "Box 1 pc. (Tray)",
+      "shelfLife": "72h (Fresh)",
       "cert": "IFS Food, BRC",
-      "description": "Traditional yeast cake generously covered with sweet curd cheese and crunchy crumble. A perfect classic bake made according to a homemade recipe."
+      "description": "Rich and crumbly shortcrust pastry with cocoa, layered with tart fruit jam and a fluffy, crispy baked meringue. A traditional Polish delicacy."
     },
     "ciasto_karpatka": {
       "name": "Karpatka cream cake",
       "weight": "approx. 1.8 kg",
       "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "48h (Keep at 2-6°C)",
+      "shelfLife": "48h (Fresh)",
       "cert": "IFS Food",
       "description": "Classic Polish cream cake filled with fluffy vanilla custard cream, layered between wavy choux pastry resembling the Carpathian Mountains, dusted with powdered sugar."
-    },
-    "skubaniec_z_beza": {
-      "name": "Skubaniec cake with meringue",
-      "weight": "approx. 2.0 kg",
-      "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "72h",
-      "cert": "IFS Food, BRC",
-      "description": "Rich and crumbly shortcrust pastry with cocoa, layered with tart fruit jam and a fluffy, crispy baked meringue. A traditional Polish delicacy."
-    },
-    "sernik_puszysty": {
-      "name": "Fluffy baked cheesecake",
-      "weight": "approx. 2.0 kg",
-      "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "48h (Keep at 2-6°C)",
-      "cert": "IFS Food, BRC",
-      "description": "Extremely light and fluffy baked cheesecake on a delicate crust, prepared with the highest quality Polish curd cheese and a hint of vanilla."
-    },
-    "miniptysie": {
-      "name": "Mini cream puffs",
-      "weight": "approx. 1.0 kg",
-      "packaging": "Bulk box",
-      "shelfLife": "24h (Keep at 2-6°C)",
-      "cert": "IFS Food",
-      "description": "Delicate miniature choux pastry puffs filled with light whipped cream or custard. A perfect sweet bite to accompany your coffee."
     },
     "ciasto_krowka": {
       "name": "Toffee caramel cake",
       "weight": "approx. 1.8 kg",
       "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "48h (Keep at 2-6°C)",
+      "shelfLife": "48h (Fresh)",
       "cert": "IFS Food",
       "description": "Exceedingly sweet and creamy cake layered with soft sponge cake, fluffy whipped cream, and rich dulce de leche (toffee) caramel filling."
     },
@@ -408,9 +384,25 @@
       "name": "Strawberry jelly cake",
       "weight": "approx. 2.0 kg",
       "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "48h (Keep at 2-6°C)",
+      "shelfLife": "48h (Fresh)",
       "cert": "IFS Food",
       "description": "Refreshing dessert on a fluffy sponge cake base with a light cream layer, generously topped with juicy strawberries in strawberry jelly."
+    },
+    "sernik_puszysty": {
+      "name": "Fluffy baked cheesecake",
+      "weight": "approx. 2.0 kg",
+      "packaging": "Box 1 pc. (Tray)",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC",
+      "description": "Extremely light and fluffy baked cheesecake on a delicate crust, prepared with the highest quality Polish curd cheese and a hint of vanilla."
+    },
+    "rwaniec_drozdzowy_z_twarogiem": {
+      "name": "Pull-apart yeast cake with curd cheese",
+      "weight": "approx. 1.5 kg",
+      "packaging": "Box 1 pc.",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC",
+      "description": "Soft pull-apart yeast cake filled with sweet cottage cheese curd, drizzled with glaze icing and fine crumble topping."
     }
   },
   "products_polcukiernicze": {

@@ -356,51 +356,27 @@
     }
   },
   "products_cukiernia": {
-    "placek_z_twarogiem": {
-      "name": "Pastel de levadura con requesón",
+    "skubaniec_z_beza": {
+      "name": "Pastel Skubaniec con merengue",
       "weight": "aprox. 2.0 kg",
-      "packaging": "Caja 1 ud. / Caja plástica",
-      "shelfLife": "48h (Entrega fresca)",
+      "packaging": "Caja 1 ud. (Bandeja)",
+      "shelfLife": "72h (Fresco)",
       "cert": "IFS Food, BRC",
-      "description": "Pastel tradicional de levadura generosamente cubierto con requesón dulce y migas crujientes. Un bizcocho clásico perfecto hecho según una receta casera."
+      "description": "Pastel de masa quebrada rica y desmenuzable con cacao, relleno de mermelada ácida de frutas y un merengue esponjoso y crujiente. Una delicia tradicional polaca."
     },
     "ciasto_karpatka": {
       "name": "Pastel de crema Karpatka",
       "weight": "aprox. 1.8 kg",
       "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "48h (Conservar a 2-6°C)",
+      "shelfLife": "48h (Fresco)",
       "cert": "IFS Food",
       "description": "Pastel de crema polaco clásico relleno de crema suave de vainilla, intercalado entre masa de lionesa ondulada que recuerda a los Montes Cárpatos, espolvoreado con azúcar glas."
-    },
-    "skubaniec_z_beza": {
-      "name": "Pastel Skubaniec con merengue",
-      "weight": "aprox. 2.0 kg",
-      "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "72h",
-      "cert": "IFS Food, BRC",
-      "description": "Pastel de masa quebrada rica y desmenuzable con cacao, relleno de mermelada ácida de frutas y un merengue esponjoso y crujiente. Una delicia tradicional polaca."
-    },
-    "sernik_puszysty": {
-      "name": "Tarta de queso esponjosa",
-      "weight": "aprox. 2.0 kg",
-      "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "48h (Conservar a 2-6°C)",
-      "cert": "IFS Food, BRC",
-      "description": "Tarta de queso horneada extremadamente ligera y esponjosa sobre una base delicada, preparada con requesón polaco de la más alta calidad y un toque de vaillina."
-    },
-    "miniptysie": {
-      "name": "Mini lionesas de nata",
-      "weight": "aprox. 1.0 kg",
-      "packaging": "Caja de cartón colectiva",
-      "shelfLife": "24h (Conservar a 2-6°C)",
-      "cert": "IFS Food",
-      "description": "Delicados bocaditos miniatura de masa de lionesa rellenos de nata montada ligera o crema. Un bocado dulce perfecto para acompañar el café."
     },
     "ciasto_krowka": {
       "name": "Pastel de caramelo y toffee",
       "weight": "aprox. 1.8 kg",
       "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "48h (Conservar a 2-6°C)",
+      "shelfLife": "48h (Fresco)",
       "cert": "IFS Food",
       "description": "Pastel sumamente dulce y cremoso intercalado con capas de bizcocho tierno, crema esponjosa de nata y un rico relleno de dulce de leche (caramelo de toffee)."
     },
@@ -408,9 +384,25 @@
       "name": "Pastel de gelatina y fresas",
       "weight": "aprox. 2.0 kg",
       "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "48h (Conservar a 2-6°C)",
+      "shelfLife": "48h (Fresco)",
       "cert": "IFS Food",
       "description": "Postre refrescante sobre una base esponjosa de bizcocho con una capa ligera de crema de nata, generosamente cubierto con fresas jugosas en gelatina de fresa."
+    },
+    "sernik_puszysty": {
+      "name": "Tarta de queso esponjosa",
+      "weight": "aprox. 2.0 kg",
+      "packaging": "Caja 1 ud. (Bandeja)",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC",
+      "description": "Tarta de queso horneada extremadamente ligera y esponjosa sobre una base delicada, preparada con requesón polaco de la más alta calidad y un toque de vaillina."
+    },
+    "rwaniec_drozdzowy_z_twarogiem": {
+      "name": "Pastel desgranable de levadura con requesón",
+      "weight": "aprox. 1.5 kg",
+      "packaging": "Caja 1 ud.",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC",
+      "description": "Esponjoso pastel de levadura desgranable relleno de requesón dulce, glaseado con azúcar y crujientes migas de mantequilla."
     }
   },
   "products_polcukiernicze": {
