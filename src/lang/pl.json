@@ -414,144 +414,215 @@
     }
   },
   "products_polcukiernicze": {
-    "paczek_twarogowy": {
-      "name": "Pączek twarogowy",
-      "weight": "80g",
-      "packaging": "Karton 24 szt.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Puszysty pączek z dodatkiem naturalnego twarogu w cieście, co nadaje mu wyjątkową wilgotność i miękkość."
-    },
-    "paczek_z_budyniem": {
-      "name": "Pączek z budyniem",
-      "weight": "90g",
-      "packaging": "Karton 24 szt.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Puszysty pączek wypełniony gęstym, waniliowym kremem budyniowym, oprószony cukrem pudrem."
-    },
-    "gniazdko_z_lukrem": {
-      "name": "Gniazdko z lukrem",
-      "weight": "80g",
-      "packaging": "Karton 20 szt.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Puszyste ciastko parzone (tzw. pączek hiszpański), smażone na złoty kolor i pokryte słodkim lukrem."
-    },
-    "warkocz_z_lukrem": {
-      "name": "Warkocz z lukrem",
-      "weight": "100g",
+    "brioszka_z_lezkami_czekolady": {
+      "name": "Brioszka z łezkami czekolady",
+      "weight": "200g",
       "packaging": "Karton 20 szt. / Skrzynka",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Tradycyjna drożdżowa plecionka, puszysta i lekka, polana słodkim lukrem."
-    },
-    "racuch_z_jablkiem": {
-      "name": "Racuch z jabłkiem",
-      "weight": "90g",
-      "packaging": "Karton 20 szt.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Tradycyjny racuch drożdżowy z soczystymi kawałkami jabłek, idealny na słodką przekąskę."
-    },
-    "paczek_z_marmolada": {
-      "name": "Pączek z marmoladą",
-      "weight": "90g",
-      "packaging": "Karton 24 szt.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Tradycyjny pączek z wieloowocową marmoladą, lukrowany i posypany skórką pomarańczową."
+      "shelfLife": "48h (Świeża)",
+      "cert": "IFS Food, BRC",
+      "description": "Pieczywo półcukiernicze z ciasta drożdżowego z dodatkiem łezek o smaku czekoladowym"
     },
     "calusek": {
       "name": "Całusek",
-      "weight": "90g",
-      "packaging": "Karton 20 szt.",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Delikatne ciastko drożdżowe z nadzieniem owocowym, zwinięte w charakterystyczny kształt całuska."
-    },
-    "paczek_premium_z_nadzieniem_wisniowym": {
-      "name": "Pączek premium z nadzieniem wiśniowym",
-      "weight": "100g",
-      "packaging": "Karton 24 szt.",
-      "shelfLife": "24h",
-      "cert": "IFS Food, BRC",
-      "description": "Pączek premium z lekko kwaskowatym nadzieniem z wiśni, glazurowany i posypany płatkami migdałowymi."
-    },
-    "gniazdko_z_cukrem_pudrem": {
-      "name": "Gniazdko z cukrem pudrem",
       "weight": "80g",
       "packaging": "Karton 20 szt.",
-      "shelfLife": "24h",
+      "shelfLife": "48h (Świeży)",
       "cert": "IFS Food",
-      "description": "Delikatne i lekkie gniazdko z ciasta parzonego, posypane cukrem pudrem."
-    },
-    "paczek_z_nadzieniem_karpatkowym": {
-      "name": "Pączek z nadzieniem karpatkowym",
-      "weight": "100g",
-      "packaging": "Karton 24 szt.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Wyjątkowy pączek z bogatym i puszystym nadzieniem o smaku tradycyjnego kremu karpatkowego."
+      "description": "Wyrób cukierniczy z ciasta drożdżowego smażonego, udekorowany cukrem dekorającym"
     },
     "drozdzowka_z_makiem": {
       "name": "Drożdżówka z makiem",
-      "weight": "110g",
+      "weight": "100g",
       "packaging": "Karton 15 szt. / Skrzynka",
-      "shelfLife": "48h",
+      "shelfLife": "48h (Świeża)",
       "cert": "IFS Food",
-      "description": "Klasyczna drożdżówka wypełniona aromatyczną, słodką masą z niebieskiego maku i bakalii, lukrowana."
-    },
-    "rogal_swiateczny_z_bialym_makiem": {
-      "name": "Rogal świąteczny z białym makiem",
-      "weight": "170g",
-      "packaging": "Karton 12 szt.",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Wyjątkowy rogal z ciasta półfrancuskiego z bogatym nadzieniem z białego maku, bakalii i marcepanu."
+      "description": "Pieczywo pszenne półcukiernicze z dodatkiem nadzienia makowego z rodzynkami i dekoracją cukrową"
     },
     "drozdzowka_z_serem_i_kruszonka": {
       "name": "Drożdżówka z serem i kruszonką",
       "weight": "130g",
       "packaging": "Karton 15 szt. / Skrzynka",
-      "shelfLife": "48h",
+      "shelfLife": "48h (Świeża) / 9 miesięcy (Mrożona)",
       "cert": "IFS Food, BRC",
-      "description": "Tradycyjna drożdżówka z nadzieniem ze słodkiego twarogu, posypana chrupiącą maślaną kruszonką."
+      "description": "Pieczywo półcukiernicze pszenne z nadzieniem serowym, posypane kruszonką"
     },
-    "paczek_z_nadzieniem_pistacjowym": {
-      "name": "Pączek z nadzieniem pistacjowym",
-      "weight": "100g",
-      "packaging": "Karton 24 szt.",
-      "shelfLife": "24h",
+    "gniazdko_z_lukrem": {
+      "name": "Gniazdko z lukrem",
+      "weight": "55g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "24h (Świeże)",
       "cert": "IFS Food",
-      "description": "Nowoczesny pączek premium wypełniony aksamitnym kremem pistacjowym, ozdobiony posypką z kruszonych pistacji."
+      "description": "Wyrób cukierniczy z ciasta parzonego smażonego oblany lukrem"
+    },
+    "miniptysie": {
+      "name": "Miniptysie",
+      "weight": "kg",
+      "packaging": "Karton zbiorczy",
+      "shelfLife": "24h (Przechowywać w temp. 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Ciasto parzone z kremem"
+    },
+    "paczek_premium_z_nadzieniem_wisniowym": {
+      "name": "Pączek premium z nadzieniem wiśniowym",
+      "weight": "70g - 100g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h (Świeży) / 9 miesięcy (Mrożony)",
+      "cert": "IFS Food, BRC",
+      "description": "Pączek z ciasta drożdżowego smażonego z nadzieniem o smaku wiśniowym , dekorowany pomadą wodną i płatkami migdałów"
+    },
+    "paczek_twarogowy": {
+      "name": "Pączek twarogowy",
+      "weight": "50g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h (Świeży)",
+      "cert": "IFS Food",
+      "description": "Wyrób cukierniczy z ciasta drożdżowego z dodatkiem sera twarogowego, obtoczony cukrem"
+    },
+    "paczek_z_budyniem": {
+      "name": "Pączek z budyniem",
+      "weight": "70g - 100g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h (Świeży)",
+      "cert": "IFS Food",
+      "description": "Pączek z ciasta drożdżowego smażonego z nadzieniem budyniowym , dekorowany pomadą wodną i polewą"
+    },
+    "paczek_z_marmolada": {
+      "name": "Pączek z marmoladą",
+      "weight": "70g - 100g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h (Świeży) / 9 miesięcy (Mrożony)",
+      "cert": "IFS Food",
+      "description": "Pączek z ciasta drożdżowego smażonego z marmoladą o smaku różanym, dekorowany pomadą wodną"
+    },
+    "paczek_z_nadzieniem_karpatkowym": {
+      "name": "Pączek z nadzieniem karpatkowym",
+      "weight": "90g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h (Świeży)",
+      "cert": "IFS Food",
+      "description": "Pączek z ciasta drożdżowego z nadzieniem budyniowym, polewą cukrową i posypką z białej czekolady"
     },
     "paczek_z_nadzieniem_malinowym": {
       "name": "Pączek z nadzieniem malinowym",
-      "weight": "100g",
+      "weight": "70g - 100g",
       "packaging": "Karton 24 szt.",
-      "shelfLife": "24h",
+      "shelfLife": "24h (Świeży)",
       "cert": "IFS Food",
-      "description": "Klasyczny puszysty pączek z aromatycznym nadzieniem z dojrzałych malin, posypany cukrem pudrem."
+      "description": "Pączek z ciasta drożdżowego smażonego z nadzieniem o smaku malinowym , dekorowany pomadą wodną i mailną liofizlizowaną"
+    },
+    "paczek_z_nadzieniem_pistacjowym": {
+      "name": "Pączek z nadzieniem pistacjowym",
+      "weight": "80g",
+      "packaging": "Karton 24 szt.",
+      "shelfLife": "24h (Świeży) / 9 miesięcy (Mrożony)",
+      "cert": "IFS Food",
+      "description": "Pączek z ciasta drożdżowego smażonego z nadzieniem o smaku pistacjowym , dekorowany pomadą wodną i kostką pistacjową"
+    },
+    "racuch_z_jablkiem": {
+      "name": "Racuch z jabłkiem",
+      "weight": "90g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "24h (Świeży)",
+      "cert": "IFS Food",
+      "description": "Pączek z ciasta drożdżowego smażonego z nadzieniem jabłkowym,  dekorowany pomadą"
+    },
+    "twist_z_makiem": {
+      "name": "Twist z makiem",
+      "weight": "90g",
+      "packaging": "Karton 20 szt. / Skrzynka",
+      "shelfLife": "48h (Świeży)",
+      "cert": "IFS Food, BRC",
+      "description": "Bułka pszenna drożdżowa z dodatkiem maku"
+    },
+    "warkocz_z_lukrem": {
+      "name": "Warkocz z lukrem",
+      "weight": "90g",
+      "packaging": "Karton 20 szt. / Skrzynka",
+      "shelfLife": "48h (Świeży)",
+      "cert": "IFS Food",
+      "description": "Wyrób cukierniczy z ciasta drożdżowego, smażony, polany  polewą cukrową."
+    }
+  },
+  "products_przekaski": {
+    "paluch_z_serem": {
+      "name": "Paluch z serem",
+      "weight": "80g",
+      "packaging": "Karton 40 szt. / Paleta: 48 kartonów",
+      "shelfLife": "48h (Świeży)",
+      "cert": "IFS Food, BRC",
+      "description": "Pieczywo pszenne posypane serem gouda"
+    },
+    "przekaska_z_serem": {
+      "name": "Przekąska z serem",
+      "weight": "70g",
+      "packaging": "Karton 40 szt.",
+      "shelfLife": "9 miesięcy (Mrożona)",
+      "cert": "IFS Food, BRC",
+      "description": "Pieczywo pszenne z serem gouda"
+    },
+    "wianek_ze_szpinakiem": {
+      "name": "Wianek ze szpinakiem",
+      "weight": "100g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "48h (Świeży)",
+      "cert": "IFS Food, BRC",
+      "description": "Pieczywo pszenna drożdżowa w kształcie wieńca z dodatkiem sosu beszamel, oraz szpinaku."
     }
   },
   "illustrative_photo": "Zdjęcie poglądowe",
+  "products_cukiernia": {
+    "skubaniec_z_beza": {
+      "name": "Ciasto Skubaniec",
+      "weight": "kg",
+      "description": "Ciasto z owocami, na półkruchym spodzie."
+    },
+    "ciasto_karpatka": {
+      "name": "Ciasto Karpatka",
+      "weight": "kg",
+      "description": "Ciasto parzone przełożone kremem o smaku śmietankowym i udekorowane cukrem dekoracyjnym."
+    },
+    "ciasto_krowka": {
+      "name": "Ciasto Krówka",
+      "weight": "kg",
+      "description": "Ciasto biszkoptowo-tłuszczowe z kremem o smaku śmietankowym i polewą o smaku toffi, udekorowane płatkami migdałów."
+    },
+    "ciasto_z_galaretka": {
+      "name": "Ciasto z galaretką i truskawkami",
+      "weight": "kg",
+      "description": "Ciasto biszkoptowo-tłuszczowe z kremem o smaku waniliowo-śmietankowym, truskawkami i galaretką o smaku truskawkowym."
+    },
+    "sernik_puszysty": {
+      "name": "Sernik puszysty",
+      "weight": "kg",
+      "description": "Masa serowa na biszkoptowo-tłuszczowym spodzie udekorowane cukrem dekoracyjnym."
+    },
+    "rwaniec_drozdzowy_z_twarogiem": {
+      "name": "Rwaniec drożdżowy z twarogiem",
+      "weight": "450g",
+      "description": "Ciasto drożdżowe z serem twarogowym udekorowane kruszonką i dekoracją cukrową."
+    },
+    "baton_coco_crunch": {
+      "name": "Batony Coco-Crunch",
+      "weight": "kg",
+      "description": "Mix batonów z orzeszkami i nadzieniem o smaku toffi oraz z wiórkami kokosowymi."
+    }
+  },
   "products_bulki": {
     "bulka_kajzerka": {
       "name": "Bułka Kajzerka",
-      "weight": "60g",
+      "weight": "55g",
       "packaging": "Karton 80 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC Grade A",
-      "description": "Tradycyjna, chrupiąca bułka pszenna kajzerka z pięcioma nacięciami."
+      "description": "Pieczywo pszenne wyborowe, charakteryzuje się złocisto-brązową chrupiącą skórką."
     },
     "bulka_z_ziarnem": {
       "name": "Bułka z ziarnem",
-      "weight": "75g",
+      "weight": "70g",
       "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC",
-      "description": "Puszysta bułka pszenna obficie pokryta ziarnami sezamu, lnu i słonecznika."
+      "description": "Bułka pszenna z ziarnami słonecznika, siemienia lnianego, sezamu, prosa oraz pestkami dyni. Pieczywo przygotowywane z wykorzystaniem odroczonego rozrostu zapewniający dłuższą świeżość produktu."
     },
     "bulka_wysokobialkowa": {
       "name": "Bułka wysokobiałkowa",
@@ -559,7 +630,7 @@
       "packaging": "Karton 50 szt.",
       "shelfLife": "48h / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC",
-      "description": "Specjalistyczna bułka o podwyższonej zawartości białka roślinnego i obniżonej zawartości węglowodanów."
+      "description": "Pieczywo pszenne na drożdżach z posypką z sezamu i siemienia lnianego. Produkt głęboko mrożony wstępnie zapieczony."
     },
     "bulka_z_warzywami": {
       "name": "Bułka z warzywami",
@@ -567,7 +638,7 @@
       "packaging": "Karton 50 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC",
-      "description": "Oryginalna, wytrawna bułka z kawałkami suszonych warzyw."
+      "description": "Pieczywo pszenne z dodatkiem szpinaku mrożonego, marchwi suszonej, buraka suszonego i cebuli suszonej. Wstępnie podpieczone. Produkt głęboko mrożony"
     },
     "bulka_grahamka_slonecznik": {
       "name": "Bułka grahamka ze słonecznikiem",
@@ -575,7 +646,7 @@
       "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC",
-      "description": "Ciemna bułka grahamka wzbogacona chrupiącymi ziarnami słonecznika."
+      "description": "Bułka pszenna z mąką pszenną graham z posypką z nasion słonecznika. Pieczywo przygotowywane z wykorzystaniem odroczonego rozrostu zapewniający dłuższą świeżość produktu."
     },
     "bulka_mleczna": {
       "name": "Bułka mleczna",
@@ -583,23 +654,23 @@
       "packaging": "Karton 50 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC",
-      "description": "Delikatna, puszysta bułka maślana wypiekana z dodatkiem mleka."
+      "description": "Pieczywo półcukiernicze pszenne z dodatkiem mleka."
     },
     "bulka_duza": {
       "name": "Bułka duża",
-      "weight": "90g",
+      "weight": "100g",
       "packaging": "Karton 50 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC",
-      "description": "Duża bułka pszenna śniadaniowa o puszystym wnętrzu i chrupiącej skórce."
+      "description": "Bułka pszenna, charakteryzuje się złocistą, chrupiącą skórką."
     },
     "bulka_grahamka": {
       "name": "Bułka grahamka",
-      "weight": "70g",
+      "weight": "80g",
       "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC Grade A",
-      "description": "Klasyczna ciemna bułka grahamka bogata w błonnik, o tradycyjnym smaku."
+      "description": "Pieczywo pszenne z dodatkiem mąki graham."
     },
     "bulka_z_marchewka": {
       "name": "Bułka z marchewką",
@@ -607,23 +678,23 @@
       "packaging": "Karton 50 szt.",
       "shelfLife": "48h (Świeża)",
       "cert": "IFS Food, BRC",
-      "description": "Aromatyczna bułka pszenna z dodatkiem utartej marchewki o delikatnie słodkawym smaku."
+      "description": "Pieczywo pszenne z dodatkiem marchwi suszonej, ziarna słonecznika oraz siemienia lnianego. Produkt wstępnie podpieczony, głęboko mrożony."
     },
     "bulka_poznanska": {
       "name": "Bułka poznańska",
-      "weight": "70g",
+      "weight": "80g",
       "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC",
-      "description": "Klasyczna bułka poznańska z charakterystycznym przedziałkiem pośrodku."
+      "description": "Bułka pszenna, charakteryzuje się złocistą, chrupiącą skórką."
     },
     "rogal_z_makiem": {
       "name": "Rogal z makiem",
-      "weight": "90g",
+      "weight": "100g",
       "packaging": "Karton 40 szt. / Skrzynka",
       "shelfLife": "48h",
       "cert": "IFS Food, BRC",
-      "description": "Tradycyjny maślany rogal obficie posypany ziarnami niebieskiego maku."
+      "description": "Pieczywo pszenne w kształcie podkowy, posypane makiem."
     },
     "ciabatta_80g": {
       "name": "Ciabatta 80g.",
@@ -631,37 +702,10 @@
       "packaging": "Karton 50 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC",
-      "description": "Włoska bułka ciabatta z chrupiącą skórką i dużymi porami w puszystym miąższu."
+      "description": "Pieczywo pszenne długo fermentowane wstępnie podpieczone. Produkt głęboko mrożony."
     },
     "rogal_klasyczny": {
       "name": "Rogal",
-      "weight": "80g",
-      "packaging": "Karton 40 szt. / Skrzynka",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Klasyczny, delikatny rogal drożdżowy o maślanym zapachu i miękkim wnętrzu."
-    },
-    "rogal_swiateczny_z_bialym_makiem": {
-      "name": "Rogal świąteczny z białym makiem",
-      "weight": "170g",
-      "packaging": "Karton 12 szt.",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Wyjątkowy rogal z bogatym nadzieniem z białego maku, bakalii i orzechów."
-    },
-    "chleb_2ab": {
-      "name": "Chleb z pradawnej odmiany pszenicy 2ab",
-      "weight": "400g",
-      "packaging": "Karton 10 szt.",
-      "shelfLife": "6 dni",
-      "cert": "IFS Food, BRC, Certyfikat 2AB",
-      "description": "Lekkostrawny chleb z pradawnej pszenicy 2AB, pieczony na naturalnym zakwasie."
-    },
-    "bulka_2ab": {
-      "name": "Bułka z pradawnej odmiany pszenicy 2ab",
-      "weight": "70g",
-      "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
-      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC, Certyfikat 2AB",
       "description": "Lekkostrawna bułka z pradawnej pszenicy 2AB, przyjazna dla wrażliwych jelit."
     },

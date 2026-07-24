@@ -723,6 +723,14 @@ function renderCategoryProducts() {
             if (tProd.shelfLife) prodShelfLife = tProd.shelfLife;
             if (tProd.cert) prodCert = tProd.cert;
             if (tProd.description) prodDesc = tProd.description;
+        } else if (prod.id && translations.products_przekaski && translations.products_przekaski[prod.id]) {
+            const tProd = translations.products_przekaski[prod.id];
+            if (tProd.name) prodName = tProd.name;
+            if (tProd.weight) prodWeight = tProd.weight;
+            if (tProd.packaging) prodPackaging = tProd.packaging;
+            if (tProd.shelfLife) prodShelfLife = tProd.shelfLife;
+            if (tProd.cert) prodCert = tProd.cert;
+            if (tProd.description) prodDesc = tProd.description;
         }
         
         // Zapisywanie danych specyfikacji
