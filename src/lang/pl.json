@@ -331,28 +331,28 @@
   },
   "products_2ab": {
     "chleb_2ab": {
-      "name": "Chleb z pradawnej odmiany pszenicy 2ab",
-      "weight": "400g",
+      "name": "Chleb 2AB",
+      "weight": "300g",
       "packaging": "Karton 10 szt.",
-      "shelfLife": "6 dni",
+      "shelfLife": "9 miesięcy (Mrożony)",
       "cert": "IFS Food, BRC, Certyfikat 2AB",
-      "description": "Lekkostrawny chleb z pradawnej pszenicy 2AB, pieczony na naturalnym zakwasie. Doskonały dla osób z wrażliwym układem pokarmowym, w tym cierpiących na IBS czy SIBO (dieta low-FODMAP)."
+      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach."
     },
     "bulka_2ab": {
-      "name": "Bułka z pradawnej odmiany pszenicy 2ab",
-      "weight": "70g",
+      "name": "Bułka 2AB",
+      "weight": "60g - 70g",
       "packaging": "Karton 60 szt. / Paleta: 40 kartonów",
-      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "shelfLife": "9 miesięcy (Mrożona)",
       "cert": "IFS Food, BRC, Certyfikat 2AB",
-      "description": "Lekkostrawna, chrupiąca bułka codzienna z pradawnej pszenicy 2AB. Charakteryzuje się naturalną złocistą skórką, niską zawartością FODMAP i mniejszą zawartością glutenu."
+      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
     },
     "bagietka_2ab": {
-      "name": "Bagietka z pradawnej odmiany pszenicy 2ab",
-      "weight": "250g",
+      "name": "Bagietka 2AB",
+      "weight": "180g - 200g",
       "packaging": "Karton 20 szt. / Paleta: 40 kartonów",
-      "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
+      "shelfLife": "9 miesięcy (Mrożona)",
       "cert": "IFS Food, BRC, Certyfikat 2AB",
-      "description": "Klasyczna, chrupiąca bagietka w wersji lekkostrawnej. Wypiekana z unikalnej mąki z pradawnej pszenicy 2AB, przyjazna dla żołądka i jelit."
+      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
     }
   },
   "products_cukiernia": {
@@ -653,7 +653,7 @@
       "weight": "100g"
     },
     "bagietka_2ab": {
-      "name": "Bagietka z pradawnej odmiany pszenicy 2ab",
+      "name": "Bagietka 2AB",
       "weight": "180g - 200g",
       "packaging": "Karton 20 szt.",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
@@ -661,7 +661,7 @@
       "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
     },
     "bulka_2ab": {
-      "name": "Bułka z pradawnej odmiany pszenicy 2ab",
+      "name": "Bułka 2AB",
       "weight": "60g - 70g",
       "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
     }
@@ -768,7 +768,7 @@
       "description": "Pieczywo pszenne obsypane mąką żytnią typ 720."
     },
     "chleb_2ab": {
-      "name": "Chleb z pradawnej odmiany pszenicy 2ab",
+      "name": "Chleb 2AB",
       "weight": "300g",
       "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
     }
