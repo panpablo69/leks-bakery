@@ -551,7 +551,7 @@
   "illustrative_photo": "Zdjęcie poglądowe",
   "products_bulki": {
     "bulka_kajzerka": {
-      "name": "Bułka Kajzerka",
+      "name": "Bułka kajzerka",
       "weight": "55g",
       "packaging": "Karton 80 szt. / Paleta: 40 kartonów",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
@@ -649,15 +649,21 @@
     "rogal_klasyczny": {
       "name": "Rogal",
       "cert": "IFS Food, BRC, Certyfikat 2AB",
-      "description": "Lekkostrawna bułka z pradawnej pszenicy 2AB, przyjazna dla wrażliwych jelit."
+      "description": "Pieczywo pszenne o kształcie podkowy z charakterystyczną błyszczącą skórką.",
+      "weight": "100g"
     },
     "bagietka_2ab": {
       "name": "Bagietka z pradawnej odmiany pszenicy 2ab",
-      "weight": "250g",
+      "weight": "180g - 200g",
       "packaging": "Karton 20 szt.",
       "shelfLife": "48h (Świeża) / 9 miesięcy (Bake-off)",
       "cert": "IFS Food, BRC, Certyfikat 2AB",
-      "description": "Chrupiąca bagietka z pradawnej pszenicy 2AB o unikalnym aromacie."
+      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
+    },
+    "bulka_2ab": {
+      "name": "Bułka z pradawnej odmiany pszenicy 2ab",
+      "weight": "60g - 70g",
+      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
     }
   },
   "products_chleby": {
