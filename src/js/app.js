@@ -672,6 +672,8 @@ function renderKategorie() {
 }
 
 
+let catSelectInitialized = false;
+
 function renderCategoryProducts() {
     const container = document.getElementById("category-products-container");
     if (!container || typeof kategorieProduktow === 'undefined') return;
@@ -688,13 +690,21 @@ function renderCategoryProducts() {
     const countBadge = document.getElementById("filter-count-badge");
     
     let activeCatId = "all";
-    if (catSelect && catSelect.value) {
-        activeCatId = catSelect.value;
-    } else if (urlCat && kategorieProduktow.some(k => k.id === urlCat)) {
-        activeCatId = urlCat;
-        if (catSelect) catSelect.value = urlCat;
-    } else if (catSelect) {
-        catSelect.value = "all";
+    if (!catSelectInitialized) {
+        if (urlCat && kategorieProduktow.some(k => k.id === urlCat)) {
+            activeCatId = urlCat;
+            if (catSelect) catSelect.value = urlCat;
+        } else if (catSelect) {
+            activeCatId = "all";
+            catSelect.value = "all";
+        }
+        catSelectInitialized = true;
+    } else {
+        if (catSelect && catSelect.value) {
+            activeCatId = catSelect.value;
+        } else if (urlCat && kategorieProduktow.some(k => k.id === urlCat)) {
+            activeCatId = urlCat;
+        }
     }
     
     const category = kategorieProduktow.find(k => k.id === activeCatId) || kategorieProduktow.find(k => k.id === "all");
