@@ -201,6 +201,10 @@
     "copyright": "&copy; 2026 Leks Sp. z o.o. All rights reserved."
   },
   "categories": {
+    "all": {
+      "name": "All Products",
+      "description": "Full assortment of traditional breads, rolls, patisserie, and snacks by Leks."
+    },
     "chleby": {
       "name": "Breads",
       "description": "Traditional Polish sourdough breads."
@@ -225,6 +229,30 @@
       "name": "Savory Snacks",
       "description": "Crispy and aromatic savory snacks straight from the oven."
     }
+  },
+  "filters": {
+    "search_label": "Search:",
+    "search_placeholder": "Type product name...",
+    "category_label": "Category:",
+    "cat_all": "All categories",
+    "cat_chleby": "Breads",
+    "cat_bulki": "Rolls & Croissants",
+    "cat_2ab": "Leks 2AB Bread",
+    "cat_cukiernia": "Patisserie",
+    "cat_polcukiernicze": "Sweet Bakes",
+    "cat_przekaski": "Savory Snacks",
+    "state_label": "Option:",
+    "state_all": "All (Fresh & Frozen)",
+    "state_fresh": "Fresh only",
+    "state_frozen": "Frozen only",
+    "sort_label": "Sort by:",
+    "sort_default": "Default",
+    "sort_category": "By category",
+    "sort_name_asc": "By name (A-Z)",
+    "sort_name_desc": "By name (Z-A)",
+    "sort_weight_asc": "By weight (ascending)",
+    "sort_weight_desc": "By weight (descending)",
+    "sort_state": "By option (Fresh / Frozen)"
   },
   "privacy": {
     "badge": "GDPR Documentation",

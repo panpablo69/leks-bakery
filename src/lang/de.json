@@ -201,6 +201,10 @@
     "copyright": "&copy; 2026 Leks Sp. z o.o. Alle Rechte vorbehalten."
   },
   "categories": {
+    "all": {
+      "name": "Alle Produkte",
+      "description": "Gesamtes Sortiment an traditionellen Broten, Brötchen, Konditoreiwaren und Snacks von Leks."
+    },
     "chleby": {
       "name": "Brote",
       "description": "Traditionelle polnische Sauerteigbrote."
@@ -225,6 +229,30 @@
       "name": "Herzhafte Snacks",
       "description": "Knusprige und aromatische herzhafte Snacks frisch aus dem Ofen."
     }
+  },
+  "filters": {
+    "search_label": "Suche:",
+    "search_placeholder": "Produktname eingeben...",
+    "category_label": "Kategorie:",
+    "cat_all": "Alle Kategorien",
+    "cat_chleby": "Brote",
+    "cat_bulki": "Brötchen & Hörnchen",
+    "cat_2ab": "Leks 2AB Gebäck",
+    "cat_cukiernia": "Konditorei",
+    "cat_polcukiernicze": "Süßgebäck",
+    "cat_przekaski": "Herzhafte Snacks",
+    "state_label": "Option:",
+    "state_all": "Alle (Frisch & Tiefgekühlt)",
+    "state_fresh": "Nur frisch",
+    "state_frozen": "Nur tiefgekühlt",
+    "sort_label": "Sortierung:",
+    "sort_default": "Standard",
+    "sort_category": "Nach Kategorie",
+    "sort_name_asc": "Nach Name (A-Z)",
+    "sort_name_desc": "Nach Name (Z-A)",
+    "sort_weight_asc": "Nach Gewicht (aufsteigend)",
+    "sort_weight_desc": "Nach Gewicht (absteigend)",
+    "sort_state": "Nach Option (Frisch / Tiefgekühlt)"
   },
   "privacy": {
     "badge": "DSGVO Dokumentation",

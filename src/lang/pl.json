@@ -201,6 +201,10 @@
     "copyright": "&copy; 2026 Leks Sp. z o.o. Wszelkie prawa zastrzeżone."
   },
   "categories": {
+    "all": {
+      "name": "Wszystkie produkty",
+      "description": "Pełny asortyment tradycyjnego pieczywa, bułek, wyrobów cukierniczych i przekąsek Leks."
+    },
     "chleby": {
       "name": "Chleby",
       "description": "Tradycyjne polskie chleby wypiekane na naturalnym zakwasie."
@@ -225,6 +229,30 @@
       "name": "Słone Przekąski",
       "description": "Chrupiące i aromatyczne słone przekąski prosto z pieca."
     }
+  },
+  "filters": {
+    "search_label": "Szukaj:",
+    "search_placeholder": "Wpisz nazwę...",
+    "category_label": "Kategoria:",
+    "cat_all": "Wszystkie kategorie",
+    "cat_chleby": "Chleby",
+    "cat_bulki": "Bułki i rogale",
+    "cat_2ab": "Pieczywo Leks 2AB",
+    "cat_cukiernia": "Cukiernia",
+    "cat_polcukiernicze": "Produkty Półcukiernicze",
+    "cat_przekaski": "Słone Przekąski",
+    "state_label": "Opcja:",
+    "state_all": "Wszystkie (Świeże i Mrożone)",
+    "state_fresh": "Tylko świeże",
+    "state_frozen": "Tylko mrożone",
+    "sort_label": "Sortowanie:",
+    "sort_default": "Domyślne",
+    "sort_category": "Po kategorii",
+    "sort_name_asc": "Po nazwie (A-Z)",
+    "sort_name_desc": "Po nazwie (Z-A)",
+    "sort_weight_asc": "Po wadze (rosnąco)",
+    "sort_weight_desc": "Po wadze (malejąco)",
+    "sort_state": "Po opcji (Świeże / Mrożone)"
   },
   "privacy": {
     "badge": "Dokumentacja RODO",

@@ -109,8 +109,61 @@
 
             <div class="container">
                 <!-- Przycisk powrotu -->
-                <div style="margin-bottom: 40px;">
-                    <a href="index.html#products" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="products.back">&larr; Wróć do kategorii</a>
+                <div style="margin-bottom: 30px;">
+                    <a href="index.html#produkty" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="products.back">&larr; Wróć do kategorii</a>
+                </div>
+
+                <!-- Pasek Filtrowania i Sortowania Produktów -->
+                <div class="products-filter-bar" id="products-filter-bar">
+                    <div class="filter-group filter-group-search">
+                        <label for="filter-search" class="filter-label" data-i18n="filters.search_label">Szukaj:</label>
+                        <div class="filter-input-wrapper">
+                            <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" id="filter-search" class="filter-input" placeholder="Wpisz nazwę..." data-i18n-placeholder="filters.search_placeholder">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-category" class="filter-label" data-i18n="filters.category_label">Kategoria:</label>
+                        <select id="filter-category" class="filter-select">
+                            <option value="all" data-i18n="filters.cat_all">Wszystkie kategorie</option>
+                            <option value="chleby" data-i18n="filters.cat_chleby">Chleby</option>
+                            <option value="bulki" data-i18n="filters.cat_bulki">Bułki i rogale</option>
+                            <option value="2ab" data-i18n="filters.cat_2ab">Pieczywo Leks 2AB</option>
+                            <option value="cukiernia" data-i18n="filters.cat_cukiernia">Cukiernia</option>
+                            <option value="polcukiernicze" data-i18n="filters.cat_polcukiernicze">Produkty Półcukiernicze</option>
+                            <option value="przekaski" data-i18n="filters.cat_przekaski">Słone Przekąski</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-state" class="filter-label" data-i18n="filters.state_label">Opcja:</label>
+                        <select id="filter-state" class="filter-select">
+                            <option value="all" data-i18n="filters.state_all">Wszystkie (Świeże i Mrożone)</option>
+                            <option value="fresh" data-i18n="filters.state_fresh">Tylko świeże</option>
+                            <option value="frozen" data-i18n="filters.state_frozen">Tylko mrożone</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sort-by" class="filter-label" data-i18n="filters.sort_label">Sortowanie:</label>
+                        <select id="sort-by" class="filter-select">
+                            <option value="default" data-i18n="filters.sort_default">Domyślne</option>
+                            <option value="category" data-i18n="filters.sort_category">Po kategorii</option>
+                            <option value="name-asc" data-i18n="filters.sort_name_asc">Po nazwie (A-Z)</option>
+                            <option value="name-desc" data-i18n="filters.sort_name_desc">Po nazwie (Z-A)</option>
+                            <option value="weight-asc" data-i18n="filters.sort_weight_asc">Po wadze (rosnąco)</option>
+                            <option value="weight-desc" data-i18n="filters.sort_weight_desc">Po wadze (malejąco)</option>
+                            <option value="state" data-i18n="filters.sort_state">Po opcji (Świeże / Mrożone)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-stats">
+                        <span id="filter-count-badge" class="filter-count-badge">0 produktów</span>
+                    </div>
                 </div>
 
                 <!-- Siatka Produktów (GSAP Animated Grid) -->

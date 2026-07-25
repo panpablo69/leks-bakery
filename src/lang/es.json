@@ -201,6 +201,10 @@
     "copyright": "&copy; 2026 Leks Sp. z o.o. Todos los derechos reservados."
   },
   "categories": {
+    "all": {
+      "name": "Todos los productos",
+      "description": "Gama completa de panes tradicionales, panecillos, repostería y snacks de Leks."
+    },
     "chleby": {
       "name": "Panes",
       "description": "Panes tradicionales polacos elaborados con masa madre."
@@ -225,6 +229,30 @@
       "name": "Snacks Salados",
       "description": "Crujientes y aromáticos snacks salados recién horneados."
     }
+  },
+  "filters": {
+    "search_label": "Buscar:",
+    "search_placeholder": "Buscar producto...",
+    "category_label": "Categoría:",
+    "cat_all": "Todas las categorías",
+    "cat_chleby": "Panes",
+    "cat_bulki": "Panecillos y Croissants",
+    "cat_2ab": "Pan Leks 2AB",
+    "cat_cukiernia": "Pastelería",
+    "cat_polcukiernicze": "Bollería Dulce",
+    "cat_przekaski": "Snacks Salados",
+    "state_label": "Opción:",
+    "state_all": "Todos (Frescos y Congelados)",
+    "state_fresh": "Solo frescos",
+    "state_frozen": "Solo congelados",
+    "sort_label": "Ordenar por:",
+    "sort_default": "Predeterminado",
+    "sort_category": "Por categoría",
+    "sort_name_asc": "Por nombre (A-Z)",
+    "sort_name_desc": "Por nombre (Z-A)",
+    "sort_weight_asc": "Por peso (ascendente)",
+    "sort_weight_desc": "Por peso (descendente)",
+    "sort_state": "Por opción (Fresco / Congelado)"
   },
   "privacy": {
     "badge": "Documentación de RGPD",

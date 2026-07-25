@@ -198,12 +198,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch(e) { console.error("initTimeline error:", e); }
     
     try {
+        initAllProductsCategory();
+    } catch(e) { console.error("initAllProductsCategory error:", e); }
+    
+    try {
         renderKategorie();
     } catch(e) { console.error("renderKategorie error:", e); }
     
     try {
         renderCategoryProducts();
     } catch(e) { console.error("renderCategoryProducts error:", e); }
+
+    try {
+        initProductsFilterAndSort();
+    } catch(e) { console.error("initProductsFilterAndSort error:", e); }
     
     try {
         initParallax();
@@ -544,21 +552,55 @@ function initTimeline() {
 
 function initAllProductsCategory() {
     if (typeof kategorieProduktow === 'undefined') return;
-    const allCategory = kategorieProduktow.find(k => k.id === "all");
-    if (allCategory) {
-        const allProducts = [];
-        kategorieProduktow.forEach(kat => {
-            try {
-                if (kat && kat.id !== "all" && Array.isArray(kat.products)) {
-                    // Skopiuj produkty z innych kategorii
-                    allProducts.push(...kat.products);
-                }
-            } catch(e) {
-                console.error("Error aggregating products for category:", kat, e);
-            }
-        });
-        allCategory.products = allProducts;
+    let allCategory = kategorieProduktow.find(k => k.id === "all");
+    if (!allCategory) {
+        allCategory = {
+            id: "all",
+            name: "Wszystkie produkty",
+            description: "Pełny asortyment tradycyjnego pieczywa, bułek, wyrobów cukierniczych i przekąsek Leks.",
+            image: "img/kat_chleby.png",
+            products: []
+        };
+        kategorieProduktow.unshift(allCategory);
     }
+    const allProducts = [];
+    const seenIds = new Set();
+    kategorieProduktow.forEach(kat => {
+        try {
+            if (kat && kat.id !== "all" && Array.isArray(kat.products)) {
+                kat.products.forEach(prod => {
+                    if (prod && prod.id && !seenIds.has(prod.id)) {
+                        seenIds.add(prod.id);
+                        allProducts.push({
+                            ...prod,
+                            categoryId: kat.id,
+                            categoryName: kat.name
+                        });
+                    }
+                });
+            }
+        } catch(e) {
+            console.error("Error aggregating products for category:", kat, e);
+        }
+    });
+    allCategory.products = allProducts;
+}
+
+function parseWeightInGrams(weightStr) {
+    if (!weightStr) return 0;
+    const lower = String(weightStr).toLowerCase();
+    if (lower.includes("kg")) {
+        const match = lower.match(/(\d+([.,]\d+)?)\s*kg/);
+        if (match) {
+            return parseFloat(match[1].replace(',', '.')) * 1000;
+        }
+        return 1000;
+    }
+    const match = lower.match(/(\d+)\s*g/);
+    if (match) {
+        return parseInt(match[1], 10);
+    }
+    return 0;
 }
 
 /* ==============================================================================
@@ -581,7 +623,7 @@ function renderKategorie() {
             // Kontener zdjęcia z poprawną ścieżką z data.js i bezpiecznym fallbackiem
             const imageContainer = document.createElement("div");
             imageContainer.className = "image-container";
-            const imgSrc = kat.image || "img/kat_all.png";
+            const imgSrc = kat.image || "img/kat_chleby.png";
             imageContainer.style.backgroundImage = `url('${imgSrc}')`;
 
             const infoDiv = document.createElement("div");
@@ -634,44 +676,107 @@ function renderCategoryProducts() {
     const container = document.getElementById("category-products-container");
     if (!container || typeof kategorieProduktow === 'undefined') return;
     
-    const params = new URLSearchParams(window.location.search);
-    const catId = params.get('cat');
+    initAllProductsCategory();
     
-    const category = kategorieProduktow.find(k => k.id === catId);
+    const params = new URLSearchParams(window.location.search);
+    const urlCat = params.get('cat');
+    
+    const catSelect = document.getElementById("filter-category");
+    const stateSelect = document.getElementById("filter-state");
+    const sortSelect = document.getElementById("sort-by");
+    const searchInput = document.getElementById("filter-search");
+    const countBadge = document.getElementById("filter-count-badge");
+    
+    let activeCatId = "all";
+    if (catSelect && catSelect.value) {
+        activeCatId = catSelect.value;
+    } else if (urlCat && kategorieProduktow.some(k => k.id === urlCat)) {
+        activeCatId = urlCat;
+        if (catSelect) catSelect.value = urlCat;
+    } else if (catSelect) {
+        catSelect.value = "all";
+    }
+    
+    const category = kategorieProduktow.find(k => k.id === activeCatId) || kategorieProduktow.find(k => k.id === "all");
     
     if (!category) {
         document.getElementById("cat-title").textContent = "Kategoria nie znaleziona";
         return;
     }
     
-    const catName = translations.categories && translations.categories[catId] 
-        ? translations.categories[catId].name 
+    const catName = translations.categories && translations.categories[activeCatId] 
+        ? translations.categories[activeCatId].name 
         : category.name;
-    const catDesc = translations.categories && translations.categories[catId] 
-        ? translations.categories[catId].description 
+    const catDesc = translations.categories && translations.categories[activeCatId] 
+        ? translations.categories[activeCatId].description 
         : category.description;
 
-    document.getElementById("cat-title").textContent = catName;
-    document.getElementById("cat-desc").textContent = catDesc;
+    const titleEl = document.getElementById("cat-title");
+    const descEl = document.getElementById("cat-desc");
+    if (titleEl) titleEl.textContent = catName;
+    if (descEl) descEl.textContent = catDesc;
     
     // Czyszczenie za pomocą usuwania węzłów (bezpieczne przed XSS)
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
     
-    if (!category.products || category.products.length === 0) {
+    let productsList = [...(category.products || [])];
+    
+    // Filtracja według opcji Świeże / Mrożone
+    const filterState = stateSelect ? stateSelect.value : "all";
+    if (filterState === "fresh") {
+        productsList = productsList.filter(p => p.isFresh);
+    } else if (filterState === "frozen") {
+        productsList = productsList.filter(p => p.isFrozen);
+    }
+    
+    // Wyszukiwanie tekstu
+    const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+    if (query) {
+        productsList = productsList.filter(prod => {
+            const name = (prod.name || "").toLowerCase();
+            const desc = (prod.description || "").toLowerCase();
+            return name.includes(query) || desc.includes(query);
+        });
+    }
+    
+    // Sortowanie
+    const sortBy = sortSelect ? sortSelect.value : "default";
+    if (sortBy === "name-asc") {
+        productsList.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+    } else if (sortBy === "name-desc") {
+        productsList.sort((a, b) => (b.name || "").localeCompare(a.name || ""));
+    } else if (sortBy === "weight-asc") {
+        productsList.sort((a, b) => parseWeightInGrams(a.weight) - parseWeightInGrams(b.weight));
+    } else if (sortBy === "weight-desc") {
+        productsList.sort((a, b) => parseWeightInGrams(b.weight) - parseWeightInGrams(a.weight));
+    } else if (sortBy === "category") {
+        productsList.sort((a, b) => (a.categoryId || "").localeCompare(b.categoryId || ""));
+    } else if (sortBy === "state") {
+        productsList.sort((a, b) => (b.isFresh ? 1 : 0) - (a.isFresh ? 1 : 0));
+    }
+    
+    if (countBadge) {
+        const prodWord = productsList.length === 1 ? "produkt" : (productsList.length > 1 && productsList.length < 5 ? "produkty" : "produktów");
+        countBadge.textContent = `${productsList.length} ${prodWord}`;
+    }
+    
+    if (productsList.length === 0) {
         const emptyMsg = document.createElement("p");
         emptyMsg.style.gridColumn = "1/-1";
         emptyMsg.style.textAlign = "center";
+        emptyMsg.style.padding = "40px 20px";
         emptyMsg.style.color = "var(--color-text-muted)";
-        emptyMsg.textContent = "Brak produktów w tej kategorii.";
+        emptyMsg.style.fontSize = "16px";
+        emptyMsg.textContent = "Brak produktów spełniających wybrane kryteria.";
         container.appendChild(emptyMsg);
         return;
     }
     
     const fragment = document.createDocumentFragment();
     
-    category.products.forEach(prod => {
+    productsList.forEach(prod => {
         const card = document.createElement("div");
         card.className = "product-card";
         
@@ -835,7 +940,8 @@ function renderCategoryProducts() {
         
         const catSpan = document.createElement("span");
         catSpan.className = "product-category";
-        catSpan.textContent = catName;
+        const itemCatName = prod.categoryName || catName;
+        catSpan.textContent = itemCatName;
         
         const titleH3 = document.createElement("h3");
         titleH3.className = "product-title";
@@ -858,11 +964,29 @@ function renderCategoryProducts() {
     });
     
     container.appendChild(fragment);
+}
 
-    // Refresh ScrollTrigger to ensure triggers are recalculating height
-    if (typeof ScrollTrigger !== 'undefined') {
-        ScrollTrigger.refresh();
-    }
+function initProductsFilterAndSort() {
+    const filterBar = document.getElementById("products-filter-bar");
+    if (!filterBar) return;
+    
+    const catSelect = document.getElementById("filter-category");
+    const stateSelect = document.getElementById("filter-state");
+    const sortSelect = document.getElementById("sort-by");
+    const searchInput = document.getElementById("filter-search");
+    
+    const onChange = () => {
+        if (catSelect && catSelect.value) {
+            const newUrl = `${window.location.pathname}?cat=${catSelect.value}`;
+            window.history.replaceState(null, '', newUrl);
+        }
+        renderCategoryProducts();
+    };
+    
+    if (catSelect) catSelect.addEventListener("change", onChange);
+    if (stateSelect) stateSelect.addEventListener("change", onChange);
+    if (sortSelect) sortSelect.addEventListener("change", onChange);
+    if (searchInput) searchInput.addEventListener("input", onChange);
 }
 
 function initParallax() {
