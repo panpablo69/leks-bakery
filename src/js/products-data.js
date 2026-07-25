@@ -3,7 +3,7 @@ const kategorieProduktow = [
         id: "all",
         name: "Wszystkie produkty",
         description: "Pełny asortyment tradycyjnego pieczywa, bułek, wyrobów cukierniczych i przekąsek Leks.",
-        image: "img/kat_chleby.png",
+        image: "img/kat_all.png",
         products: []
     },
     {
