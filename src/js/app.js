@@ -1521,10 +1521,10 @@ function initBlogModal() {
     const contentEl = document.getElementById("blog-modal-content");
     
     const imgSrcMap = {
-        'p1': 'img/blog_logistics.png?v=7',
-        'p2': 'img/blog_diet.png?v=7',
-        'p3': 'img/blog_tradition.png?v=7',
-        'p4': 'img/blog_ecology.png?v=7'
+        'p1': 'img/blog_logistics.png?v=8',
+        'p2': 'img/blog_diet.png?v=8',
+        'p3': 'img/blog_tradition.png?v=8',
+        'p4': 'img/blog_ecology.png?v=8'
     };
     
     const fallbackArticles = {
