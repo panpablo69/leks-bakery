@@ -1762,9 +1762,9 @@ body::before {
 
 .blog-img {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    max-height: 250px;
-    background: #f5eedc;
+    aspect-ratio: 4 / 3;
+    max-height: 320px;
+    background: transparent;
     overflow: hidden;
     position: relative;
     display: flex;

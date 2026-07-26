@@ -14,7 +14,7 @@ let translations = {};
 
 async function loadInitialTranslations() {
     try {
-        const response = await fetch(`lang/${currentLang}.json?v=45`);
+        const response = await fetch(`lang/${currentLang}.json?v=46`);
         if (response.ok) {
             translations = await response.json();
             document.documentElement.setAttribute("lang", currentLang);
@@ -28,7 +28,7 @@ async function loadInitialTranslations() {
 
 async function loadTranslations(lang) {
     try {
-        const response = await fetch(`lang/${lang}.json?v=45`);
+        const response = await fetch(`lang/${lang}.json?v=46`);
         if (!response.ok) throw new Error(`Could not load translations for ${lang}`);
         translations = await response.json();
         currentLang = lang;
@@ -240,6 +240,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         initPrivacyModal();
     } catch(e) { console.error("initPrivacyModal error:", e); }
+    
+    try {
+        initBlogModal();
+    } catch(e) { console.error("initBlogModal error:", e); }
     
     try {
         initCertificates();
@@ -1495,6 +1499,129 @@ function initPrivacyModal() {
         if (e.key === "Escape" && modal.classList.contains("active")) {
             closeModal();
         }
+    });
+}
+
+/* ==============================================================================
+   11. MODAL ARTYKUŁÓW BLOGOWYCH (INTERAKCJA I CZYTANIE)
+   ============================================================================== */
+function initBlogModal() {
+    const modal = document.getElementById("blog-article-modal");
+    if (!modal) return;
+    
+    const closeBtn = document.getElementById("close-blog-modal");
+    const closeActionBtn = document.getElementById("close-blog-action-btn");
+    const modalCard = modal.querySelector(".blog-modal-card");
+    
+    const imgEl = document.getElementById("blog-modal-img");
+    const categoryEl = document.getElementById("blog-modal-category");
+    const dateEl = document.getElementById("blog-modal-date");
+    const readTimeEl = document.getElementById("blog-modal-read-time");
+    const titleEl = document.getElementById("blog-modal-title");
+    const contentEl = document.getElementById("blog-modal-content");
+    
+    const imgSrcMap = {
+        'p1': 'img/blog_logistics.png?v=6',
+        'p2': 'img/blog_diet.png?v=6',
+        'p3': 'img/blog_tradition.png?v=6',
+        'p4': 'img/blog_ecology.png?v=6'
+    };
+    
+    const fallbackArticles = {
+        'p1': {
+            title: "Logistyka świeżości: Standard na europejską skalę",
+            category: "Logistyka & Świeżość",
+            date: "14 Lutego 2026",
+            readTime: "4 min czytania",
+            content: "<p>W Piekarni LEKS wiemy, że chrupiąca skórka i wyjątkowy zapach świeżego chleba to efekt nie tylko doskonałej receptury, ale przede wszystkim precyzyjnej i nowoczesnej logistyki. W 2026 roku dostarczamy pieczywo do setek punktów w Polsce i Europie Zachodniej w rekordowo krótkim czasie od momentu wyjęcia z pieca.</p><h3>Flota chłodnicza i kontrola temperatury</h3><p>Każdy z naszych pojazdów dostawczych wyposażony jest w zaawansowane systemy monitorowania temperatury i wilgotności w czasie rzeczywistym. Dzięki temu pieczywo dociera do sklepów, kawiarni i sieci partnerskich dokładnie w takich warunkach, jakich wymaga zachowanie pełnych walorów smakowych i odżywczych.</p><h3>Innowacyjne pakowanie próżniowe</h3><p>Dla wybranych linii produktów – w tym naszego flagowego pieczywa 2AB – wdrożyliśmy sterylną technologię pakowania w atmosferze modyfikowanej (MAP). Pozwala to cieszyć się tradycyjnym smakiem chleba bez konieczności stosowania chemicznych konserwantów.</p><blockquote>Logistyka w LEKS to most łączący gorący piec rzemieślniczy z porannym stołem naszych konsumentów.</blockquote>"
+        },
+        'p2': {
+            title: "Pieczywo w diecie nowoczesnego konsumenta",
+            category: "Zdrowie & Odżywianie",
+            date: "10 Lutego 2026",
+            readTime: "5 min czytania",
+            content: "<p>Współczesny konsument zwraca ogromną uwagę na skład produktów spożywczych. Pieczywo przestało być jedynie podstawowym dodatkiem do posiłku – stało się kluczowym elementem zbilansowanej diety wspierającej odporność, trawienie i dobre samopoczucie.</p><h3>Potęga praziarna 2AB</h3><p>Przełomem w naszej ofercie jest wykorzystanie starożytnej odmiany pszenicy 2AB (Aegilops Tauschii & Speltoides). Posiada ona unikalną strukturę białkową, która jest znacznie łatwiej przyswajalna przez ludzki układ pokarmowy niż współczesna pszenica modyfikowana.</p><h3>Naturalne minerały i niski indeks glikemiczny</h3><p>Pieczywo z praziarna 2AB wyróżnia się naturalnie wysoką zawartością cynku, selenu oraz błonnika pokarmowego. Charakteryzuje się również niższym indeksem glikemicznym, co pomaga w utrzymaniu stabilnego poziomu cukru we krwi przez cały dzień.</p><blockquote>Prawdziwe zdrowie zaczyna się od ziarna, które szanuje naturalny metabolizm człowieka.</blockquote>"
+        },
+        'p3': {
+            title: "Od ziarna do bochenka. Tradycja spotyka technologię",
+            category: "Tradycja & Technologia",
+            date: "02 Lutego 2026",
+            readTime: "4 min czytania",
+            content: "<p>W Piekarni LEKS łączymy wielopokoleniową tradycję piekarniczą z najnowocześniejszymi rozwiązaniami technologicznymi. Zastąpienie pracy ręcznej w powtarzalnych etapach procesami automatycznymi pozwala nam zachować najwyższą i powtarzalną jakość przy zachowaniu tradycyjnych receptur.</p><h3>Długotrwała fermentacja na żywym zakwasie</h3><p>Sercem naszej produkcji jest własny, naturalny zakwas żytni i pszenny, pielęgnowany według sprawdzonych receptur od kilkudziesięciu lat. Ciasto przechodzi wielogodzinny proces powolnej fermentacji, co nadaje pieczywu głęboki aromat, chrupiącą skórkę i elastyczny miąższ.</p><h3>Nowoczesne piece przelotowe</h3><p>Nasi mistrzowie piekarnictwa nadzorują proces wypieku w komputerowo sterowanych piecach przelotowych, które gwarantują idealną dystrybucję ciepła i pary wodnej. Dzięki temu każdy bochenek opuszczający naszą piekarnię smakuje jak z tradycyjnej wiejskiej piecowni.</p><blockquote>Technologia nie zastępuje serca piekarza – ona pomaga mu chronić tradycyjny smak.</blockquote>"
+        },
+        'p4': {
+            title: "Eko-Piekarnia: Nasza droga do 100% zielonej energii",
+            category: "Ekologia & Zrównoważony Rozwój",
+            date: "25 Stycznia 2026",
+            readTime: "3 min czytania",
+            content: "<p>Ochrona środowiska to dla Piekarni LEKS jeden z priorytetów strategicznych. W 2026 roku z dumą ogłaszamy, że nasze zakłady produkcyjne w Sulęcinie i Gorzowie Wielkopolskim osiągnęły pełną samowystarczalność energetyczną opartą na odnawialnych źródłach energii.</p><h3>Fotowoltaika i odzysk ciepła z pieców</h3><p>Na dachach naszych hal produkcyjnych zainstalowaliśmy nowoczesne panele fotowoltaiczne o łącznej mocy rzędu kilkuset kilowatów. Dodatkowo wdrożyliśmy zaawansowany system odzysku ciepła odpadowego z pieców piekarniczych, które wykorzystujemy do ogrzewania wody i pomieszczeń zakładowych.</p><h3>Opakowania w 100% biodegradowalne</h3><p>Zredukowaliśmy zużycie plastiku o 85%, wprowadzając papierowe torby z recyklingu oraz biodegradowalne folie kompostowalne. Nasze cele na kolejne lata to zero odpadów organicznych oraz całkowita elektryfikacja floty pojazdów pomocniczych.</p><blockquote>Zrównoważony piekarz piecze z szacunkiem zarówno dla ludzi, jak i dla planety.</blockquote>"
+        }
+    };
+    
+    function openModal(postId) {
+        const fb = fallbackArticles[postId] || {};
+        const prefix = postId; // 'p1', 'p2', 'p3', 'p4'
+        const b = (translations && translations.blog) ? translations.blog : {};
+        
+        const title = b[`${prefix}_title`] || fb.title || "";
+        const category = b[`${prefix}_category`] || fb.category || "";
+        const date = b[`${prefix}_date`] || fb.date || "";
+        const readTime = b[`${prefix}_read_time`] || fb.readTime || "";
+        const content = b[`${prefix}_content`] || fb.content || "";
+        
+        if (imgEl) imgEl.src = imgSrcMap[postId] || 'img/blog_logistics.png';
+        if (categoryEl) categoryEl.textContent = category;
+        if (dateEl) dateEl.textContent = date;
+        if (readTimeEl) readTimeEl.textContent = readTime;
+        if (titleEl) titleEl.textContent = title;
+        if (contentEl) contentEl.innerHTML = content;
+        
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+        
+        if (typeof gsap !== 'undefined') {
+            gsap.fromTo(modal, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" });
+            gsap.fromTo(modalCard, { y: 40, scale: 0.95, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" });
+        }
+    }
+    
+    function closeModal() {
+        if (!modal.classList.contains("active")) return;
+        if (typeof gsap !== 'undefined') {
+            gsap.to(modalCard, { y: 30, scale: 0.97, opacity: 0, duration: 0.25, ease: "power2.in" });
+            gsap.to(modal, {
+                opacity: 0,
+                duration: 0.25,
+                ease: "power2.in",
+                onComplete: () => {
+                    modal.classList.remove("active");
+                    document.body.style.overflow = "";
+                }
+            });
+        } else {
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+    }
+    
+    // Obsługa kliknięcia w kafelki bloga oraz ich elementy (przycisk Więcej, tytuł, obrazek)
+    document.querySelectorAll(".blog-card").forEach(card => {
+        card.addEventListener("click", (e) => {
+            e.preventDefault();
+            const postId = card.getAttribute("data-post-id");
+            if (postId) openModal(postId);
+        });
+    });
+    
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    if (closeActionBtn) closeActionBtn.addEventListener("click", closeModal);
+    
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+    
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) closeModal();
     });
 }
 
