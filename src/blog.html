@@ -89,17 +89,17 @@
             transform: translateX(4px);
         }
 
-        /* Modal Artykułu Blogowego */
+        /* Modal Artykułu Blogowego - Wersja powiększona */
         .blog-modal-card {
-            max-width: 850px !important;
-            width: 92%;
-            max-height: 88vh;
+            max-width: 1100px !important;
+            width: 95%;
+            max-height: 92vh;
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            border-radius: 16px;
+            border-radius: 20px;
             background: #ffffff;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.32);
         }
         
         .blog-modal-header {
@@ -109,7 +109,7 @@
         
         .blog-modal-img-wrapper {
             width: 100%;
-            height: 280px;
+            height: 320px;
             position: relative;
             overflow: hidden;
             background-color: var(--color-bg-alt);
@@ -124,22 +124,22 @@
         
         .blog-modal-img-wrapper .modal-badge {
             position: absolute;
-            bottom: 16px;
-            left: 24px;
-            background: rgba(0, 58, 115, 0.9);
+            bottom: 20px;
+            left: 32px;
+            background: rgba(0, 58, 115, 0.92);
             backdrop-filter: blur(8px);
             color: #ffffff;
-            padding: 6px 16px;
+            padding: 8px 20px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            letter-spacing: 1.2px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
         
         .blog-modal-body {
-            padding: 28px 36px;
+            padding: 32px 48px;
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -147,15 +147,15 @@
         }
         
         .blog-modal-meta {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--color-accent);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
         }
         
@@ -165,43 +165,58 @@
         
         .blog-modal-title {
             font-family: var(--font-serif);
-            font-size: 1.75rem;
+            font-size: 2.1rem;
             color: var(--color-primary);
-            line-height: 1.35;
-            margin-bottom: 12px;
+            line-height: 1.3;
+            margin-bottom: 16px;
         }
         
         .blog-text-content {
             overflow-y: auto;
-            padding-right: 12px;
+            padding-right: 16px;
             margin-top: 10px;
-            color: var(--color-primary);
-            font-size: 1rem;
-            line-height: 1.7;
-            max-height: 42vh;
+            color: #2D3748;
+            font-size: 1.08rem;
+            line-height: 1.8;
+            max-height: 52vh;
+        }
+        
+        .blog-text-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .blog-text-content::-webkit-scrollbar-track {
+            background: #F1F5F9;
+            border-radius: 4px;
+        }
+        
+        .blog-text-content::-webkit-scrollbar-thumb {
+            background: var(--color-accent);
+            border-radius: 4px;
         }
         
         .blog-text-content p {
-            margin-bottom: 16px;
-            color: var(--color-text);
+            margin-bottom: 18px;
+            color: #4A5568;
         }
         
         .blog-text-content h3 {
             font-family: var(--font-serif);
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: var(--color-primary);
-            margin: 22px 0 10px;
-            border-bottom: 2px solid rgba(197, 160, 89, 0.3);
-            padding-bottom: 4px;
+            margin: 26px 0 12px;
+            border-bottom: 2px solid rgba(197, 160, 89, 0.35);
+            padding-bottom: 6px;
         }
         
         .blog-text-content blockquote {
-            margin: 20px 0;
-            padding: 16px 20px;
-            background-color: var(--color-bg-alt);
-            border-left: 4px solid var(--color-accent);
-            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+            padding: 18px 24px;
+            background-color: #F7FAFC;
+            border-left: 5px solid var(--color-accent);
+            border-radius: 0 10px 10px 0;
             font-style: italic;
+            font-size: 1.1rem;
             color: var(--color-primary);
         }
         
@@ -306,7 +321,7 @@
                     <!-- Artykuł 1 -->
                     <article class="blog-card" data-post-id="p1">
                         <div class="blog-img">
-                            <img src="img/blog_logistics.png?v=6" alt="Logistyka">
+                            <img src="img/blog_logistics.png?v=7" alt="Logistyka">
                         </div>
                         <div class="blog-content">
                             <div>
@@ -320,7 +335,7 @@
                     <!-- Artykuł 2 -->
                     <article class="blog-card" data-post-id="p2">
                         <div class="blog-img">
-                            <img src="img/blog_diet.png?v=6" alt="Dieta">
+                            <img src="img/blog_diet.png?v=7" alt="Dieta">
                         </div>
                         <div class="blog-content">
                             <div>
@@ -334,7 +349,7 @@
                     <!-- Artykuł 3 -->
                     <article class="blog-card" data-post-id="p3">
                         <div class="blog-img">
-                            <img src="img/blog_tradition.png?v=6" alt="Przepis">
+                            <img src="img/blog_tradition.png?v=7" alt="Przepis">
                         </div>
                         <div class="blog-content">
                             <div>
@@ -348,7 +363,7 @@
                     <!-- Artykuł 4 -->
                     <article class="blog-card" data-post-id="p4">
                         <div class="blog-img">
-                            <img src="img/blog_ecology.png?v=6" alt="Ekologia">
+                            <img src="img/blog_ecology.png?v=7" alt="Ekologia">
                         </div>
                         <div class="blog-content">
                             <div>
