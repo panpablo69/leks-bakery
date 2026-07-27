@@ -745,6 +745,10 @@ body::before {
     }
 }
 
+#timeline-section .container {
+    max-width: 1440px;
+}
+
 .about-interactive-timeline {
     background-color: transparent !important;
     border: none !important;
@@ -753,7 +757,7 @@ body::before {
     position: relative;
     overflow: visible; /* Aby glow aktywnego przycisku nie był przycięty */
     width: 100%;
-    max-width: 1280px; /* Poszerzona sekcja dla zachowania doskonałych proporcji i symetrii */
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -764,7 +768,8 @@ body::before {
     top: 120px; /* Wyrównanie do wysokości kropki i linii osi czasu */
     width: 180px;
     z-index: 5;
-    transition: transform 0.4s ease, left 0.4s ease;
+    transform-origin: bottom center;
+    transition: left 0.4s ease;
 }
 
 .timeline-mascot-img {
@@ -804,14 +809,14 @@ body::before {
     position: relative;
     margin: 80px 0 300px; /* Przesunięto timeline do góry (pod nagłówek), a pod nim zrobiono 300px miejsca na kafelek */
     width: 100%;
-    padding: 0 40px 0 200px; /* Przesunięta pierwsza kropka o 200px w prawo, aby zwolnić miejsce dla Kłosia po lewej */
+    padding: 0 40px 0 180px; /* Rozciągnięta oś czasu na szerokość kontenera */
 }
 
 .timeline-navigation::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 200px; /* Linia postępu zaczyna się od pierwszej kropki (200px) */
+    left: 180px; /* Linia postępu zaczyna się od pierwszej kropki */
     right: 40px;
     height: 4px; /* Grubsza, bardziej premium linia */
     background: linear-gradient(to right, var(--color-primary) var(--timeline-progress, 0%), var(--color-accent-light) var(--timeline-progress, 0%));
@@ -1056,6 +1061,9 @@ body::before {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .product-card:hover {
@@ -1075,6 +1083,9 @@ body::before {
 
 .product-info {
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .product-category {
@@ -1098,6 +1109,11 @@ body::before {
 .product-desc {
     font-size: 0.95rem;
     color: var(--color-text-muted);
+}
+
+.product-card .btn,
+.product-card .open-spec-btn {
+    margin-top: auto;
 }
 
 .category-card {

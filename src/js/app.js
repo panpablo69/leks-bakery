@@ -421,6 +421,31 @@ const timelineData = {
     }
 };
 
+const mascotYearScales = {
+    "1989": 0.55,
+    "1998": 0.70,
+    "2005": 0.85,
+    "2010": 1.00,
+    "2018": 1.15,
+    "2026": 1.30
+};
+
+function updateMascotScale(year) {
+    const mascotContainer = document.querySelector(".timeline-mascot-container");
+    if (!mascotContainer) return;
+    const targetScale = mascotYearScales[year] !== undefined ? mascotYearScales[year] : 1;
+    if (typeof gsap !== "undefined") {
+        gsap.to(mascotContainer, {
+            scale: targetScale,
+            duration: 0.5,
+            ease: "back.out(1.6)",
+            transformOrigin: "bottom center"
+        });
+    } else {
+        mascotContainer.style.transform = `scale(${targetScale})`;
+    }
+}
+
 function positionTimelineElements(button) {
     const card = document.getElementById("timeline-card");
     const mascotSlider = document.getElementById("timeline-mascot-slider");
@@ -481,6 +506,7 @@ function initTimeline() {
         }
         
         positionTimelineElements(activeBtn);
+        updateMascotScale(initYear);
         
         // Przywrócenie transition po krótkiej chwili
         setTimeout(() => {
@@ -510,6 +536,9 @@ function initTimeline() {
             if (percentages[targetYear] !== undefined) {
                 nav.style.setProperty("--timeline-progress", percentages[targetYear] + "%");
             }
+            
+            // Animacja wzrostu maskotki w zależności od wybranego roku
+            updateMascotScale(targetYear);
             
             // Elegancka animacja GSAP: zniknięcie, zmiana tekstu i pozycji, pojawienie się
             const timelineTl = gsap.timeline();
@@ -964,7 +993,7 @@ function renderCategoryProducts() {
         const b2bLabel = translations.products && translations.products.b2b_badge ? translations.products.b2b_badge : "Opis";
         const btn = document.createElement("button");
         btn.className = "btn btn-sm btn-primary open-spec-btn";
-        btn.style.marginTop = "12px";
+        btn.style.marginTop = "auto";
         btn.textContent = b2bLabel;
         
         infoDiv.appendChild(catSpan);
