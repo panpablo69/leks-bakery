@@ -1,12 +1,5 @@
 const kategorieProduktow = [
     {
-        id: "all",
-        name: "Wszystkie produkty",
-        description: "Pełny asortyment tradycyjnego pieczywa, bułek, wyrobów cukierniczych i przekąsek Leks.",
-        image: "img/kat_all.png",
-        products: []
-    },
-    {
         id: "chleby",
         name: "Chleby",
         description: "Tradycyjne polskie chleby wypiekane na naturalnym zakwasie.",

@@ -206,6 +206,7 @@
     "label_email": "Dirección de correo electrónico",
     "placeholder_email": "ej. juan@dominio.com",
     "label_subject": "Asunto",
+    "placeholder_subject": "Ingrese el asunto...",
     "subject_wholesale": "Colaboración Mayorista",
     "subject_career": "Empleo y Reclutamiento",
     "subject_general": "Consulta General",
@@ -356,7 +357,7 @@
     "pillar2_desc": "Estricto control en cada etapa de producción, desde la materia prima hasta el producto terminado (HACCP, IFS, ISO).",
     "pillar3_title": "Logística y Almacén",
     "pillar3_desc": "Cámaras frigoríficas modernas, almacenes de gran altura y una flota de transporte especializada.",
-    "cta_title": "📦 ¿Busca una oferta para una cadena de supermercados?",
+    "cta_title": "¿Está interesado en una oferta comercial?",
     "cta_desc": "Contáctenos — prepararemos condiciones de cooperación personalizadas, detalles técnicos y muestras.",
     "cta_btn": "Formulario de Contacto",
     "download_title": "📄 Certificados de Calidad",
@@ -373,6 +374,7 @@
     "contact_company_placeholder": "p. ej. Su Empresa S.L.",
     "contact_phone_field_label": "Número de teléfono",
     "contact_phone_field_placeholder": "p. ej. +48 123 456 789",
+    "contact_subject_placeholder": "ej. Consulta de colaboración B2B",
     "subject_samples": "Solicitud de muestras de panadería"
   },
   "products_2ab": {

@@ -206,6 +206,7 @@
     "label_email": "Adres e-mail",
     "placeholder_email": "np. jan@domena.pl",
     "label_subject": "Temat",
+    "placeholder_subject": "Wpisz temat wiadomości...",
     "subject_wholesale": "Współpraca Hurtowa",
     "subject_career": "Kariera i rekrutacja",
     "subject_general": "Zapytanie Ogólne",
@@ -356,7 +357,7 @@
     "pillar2_desc": "Ścisły monitoring na każdym etapie produkcji od surowca po gotowy wyrób (HACCP, IFS, ISO).",
     "pillar3_title": "Logistyka i magazyn",
     "pillar3_desc": "Nowoczesne chłodnie i magazyny wysokiego składowania oraz wyspecjalizowana flota transportowa.",
-    "cta_title": "📦 Chcesz ofertę dla sieci handlowej?",
+    "cta_title": "Jesteś zainteresowany ofertą handlową?",
     "cta_desc": "Skontaktuj się z nami — przygotujemy indywidualne warunki współpracy, dane techniczne i próbki.",
     "cta_btn": "Formularz kontaktowy",
     "download_title": "📄 Certyfikaty Jakości",
@@ -373,6 +374,7 @@
     "contact_company_placeholder": "np. Twoja Firma Sp. z o.o.",
     "contact_phone_field_label": "Numer telefonu",
     "contact_phone_field_placeholder": "np. +48 123 456 789",
+    "contact_subject_placeholder": "np. Zapytanie o współpracę B2B",
     "subject_samples": "Zapytanie o próbki wypieków"
   },
   "products_2ab": {

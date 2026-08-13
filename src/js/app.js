@@ -648,7 +648,7 @@ function renderKategorie() {
 
     kategorieProduktow.forEach(kat => {
         try {
-            if (!kat || !kat.id) return; // Pomija niepoprawne lub puste elementy
+            if (!kat || !kat.id || kat.id === "all") return; // Pomija niepoprawne, puste lub syntetyczną kategorię 'all'
 
             const card = document.createElement("div");
             card.className = "product-card category-card";

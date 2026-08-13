@@ -206,6 +206,7 @@
     "label_email": "Email address",
     "placeholder_email": "e.g. john@domain.com",
     "label_subject": "Subject",
+    "placeholder_subject": "Enter message subject...",
     "subject_wholesale": "Wholesale Cooperation",
     "subject_career": "Career & Recruitment",
     "subject_general": "General Inquiry",
@@ -356,7 +357,7 @@
     "pillar2_desc": "Strict monitoring at every stage of production from raw material to finished product (HACCP, IFS, ISO).",
     "pillar3_title": "Logistics & Warehouse",
     "pillar3_desc": "Modern cold stores, high-bay warehouses, and a specialized transport fleet.",
-    "cta_title": "📦 Looking for an offer for a retail chain?",
+    "cta_title": "Are you interested in a commercial offer?",
     "cta_desc": "Contact us — we will prepare individual cooperation terms, technical details, and samples.",
     "cta_btn": "Contact Form",
     "download_title": "📄 Quality Certificates",
@@ -373,6 +374,7 @@
     "contact_company_placeholder": "e.g. Your Company Ltd.",
     "contact_phone_field_label": "Phone Number",
     "contact_phone_field_placeholder": "e.g. +48 123 456 789",
+    "contact_subject_placeholder": "e.g. Inquiry about B2B cooperation",
     "subject_samples": "Request for bakery samples"
   },
   "products_2ab": {

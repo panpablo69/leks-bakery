@@ -206,6 +206,7 @@
     "label_email": "E-Mail-Adresse",
     "placeholder_email": "z. B. max@domain.de",
     "label_subject": "Betreff",
+    "placeholder_subject": "Betreff eingeben...",
     "subject_wholesale": "Großhandelskooperation",
     "subject_career": "Karriere & Rekrutierung",
     "subject_general": "Allgemeine Anfrage",
@@ -356,7 +357,7 @@
     "pillar2_desc": "Strenge Überwachung auf jeder Produktionsstufe vom Rohstoff bis zum Endprodukt (HACCP, IFS, ISO).",
     "pillar3_title": "Logistik & Lagerung",
     "pillar3_desc": "Moderne Kühlhäuser, Hochregallager und ein spezialisierter Transportfuhrpark.",
-    "cta_title": "📦 Suchen Sie ein Angebot für eine Handelskette?",
+    "cta_title": "Sind Sie an einem kommerziellen Angebot interessiert?",
     "cta_desc": "Kontaktieren Sie uns — wir erstellen individuelle Kooperationsbedingungen, technische Spezifikationen und Muster.",
     "cta_btn": "Kontaktformular",
     "download_title": "📄 Qualitätszertifikate",
@@ -373,6 +374,7 @@
     "contact_company_placeholder": "z.B. Ihre Firma GmbH",
     "contact_phone_field_label": "Telefonnummer",
     "contact_phone_field_placeholder": "z.B. +48 123 456 789",
+    "contact_subject_placeholder": "z.B. Anfrage zu B2B-Kooperation",
     "subject_samples": "Musteranfrage for Backwaren"
   },
   "products_2ab": {
