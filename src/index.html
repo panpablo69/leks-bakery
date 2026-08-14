@@ -23,7 +23,7 @@
     <header id="main-header" class="header-glass">
         <div class="header-container">
             <a href="#" class="logo-link" id="nav-logo">
-                <img src="img/leks_logo_smacznego.png" alt="Leks Logo">
+                <img src="img/leks_logo_smacznego.webp" alt="Leks Logo" width="160" height="48" loading="eager" fetchpriority="high">
             </a>
             
             <nav id="main-nav" class="nav-menu">
@@ -87,7 +87,7 @@
         <!-- Sekcja Hero (Strona Główna z efektem przybliżania) -->
         <section id="hero" class="hero-section">
             <div class="hero-bg-container">
-                <video autoplay loop muted playsinline class="hero-video" id="hero-zoom-bg">
+                <video autoplay loop muted playsinline poster="img/hero_poster.webp" preload="metadata" class="hero-video" id="hero-zoom-bg">
                     <source src="img/bakery_hero_video.mp4" type="video/mp4">
                 </video>
             </div>
@@ -119,8 +119,8 @@
                 </div>
                 
                 <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
-                <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-1" alt="">
-                <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-2" alt="">
+                <img src="img/dekoracyjny_klos.webp" class="parallax-wheat" id="wheat-1" alt="" loading="lazy" decoding="async">
+                <img src="img/dekoracyjny_klos.webp" class="parallax-wheat" id="wheat-2" alt="" loading="lazy" decoding="async">
 
                 <!-- Siatka Produktów (GSAP Animated Grid) -->
                 <div class="products-grid" id="products-container">
@@ -135,7 +135,7 @@
                 <button id="close-modal" class="modal-close-btn" aria-label="Zamknij">&times;</button>
                 <div class="modal-body-layout">
                     <div class="modal-image-col">
-                        <img id="modal-product-img" src="" alt="Produkt" />
+                        <img id="modal-product-img" src="" alt="Produkt"  loading="lazy" decoding="async">
                         <span id="modal-overview-badge" class="modal-overview-badge" style="display: none;" data-i18n="illustrative_photo">Zdjęcie poglądowe</span>
                     </div>
                     <div class="modal-content-col">
@@ -163,7 +163,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <div class="logo-2ab-header-wrapper">
-                        <img src="img/logo-2ab.png" alt="Leks 2AB Logo" class="logo-2ab-header">
+                        <img src="img/logo-2ab.webp" alt="Leks 2AB Logo" class="logo-2ab-header" loading="lazy" decoding="async">
                     </div>
                     <span class="section-subtitle" data-i18n="features_2ab.subtitle">Innowacja i Zdrowie</span>
                     <h2 class="section-title" data-i18n="features_2ab.title">Pieczywo 2AB</h2>
@@ -172,11 +172,11 @@
                 </div>
                 
                 <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
-                <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-2ab" alt="">
+                <img src="img/dekoracyjny_klos.webp" class="parallax-wheat" id="wheat-2ab" alt="" loading="lazy" decoding="async">
                 
                 <div class="features-presentation">
                     <div class="features-image-wrapper">
-                         <img src="img/bulka-cechy.png" alt="Bułka 2AB" class="features-main-image">
+                         <img src="img/bulka-cechy.webp" alt="Bułka 2AB" class="features-main-image" loading="lazy" decoding="async">
                     </div>
                     
                     <!-- Cecha 1 (Lewa góra) -->
@@ -246,31 +246,31 @@
                     <div class="partners-grid">
                         <div class="partner-card" data-partner="backaldrin">
                             <div class="partner-logo-wrapper">
-                                <img src="https://leks.com.pl/wp-content/uploads/RZ_backaldrin_Logo_cmyk_Logoform-360x360.jpg" alt="backaldrin" class="partner-logo-img">
+                                <img src="https://leks.com.pl/wp-content/uploads/RZ_backaldrin_Logo_cmyk_Logoform-360x360.jpg" alt="backaldrin" class="partner-logo-img" loading="lazy" decoding="async">
                             </div>
                             <span class="partner-name">backaldrin</span>
                         </div>
                         <div class="partner-card" data-partner="puratos">
                             <div class="partner-logo-wrapper">
-                                <img src="https://leks.com.pl/wp-content/uploads/PURATOS_PL_S_RGB-420x203.png" alt="Puratos" class="partner-logo-img">
+                                <img src="https://leks.com.pl/wp-content/uploads/PURATOS_PL_S_RGB-420x203.png" alt="Puratos" class="partner-logo-img" loading="lazy" decoding="async">
                             </div>
                             <span class="partner-name">Puratos</span>
                         </div>
                         <div class="partner-card" data-partner="uldo">
                             <div class="partner-logo-wrapper">
-                                <img src="https://leks.com.pl/wp-content/uploads/ULDO-Polska_logo-361x360.jpg" alt="ULDO" class="partner-logo-img">
+                                <img src="https://leks.com.pl/wp-content/uploads/ULDO-Polska_logo-361x360.jpg" alt="ULDO" class="partner-logo-img" loading="lazy" decoding="async">
                             </div>
                             <span class="partner-name">ULDO</span>
                         </div>
                         <div class="partner-card" data-partner="goodmills">
                             <div class="partner-logo-wrapper">
-                                <img src="https://leks.com.pl/wp-content/uploads/GMI-Logo-40-KB-420x157.jpg" alt="GoodMills" class="partner-logo-img">
+                                <img src="https://leks.com.pl/wp-content/uploads/GMI-Logo-40-KB-420x157.jpg" alt="GoodMills" class="partner-logo-img" loading="lazy" decoding="async">
                             </div>
                             <span class="partner-name">GoodMills</span>
                         </div>
                         <div class="partner-card" data-partner="spp">
                             <div class="partner-logo-wrapper">
-                                <img src="https://leks.com.pl/wp-content/uploads/SPP_logotyp_RGB-322x360.jpg" alt="Stowarzyszenie Piekarzy RP" class="partner-logo-img">
+                                <img src="https://leks.com.pl/wp-content/uploads/SPP_logotyp_RGB-322x360.jpg" alt="Stowarzyszenie Piekarzy RP" class="partner-logo-img" loading="lazy" decoding="async">
                             </div>
                             <span class="partner-name">Stowarzyszenie Piekarzy RP</span>
                         </div>
@@ -282,7 +282,7 @@
         <!-- Sekcja Kontakt -->
         <section id="contact" class="section-padding bg-alt">
             <!-- Dekoracyjne kłosy pszenicy (Parallax) -->
-            <img src="img/dekoracyjny_klos.png" class="parallax-wheat" id="wheat-contact" alt="">
+            <img src="img/dekoracyjny_klos.webp" class="parallax-wheat" id="wheat-contact" alt="" loading="lazy" decoding="async">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle" data-i18n="contact.subtitle">Napisz Do Nas</span>
@@ -336,7 +336,7 @@
     <footer id="main-footer" class="footer-minimalist">
         <div class="container footer-container-minimal">
             <div class="footer-brand">
-                <img src="img/leks_logo_smacznego.png" alt="Leks Logo" class="footer-logo-white">
+                <img src="img/leks_logo_smacznego.webp" alt="Leks Logo" class="footer-logo-white" width="160" height="48" loading="lazy" decoding="async">
             </div>
             
             <nav class="footer-nav">
