@@ -4116,7 +4116,7 @@ header, main, footer, section, .hero-section, .container {
     max-width: 100vw;
 }
 
-/* Fix mobile navigation drawer overflow when closed */
+/* Fix mobile navigation & vertical timeline layout on mobile */
 @media (max-width: 768px) {
     .nav-menu:not(.active) {
         visibility: hidden !important;
@@ -4128,12 +4128,110 @@ header, main, footer, section, .hero-section, .container {
         overflow-x: hidden;
     }
 
-    /* Fix timeline navigation overflow on mobile */
+    #timeline-section {
+        padding: 60px 0;
+        overflow: hidden !important;
+    }
+
+    .about-interactive-timeline {
+        position: relative;
+        padding: 0 10px;
+    }
+
     .timeline-navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 70px 0 30px 80px; /* Space on left for vertical spine & mascot */
+        margin: 0 !important;
+        gap: 24px;
         max-width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding: 0 16px;
+        width: 100%;
+        overflow: visible !important;
+    }
+
+    /* Vertical line running down */
+    .timeline-navigation::before {
+        content: '';
+        position: absolute;
+        top: 70px;
+        bottom: 30px;
+        left: 32px;
+        right: auto;
+        width: 4px;
+        height: auto;
+        background: rgba(0, 58, 115, 0.18);
+        border-radius: 2px;
+    }
+
+    .timeline-year-btn {
+        position: relative;
+        z-index: 2;
+        width: auto;
+        min-width: 84px;
+        height: 42px;
+        padding: 0 18px;
+        border-radius: 22px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        color: var(--color-primary);
+        border: 2px solid var(--color-accent);
+        box-shadow: 0 4px 12px rgba(0, 58, 115, 0.08);
+        transition: all 0.3s ease;
+    }
+
+    .timeline-year-btn.active {
+        background: var(--color-accent);
+        color: #FFFFFF;
+        border-color: var(--color-accent);
+        transform: scale(1.08);
+        box-shadow: 0 6px 16px rgba(197, 160, 89, 0.3);
+    }
+
+    /* Mascot Kłos Krzyś on mobile vertical timeline */
+    .timeline-mascot-container {
+        position: absolute !important;
+        left: 32px !important;
+        top: 60px;
+        transform: translate(-50%, -100%) !important;
+        margin-bottom: 0 !important;
+        z-index: 10;
+        pointer-events: none;
+        width: 60px;
+    }
+
+    .timeline-mascot-img {
+        width: 58px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    }
+
+    /* Content card under vertical timeline buttons */
+    .timeline-content-card {
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        transform: none !important;
+        width: calc(100% + 55px) !important;
+        margin-left: -55px !important;
+        margin-top: 24px !important;
+        padding: 24px 20px;
+        box-sizing: border-box;
+        border-left: 4px solid var(--color-accent);
+        background: #FFFFFF;
+        box-shadow: 0 8px 24px rgba(0, 58, 115, 0.1);
+        border-radius: 12px;
+    }
+
+    .timeline-content-card::before {
+        display: none !important;
     }
 }
 

@@ -453,28 +453,56 @@ function updateMascotScale(year) {
 function positionTimelineElements(button, animate = true) {
     const card = document.getElementById("timeline-card");
     const mascotSlider = document.getElementById("timeline-mascot-slider") || document.querySelector(".timeline-mascot-container");
+    const isMobile = window.innerWidth <= 768;
     
     if (!button || !card) return;
     
     const year = button.getAttribute("data-year");
-    const btnCenter = button.offsetLeft + button.offsetWidth / 2;
     const targetScale = mascotYearScales[year] !== undefined ? mascotYearScales[year] : 1;
     
-    card.style.left = btnCenter + "px";
-    card.classList.add("active");
+    if (isMobile) {
+        // Pionowe pozycjonowanie na urządzeniach mobilnych
+        const btnTop = button.offsetTop + button.offsetHeight / 2;
+        card.style.left = "0px";
+        card.classList.add("active");
 
-    if (mascotSlider) {
-        if (animate && typeof gsap !== "undefined") {
-            gsap.to(mascotSlider, {
-                left: btnCenter + "px",
-                scale: targetScale,
-                duration: 0.55,
-                ease: "back.out(1.4)",
-                transformOrigin: "bottom center"
-            });
-        } else {
-            mascotSlider.style.left = btnCenter + "px";
-            mascotSlider.style.transform = `translateX(-50%) scale(${targetScale})`;
+        if (mascotSlider) {
+            if (animate && typeof gsap !== "undefined") {
+                gsap.to(mascotSlider, {
+                    top: (button.offsetTop - 12) + "px",
+                    left: "32px",
+                    scale: targetScale,
+                    duration: 0.55,
+                    ease: "back.out(1.4)",
+                    transformOrigin: "bottom center"
+                });
+            } else {
+                mascotSlider.style.top = (button.offsetTop - 12) + "px";
+                mascotSlider.style.left = "32px";
+                mascotSlider.style.transform = `translate(-50%, -100%) scale(${targetScale})`;
+            }
+        }
+    } else {
+        // Poziome pozycjonowanie na wersjach desktopowych
+        const btnCenter = button.offsetLeft + button.offsetWidth / 2;
+        card.style.left = btnCenter + "px";
+        card.classList.add("active");
+
+        if (mascotSlider) {
+            if (animate && typeof gsap !== "undefined") {
+                gsap.to(mascotSlider, {
+                    left: btnCenter + "px",
+                    top: "0px",
+                    scale: targetScale,
+                    duration: 0.55,
+                    ease: "back.out(1.4)",
+                    transformOrigin: "bottom center"
+                });
+            } else {
+                mascotSlider.style.left = btnCenter + "px";
+                mascotSlider.style.top = "0px";
+                mascotSlider.style.transform = `translateX(-50%) scale(${targetScale})`;
+            }
         }
     }
 }
