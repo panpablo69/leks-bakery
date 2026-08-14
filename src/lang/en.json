@@ -584,6 +584,30 @@
       "shelfLife": "24h",
       "cert": "IFS Food",
       "description": "Classic fluffy donut with an aromatic filling of ripe raspberries, dusted with powdered sugar."
+    },
+    "brioszka_z_lezkami_czekolady": {
+      "name": "Brioszka z łezkami czekolady",
+      "weight": "200g",
+      "packaging": "Karton 20 szt. / Skrzynka",
+      "shelfLife": "48h (Świeża)",
+      "cert": "IFS Food, BRC",
+      "description": "Pieczywo półcukiernicze z ciasta drożdżowego z dodatkiem łezek o smaku czekoladowym"
+    },
+    "miniptysie": {
+      "name": "Miniptysie",
+      "weight": "kg",
+      "packaging": "Karton zbiorczy",
+      "shelfLife": "24h (Przechowywać w temp. 2-6°C)",
+      "cert": "IFS Food",
+      "description": "Ciasto parzone z kremem"
+    },
+    "twist_z_makiem": {
+      "name": "Twist z makiem",
+      "weight": "90g",
+      "packaging": "Karton 20 szt. / Skrzynka",
+      "shelfLife": "48h (Świeży)",
+      "cert": "IFS Food, BRC",
+      "description": "Bułka pszenna drożdżowa z dodatkiem maku"
     }
   },
   "illustrative_photo": "Illustrative photo",
@@ -723,6 +747,139 @@
       "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
       "cert": "IFS Food, BRC, 2AB Certified",
       "description": "Crispy baguette made from ancient 2AB wheat with a distinctive aroma."
+    }
+  },
+  "products_przekaski": {
+    "paluch_z_serem": {
+      "name": "Paluch z serem",
+      "weight": "80g",
+      "packaging": "Karton 40 szt. / Paleta: 48 kartonów",
+      "shelfLife": "48h (Świeży)",
+      "cert": "IFS Food, BRC",
+      "description": "Pieczywo pszenne posypane serem gouda"
+    },
+    "przekaska_z_serem": {
+      "name": "Przekąska z serem",
+      "weight": "70g",
+      "packaging": "Karton 40 szt.",
+      "shelfLife": "9 miesięcy (Mrożona)",
+      "cert": "IFS Food, BRC",
+      "description": "Pieczywo pszenne z serem gouda"
+    },
+    "wianek_ze_szpinakiem": {
+      "name": "Wianek ze szpinakiem",
+      "weight": "100g",
+      "packaging": "Karton 20 szt.",
+      "shelfLife": "48h (Świeży)",
+      "cert": "IFS Food, BRC",
+      "description": "Pieczywo pszenna drożdżowa w kształcie wieńca z dodatkiem sosu beszamel, oraz szpinaku."
+    }
+  },
+  "products_chleby": {
+    "chleb_baltonowski": {
+      "name": "Chleb baltonowski",
+      "weight": "550g",
+      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, barwa złocisto-brązowa."
+    },
+    "chleb_baltonowski_z_makiem": {
+      "name": "Chleb baltonowski z makiem",
+      "weight": "500g",
+      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, barwa złocisto-brązowa. Posypane makiem."
+    },
+    "chleb_geparda": {
+      "name": "Chleb geparda",
+      "weight": "450g",
+      "description": "Pieczywo mieszane pszenno-żytnie na zakwasie żytnim z dodatkiem drożdży, z nasionami słonecznika, ziarnem prosa, siemieniem lnianym i nasionami sezamu"
+    },
+    "chleb_helios": {
+      "name": "Chleb helios",
+      "weight": "400g",
+      "description": "Pieczywo mieszane pszenno-żytnie z ziarnami."
+    },
+    "chleb_ig": {
+      "name": "Chleb ig",
+      "weight": "300g",
+      "description": "Pieczywo mieszane o niskim indeksie glikemicznym."
+    },
+    "chleb_zakwas": {
+      "name": "Chleb na naturalnym zakwasie",
+      "weight": "600g",
+      "description": "Pieczywo mieszane pszenno – żytnie na naturalnym zakwasie żytnim produkowane metodą wielofazową."
+    },
+    "chleb_pajda": {
+      "name": "Chleb pajda",
+      "weight": "900g",
+      "description": "Pieczywo mieszane pszenno – żytnie na naturalnym zakwasie żytnim produkowane metodą wielofazową."
+    },
+    "chleb_boryny": {
+      "name": "Chleb przysmak boryny",
+      "weight": "400/800g",
+      "description": "Pieczywo wyprodukowane na bazie mieszanki do chleba, mąki żytniej, mąki pszennej z dodatkiem kwasu naturalnego, drożdży, soli oraz nasion słonecznika i siemienia lnianego obsypanego mieszanką nasion i płatków ziemniaczanych."
+    },
+    "chleb_razowy": {
+      "name": "Chleb razowy",
+      "weight": "450g",
+      "description": "Pieczywo żytnie razowe pełnoziarniste w formie prostokątnego bochenka."
+    },
+    "chleb_wieloziarnisty": {
+      "name": "Chleb wieloziarnisty",
+      "weight": "500g",
+      "description": "Pieczywo produkowane z mąki pszennej i żytniej na naturalnym zakwasie z dodatkiem drożdży, soli, ekstraktu słodowego, polepszacza oraz mieszanki ziaren; obsypanego mieszanka ziaren posypką ziarnistą"
+    },
+    "chleb_wiosenny": {
+      "name": "Chleb wiosenny z przyprawami i czosnkiem",
+      "weight": "400g",
+      "description": "Pieczywo żytnie z dodatkiem czosnku oraz przypraw (koperek suszony, pietruszka suszona, szczypiorek krojony)."
+    },
+    "chleb_z_maka": {
+      "name": "Chleb z mąką",
+      "weight": "500g",
+      "description": "Chleb wyprodukowany jest na kwasie uzyskanym metodą fermentacji wielofazowej z dodatkiem drożdży. Bochenki o kształcie podłużnym, z trzema nacięciami, posypany mąką żytnią typ 720"
+    },
+    "chleb_zloty_klos": {
+      "name": "Chleb złoty kłos",
+      "weight": "400/800g",
+      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, z nacięciami w kształcie X, posypane mąką żytnią typ 720."
+    },
+    "chleb_zytni_bez_drozdzy": {
+      "name": "Chleb żytni bez drożdży",
+      "weight": "500 g",
+      "description": "chleb żytni wypiekany bez dodatku drożdży"
+    },
+    "chleb_zytni_chrzan": {
+      "name": "Chleb żytni z chrzanem",
+      "weight": "400g",
+      "description": "Pieczywo żytnie z dodatkiem chrzanu tartego i majeranku."
+    },
+    "chleb_zytni_kapusta": {
+      "name": "Chleb żytni z kiszoną kapustą",
+      "weight": "400g",
+      "description": "Pieczywo żytnie z dodatkiem kapusty kiszonej."
+    },
+    "chleb_zytni_papryka": {
+      "name": "Chleb żytni z papryką",
+      "weight": "380g",
+      "description": "Pieczywo pszenno-żytnie z pieczoną papryką, posypane mieszanką ziaren sezamu oraz sezamu czarnego."
+    },
+    "chleb_zytni_ziarna": {
+      "name": "Chleb żytni z ziarnami",
+      "weight": "400g",
+      "description": "Chleb żytni z dodatkiem siemienia lnianego i nasion słonecznika, posypany ziarnami prosa i siemieniem lnianym oraz nasionami słonecznika i sezamu."
+    },
+    "chleb_zytni_slonecznik": {
+      "name": "Chleb żytni ze słonecznikiem",
+      "weight": "600g",
+      "description": "Pieczywo żytnie ze słonecznikiem."
+    },
+    "chlebek_swieconka": {
+      "name": "Chlebek do święconki",
+      "weight": "60g",
+      "description": "Pieczywo pszenne obsypane mąką żytnią typ 720."
+    },
+    "chleb_2ab": {
+      "name": "Chleb 2AB",
+      "weight": "300g",
+      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
     }
   }
 }
