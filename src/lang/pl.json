@@ -213,7 +213,10 @@
     "subject_newsletter_2ab": "Poinformuj mnie o starcie sklepu z pieczywem 2AB",
     "label_message": "Treść wiadomości",
     "placeholder_message": "Wpisz treść swojej wiadomości...",
-    "btn_send": "Wyślij wiadomość"
+    "btn_send": "Wyślij wiadomość",
+    "sending": "Wysyłanie...",
+    "success": "Wiadomość została wysłana! Dziękujemy za kontakt.",
+    "error": "Wystąpił błąd podczas wysyłania. Napisz bezpośrednio na: biuro@leks.com.pl"
   },
   "footer": {
     "privacy": "RODO (Polityka prywatności)",

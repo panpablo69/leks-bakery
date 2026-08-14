@@ -213,7 +213,10 @@
     "subject_newsletter_2ab": "Informieren Sie mich, wenn der Shop mit 2AB-Brot startet",
     "label_message": "Inhalt der Nachricht",
     "placeholder_message": "Geben Sie hier Ihre Nachricht ein...",
-    "btn_send": "Nachricht senden"
+    "btn_send": "Nachricht senden",
+    "sending": "Senden...",
+    "success": "Nachricht erfolgreich gesendet! Vielen Dank für Ihre Kontaktaufnahme.",
+    "error": "Beim Senden ist ein Fehler aufgetreten. Bitte schreiben Sie direkt an: biuro@leks.com.pl"
   },
   "footer": {
     "privacy": "DSGVO (Datenschutzerklärung)",

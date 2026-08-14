@@ -213,7 +213,10 @@
     "subject_newsletter_2ab": "Infórmame cuando se lance la tienda con pan 2AB",
     "label_message": "Contenido del mensaje",
     "placeholder_message": "Escriba el contenido de su mensaje aquí...",
-    "btn_send": "Enviar mensaje"
+    "btn_send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito! Gracias por contactarnos.",
+    "error": "Ocurrió un error al enviar. Por favor escriba directamente a: biuro@leks.com.pl"
   },
   "footer": {
     "privacy": "RGPD (Política de privacidad)",

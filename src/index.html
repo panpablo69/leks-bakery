@@ -301,25 +301,30 @@
                     
                     <div class="contact-form-panel">
                         <form id="leks-contact-form" class="modern-form">
+                            <input type="hidden" name="access_key" value="__WEB3FORMS_KEY__">
+                            <input type="hidden" name="from_name" value="Strona Leks - Formularz Kontaktowy">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+                            
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="form-name" data-i18n="contact.label_name">Imię i nazwisko</label>
-                                    <input type="text" id="form-name" required placeholder="np. Jan Kowalski" data-i18n-placeholder="contact.placeholder_name">
+                                    <input type="text" id="form-name" name="name" autocomplete="name" required placeholder="np. Jan Kowalski" data-i18n-placeholder="contact.placeholder_name">
                                 </div>
                                 <div class="form-group">
                                     <label for="form-email" data-i18n="contact.label_email">Adres e-mail</label>
-                                    <input type="email" id="form-email" required placeholder="np. jan@domena.pl" data-i18n-placeholder="contact.placeholder_email">
+                                    <input type="email" id="form-email" name="email" autocomplete="email" required placeholder="np. jan@domena.pl" data-i18n-placeholder="contact.placeholder_email">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="form-subject" data-i18n="contact.label_subject">Temat</label>
-                                <input type="text" id="form-subject" required placeholder="Wpisz temat wiadomości..." data-i18n-placeholder="contact.placeholder_subject">
+                                <input type="text" id="form-subject" name="subject" required placeholder="Wpisz temat wiadomości..." data-i18n-placeholder="contact.placeholder_subject">
                             </div>
                             <div class="form-group">
                                 <label for="form-message" data-i18n="contact.label_message">Treść wiadomości</label>
-                                <textarea id="form-message" required placeholder="Wpisz treść swojej wiadomości..." data-i18n-placeholder="contact.placeholder_message" rows="5"></textarea>
+                                <textarea id="form-message" name="message" required placeholder="Wpisz treść swojej wiadomości..." data-i18n-placeholder="contact.placeholder_message" rows="5"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn" data-i18n="contact.btn_send">Wyślij wiadomość</button>
+                            <div id="form-status" class="form-status-msg" role="status" aria-live="polite" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
                         </form>
                     </div>
                 </div>

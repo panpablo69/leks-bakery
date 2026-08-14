@@ -213,7 +213,10 @@
     "subject_newsletter_2ab": "Inform me when the shop with 2AB bread launches",
     "label_message": "Message content",
     "placeholder_message": "Enter your message here...",
-    "btn_send": "Send Message"
+    "btn_send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! Thank you for contacting us.",
+    "error": "An error occurred while sending. Please write directly to: biuro@leks.com.pl"
   },
   "footer": {
     "privacy": "GDPR (Privacy Policy)",

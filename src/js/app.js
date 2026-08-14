@@ -238,6 +238,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch(e) { console.error("initHotspots error:", e); }
     
     try {
+        initContactForms();
+    } catch(e) { console.error("initContactForms error:", e); }
+    
+    try {
         initPrivacyModal();
     } catch(e) { console.error("initPrivacyModal error:", e); }
     
@@ -1725,3 +1729,93 @@ function initCertificates() {
         }
     });
 }
+
+/* ==============================================================================
+   12. FORMULARZE KONTAKTOWE (WEB3FORMS + VALIDATION + DATALAYER)
+   ============================================================================== */
+function initContactForms() {
+    const forms = [
+        { formId: "leks-contact-form", btnId: "form-submit-btn", statusId: "form-status" },
+        { formId: "b2b-contact-form", btnId: "b2b-submit-btn", statusId: "b2b-form-status" }
+    ];
+
+    forms.forEach(({ formId, btnId, statusId }) => {
+        const form = document.getElementById(formId);
+        if (!form) return;
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById(btnId);
+            const statusDiv = document.getElementById(statusId);
+            const botcheck = form.querySelector('input[name="botcheck"]');
+
+            // Honeypot check
+            if (botcheck && botcheck.checked) {
+                console.warn("Spam submission blocked by honeypot.");
+                return;
+            }
+
+            const getMsg = (key, fallback) => {
+                if (typeof getTranslationValue === "function" && typeof translations !== "undefined") {
+                    return getTranslationValue(translations, key) || fallback;
+                }
+                return fallback;
+            };
+
+            const sendingMsg = getMsg("contact.sending", "Wysyłanie...");
+            const successMsg = getMsg("contact.success", "Wiadomość została wysłana! Dziękujemy za kontakt.");
+            const errorMsg = getMsg("contact.error", "Wystąpił błąd podczas wysyłania. Napisz bezpośrednio na: biuro@leks.com.pl");
+
+            const originalBtnHtml = submitBtn ? submitBtn.innerHTML : "";
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = sendingMsg;
+            }
+            if (statusDiv) {
+                statusDiv.textContent = "";
+                statusDiv.className = "form-status-msg";
+                statusDiv.style.color = "var(--color-primary, #003a73)";
+            }
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    if (statusDiv) {
+                        statusDiv.textContent = successMsg;
+                        statusDiv.style.color = "#155724"; // Success Green
+                    }
+                    form.reset();
+                    
+                    // Push dataLayer event for conversion tracking
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: "contact_form_submit",
+                        form_id: formId
+                    });
+                } else {
+                    throw new Error(result.message || "Form submission failed.");
+                }
+            } catch (err) {
+                console.error("Contact form submission error:", err);
+                if (statusDiv) {
+                    statusDiv.textContent = errorMsg;
+                    statusDiv.style.color = "#721c24"; // Error Red
+                }
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHtml;
+                }
+            }
+        });
+    });
+}
+
