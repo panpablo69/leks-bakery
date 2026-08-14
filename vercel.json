@@ -1,5 +1,13 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/shop", "destination": "/", "permanent": false },
+    { "source": "/shop.html", "destination": "/", "permanent": false },
+    { "source": "/reel-explorer", "destination": "/", "permanent": false },
+    { "source": "/reel-explorer.html", "destination": "/", "permanent": false },
+    { "source": "/reel-preview", "destination": "/", "permanent": false },
+    { "source": "/reel-preview.html", "destination": "/", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/src/$1" }
   ]
