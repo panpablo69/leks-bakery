@@ -142,7 +142,7 @@
     },
     "jobs": {
       "production": {
-        "title": "Operario de Producción",
+        "title": "Operador de Producción",
         "desc": "Tareas: Operación de maquinaria y equipos de panadería, control de parámetros y envasado de productos terminados."
       },
       "mechanic": {

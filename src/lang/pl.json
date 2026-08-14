@@ -142,7 +142,7 @@
     },
     "jobs": {
       "production": {
-        "title": "Pracownik Produkcji",
+        "title": "Operator Produkcji",
         "desc": "Zadania: Obsługa maszyn i urządzeń piekarniczych, kontrolowanie parametrów oraz pakowanie wyrobów gotowych."
       },
       "mechanic": {

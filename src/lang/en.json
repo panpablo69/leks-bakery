@@ -142,7 +142,7 @@
     },
     "jobs": {
       "production": {
-        "title": "Production Worker",
+        "title": "Production Operator",
         "desc": "Tasks: Operation of bakery machinery and equipment, monitoring parameters, and packaging finished products."
       },
       "mechanic": {

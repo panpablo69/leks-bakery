@@ -142,7 +142,7 @@
     },
     "jobs": {
       "production": {
-        "title": "Mitarbeiter in der Produktion",
+        "title": "Produktionsoperator",
         "desc": "Aufgaben: Bedienung von Bäckereimaschinen und -anlagen, Überwachung der Parameter und Verpackung der Fertigprodukte."
       },
       "mechanic": {
