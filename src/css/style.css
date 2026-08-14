@@ -765,7 +765,7 @@ body::before {
 .timeline-mascot-container {
     position: absolute;
     bottom: 100%;
-    margin-bottom: 14px;
+    margin-bottom: 60px; /* Wyciągnięcie maskotki ponad cyfry cyfr rocznika (1989, 1998, itd.) */
     left: 0;
     width: 120px;
     height: 130px;
@@ -808,17 +808,17 @@ body::before {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 180px 0 300px; /* Dodatkowa przestrzeń na wędrującą maskotkę nad osią czasu */
+    margin: 210px 0 300px; /* Bezpieczny odstęp od nagłówka dla maskotki wędrującej nad cyframi */
     width: 100%;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .timeline-navigation::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 180px; /* Linia postępu zaczyna się od pierwszej kropki */
-    right: 40px;
+    left: 40px; /* Linia postępu zaczyna się idealnie na pierwszej kropce (1989) */
+    right: 40px; /* i kończy na ostatniej kropce (2026) */
     height: 4px; /* Grubsza, bardziej premium linia */
     background: linear-gradient(to right, var(--color-primary) var(--timeline-progress, 0%), var(--color-accent-light) var(--timeline-progress, 0%));
     transform: translateY(-50%);
