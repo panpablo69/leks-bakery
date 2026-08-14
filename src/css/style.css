@@ -4086,4 +4086,65 @@ body::before {
     }
 }
 
+/* ==============================================================================
+   RESPONSIVE AUDIT FIXES & OVERFLOW CONTAINMENT (MOBILE & DESKTOP 4K)
+   ============================================================================== */
+
+/* Strict global containment for horizontal overflow */
+html {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+}
+
+/* Contain all major layout sections */
+header, main, footer, section, .hero-section, .container {
+    max-width: 100%;
+}
+
+/* Contain parallax wheat images and background videos to viewport bounds */
+.parallax-wheat,
+.hero-bg-container,
+.hero-video,
+#hero-zoom-bg {
+    max-width: 100vw;
+}
+
+/* Fix mobile navigation drawer overflow when closed */
+@media (max-width: 768px) {
+    .nav-menu:not(.active) {
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    .nav-menu {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    /* Fix timeline navigation overflow on mobile */
+    .timeline-navigation {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 16px;
+    }
+}
+
+/* Ensure grid elements do not exceed container widths on large monitors */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 
