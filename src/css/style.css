@@ -761,36 +761,28 @@ body::before {
     margin: 0 auto;
 }
 
-/* Absolutny kontener maskotki na desktopie */
+/* Kontener wędrującej maskotki Kłos nad osią czasu */
 .timeline-mascot-container {
     position: absolute;
-    left: -110px;
-    top: 120px;
-    width: 140px;
-    max-width: 140px;
-    z-index: 5;
+    bottom: 100%;
+    margin-bottom: 14px;
+    left: 0;
+    width: 120px;
+    height: 130px;
+    z-index: 10;
+    transform: translateX(-50%);
     transform-origin: bottom center;
-    transition: left 0.4s ease, transform 0.4s ease;
     pointer-events: none;
-}
-
-@media (max-width: 1280px) {
-    .timeline-mascot-container {
-        left: -60px;
-        width: 110px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .timeline-mascot-img {
     width: 100%;
-    height: auto;
+    max-height: 130px;
     object-fit: contain;
-    filter: drop-shadow(0 10px 20px rgba(0, 58, 115, 0.08)); /* Delikatny, naturalny cień na tło strony */
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.timeline-mascot-img:hover {
-    transform: translateY(-6px) scale(1.03); /* Przyjemny efekt uniesienia przy najechaniu */
+    filter: drop-shadow(0 10px 20px rgba(0, 58, 115, 0.12));
 }
 
 .timeline-section-title {
@@ -805,7 +797,7 @@ body::before {
     font-size: 1.05rem;
     font-weight: 400; /* Klasyczna grubość */
     color: var(--color-text); /* Brandowy Prussian Blue */
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-shadow: none !important;
     filter: none !important;
     opacity: 1 !important;
@@ -816,9 +808,9 @@ body::before {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 80px 0 300px; /* Przesunięto timeline do góry (pod nagłówek), a pod nim zrobiono 300px miejsca na kafelek */
+    margin: 180px 0 300px; /* Dodatkowa przestrzeń na wędrującą maskotkę nad osią czasu */
     width: 100%;
-    padding: 0 40px 0 180px; /* Rozciągnięta oś czasu na szerokość kontenera */
+    padding: 0 20px;
 }
 
 .timeline-navigation::before {
@@ -959,18 +951,25 @@ body::before {
 
 /* Responsywność dla osi czasu w timeline */
 @media (max-width: 992px) {
+    .timeline-navigation {
+        margin: 140px 0 280px;
+        padding: 0 20px;
+    }
+
     .timeline-mascot-container {
+        width: 90px;
+        height: 100px;
+        margin-bottom: 8px;
         position: relative; /* Wracamy do normalnego przepływu na mobile */
         left: auto;
         top: auto;
-        width: 100%;
         display: flex;
         justify-content: center;
         margin-top: 20px;
-        margin-bottom: 5px;
     }
     
     .timeline-mascot-img {
+        max-height: 100px;
         max-width: 160px; /* Delikatnie mniejszy rozmiar na telefonach */
     }
 

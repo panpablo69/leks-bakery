@@ -426,51 +426,56 @@ const timelineData = {
 };
 
 const mascotYearScales = {
-    "1989": 0.92,
-    "1998": 0.95,
-    "2005": 0.98,
-    "2010": 1.00,
-    "2018": 1.03,
-    "2026": 1.05
+    "1989": 0.72,
+    "1998": 0.80,
+    "2005": 0.88,
+    "2010": 0.96,
+    "2018": 1.05,
+    "2026": 1.15
 };
 
 function updateMascotScale(year) {
-    const mascotContainer = document.querySelector(".timeline-mascot-container");
+    const mascotContainer = document.getElementById("timeline-mascot-slider") || document.querySelector(".timeline-mascot-container");
     if (!mascotContainer) return;
     const targetScale = mascotYearScales[year] !== undefined ? mascotYearScales[year] : 1;
     if (typeof gsap !== "undefined") {
         gsap.to(mascotContainer, {
             scale: targetScale,
-            duration: 0.5,
-            ease: "back.out(1.6)",
+            duration: 0.55,
+            ease: "back.out(1.4)",
             transformOrigin: "bottom center"
         });
     } else {
-        mascotContainer.style.transform = `scale(${targetScale})`;
+        mascotContainer.style.transform = `translateX(-50%) scale(${targetScale})`;
     }
 }
 
-function positionTimelineElements(button) {
+function positionTimelineElements(button, animate = true) {
     const card = document.getElementById("timeline-card");
-    const mascotSlider = document.getElementById("timeline-mascot-slider");
-    const mascotVideo = document.getElementById("timeline-mascot-video");
+    const mascotSlider = document.getElementById("timeline-mascot-slider") || document.querySelector(".timeline-mascot-container");
     
     if (!button || !card) return;
     
-    // Oblicz środek przycisku relatywnie do timeline-navigation
+    const year = button.getAttribute("data-year");
     const btnCenter = button.offsetLeft + button.offsetWidth / 2;
+    const targetScale = mascotYearScales[year] !== undefined ? mascotYearScales[year] : 1;
     
-    // Ustaw dynamicznie współrzędne left
     card.style.left = btnCenter + "px";
-    if (mascotSlider) {
-        mascotSlider.style.left = btnCenter + "px";
-    }
-    
-    // Aktywuj kartę i zresetuj wideo
     card.classList.add("active");
-    if (mascotVideo) {
-        mascotVideo.currentTime = 0;
-        mascotVideo.play().catch(e => console.log("Video playback prevented:", e));
+
+    if (mascotSlider) {
+        if (animate && typeof gsap !== "undefined") {
+            gsap.to(mascotSlider, {
+                left: btnCenter + "px",
+                scale: targetScale,
+                duration: 0.55,
+                ease: "back.out(1.4)",
+                transformOrigin: "bottom center"
+            });
+        } else {
+            mascotSlider.style.left = btnCenter + "px";
+            mascotSlider.style.transform = `translateX(-50%) scale(${targetScale})`;
+        }
     }
 }
 
@@ -509,7 +514,7 @@ function initTimeline() {
             cardDesc.textContent = desc;
         }
         
-        positionTimelineElements(activeBtn);
+        positionTimelineElements(activeBtn, false);
         updateMascotScale(initYear);
         
         // Przywrócenie transition po krótkiej chwili
