@@ -382,504 +382,514 @@
   },
   "products_2ab": {
     "chleb_2ab": {
-      "name": "Ancient Wheat 2AB Bread",
-      "weight": "400g",
-      "packaging": "Box of 10 pcs.",
-      "shelfLife": "6 days",
-      "cert": "IFS Food, BRC, 2AB Certificate",
-      "description": "Easily digestible bread made from ancient wheat 2AB, baked on natural sourdough. Ideal for people with sensitive digestive systems, including those suffering from IBS or SIBO (low-FODMAP diet)."
+      "name": "2AB Ancient Grain Bread",
+      "weight": "300g",
+      "packaging": "Box 10 pcs",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC, 2AB Certified",
+      "description": "Wheat bread baked with 2AB ancient grain flour on yeast."
     },
     "bulka_2ab": {
-      "name": "Ancient Wheat 2AB Bun",
-      "weight": "70g",
-      "packaging": "Box of 60 pcs. / Palette: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC, 2AB Certificate",
-      "description": "Easily digestible, crispy daily bun made from ancient wheat 2AB. Characterized by a natural golden crust, low FODMAP content, and reduced gluten."
+      "name": "2AB Ancient Grain Roll",
+      "weight": "60g - 70g",
+      "packaging": "Box 60 pcs / Palette: 40 boxes",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC, 2AB Certified",
+      "description": "Wheat roll baked with 2AB ancient grain flour."
     },
     "bagietka_2ab": {
-      "name": "Ancient Wheat 2AB Baguette",
-      "weight": "250g",
-      "packaging": "Box of 20 pcs. / Palette: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC, 2AB Certificate",
-      "description": "Classic, crispy baguette in an easily digestible version. Baked with unique flour from ancient wheat 2AB, gentle on the stomach and gut."
+      "name": "2AB Ancient Grain Baguette",
+      "weight": "180g - 200g",
+      "packaging": "Box 20 pcs",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC, 2AB Certified",
+      "description": "Wheat baguette baked with 2AB ancient grain flour."
     }
   },
   "products_cukiernia": {
     "skubaniec_z_beza": {
-      "name": "Skubaniec cake with meringue",
-      "weight": "approx. 2.0 kg",
-      "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "72h (Fresh)",
-      "cert": "IFS Food, BRC",
-      "description": "Rich and crumbly shortcrust pastry with cocoa, layered with tart fruit jam and a fluffy, crispy baked meringue. A traditional Polish delicacy."
+      "name": "Skubaniec Berry Cake",
+      "weight": "kg",
+      "description": "Fruit cake on shortcrust base topped with meringue."
     },
     "ciasto_karpatka": {
-      "name": "Karpatka cream cake",
-      "weight": "approx. 1.8 kg",
-      "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "48h (Fresh)",
-      "cert": "IFS Food",
-      "description": "Classic Polish cream cake filled with fluffy vanilla custard cream, layered between wavy choux pastry resembling the Carpathian Mountains, dusted with powdered sugar."
+      "name": "Karpatka Cream Cake",
+      "weight": "kg",
+      "description": "Choux pastry cake filled with vanilla cream and dusted with powdered sugar."
     },
     "ciasto_krowka": {
-      "name": "Toffee caramel cake",
-      "weight": "approx. 1.8 kg",
-      "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "48h (Fresh)",
-      "cert": "IFS Food",
-      "description": "Exceedingly sweet and creamy cake layered with soft sponge cake, fluffy whipped cream, and rich dulce de leche (toffee) caramel filling."
+      "name": "Krówka Toffee Cake",
+      "weight": "kg",
+      "description": "Sponge cake with cream filling, toffee topping and almond flakes."
     },
     "ciasto_z_galaretka": {
-      "name": "Strawberry jelly cake",
-      "weight": "approx. 2.0 kg",
-      "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "48h (Fresh)",
-      "cert": "IFS Food",
-      "description": "Refreshing dessert on a fluffy sponge cake base with a light cream layer, generously topped with juicy strawberries in strawberry jelly."
+      "name": "Strawberry Jelly Cake",
+      "weight": "kg",
+      "description": "Sponge cake with vanilla cream, strawberries and strawberry jelly."
     },
     "sernik_puszysty": {
-      "name": "Fluffy baked cheesecake",
-      "weight": "approx. 2.0 kg",
-      "packaging": "Box 1 pc. (Tray)",
-      "shelfLife": "48h (Fresh)",
-      "cert": "IFS Food, BRC",
-      "description": "Extremely light and fluffy baked cheesecake on a delicate crust, prepared with the highest quality Polish curd cheese and a hint of vanilla."
+      "name": "Fluffy Cheesecake",
+      "weight": "kg",
+      "description": "Fluffy cheesecake layer on sponge base dusted with decorative sugar."
     },
     "rwaniec_drozdzowy_z_twarogiem": {
-      "name": "Pull-apart yeast cake with curd cheese",
-      "weight": "approx. 1.5 kg",
-      "packaging": "Box 1 pc.",
-      "shelfLife": "48h (Fresh)",
-      "cert": "IFS Food, BRC",
-      "description": "Soft pull-apart yeast cake filled with sweet cottage cheese curd, drizzled with glaze icing and fine crumble topping."
+      "name": "Pull-Apart Yeast Bread with Quark",
+      "weight": "450g",
+      "description": "Yeast cake with sweet quark cheese, crumble and sugar decoration."
     },
     "baton_coco_crunch": {
       "name": "Coco-Crunch Bars",
-      "weight": "approx. 1.5 kg",
-      "packaging": "Box 1 pc. / Tray",
-      "shelfLife": "72h (Fresh)",
-      "cert": "IFS Food, BRC",
-      "description": "Delicious chocolate and coconut bars with crispy pops and coconut flakes."
+      "weight": "kg",
+      "description": "Bar mix with peanuts, toffee filling and coconut flakes."
     }
   },
   "products_polcukiernicze": {
-    "paczek_twarogowy": {
-      "name": "Curd cheese donut",
-      "weight": "80g",
-      "packaging": "Box 24 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Fluffy donut with natural curd cheese added to the dough, giving it exceptional moisture and softness."
-    },
-    "paczek_z_budyniem": {
-      "name": "Custard donut",
-      "weight": "90g",
-      "packaging": "Box 24 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Fluffy donut filled with thick, vanilla custard cream, dusted with powdered sugar."
-    },
-    "gniazdko_z_lukrem": {
-      "name": "Viennese donut with icing",
-      "weight": "80g",
-      "packaging": "Box 20 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Fluffy choux pastry donut (Spanish style), fried to a golden color and covered with sweet icing."
-    },
-    "warkocz_z_lukrem": {
-      "name": "Yeast braid with icing",
-      "weight": "100g",
-      "packaging": "Box 20 pcs. / Crate",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Traditional yeast braid, fluffy and light, topped with sweet icing."
-    },
-    "racuch_z_jablkiem": {
-      "name": "Apple yeast pancake",
-      "weight": "90g",
-      "packaging": "Box 20 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Traditional yeast pancake with juicy apple pieces, perfect for a sweet snack."
-    },
-    "paczek_z_marmolada": {
-      "name": "Marmalade donut",
-      "weight": "90g",
-      "packaging": "Box 24 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Traditional donut with multi-fruit marmalade, iced and sprinkled with orange peel."
+    "brioszka_z_lezkami_czekolady": {
+      "name": "Chocolate Chip Brioche",
+      "weight": "200g",
+      "packaging": "Box 20 pcs / Crate",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC",
+      "description": "Sweet brioche yeast pastry with chocolate chips."
     },
     "calusek": {
-      "name": "Całusek pastry",
-      "weight": "90g",
-      "packaging": "Box 20 pcs.",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Delicate yeast pastry with fruit filling, rolled into a characteristic kiss shape."
-    },
-    "paczek_premium_z_nadzieniem_wisniowym": {
-      "name": "Premium cherry donut",
-      "weight": "100g",
-      "packaging": "Box 24 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food, BRC",
-      "description": "Premium donut with a slightly tart cherry filling, glazed and sprinkled with almond flakes."
-    },
-    "gniazdko_z_cukrem_pudrem": {
-      "name": "Viennese donut with powdered sugar",
+      "name": "Całusek Sugar Doughnut",
       "weight": "80g",
-      "packaging": "Box 20 pcs.",
-      "shelfLife": "24h",
+      "packaging": "Box 20 pcs",
+      "shelfLife": "48h (Fresh)",
       "cert": "IFS Food",
-      "description": "Delicate and light choux pastry donut, dusted with powdered sugar."
-    },
-    "paczek_z_nadzieniem_karpatkowym": {
-      "name": "Karpatka cream donut",
-      "weight": "100g",
-      "packaging": "Box 24 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Exceptional donut filled with rich and fluffy custard cream reminiscent of traditional Karpatka cake."
+      "description": "Fried yeast pastry dusted with decorative sugar."
     },
     "drozdzowka_z_makiem": {
-      "name": "Poppy seed sweet bun",
-      "weight": "110g",
-      "packaging": "Box 15 pcs. / Crate",
-      "shelfLife": "48h",
+      "name": "Poppy Seed Sweet Bun",
+      "weight": "100g",
+      "packaging": "Box 15 pcs / Crate",
+      "shelfLife": "48h (Fresh)",
       "cert": "IFS Food",
-      "description": "Classic yeast bun filled with aromatic, sweet blue poppy seed mass and dried fruits, iced."
-    },
-    "rogal_swiateczny_z_bialym_makiem": {
-      "name": "Christmas croissant with white poppy seeds",
-      "weight": "170g",
-      "packaging": "Box 12 pcs.",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Premium Danish pastry croissant filled to the brim with exclusive white poppy seeds, nuts, marzipan, and raisins, iced and topped with nuts."
+      "description": "Sweet yeast bun filled with poppy seed and raisin filling."
     },
     "drozdzowka_z_serem_i_kruszonka": {
-      "name": "Sweet cheese bun with crumble",
+      "name": "Quark Cheese Bun with Crumble",
       "weight": "130g",
-      "packaging": "Box 15 pcs. / Crate",
-      "shelfLife": "48h",
+      "packaging": "Box 15 pcs / Crate",
+      "shelfLife": "48h (Fresh) / 9 months (Frozen)",
       "cert": "IFS Food, BRC",
-      "description": "Traditional yeast bun filled with sweet cottage cheese, topped with crispy butter crumble."
+      "description": "Sweet yeast bun filled with sweet quark cheese and topped with crumble."
     },
-    "paczek_z_nadzieniem_pistacjowym": {
-      "name": "Pistachio donut",
-      "weight": "100g",
-      "packaging": "Box 24 pcs.",
-      "shelfLife": "24h",
+    "gniazdko_z_lukrem": {
+      "name": "French Cruller (Gniazdko)",
+      "weight": "55g",
+      "packaging": "Box 20 pcs",
+      "shelfLife": "24h (Fresh)",
       "cert": "IFS Food",
-      "description": "Modern premium donut filled with velvety pistachio cream, decorated with crushed pistachios."
-    },
-    "paczek_z_nadzieniem_malinowym": {
-      "name": "Raspberry donut",
-      "weight": "100g",
-      "packaging": "Box 24 pcs.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Classic fluffy donut with an aromatic filling of ripe raspberries, dusted with powdered sugar."
-    },
-    "brioszka_z_lezkami_czekolady": {
-      "name": "Brioszka z łezkami czekolady",
-      "weight": "200g",
-      "packaging": "Karton 20 szt. / Skrzynka",
-      "shelfLife": "48h (Świeża)",
-      "cert": "IFS Food, BRC",
-      "description": "Pieczywo półcukiernicze z ciasta drożdżowego z dodatkiem łezek o smaku czekoladowym"
+      "description": "Choux pastry cruller coated with sugar glaze."
     },
     "miniptysie": {
-      "name": "Miniptysie",
+      "name": "Mini Cream Puffs",
       "weight": "kg",
-      "packaging": "Karton zbiorczy",
-      "shelfLife": "24h (Przechowywać w temp. 2-6°C)",
+      "packaging": "Bulk Box",
+      "shelfLife": "24h (Keep at 2-6°C)",
       "cert": "IFS Food",
-      "description": "Ciasto parzone z kremem"
+      "description": "Choux pastry mini puffs filled with sweet cream."
+    },
+    "paczek_premium_z_nadzieniem_wisniowym": {
+      "name": "Premium Cherry Doughnut",
+      "weight": "70g - 100g",
+      "packaging": "Box 24 pcs",
+      "shelfLife": "24h (Fresh) / 9 months (Frozen)",
+      "cert": "IFS Food, BRC",
+      "description": "Yeast doughnut filled with cherry filling, glazed and topped with almond flakes."
+    },
+    "paczek_twarogowy": {
+      "name": "Quark Cheese Doughnut",
+      "weight": "50g",
+      "packaging": "Box 24 pcs",
+      "shelfLife": "24h (Fresh)",
+      "cert": "IFS Food",
+      "description": "Yeast doughnut made with farmers cheese, rolled in sugar."
+    },
+    "paczek_z_budyniem": {
+      "name": "Vanilla Custard Doughnut",
+      "weight": "70g - 100g",
+      "packaging": "Box 24 pcs",
+      "shelfLife": "24h (Fresh)",
+      "cert": "IFS Food",
+      "description": "Yeast doughnut filled with vanilla custard, glazed."
+    },
+    "paczek_z_marmolada": {
+      "name": "Rose Jam Doughnut",
+      "weight": "70g - 100g",
+      "packaging": "Box 24 pcs",
+      "shelfLife": "24h (Fresh) / 9 months (Frozen)",
+      "cert": "IFS Food",
+      "description": "Yeast doughnut filled with rose marmalade, glazed."
+    },
+    "paczek_z_nadzieniem_karpatkowym": {
+      "name": "Karpatka Custard Doughnut",
+      "weight": "90g",
+      "packaging": "Box 24 pcs",
+      "shelfLife": "24h (Fresh)",
+      "cert": "IFS Food",
+      "description": "Yeast doughnut filled with custard cream, icing and white chocolate."
+    },
+    "paczek_z_nadzieniem_malinowym": {
+      "name": "Raspberry Filled Doughnut",
+      "weight": "70g - 100g",
+      "packaging": "Box 24 pcs",
+      "shelfLife": "24h (Fresh)",
+      "cert": "IFS Food",
+      "description": "Yeast doughnut filled with raspberry jam, glazed and topped with freeze-dried raspberry."
+    },
+    "paczek_z_nadzieniem_pistacjowym": {
+      "name": "Pistachio Cream Doughnut",
+      "weight": "80g",
+      "packaging": "Box 24 pcs",
+      "shelfLife": "24h (Fresh) / 9 months (Frozen)",
+      "cert": "IFS Food",
+      "description": "Yeast doughnut filled with pistachio cream, glazed and topped with chopped pistachios."
+    },
+    "racuch_z_jablkiem": {
+      "name": "Apple Fritter",
+      "weight": "90g",
+      "packaging": "Box 20 pcs",
+      "shelfLife": "24h (Fresh)",
+      "cert": "IFS Food",
+      "description": "Yeast fritter filled with apple, glazed."
     },
     "twist_z_makiem": {
-      "name": "Twist z makiem",
+      "name": "Poppy Seed Twist",
       "weight": "90g",
-      "packaging": "Karton 20 szt. / Skrzynka",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Box 20 pcs / Crate",
+      "shelfLife": "48h (Fresh)",
       "cert": "IFS Food, BRC",
-      "description": "Bułka pszenna drożdżowa z dodatkiem maku"
+      "description": "Yeast wheat bun twisted with poppy seed filling."
+    },
+    "warkocz_z_lukrem": {
+      "name": "Iced Braided Pastry",
+      "weight": "90g",
+      "packaging": "Box 20 pcs / Crate",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food",
+      "description": "Fried yeast braided pastry with sugar glaze."
     }
   },
   "illustrative_photo": "Illustrative photo",
   "products_bulki": {
     "bulka_kajzerka": {
       "name": "Kaiser Roll",
-      "weight": "60g",
-      "packaging": "Box 80 pcs / Pallet: 40 boxes",
+      "weight": "55g",
+      "description": "Classic choice wheat roll with a golden-brown crispy crust.",
+      "packaging": "Box 80 pcs / Palette: 40 boxes",
       "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC Grade A",
-      "description": "Traditional, crispy wheat kaiser roll with five characteristic cuts."
+      "cert": "IFS Food, BRC Grade A"
     },
     "bulka_z_ziarnem": {
       "name": "Seeded Roll",
-      "weight": "75g",
-      "packaging": "Box 60 pcs / Pallet: 40 boxes",
+      "weight": "70g",
+      "description": "Wheat roll with sunflower seeds, flaxseed, sesame, millet and pumpkin seeds.",
+      "packaging": "Box 60 pcs / Palette: 40 boxes",
       "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Fluffy wheat roll generously coated with sesame, flax, and sunflower seeds."
+      "cert": "IFS Food, BRC"
     },
     "bulka_wysokobialkowa": {
-      "name": "High-Protein Roll",
+      "name": "High Protein Roll",
       "weight": "80g",
+      "description": "Wheat roll with sesame and flaxseed topping. Pre-baked frozen product.",
       "packaging": "Box 50 pcs",
-      "shelfLife": "48h / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Specialty roll with high plant protein content and low carbohydrates."
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_z_warzywami": {
       "name": "Vegetable Roll",
       "weight": "80g",
-      "packaging": "Box 50 pcs / Pallet: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Savory wheat roll blended with dried vegetable pieces."
+      "description": "Wheat roll with spinach, dried carrot, dried beetroot and onion. Pre-baked frozen.",
+      "packaging": "Box 50 pcs / Palette: 40 boxes",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_grahamka_slonecznik": {
-      "name": "Graham Roll with Sunflower",
+      "name": "Graham Roll with Sunflower Seeds",
       "weight": "75g",
-      "packaging": "Box 60 pcs / Pallet: 40 boxes",
+      "description": "Graham wheat roll topped with sunflower seeds.",
+      "packaging": "Box 60 pcs / Palette: 40 boxes",
       "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Wholesome dark graham roll topped with crunchy sunflower seeds."
+      "cert": "IFS Food, BRC"
     },
     "bulka_mleczna": {
-      "name": "Milk Bun",
+      "name": "Milk Roll",
       "weight": "80g",
-      "packaging": "Box 50 pcs / Pallet: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Soft and fluffy buttery sweet roll baked with natural milk."
+      "description": "Sweetened wheat roll made with fresh milk.",
+      "packaging": "Box 50 pcs / Palette: 40 boxes",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_duza": {
-      "name": "Large Breakfast Roll",
-      "weight": "90g",
-      "packaging": "Box 50 pcs / Pallet: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Large, satisfying wheat roll with a crispy crust."
+      "name": "Large Wheat Roll",
+      "weight": "100g",
+      "description": "Classic large wheat roll with a crispy golden crust.",
+      "packaging": "Box 50 pcs / Palette: 40 boxes",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_grahamka": {
       "name": "Graham Roll",
-      "weight": "70g",
-      "packaging": "Box 60 pcs / Pallet: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC Grade A",
-      "description": "Classic dark wholemeal graham roll rich in fiber."
+      "weight": "80g",
+      "description": "Whole wheat roll with graham flour.",
+      "packaging": "Box 60 pcs / Palette: 40 boxes",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC Grade A"
     },
     "bulka_z_marchewka": {
       "name": "Carrot Roll",
       "weight": "80g",
+      "description": "Wheat roll with dried carrot, sunflower seeds and flaxseed.",
       "packaging": "Box 50 pcs",
-      "shelfLife": "48h (Fresh)",
-      "cert": "IFS Food, BRC",
-      "description": "Aromatic wheat roll with grated carrot and a subtly sweet taste."
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_poznanska": {
-      "name": "Poznań Roll",
-      "weight": "70g",
-      "packaging": "Box 60 pcs / Pallet: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Traditional Polish roll with a distinctive split along the top."
+      "name": "Poznańska Roll",
+      "weight": "80g",
+      "description": "Traditional wheat roll with a crispy crust.",
+      "packaging": "Box 60 pcs / Palette: 40 boxes",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "rogal_z_makiem": {
       "name": "Poppy Seed Crescent",
-      "weight": "90g",
-      "packaging": "Box 40 pcs",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Traditional butter crescent topped generously with blue poppy seeds."
+      "weight": "100g",
+      "description": "Horseshoe-shaped wheat roll sprinkled with poppy seeds.",
+      "packaging": "Box 40 pcs / Crate",
+      "shelfLife": "48h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "ciabatta_80g": {
       "name": "Ciabatta 80g",
       "weight": "80g",
-      "packaging": "Box 50 pcs / Pallet: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Italian ciabatta roll with a crispy crust and porous crumb."
+      "description": "Long-fermented wheat ciabatta. Pre-baked frozen.",
+      "packaging": "Box 50 pcs / Palette: 40 boxes",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "rogal_klasyczny": {
       "name": "Classic Crescent Roll",
-      "weight": "80g",
-      "packaging": "Box 40 pcs",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Soft and buttery traditional yeast crescent roll."
-    },
-    "rogal_swiateczny_z_bialym_makiem": {
-      "name": "White Poppy Seed Crescent",
-      "weight": "170g",
-      "packaging": "Box 12 pcs",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Festive crescent pastry rich in white poppy seed, dried fruit, and almond paste."
-    },
-    "chleb_2ab": {
-      "name": "Ancient Wheat 2AB Bread",
-      "weight": "400g",
-      "packaging": "Box 10 pcs",
-      "shelfLife": "6 days",
-      "cert": "IFS Food, BRC, 2AB Certified",
-      "description": "Easily digestible bread made from ancient 2AB wheat and natural sourdough."
-    },
-    "bulka_2ab": {
-      "name": "Ancient Wheat 2AB Roll",
-      "weight": "70g",
-      "packaging": "Box 60 pcs / Pallet: 40 boxes",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC, 2AB Certified",
-      "description": "Digestive-friendly roll baked with ancient 2AB wheat flour."
+      "weight": "100g",
+      "description": "Horseshoe-shaped wheat roll with a shiny golden crust.",
+      "packaging": "Box 40 pcs / Crate",
+      "shelfLife": "48h (Fresh) / 9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "bagietka_2ab": {
-      "name": "Ancient Wheat 2AB Baguette",
-      "weight": "250g",
+      "name": "2AB Ancient Grain Baguette",
+      "weight": "180g - 200g",
+      "description": "Wheat baguette baked with 2AB ancient grain flour.",
       "packaging": "Box 20 pcs",
-      "shelfLife": "48h (Fresh) / 9 months (Bake-off)",
-      "cert": "IFS Food, BRC, 2AB Certified",
-      "description": "Crispy baguette made from ancient 2AB wheat with a distinctive aroma."
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC, 2AB Certified"
+    },
+    "bulka_2ab": {
+      "name": "2AB Ancient Grain Roll",
+      "weight": "60g - 70g",
+      "description": "Wheat roll baked with 2AB ancient grain flour.",
+      "packaging": "Box 60 pcs / Palette: 40 boxes",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC, 2AB Certified"
     }
   },
   "products_przekaski": {
     "paluch_z_serem": {
-      "name": "Paluch z serem",
+      "name": "Gouda Cheese Stick",
       "weight": "80g",
-      "packaging": "Karton 40 szt. / Paleta: 48 kartonów",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Box 40 pcs / Palette: 48 boxes",
+      "shelfLife": "48h (Fresh)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenne posypane serem gouda"
+      "description": "Wheat breadstick topped with melted Gouda cheese."
     },
     "przekaska_z_serem": {
-      "name": "Przekąska z serem",
+      "name": "Gouda Cheese Snack",
       "weight": "70g",
-      "packaging": "Karton 40 szt.",
-      "shelfLife": "9 miesięcy (Mrożona)",
+      "packaging": "Box 40 pcs",
+      "shelfLife": "9 months (Frozen)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenne z serem gouda"
+      "description": "Wheat pastry snack with Gouda cheese."
     },
     "wianek_ze_szpinakiem": {
-      "name": "Wianek ze szpinakiem",
+      "name": "Spinach & Béchamel Wreath",
       "weight": "100g",
-      "packaging": "Karton 20 szt.",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Box 20 pcs",
+      "shelfLife": "48h (Fresh)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenna drożdżowa w kształcie wieńca z dodatkiem sosu beszamel, oraz szpinaku."
+      "description": "Wreath-shaped yeast wheat pastry filled with béchamel sauce and spinach."
     }
   },
   "products_chleby": {
     "chleb_baltonowski": {
-      "name": "Chleb baltonowski",
+      "name": "Baltonowski Bread",
       "weight": "550g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, barwa złocisto-brązowa."
+      "description": "Wheat-rye bread. Oval loaf with a golden-brown crust.",
+      "packaging": "Crate 12 pcs / Palette: 48 crates (576 pcs)",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC Grade A"
     },
     "chleb_baltonowski_z_makiem": {
-      "name": "Chleb baltonowski z makiem",
+      "name": "Baltonowski Bread with Poppy Seeds",
       "weight": "500g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, barwa złocisto-brązowa. Posypane makiem."
+      "description": "Wheat-rye oval bread sprinkled with poppy seeds.",
+      "packaging": "Crate 12 pcs",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_geparda": {
-      "name": "Chleb geparda",
+      "name": "Gepard Seeded Bread",
       "weight": "450g",
-      "description": "Pieczywo mieszane pszenno-żytnie na zakwasie żytnim z dodatkiem drożdży, z nasionami słonecznika, ziarnem prosa, siemieniem lnianym i nasionami sezamu"
+      "description": "Mixed wheat-rye sourdough bread with yeast, sunflower seeds, millet, flaxseed and sesame.",
+      "packaging": "Crate 15 pcs / Palette: 48 crates",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food"
     },
     "chleb_helios": {
-      "name": "Chleb helios",
+      "name": "Helios Seeded Bread",
       "weight": "400g",
-      "description": "Pieczywo mieszane pszenno-żytnie z ziarnami."
+      "description": "Mixed wheat-rye bread with healthy seeds.",
+      "packaging": "Crate 12 pcs / Palette: 48 crates (576 pcs)",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_ig": {
-      "name": "Chleb ig",
+      "name": "Low GI Bread",
       "weight": "300g",
-      "description": "Pieczywo mieszane o niskim indeksie glikemicznym."
+      "description": "Mixed bread with a low glycemic index.",
+      "packaging": "Box 10 pcs / Palette: 40 boxes",
+      "shelfLife": "6 days",
+      "cert": "IFS Food, BRC, GI Tested"
     },
     "chleb_zakwas": {
-      "name": "Chleb na naturalnym zakwasie",
+      "name": "Natural Sourdough Bread",
       "weight": "600g",
-      "description": "Pieczywo mieszane pszenno – żytnie na naturalnym zakwasie żytnim produkowane metodą wielofazową."
+      "description": "Mixed wheat-rye bread made with traditional multi-stage natural rye sourdough.",
+      "packaging": "Crate 12 pcs / Palette: 48 crates",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_pajda": {
-      "name": "Chleb pajda",
+      "name": "Pajda Sourdough Bread",
       "weight": "900g",
-      "description": "Pieczywo mieszane pszenno – żytnie na naturalnym zakwasie żytnim produkowane metodą wielofazową."
+      "description": "Traditional mixed wheat-rye bread baked on natural rye sourdough.",
+      "packaging": "Crate 12 pcs",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_boryny": {
-      "name": "Chleb przysmak boryny",
-      "weight": "400/800g",
-      "description": "Pieczywo wyprodukowane na bazie mieszanki do chleba, mąki żytniej, mąki pszennej z dodatkiem kwasu naturalnego, drożdży, soli oraz nasion słonecznika i siemienia lnianego obsypanego mieszanką nasion i płatków ziemniaczanych."
+      "name": "Boryna's Delight Bread",
+      "weight": "400g / 800g",
+      "description": "Wheat-rye bread with natural sourdough, sunflower seeds, flaxseed, topped with seeds and potato flakes.",
+      "packaging": "Crate 10 pcs / Palette: 48 crates",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food"
     },
     "chleb_razowy": {
-      "name": "Chleb razowy",
+      "name": "Wholemeal Rye Bread",
       "weight": "450g",
-      "description": "Pieczywo żytnie razowe pełnoziarniste w formie prostokątnego bochenka."
+      "description": "Whole grain rye bread baked in a rectangular loaf.",
+      "packaging": "Crate 12 pcs / Palette: 48 crates",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_wieloziarnisty": {
-      "name": "Chleb wieloziarnisty",
+      "name": "Multigrain Bread",
       "weight": "500g",
-      "description": "Pieczywo produkowane z mąki pszennej i żytniej na naturalnym zakwasie z dodatkiem drożdży, soli, ekstraktu słodowego, polepszacza oraz mieszanki ziaren; obsypanego mieszanka ziaren posypką ziarnistą"
+      "description": "Wheat and rye sourdough bread with seeds inside and on top.",
+      "packaging": "Crate 15 pcs / Palette: 40 crates (600 pcs)",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_wiosenny": {
-      "name": "Chleb wiosenny z przyprawami i czosnkiem",
+      "name": "Spring Bread with Garlic & Herbs",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem czosnku oraz przypraw (koperek suszony, pietruszka suszona, szczypiorek krojony)."
+      "description": "Rye bread enriched with garlic and dried herbs (dill, parsley, chives).",
+      "packaging": "Box 12 pcs",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_z_maka": {
-      "name": "Chleb z mąką",
+      "name": "Floured Rye-Wheat Bread",
       "weight": "500g",
-      "description": "Chleb wyprodukowany jest na kwasie uzyskanym metodą fermentacji wielofazowej z dodatkiem drożdży. Bochenki o kształcie podłużnym, z trzema nacięciami, posypany mąką żytnią typ 720"
+      "description": "Multi-stage sourdough bread with three cuts, dusted with type 720 rye flour.",
+      "packaging": "Crate 12 pcs / Palette: 48 crates",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zloty_klos": {
-      "name": "Chleb złoty kłos",
-      "weight": "400/800g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, z nacięciami w kształcie X, posypane mąką żytnią typ 720."
+      "name": "Golden Ear Bread",
+      "weight": "400g / 800g",
+      "description": "Wheat-rye oval bread with X-shaped cuts, dusted with rye flour.",
+      "packaging": "Crate 15 pcs / Palette: 48 crates",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food"
     },
     "chleb_zytni_bez_drozdzy": {
-      "name": "Chleb żytni bez drożdży",
-      "weight": "500 g",
-      "description": "chleb żytni wypiekany bez dodatku drożdży"
+      "name": "Yeast-Free Rye Bread",
+      "weight": "500g",
+      "description": "Pure rye bread baked naturally without added yeast.",
+      "packaging": "Box 10 pcs / Palette: 48 boxes",
+      "shelfLife": "6 days",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_chrzan": {
-      "name": "Chleb żytni z chrzanem",
+      "name": "Rye Bread with Horseradish",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem chrzanu tartego i majeranku."
+      "description": "Rye bread with grated horseradish and marjoram.",
+      "packaging": "Crate 12 pcs",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_kapusta": {
-      "name": "Chleb żytni z kiszoną kapustą",
+      "name": "Rye Bread with Sauerkraut",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem kapusty kiszonej."
+      "description": "Rye bread enriched with natural sauerkraut.",
+      "packaging": "Crate 12 pcs",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_papryka": {
-      "name": "Chleb żytni z papryką",
+      "name": "Rye Bread with Roasted Peppers",
       "weight": "380g",
-      "description": "Pieczywo pszenno-żytnie z pieczoną papryką, posypane mieszanką ziaren sezamu oraz sezamu czarnego."
+      "description": "Wheat-rye bread with roasted bell pepper, topped with white and black sesame.",
+      "packaging": "Crate 15 pcs",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_ziarna": {
-      "name": "Chleb żytni z ziarnami",
+      "name": "Rye Bread with Seeds",
       "weight": "400g",
-      "description": "Chleb żytni z dodatkiem siemienia lnianego i nasion słonecznika, posypany ziarnami prosa i siemieniem lnianym oraz nasionami słonecznika i sezamu."
+      "description": "Rye bread with flaxseed and sunflower seeds, topped with millet, flaxseed, sunflower and sesame.",
+      "packaging": "Crate 12 pcs / Palette: 48 crates",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_slonecznik": {
-      "name": "Chleb żytni ze słonecznikiem",
+      "name": "Rye Bread with Sunflower Seeds",
       "weight": "600g",
-      "description": "Pieczywo żytnie ze słonecznikiem."
+      "description": "Whole rye bread with roasted sunflower seeds.",
+      "packaging": "Crate 12 pcs / Palette: 48 crates (576 pcs)",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food, BRC"
     },
     "chlebek_swieconka": {
-      "name": "Chlebek do święconki",
+      "name": "Easter Blessing Mini Bread",
       "weight": "60g",
-      "description": "Pieczywo pszenne obsypane mąką żytnią typ 720."
+      "description": "Wheat mini loaf dusted with type 720 rye flour.",
+      "packaging": "Box 30 pcs",
+      "shelfLife": "72h (Fresh)",
+      "cert": "IFS Food"
     },
     "chleb_2ab": {
-      "name": "Chleb 2AB",
+      "name": "2AB Ancient Grain Bread",
       "weight": "300g",
-      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
+      "description": "Wheat bread baked with ancient grain 2AB flour on natural yeast.",
+      "packaging": "Box 10 pcs",
+      "shelfLife": "9 months (Frozen)",
+      "cert": "IFS Food, BRC, 2AB Certified"
     }
   }
 }

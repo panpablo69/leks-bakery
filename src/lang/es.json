@@ -382,504 +382,514 @@
   },
   "products_2ab": {
     "chleb_2ab": {
-      "name": "Pan de Trigo Ancestral 2AB",
-      "weight": "400g",
-      "packaging": "Caja de 10 unidades",
-      "shelfLife": "6 días",
+      "name": "Pan 2AB de Cereales Ancestrales",
+      "weight": "300g",
+      "packaging": "Caja 10 uds",
+      "shelfLife": "9 meses (Congelado)",
       "cert": "IFS Food, BRC, Certificado 2AB",
-      "description": "Pan de trigo ancestral 2AB de fácil digestión, horneado con masa madre natural. Ideal para personas con sistemas digestivos sensibles, incluidos quienes padecen de colon irritable o SIBO (dieta baja en FODMAP)."
+      "description": "Pan de trigo elaborado con harina de cereales ancestrales 2AB con levadura."
     },
     "bulka_2ab": {
-      "name": "Panecillo de Trigo Ancestral 2AB",
-      "weight": "70g",
-      "packaging": "Caja de 60 unidades / Paleta: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "name": "Panecillo 2AB",
+      "weight": "60g - 70g",
+      "packaging": "Caja 60 uds / Paleta: 40 cajas",
+      "shelfLife": "9 meses (Congelado)",
       "cert": "IFS Food, BRC, Certificado 2AB",
-      "description": "Panecillo diario crujiente y de fácil digestión, elaborado con trigo ancestral 2AB. Se caracteriza por su corteza dorada natural, bajo contenido de FODMAP y gluten reducido."
+      "description": "Panecillo de trigo horneado con harina de cereal ancestral 2AB."
     },
     "bagietka_2ab": {
-      "name": "Bagguette de Trigo Ancestral 2AB",
-      "weight": "250g",
-      "packaging": "Caja de 20 unidades / Paleta: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
+      "name": "Baguette 2AB",
+      "weight": "180g - 200g",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "9 meses (Congelado)",
       "cert": "IFS Food, BRC, Certificado 2AB",
-      "description": "Bagguette clásica y crujiente en una versión de fácil digestión. Horneada con harina única de trigo ancestral 2AB, suave para el estómago y el intestino."
+      "description": "Baguette de trigo horneada con harina de cereal ancestral 2AB."
     }
   },
   "products_cukiernia": {
     "skubaniec_z_beza": {
-      "name": "Pastel Skubaniec con merengue",
-      "weight": "aprox. 2.0 kg",
-      "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "72h (Fresco)",
-      "cert": "IFS Food, BRC",
-      "description": "Pastel de masa quebrada rica y desmenuzable con cacao, relleno de mermelada ácida de frutas y un merengue esponjoso y crujiente. Una delicia tradicional polaca."
+      "name": "Pastel Skubaniec con Frutas",
+      "weight": "kg",
+      "description": "Pastel de masa quebrada con frutas y merengue."
     },
     "ciasto_karpatka": {
-      "name": "Pastel de crema Karpatka",
-      "weight": "aprox. 1.8 kg",
-      "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "48h (Fresco)",
-      "cert": "IFS Food",
-      "description": "Pastel de crema polaco clásico relleno de crema suave de vainilla, intercalado entre masa de lionesa ondulada que recuerda a los Montes Cárpatos, espolvoreado con azúcar glas."
+      "name": "Pastel Karpatka",
+      "weight": "kg",
+      "description": "Tarta de masa pasta choux rellena de crema de vainilla y espolvoreada con azúcar glas."
     },
     "ciasto_krowka": {
-      "name": "Pastel de caramelo y toffee",
-      "weight": "aprox. 1.8 kg",
-      "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "48h (Fresco)",
-      "cert": "IFS Food",
-      "description": "Pastel sumamente dulce y cremoso intercalado con capas de bizcocho tierno, crema esponjosa de nata y un rico relleno de dulce de leche (caramelo de toffee)."
+      "name": "Pastel Krówka con Toffee",
+      "weight": "kg",
+      "description": "Bizcocho con crema, cobertura de toffee y almendras laminadas."
     },
     "ciasto_z_galaretka": {
-      "name": "Pastel de gelatina y fresas",
-      "weight": "aprox. 2.0 kg",
-      "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "48h (Fresco)",
-      "cert": "IFS Food",
-      "description": "Postre refrescante sobre una base esponjosa de bizcocho con una capa ligera de crema de nata, generosamente cubierto con fresas jugosas en gelatina de fresa."
+      "name": "Tarta de Fresa con Gelatina",
+      "weight": "kg",
+      "description": "Bizcocho con crema de vainilla, fresas frescas y gelatina de fresa."
     },
     "sernik_puszysty": {
-      "name": "Tarta de queso esponjosa",
-      "weight": "aprox. 2.0 kg",
-      "packaging": "Caja 1 ud. (Bandeja)",
-      "shelfLife": "48h (Fresco)",
-      "cert": "IFS Food, BRC",
-      "description": "Tarta de queso horneada extremadamente ligera y esponjosa sobre una base delicada, preparada con requesón polaco de la más alta calidad y un toque de vaillina."
+      "name": "Tarta de Queso Esponjosa",
+      "weight": "kg",
+      "description": "Esponjosa masa de tarta de queso sobre base de bizcocho."
     },
     "rwaniec_drozdzowy_z_twarogiem": {
-      "name": "Pastel desgranable de levadura con requesón",
-      "weight": "aprox. 1.5 kg",
-      "packaging": "Caja 1 ud.",
-      "shelfLife": "48h (Fresco)",
-      "cert": "IFS Food, BRC",
-      "description": "Esponjoso pastel de levadura desgranable relleno de requesón dulce, glaseado con azúcar y crujientes migas de mantequilla."
+      "name": "Pan Dulce Desmontable con Queso Quark",
+      "weight": "450g",
+      "description": "Masa de levadura con queso fresco dulce, masa desmigada y azúcar."
     },
     "baton_coco_crunch": {
       "name": "Barritas Coco-Crunch",
-      "weight": "aprox. 1.5 kg",
-      "packaging": "Caja 1 ud. / Bandeja",
-      "shelfLife": "72h (Fresco)",
-      "cert": "IFS Food, BRC",
-      "description": "Deliciosas barritas de chocolate y coco con bolitas crujientes y virutas de coco."
+      "weight": "kg",
+      "description": "Surtido de barritas con cacahuetes, relleno de toffee y coco rallado."
     }
   },
   "products_polcukiernicze": {
-    "paczek_twarogowy": {
-      "name": "Berlina de requesón",
-      "weight": "80g",
-      "packaging": "Caja 24 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Berlina esponjosa con requesón natural añadido a la masa, lo que le otorga una jugosidad y suavidad excepcionales."
-    },
-    "paczek_z_budyniem": {
-      "name": "Berlina rellena de crema pastelera",
-      "weight": "90g",
-      "packaging": "Caja 24 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Berlina esponjosa rellena de una densa crema pastelera de vainilla, espolvoreada con azúcar glas."
-    },
-    "gniazdko_z_lukrem": {
-      "name": "Rosquilla de viento glaseada",
-      "weight": "80g",
-      "packaging": "Caja 20 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Rosquilla esponjosa de pasta choux (estilo español), frita hasta obtener un color dorado y cubierta con glaseado dulce."
-    },
-    "warkocz_z_lukrem": {
-      "name": "Trenza de levadura glaseada",
-      "weight": "100g",
-      "packaging": "Caja 20 ud. / Caja plástica",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Trenza de levadura tradicional, esponjosa y ligera, decorada con glaseado dulce."
-    },
-    "racuch_z_jablkiem": {
-      "name": "Tortita de levadura con manzana",
-      "weight": "90g",
-      "packaging": "Caja 20 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Tortita tradicional de levadura con trozos jugosos de manzana, ideal para una merienda dulce."
-    },
-    "paczek_z_marmolada": {
-      "name": "Berlina con mermelada",
-      "weight": "90g",
-      "packaging": "Caja 24 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Berlina tradicional con mermelada de varias frutas, glaseada y decorada con ralladura de naranja."
+    "brioszka_z_lezkami_czekolady": {
+      "name": "Brioche con Gotas de Chocolate",
+      "weight": "200g",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC",
+      "description": "Bollo dulce de levadura con pepitas de chocolate."
     },
     "calusek": {
-      "name": "Dulce Całusek",
-      "weight": "90g",
-      "packaging": "Caja 20 ud.",
-      "shelfLife": "48h",
-      "cert": "IFS Food",
-      "description": "Delicado bollo de levadura con relleno de frutas, enrollado con la forma característica de un beso."
-    },
-    "paczek_premium_z_nadzieniem_wisniowym": {
-      "name": "Berlina premium de cereza",
-      "weight": "100g",
-      "packaging": "Caja 24 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food, BRC",
-      "description": "Berlina premium con un relleno de cereza ligeramente ácido, glaseada y decorada con almendras laminadas."
-    },
-    "gniazdko_z_cukrem_pudrem": {
-      "name": "Rosquilla de viento con azúcar glas",
+      "name": "Berlina Całusek con Azúcar",
       "weight": "80g",
-      "packaging": "Caja 20 ud.",
-      "shelfLife": "24h",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "48h (Fresco)",
       "cert": "IFS Food",
-      "description": "Rosquilla de pasta choux delicada y ligera, espolvoreada con azúcar glas."
-    },
-    "paczek_z_nadzieniem_karpatkowym": {
-      "name": "Berlina de crema Karpatka",
-      "weight": "100g",
-      "packaging": "Caja 24 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Berlina excepcional rellena de crema rica y esponjosa al estilo del pastel tradicional Karpatka."
+      "description": "Bollo frito de levadura espolvoreado con azúcar."
     },
     "drozdzowka_z_makiem": {
-      "name": "Bollo de semilla de amapola",
-      "weight": "110g",
-      "packaging": "Caja 15 ud. / Caja plástica",
-      "shelfLife": "48h",
+      "name": "Bollo de Amapola y Pasas",
+      "weight": "100g",
+      "packaging": "Caja 15 uds",
+      "shelfLife": "48h (Fresco)",
       "cert": "IFS Food",
-      "description": "Clásico bollo de levadura relleno de una masa aromática y dulce de semilla de amapola azul y pasas, glaseado."
-    },
-    "rogal_swiateczny_z_bialym_makiem": {
-      "name": "Cruasán navideño de amapola blanca",
-      "weight": "170g",
-      "packaging": "Caja 12 ud.",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Cruasán de masa hojaldrada premium, relleno hasta el borde con una exclusiva mezcla de semilla de amapola blanca, frutos secos, mazapán y pasas, glaseado y decorado con nueces picadas."
+      "description": "Bollo dulce de levadura relleno de amapola y pasas."
     },
     "drozdzowka_z_serem_i_kruszonka": {
-      "name": "Bollo de queso y crumble",
+      "name": "Bollo de Queso con Crujiente",
       "weight": "130g",
-      "packaging": "Caja 15 ud. / Caja plástica",
-      "shelfLife": "48h",
+      "packaging": "Caja 15 uds",
+      "shelfLife": "48h (Fresco) / 9 meses (Congelado)",
       "cert": "IFS Food, BRC",
-      "description": "Bollo de levadura tradicional con relleno dulce de requesón, cubierto con crujiente crumble de mantequilla."
+      "description": "Bollo dulce de levadura relleno de queso requesón dulce con crujiente."
     },
-    "paczek_z_nadzieniem_pistacjowym": {
-      "name": "Berlina de pistacho",
-      "weight": "100g",
-      "packaging": "Caja 24 ud.",
-      "shelfLife": "24h",
+    "gniazdko_z_lukrem": {
+      "name": "Buñuelo Francés (Gniazdko)",
+      "weight": "55g",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "24h (Fresco)",
       "cert": "IFS Food",
-      "description": "Moderna berlina premium rellena de una aterciopelada crema de pistacho, decorada con pistachos picados."
-    },
-    "paczek_z_nadzieniem_malinowym": {
-      "name": "Berlina de frambuesa",
-      "weight": "100g",
-      "packaging": "Caja 24 ud.",
-      "shelfLife": "24h",
-      "cert": "IFS Food",
-      "description": "Berlina clásica esponjosa con un aromático relleno de frambuesas maduras, espolvoreada con azúcar glas."
-    },
-    "brioszka_z_lezkami_czekolady": {
-      "name": "Brioszka z łezkami czekolady",
-      "weight": "200g",
-      "packaging": "Karton 20 szt. / Skrzynka",
-      "shelfLife": "48h (Świeża)",
-      "cert": "IFS Food, BRC",
-      "description": "Pieczywo półcukiernicze z ciasta drożdżowego z dodatkiem łezek o smaku czekoladowym"
+      "description": "Rosquilla frita de pasta choux con glaseado fino."
     },
     "miniptysie": {
-      "name": "Miniptysie",
+      "name": "Lionesas Mini de Nata",
       "weight": "kg",
-      "packaging": "Karton zbiorczy",
-      "shelfLife": "24h (Przechowywać w temp. 2-6°C)",
+      "packaging": "Caja a granel",
+      "shelfLife": "24h (Conservar a 2-6°C)",
       "cert": "IFS Food",
-      "description": "Ciasto parzone z kremem"
+      "description": "Mini profiteroles de pasta choux rellenos de nata dulce."
+    },
+    "paczek_premium_z_nadzieniem_wisniowym": {
+      "name": "Berlina Premium de Cereza",
+      "weight": "70g - 100g",
+      "packaging": "Caja 24 uds",
+      "shelfLife": "24h (Fresco) / 9 meses (Congelado)",
+      "cert": "IFS Food, BRC",
+      "description": "Berlina rellena de cereza, glaseada y cubierta con láminas de almendra."
+    },
+    "paczek_twarogowy": {
+      "name": "Berlina de Queso Requesón",
+      "weight": "50g",
+      "packaging": "Caja 24 uds",
+      "shelfLife": "24h (Fresco)",
+      "cert": "IFS Food",
+      "description": "Berlina frita de masa con queso fresco rebozada en azúcar."
+    },
+    "paczek_z_budyniem": {
+      "name": "Berlina de Natillas",
+      "weight": "70g - 100g",
+      "packaging": "Caja 24 uds",
+      "shelfLife": "24h (Fresco)",
+      "cert": "IFS Food",
+      "description": "Berlina de levadura rellena de crema de vainilla y glaseada."
+    },
+    "paczek_z_marmolada": {
+      "name": "Berlina Tradicional de Mermelada",
+      "weight": "70g - 100g",
+      "packaging": "Caja 24 uds",
+      "shelfLife": "24h (Fresco) / 9 meses (Congelado)",
+      "cert": "IFS Food",
+      "description": "Berlina de levadura rellena de mermelada de rosa y glaseada."
+    },
+    "paczek_z_nadzieniem_karpatkowym": {
+      "name": "Berlina Karpatka con Crema",
+      "weight": "90g",
+      "packaging": "Caja 24 uds",
+      "shelfLife": "24h (Fresco)",
+      "cert": "IFS Food",
+      "description": "Berlina de levadura rellena de crema pastelera, glaseada con virutas de chocolate blanco."
+    },
+    "paczek_z_nadzieniem_malinowym": {
+      "name": "Berlina con Frambuesa",
+      "weight": "70g - 100g",
+      "packaging": "Caja 24 uds",
+      "shelfLife": "24h (Fresco)",
+      "cert": "IFS Food",
+      "description": "Berlina rellena de mermelada de frambuesa, glaseada con frambuesa liofilizada."
+    },
+    "paczek_z_nadzieniem_pistacjowym": {
+      "name": "Berlina de Crema de Pistacho",
+      "weight": "80g",
+      "packaging": "Caja 24 uds",
+      "shelfLife": "24h (Fresco) / 9 meses (Congelado)",
+      "cert": "IFS Food",
+      "description": "Berlina rellena de crema de pistacho, glaseada y decorada con pistachos picados."
+    },
+    "racuch_z_jablkiem": {
+      "name": "Buñuelo con Manzana",
+      "weight": "90g",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "24h (Fresco)",
+      "cert": "IFS Food",
+      "description": "Buñuelo frito de levadura relleno de manzana picada con glaseado."
     },
     "twist_z_makiem": {
-      "name": "Twist z makiem",
+      "name": "Espiral con Amapola",
       "weight": "90g",
-      "packaging": "Karton 20 szt. / Skrzynka",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "48h (Fresco)",
       "cert": "IFS Food, BRC",
-      "description": "Bułka pszenna drożdżowa z dodatkiem maku"
+      "description": "Bollo trenzado de trigo con relleno de amapola."
+    },
+    "warkocz_z_lukrem": {
+      "name": "Trenza Glaseada",
+      "weight": "90g",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food",
+      "description": "Bollo frito de levadura en forma de trenza con glaseado de azúcar."
     }
   },
   "illustrative_photo": "Foto orientativa",
   "products_bulki": {
     "bulka_kajzerka": {
       "name": "Panecillo Kaiser",
-      "weight": "60g",
-      "packaging": "Caja 80 ud / Palet: 40 cajas",
+      "weight": "55g",
+      "description": "Panecillo clásico de trigo con corteza crujiente dorado-tostada.",
+      "packaging": "Caja 80 uds / Paleta: 40 cajas",
       "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC Grade A",
-      "description": "Tradicional panecillo de trigo kaiser con sus característicos cortes en estrella."
+      "cert": "IFS Food, BRC Grade A"
     },
     "bulka_z_ziarnem": {
-      "name": "Panecillo con Semillas",
-      "weight": "75g",
-      "packaging": "Caja 60 ud / Palet: 40 cajas",
+      "name": "Panecillo Multisemillas",
+      "weight": "70g",
+      "description": "Panecillo de trigo con semillas de girasol, lino, sésamo, mijo y pipas de calabaza.",
+      "packaging": "Caja 60 uds / Paleta: 40 cajas",
       "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Esponjoso panecillo de trigo cubierto de semillas de sésamo, lino y girasol."
+      "cert": "IFS Food, BRC"
     },
     "bulka_wysokobialkowa": {
-      "name": "Panecillo Alto en Proteínas",
+      "name": "Panecillo Proteico",
       "weight": "80g",
-      "packaging": "Caja 50 ud",
-      "shelfLife": "48h / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Panecillo especial rico en proteínas vegetales y bajo en carbohidratos."
+      "description": "Panecillo de trigo cubierto con sésamo y lino. Prehorneado ultracongelado.",
+      "packaging": "Caja 50 uds",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_z_warzywami": {
       "name": "Panecillo de Hortalizas",
       "weight": "80g",
-      "packaging": "Caja 50 ud / Palet: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Sabroso panecillo de trigo enriquecido con trozos de verduras deshidratadas."
+      "description": "Panecillo de trigo con espinacas, zanahoria, remolacha y cebolla. Ultracongelado.",
+      "packaging": "Caja 50 uds / Paleta: 40 cajas",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_grahamka_slonecznik": {
-      "name": "Panecillo Graham con Girasol",
+      "name": "Panecillo Graham con Pipas",
       "weight": "75g",
-      "packaging": "Caja 60 ud / Palet: 40 cajas",
+      "description": "Panecillo integral Graham cubierto con semillas de girasol.",
+      "packaging": "Caja 60 uds / Paleta: 40 cajas",
       "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Panecillo integral oscuro elaborado con semillas de girasol."
+      "cert": "IFS Food, BRC"
     },
     "bulka_mleczna": {
       "name": "Panecillo de Leche",
       "weight": "80g",
-      "packaging": "Caja 50 ud / Palet: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Pan dulce muy tierno y esponjoso horneado con leche natural."
+      "description": "Panecillo tierno de trigo elaborado con leche fresca.",
+      "packaging": "Caja 50 uds / Paleta: 40 cajas",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_duza": {
-      "name": "Panecillo Grande de Desayuno",
-      "weight": "90g",
-      "packaging": "Caja 50 ud / Palet: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Panecillo grande de trigo con corteza crujiente."
+      "name": "Panecillo Grande de Trigo",
+      "weight": "100g",
+      "description": "Panecillo clásico de trigo con corteza crujiente y dorada.",
+      "packaging": "Caja 50 uds / Paleta: 40 cajas",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_grahamka": {
-      "name": "Panecillo Graham Integral",
-      "weight": "70g",
-      "packaging": "Caja 60 ud / Palet: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC Grade A",
-      "description": "Panecillo integral clásico muy rico en fibra natural."
+      "name": "Panecillo Graham",
+      "weight": "80g",
+      "description": "Panecillo de trigo con harina integral Graham.",
+      "packaging": "Caja 60 uds / Paleta: 40 cajas",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC Grade A"
     },
     "bulka_z_marchewka": {
       "name": "Panecillo de Zanahoria",
       "weight": "80g",
-      "packaging": "Caja 50 ud",
-      "shelfLife": "48h (Fresco)",
-      "cert": "IFS Food, BRC",
-      "description": "Panecillo de trigo aromatizado con zanahoria rallada de sabor suave y dulce."
+      "description": "Panecillo de trigo con zanahoria deshidratada, semillas de girasol y lino.",
+      "packaging": "Caja 50 uds",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_poznanska": {
-      "name": "Panecillo Poznań",
-      "weight": "70g",
-      "packaging": "Caja 60 ud / Palet: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Panecillo tradicional polaco con hendidura central longitudinal."
+      "name": "Panecillo Poznański",
+      "weight": "80g",
+      "description": "Panecillo tradicional polaco de trigo con corteza crujiente.",
+      "packaging": "Caja 60 uds / Paleta: 40 cajas",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "rogal_z_makiem": {
-      "name": "Croissant con Semillas de Amapola",
-      "weight": "90g",
-      "packaging": "Caja 40 ud",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Croissant tradicional de mantequilla espolvoreado con semillas de amapola."
+      "name": "Cuerno con Semillas de Amapola",
+      "weight": "100g",
+      "description": "Bollo en forma de herradura espolvoreado con semillas de amapola.",
+      "packaging": "Caja 40 uds",
+      "shelfLife": "48h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "ciabatta_80g": {
-      "name": "Chiapata 80g",
+      "name": "Chabata 80g",
       "weight": "80g",
-      "packaging": "Caja 50 ud / Palet: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Chiapata de estilo italiano con corteza crujiente y miga muy alveolada."
+      "description": "Chabata de trigo de fermentación lenta. Prehorneada ultracongelada.",
+      "packaging": "Caja 50 uds / Paleta: 40 cajas",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "rogal_klasyczny": {
-      "name": "Croissant Clásico",
-      "weight": "80g",
-      "packaging": "Caja 40 ud",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Tierno croissant de levadura con suave aroma a mantequilla."
-    },
-    "rogal_swiateczny_z_bialym_makiem": {
-      "name": "Croissant Festivo de Amapola Blanca",
-      "weight": "170g",
-      "packaging": "Caja 12 ud",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Especialidad festiva rellena de amapola blanca, frutos secos y mazapán."
-    },
-    "chleb_2ab": {
-      "name": "Pan de Trigo Ancestral 2AB",
-      "weight": "400g",
-      "packaging": "Caja 10 ud",
-      "shelfLife": "6 días",
-      "cert": "IFS Food, BRC, Certificado 2AB",
-      "description": "Pan de muy fácil digestión elaborado con trigo ancestral 2AB y masa madre."
-    },
-    "bulka_2ab": {
-      "name": "Panecillo de Trigo Ancestral 2AB",
-      "weight": "70g",
-      "packaging": "Caja 60 ud / Palet: 40 cajas",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC, Certificado 2AB",
-      "description": "Panecillo ligero digestivo de harina de trigo ancestral 2AB."
+      "name": "Cuerno Clásico",
+      "weight": "100g",
+      "description": "Bollo en forma de herradura con dorada corteza brillante.",
+      "packaging": "Caja 40 uds",
+      "shelfLife": "48h (Fresco) / 9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "bagietka_2ab": {
-      "name": "Baguette de Trigo Ancestral 2AB",
-      "weight": "250g",
-      "packaging": "Caja 20 ud",
-      "shelfLife": "48h (Fresco) / 9 meses (Bake-off)",
-      "cert": "IFS Food, BRC, Certificado 2AB",
-      "description": "Crujiente baguette de trigo ancestral 2AB de aroma inconfundible."
+      "name": "Baguette 2AB",
+      "weight": "180g - 200g",
+      "description": "Baguette de trigo horneada con harina de cereal ancestral 2AB.",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC, Certificado 2AB"
+    },
+    "bulka_2ab": {
+      "name": "Panecillo 2AB",
+      "weight": "60g - 70g",
+      "description": "Panecillo de trigo horneado con harina de cereal ancestral 2AB.",
+      "packaging": "Caja 60 uds / Paleta: 40 cajas",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC, Certificado 2AB"
     }
   },
   "products_przekaski": {
     "paluch_z_serem": {
-      "name": "Paluch z serem",
+      "name": "Palito con Queso Gouda",
       "weight": "80g",
-      "packaging": "Karton 40 szt. / Paleta: 48 kartonów",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Caja 40 uds / Paleta: 48 cajas",
+      "shelfLife": "48h (Fresco)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenne posypane serem gouda"
+      "description": "Barra de pan de trigo cubierta con queso Gouda fundido."
     },
     "przekaska_z_serem": {
-      "name": "Przekąska z serem",
+      "name": "Aperitivo de Queso Gouda",
       "weight": "70g",
-      "packaging": "Karton 40 szt.",
-      "shelfLife": "9 miesięcy (Mrożona)",
+      "packaging": "Caja 40 uds",
+      "shelfLife": "9 meses (Congelado)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenne z serem gouda"
+      "description": "Bocado salado de trigo con queso Gouda."
     },
     "wianek_ze_szpinakiem": {
-      "name": "Wianek ze szpinakiem",
+      "name": "Corona de Espinacas y Bechamel",
       "weight": "100g",
-      "packaging": "Karton 20 szt.",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Caja 20 uds",
+      "shelfLife": "48h (Fresco)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenna drożdżowa w kształcie wieńca z dodatkiem sosu beszamel, oraz szpinaku."
+      "description": "Corona salada de levadura rellena de salsa bechamel y espinacas."
     }
   },
   "products_chleby": {
     "chleb_baltonowski": {
-      "name": "Chleb baltonowski",
+      "name": "Pan Baltonowski",
       "weight": "550g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, barwa złocisto-brązowa."
+      "description": "Pan de trigo y centeno. Hogaza alargada de corteza dorado-tostada.",
+      "packaging": "Caja 12 uds / Paleta: 48 cajas (576 uds)",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC Grade A"
     },
     "chleb_baltonowski_z_makiem": {
-      "name": "Chleb baltonowski z makiem",
+      "name": "Pan Baltonowski con Semillas de Amapola",
       "weight": "500g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, barwa złocisto-brązowa. Posypane makiem."
+      "description": "Pan ovalado de trigo y centeno espolvoreado con semillas de amapola.",
+      "packaging": "Caja 12 uds",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_geparda": {
-      "name": "Chleb geparda",
+      "name": "Pan Multisemillas Gepard",
       "weight": "450g",
-      "description": "Pieczywo mieszane pszenno-żytnie na zakwasie żytnim z dodatkiem drożdży, z nasionami słonecznika, ziarnem prosa, siemieniem lnianym i nasionami sezamu"
+      "description": "Pan de masa madre de trigo y centeno con levadura, semillas de girasol, mijo, lino y sésamo.",
+      "packaging": "Caja 15 uds / Paleta: 48 cajas",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food"
     },
     "chleb_helios": {
-      "name": "Chleb helios",
+      "name": "Pan con Semillas Helios",
       "weight": "400g",
-      "description": "Pieczywo mieszane pszenno-żytnie z ziarnami."
+      "description": "Pan de trigo y centeno enriquecido con semillas.",
+      "packaging": "Caja 12 uds / Paleta: 48 cajas (576 uds)",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_ig": {
-      "name": "Chleb ig",
+      "name": "Pan de Bajo Índice Glucémico",
       "weight": "300g",
-      "description": "Pieczywo mieszane o niskim indeksie glikemicznym."
+      "description": "Pan de mezcla con bajo índice glucémico.",
+      "packaging": "Caja 10 uds / Paleta: 40 cajas",
+      "shelfLife": "6 días",
+      "cert": "IFS Food, BRC, Probado IG"
     },
     "chleb_zakwas": {
-      "name": "Chleb na naturalnym zakwasie",
+      "name": "Pan de Masa Madre Natural",
       "weight": "600g",
-      "description": "Pieczywo mieszane pszenno – żytnie na naturalnym zakwasie żytnim produkowane metodą wielofazową."
+      "description": "Pan de trigo y centeno elaborado con masa madre natural en proceso multietapa.",
+      "packaging": "Caja 12 uds / Paleta: 48 cajas",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_pajda": {
-      "name": "Chleb pajda",
+      "name": "Pan Rústico Pajda",
       "weight": "900g",
-      "description": "Pieczywo mieszane pszenno – żytnie na naturalnym zakwasie żytnim produkowane metodą wielofazową."
+      "description": "Pan artesanal de trigo y centeno elaborado con masa madre natural.",
+      "packaging": "Caja 12 uds",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_boryny": {
-      "name": "Chleb przysmak boryny",
-      "weight": "400/800g",
-      "description": "Pieczywo wyprodukowane na bazie mieszanki do chleba, mąki żytniej, mąki pszennej z dodatkiem kwasu naturalnego, drożdży, soli oraz nasion słonecznika i siemienia lnianego obsypanego mieszanką nasion i płatków ziemniaczanych."
+      "name": "Pan Especial Boryna",
+      "weight": "400g / 800g",
+      "description": "Pan de trigo y centeno con masa madre, semillas de girasol, lino y copos de patata.",
+      "packaging": "Caja 10 uds / Paleta: 48 cajas",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food"
     },
     "chleb_razowy": {
-      "name": "Chleb razowy",
+      "name": "Pan Integral de Centeno",
       "weight": "450g",
-      "description": "Pieczywo żytnie razowe pełnoziarniste w formie prostokątnego bochenka."
+      "description": "Pan 100% integral de centeno en molde rectangular.",
+      "packaging": "Caja 12 uds / Paleta: 48 cajas",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_wieloziarnisty": {
-      "name": "Chleb wieloziarnisty",
+      "name": "Pan Multicereales",
       "weight": "500g",
-      "description": "Pieczywo produkowane z mąki pszennej i żytniej na naturalnym zakwasie z dodatkiem drożdży, soli, ekstraktu słodowego, polepszacza oraz mieszanki ziaren; obsypanego mieszanka ziaren posypką ziarnistą"
+      "description": "Pan de masa madre de trigo y centeno con mezcla de cereales y semillas.",
+      "packaging": "Caja 15 uds / Paleta: 40 cajas (600 uds)",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_wiosenny": {
-      "name": "Chleb wiosenny z przyprawami i czosnkiem",
+      "name": "Pan de Primavera con Ajo y Hierbas",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem czosnku oraz przypraw (koperek suszony, pietruszka suszona, szczypiorek krojony)."
+      "description": "Pan de centeno con ajo y hierbas aromáticas (eneldo, perejil, cebollino).",
+      "packaging": "Caja 12 uds",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_z_maka": {
-      "name": "Chleb z mąką",
+      "name": "Pan de Centeno Enharinado",
       "weight": "500g",
-      "description": "Chleb wyprodukowany jest na kwasie uzyskanym metodą fermentacji wielofazowej z dodatkiem drożdży. Bochenki o kształcie podłużnym, z trzema nacięciami, posypany mąką żytnią typ 720"
+      "description": "Pan de masa madre tradicional con tres cortes, espolvoreado con harina de centeno tipo 720.",
+      "packaging": "Caja 12 uds / Paleta: 48 cajas",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zloty_klos": {
-      "name": "Chleb złoty kłos",
-      "weight": "400/800g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, z nacięciami w kształcie X, posypane mąką żytnią typ 720."
+      "name": "Pan Espiga de Oro",
+      "weight": "400g / 800g",
+      "description": "Pan ovalado de trigo y centeno con cortes en X, espolvoreado con harina de centeno.",
+      "packaging": "Caja 15 uds / Paleta: 48 cajas",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food"
     },
     "chleb_zytni_bez_drozdzy": {
-      "name": "Chleb żytni bez drożdży",
-      "weight": "500 g",
-      "description": "chleb żytni wypiekany bez dodatku drożdży"
+      "name": "Pan de Centeno sin Levadura",
+      "weight": "500g",
+      "description": "Pan puro de masa madre de centeno horneado sin levadura añadida.",
+      "packaging": "Caja 10 uds / Paleta: 48 cajas",
+      "shelfLife": "6 días",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_chrzan": {
-      "name": "Chleb żytni z chrzanem",
+      "name": "Pan de Centeno con Rábano Picante",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem chrzanu tartego i majeranku."
+      "description": "Pan de centeno con rábano picante rallado y mejorana.",
+      "packaging": "Caja 12 uds",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_kapusta": {
-      "name": "Chleb żytni z kiszoną kapustą",
+      "name": "Pan de Centeno con Chucrut",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem kapusty kiszonej."
+      "description": "Pan de centeno enriquecido con chucrut natural.",
+      "packaging": "Caja 12 uds",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_papryka": {
-      "name": "Chleb żytni z papryką",
+      "name": "Pan de Centeno con Pimientos Asados",
       "weight": "380g",
-      "description": "Pieczywo pszenno-żytnie z pieczoną papryką, posypane mieszanką ziaren sezamu oraz sezamu czarnego."
+      "description": "Pan de trigo y centeno con pimiento asado, espolvoreado con sésamo blanco y negro.",
+      "packaging": "Caja 15 uds",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_ziarna": {
-      "name": "Chleb żytni z ziarnami",
+      "name": "Pan de Centeno con Semillas",
       "weight": "400g",
-      "description": "Chleb żytni z dodatkiem siemienia lnianego i nasion słonecznika, posypany ziarnami prosa i siemieniem lnianym oraz nasionami słonecznika i sezamu."
+      "description": "Pan de centeno con lino y girasol, cubierto con mijo y sésamo.",
+      "packaging": "Caja 12 uds / Paleta: 48 cajas",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_slonecznik": {
-      "name": "Chleb żytni ze słonecznikiem",
+      "name": "Pan de Centeno con Pipas de Girasol",
       "weight": "600g",
-      "description": "Pieczywo żytnie ze słonecznikiem."
+      "description": "Pan integral de centeno con pipas de girasol tostadas.",
+      "packaging": "Caja 12 uds / Paleta: 48 cajas (576 uds)",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food, BRC"
     },
     "chlebek_swieconka": {
-      "name": "Chlebek do święconki",
+      "name": "Panecillo Bendecido de Pascua",
       "weight": "60g",
-      "description": "Pieczywo pszenne obsypane mąką żytnią typ 720."
+      "description": "Mini panecillo de trigo espolvoreado con harina de centeno tipo 720.",
+      "packaging": "Caja 30 uds",
+      "shelfLife": "72h (Fresco)",
+      "cert": "IFS Food"
     },
     "chleb_2ab": {
-      "name": "Chleb 2AB",
+      "name": "Pan 2AB de Cereales Ancestrales",
       "weight": "300g",
-      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
+      "description": "Pan de trigo elaborado con harina de cereales ancestrales 2AB con levadura.",
+      "packaging": "Caja 10 uds",
+      "shelfLife": "9 meses (Congelado)",
+      "cert": "IFS Food, BRC, Certificado 2AB"
     }
   }
 }

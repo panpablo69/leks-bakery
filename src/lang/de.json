@@ -382,504 +382,514 @@
   },
   "products_2ab": {
     "chleb_2ab": {
-      "name": "Urbrot 2AB Brot",
-      "weight": "400g",
+      "name": "2AB Urgetreide-Brot",
+      "weight": "300g",
       "packaging": "Karton 10 Stk.",
-      "shelfLife": "6 Tage",
-      "cert": "IFS Food, BRC, 2AB Zertifikat",
-      "description": "Leicht verdauliches Brot aus dem Urgetreide 2AB, gebacken auf natürlichem Sauerteig. Ideal für Personen mit empfindlichem Verdauungssystem, einschließlich derer, die an IBS oder SIBO leiden (Low-FODMAP-Diät)."
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert",
+      "description": "Weizenbrot aus 2AB Urgetreidemehl mit Hefe gebacken."
     },
     "bulka_2ab": {
-      "name": "Urbrot 2AB Brötchen",
-      "weight": "70g",
+      "name": "2AB Urgetreide-Brötchen",
+      "weight": "60g - 70g",
       "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48 Std. (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC, 2AB Zertifikat",
-      "description": "Leicht verdauliches, knuspriges Alltagsbrötchen aus dem Urgetreide 2AB. Ausgezeichnet durch eine natürliche goldene Kruste, niedrigen FODMAP-Gehalt und reduzierten Glutengehalt."
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert",
+      "description": "Weizenbrötchen aus 2AB Urgetreidemehl."
     },
     "bagietka_2ab": {
-      "name": "Urbrot 2AB Baguette",
-      "weight": "250g",
-      "packaging": "Karton 20 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48 Std. (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC, 2AB Zertifikat",
-      "description": "Klassisches, knuspriges Baguette in einer leicht verdaulichen Version. Gebacken mit dem einzigartigen Urweizenmehl 2AB, magen- und darmfreundlich."
+      "name": "2AB Urgetreide-Baguette",
+      "weight": "180g - 200g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert",
+      "description": "Weizenbaguette aus 2AB Urgetreidemehl."
     }
   },
   "products_cukiernia": {
     "skubaniec_z_beza": {
-      "name": "Mürbeteigkuchen mit Baiser",
-      "weight": "ca. 2.0 kg",
-      "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "72 Std. (Frisch)",
-      "cert": "IFS Food, BRC",
-      "description": "Mürbeteigkuchen mit Kakao, geschichtet mit säuerlicher Fruchtmarmelade und luftigem, knusprigem Baiser. Eine traditionelle polnische Spezialität."
+      "name": "Skubaniec-Beerenkuchen",
+      "weight": "kg",
+      "description": "Feinkuchen mit Früchten und Baiser auf Mürbeteigboden."
     },
     "ciasto_karpatka": {
-      "name": "Karpatka Cremeschnitte",
-      "weight": "ca. 1.8 kg",
-      "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "48 Std. (Frisch)",
-      "cert": "IFS Food",
-      "description": "Klassische polnische Cremetorte gefüllt mit luftiger Vanille-Puddingcreme zwischen gewelltem Brandteig, der an die Karpaten erinnert, mit Puderzucker bestäubt."
+      "name": "Karpatka-Cremetorte",
+      "weight": "kg",
+      "description": "Brandteigkuchen gefüllt mit Vanillecreme und Puderzucker."
     },
     "ciasto_krowka": {
-      "name": "Karamell-Kajmak-Schnitt",
-      "weight": "ca. 1.8 kg",
-      "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "48 Std. (Frisch)",
-      "cert": "IFS Food",
-      "description": "Besonders süße und cremige Schnitte mit Schichten aus feinem Biskuit, luftiger Sahnecreme und einer reichhaltigen Karamell-Kajmak-Füllung."
+      "name": "Krówka-Karamellkuchen",
+      "weight": "kg",
+      "description": "Biskuitkuchen mit Sahnecreme, Toffee-Glasur und Mandelblättchen."
     },
     "ciasto_z_galaretka": {
-      "name": "Erdbeer-Gelee-Kuchen",
-      "weight": "ca. 2.0 kg",
-      "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "48 Std. (Frisch)",
-      "cert": "IFS Food",
-      "description": "Erfrischendes Dessert auf luftigem Biskuitboden mit leichter Sahnecreme, reich belegt mit saftigen Erdbeeren in Erdbeergelee."
+      "name": "Erdbeer-Geleekuchen",
+      "weight": "kg",
+      "description": "Biskuitkuchen mit Vanillecreme, frischen Erdbeeren und Erdbeergelee."
     },
     "sernik_puszysty": {
       "name": "Fluffiger Käsekuchen",
-      "weight": "ca. 2.0 kg",
-      "packaging": "Karton 1 Stk. (Blech)",
-      "shelfLife": "48 Std. (Frisch)",
-      "cert": "IFS Food, BRC",
-      "description": "Sehr leichter und luftiger gebackener Käsekuchen auf feinem Mürbeteigboden, zubereitet aus bestem polnischen Quark mit einer feinen Vanillenote."
+      "weight": "kg",
+      "description": "Lockere Käsekuchenmasse auf Biskuitboden mit Dekorzucker."
     },
     "rwaniec_drozdzowy_z_twarogiem": {
-      "name": "Zupfkuchen Hefebrot mit Quark",
-      "weight": "ca. 1.5 kg",
-      "packaging": "Karton 1 Stk.",
-      "shelfLife": "48 Std. (Frisch)",
-      "cert": "IFS Food, BRC",
-      "description": "Fluffiger Zupf-Hefekuchen gefüllt mit süßem Quark, glasiert mit Zuckerguss und feinen Butterstreuseln."
+      "name": "Hefezopf-Zupfbrot mit Quark",
+      "weight": "450g",
+      "description": "Hefegebäck mit Quarkfüllung, Streuseln und Zuckerdekor."
     },
     "baton_coco_crunch": {
       "name": "Coco-Crunch Riegel",
-      "weight": "ca. 1.5 kg",
-      "packaging": "Karton 1 Stk. / Tablett",
-      "shelfLife": "72 Std. (Frisch)",
-      "cert": "IFS Food, BRC",
-      "description": "Köstliche Schoko-Kokos-Riegel mit knusprigen Crispies und Kokosraspeln."
+      "weight": "kg",
+      "description": "Riegelmischung mit Erdnüssen, Toffeekern und Kokosraspeln."
     }
   },
   "products_polcukiernicze": {
-    "paczek_twarogowy": {
-      "name": "Quarkkrapfen",
-      "weight": "80g",
-      "packaging": "Karton 24 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Fluffiger Krapfen mit natürlichem Quark im Teig, der ihm eine besondere Saftigkeit und Weichheit verleiht."
-    },
-    "paczek_z_budyniem": {
-      "name": "Krapfen mit Vanillecreme",
-      "weight": "90g",
-      "packaging": "Karton 24 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Fluffiger Krapfen gefüllt mit dickflüssiger Vanille-Puddingcreme, mit Puderzucker bestäubt."
-    },
-    "gniazdko_z_lukrem": {
-      "name": "Spritzkuchen mit Glasur",
-      "weight": "80g",
-      "packaging": "Karton 20 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Luftiger Brandteig-Krapfen (spanischer Stil), goldgelb ausgebacken und mit süßer Zuckerglasur überzogen."
-    },
-    "warkocz_z_lukrem": {
-      "name": "Hefezopf mit Glasur",
-      "weight": "100g",
+    "brioszka_z_lezkami_czekolady": {
+      "name": "Schoko-Brioche",
+      "weight": "200g",
       "packaging": "Karton 20 Stk. / Kiste",
-      "shelfLife": "48 Std.",
-      "cert": "IFS Food",
-      "description": "Traditioneller Hefe-Flechtzopf, locker und leicht, mit süßer Zuckerglasur verziert."
-    },
-    "racuch_z_jablkiem": {
-      "name": "Hefe-Apfelpuffer",
-      "weight": "90g",
-      "packaging": "Karton 20 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Traditioneller Hefe-Puffer mit saftigen Apfelstücken, ideal als süßer Snack."
-    },
-    "paczek_z_marmolada": {
-      "name": "Krapfen mit Marmelade",
-      "weight": "90g",
-      "packaging": "Karton 24 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Traditioneller Krapfen mit Mehrfruchtmarmelade, glasiert und mit Orangenschale bestreut."
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food, BRC",
+      "description": "Süßes Hefegebäck mit Schokoladentropfen."
     },
     "calusek": {
-      "name": "Küsschen-Hefegebäck",
-      "weight": "90g",
-      "packaging": "Karton 20 Stk.",
-      "shelfLife": "48 Std.",
-      "cert": "IFS Food",
-      "description": "Feines Hefegebäck mit Fruchtfüllung, geformt in ein charakteristisches Küsschen."
-    },
-    "paczek_premium_z_nadzieniem_wisniowym": {
-      "name": "Premium-Krapfen mit Kirschfüllung",
-      "weight": "100g",
-      "packaging": "Karton 24 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food, BRC",
-      "description": "Premium-Krapfen mit leicht säuerlicher Kirschfüllung, glasiert und mit Mandelblättchen bestreut."
-    },
-    "gniazdko_z_cukrem_pudrem": {
-      "name": "Spritzkuchen mit Puderzucker",
+      "name": "Całusek Zuckerkrapfen",
       "weight": "80g",
       "packaging": "Karton 20 Stk.",
-      "shelfLife": "24 Std.",
+      "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food",
-      "description": "Zartes und leichtes Brandteig-Gniazdko, mit feinem Puderzucker bestäubt."
-    },
-    "paczek_z_nadzieniem_karpatkowym": {
-      "name": "Krapfen mit Karpatka-Creme",
-      "weight": "100g",
-      "packaging": "Karton 24 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Besonderer Krapfen gefüllt mit reichhaltiger und fluffiger Creme nach Art des traditionellen Karpatka-Kuchens."
+      "description": "Frittiertes Hefegebäck mit Dekorzucker."
     },
     "drozdzowka_z_makiem": {
       "name": "Mohnschnecke",
-      "weight": "110g",
+      "weight": "100g",
       "packaging": "Karton 15 Stk. / Kiste",
-      "shelfLife": "48 Std.",
+      "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food",
-      "description": "Klassische Hefeschnecke gefüllt mit aromatischer, süßer Blaumohnmasse und Rosinen, glasiert."
-    },
-    "rogal_swiateczny_z_bialym_makiem": {
-      "name": "Weihnachtshörnchen mit weißem Mohn",
-      "weight": "170g",
-      "packaging": "Karton 12 Stk.",
-      "shelfLife": "48 Std.",
-      "cert": "IFS Food, BRC",
-      "description": "Exquisites Plundergebäck-Hörnchen, reich gefüllt mit einer exklusiven Füllung aus weißem Mohn, Nüssen, Marzipan und Rosinen, glasiert und mit gehackten Nüssen bestreut."
+      "description": "Süßes Hefegebäck mit Mohn- und Rosinenfüllung."
     },
     "drozdzowka_z_serem_i_kruszonka": {
-      "name": "Hefetasche mit Quark und Streuseln",
+      "name": "Quarkbrötchen mit Streuseln",
       "weight": "130g",
       "packaging": "Karton 15 Stk. / Kiste",
-      "shelfLife": "48 Std.",
+      "shelfLife": "48 Std. (Frisch) / 9 Monate (Tiefgekühlt)",
       "cert": "IFS Food, BRC",
-      "description": "Traditionelle Hefetasche mit einer süßen Quarkfüllung, bestreut mit knusprigen Butterstreuseln."
+      "description": "Süßes Hefegebäck mit Quarkfüllung und knusprigen Streuseln."
     },
-    "paczek_z_nadzieniem_pistacjowym": {
-      "name": "Pistazienkrapfen",
-      "weight": "100g",
-      "packaging": "Karton 24 Stk.",
-      "shelfLife": "24 Std.",
+    "gniazdko_z_lukrem": {
+      "name": "Spritzkuchen (Gniazdko)",
+      "weight": "55g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "24 Std. (Frisch)",
       "cert": "IFS Food",
-      "description": "Moderner Premium-Krapfen gefüllt mit samtiger Pistaziencreme, dekoriert mit gehackten Pistazien."
-    },
-    "paczek_z_nadzieniem_malinowym": {
-      "name": "Himbeerkrapfen",
-      "weight": "100g",
-      "packaging": "Karton 24 Stk.",
-      "shelfLife": "24 Std.",
-      "cert": "IFS Food",
-      "description": "Klassischer fluffiger Krapfen mit einer aromatischen Füllung aus reifen Himbeeren, mit Puderzucker bestäubt."
-    },
-    "brioszka_z_lezkami_czekolady": {
-      "name": "Brioszka z łezkami czekolady",
-      "weight": "200g",
-      "packaging": "Karton 20 szt. / Skrzynka",
-      "shelfLife": "48h (Świeża)",
-      "cert": "IFS Food, BRC",
-      "description": "Pieczywo półcukiernicze z ciasta drożdżowego z dodatkiem łezek o smaku czekoladowym"
+      "description": "Brandteigring mit feiner Zuckerglasur."
     },
     "miniptysie": {
-      "name": "Miniptysie",
+      "name": "Mini-Windbeutel",
       "weight": "kg",
-      "packaging": "Karton zbiorczy",
-      "shelfLife": "24h (Przechowywać w temp. 2-6°C)",
+      "packaging": "Sammelkarton",
+      "shelfLife": "24 Std. (Kühl bei 2-6°C lagern)",
       "cert": "IFS Food",
-      "description": "Ciasto parzone z kremem"
+      "description": "Brandteig-Windbeutel gefüllt mit feiner Sahnecreme."
+    },
+    "paczek_premium_z_nadzieniem_wisniowym": {
+      "name": "Premium Kirsch-Krapfen",
+      "weight": "70g - 100g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std. (Frisch) / 9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC",
+      "description": "Hefekrapfen mit Kirschfüllung, Zuckerguss und Mandelblättchen."
+    },
+    "paczek_twarogowy": {
+      "name": "Quarkkrapfen",
+      "weight": "50g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std. (Frisch)",
+      "cert": "IFS Food",
+      "description": "Siedegebäck aus Hefeteig mit Speisequark, in Zucker gewälzt."
+    },
+    "paczek_z_budyniem": {
+      "name": "Pudding-Krapfen",
+      "weight": "70g - 100g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std. (Frisch)",
+      "cert": "IFS Food",
+      "description": "Hefekrapfen mit Vanillepuddingfüllung und Glasur."
+    },
+    "paczek_z_marmolada": {
+      "name": "Marmeladen-Krapfen",
+      "weight": "70g - 100g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std. (Frisch) / 9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food",
+      "description": "Traditioneller Hefekrapfen mit Rosenmarmelade und Glasur."
+    },
+    "paczek_z_nadzieniem_karpatkowym": {
+      "name": "Karpatka-Krapfen",
+      "weight": "90g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std. (Frisch)",
+      "cert": "IFS Food",
+      "description": "Hefekrapfen mit Vanillepuddingfüllung, Glasur und weißer Schokolade."
+    },
+    "paczek_z_nadzieniem_malinowym": {
+      "name": "Himbeer-Krapfen",
+      "weight": "70g - 100g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std. (Frisch)",
+      "cert": "IFS Food",
+      "description": "Hefekrapfen mit Himbeerfüllung, glasiert mit gefriergetrockneten Himbeeren."
+    },
+    "paczek_z_nadzieniem_pistacjowym": {
+      "name": "Pistazien-Krapfen",
+      "weight": "80g",
+      "packaging": "Karton 24 Stk.",
+      "shelfLife": "24 Std. (Frisch) / 9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food",
+      "description": "Hefekrapfen mit Pistaziencremefüllung, glasiert und mit Pistazien gehackt."
+    },
+    "racuch_z_jablkiem": {
+      "name": "Apfel-Krapfen",
+      "weight": "90g",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "24 Std. (Frisch)",
+      "cert": "IFS Food",
+      "description": "Hefe-Siedegebäck mit Apfelfüllung und Glasur."
     },
     "twist_z_makiem": {
-      "name": "Twist z makiem",
+      "name": "Mohnschnecke",
       "weight": "90g",
-      "packaging": "Karton 20 szt. / Skrzynka",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Karton 20 Stk. / Kiste",
+      "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food, BRC",
-      "description": "Bułka pszenna drożdżowa z dodatkiem maku"
+      "description": "Hefe-Weizengebäck mit Mohnfüllung."
+    },
+    "warkocz_z_lukrem": {
+      "name": "Glasierte Zopfbrezel",
+      "weight": "90g",
+      "packaging": "Karton 20 Stk. / Kiste",
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food",
+      "description": "Frittiertes Hefegebäck mit Zuckerguss."
     }
   },
   "illustrative_photo": "Symbolfoto",
   "products_bulki": {
     "bulka_kajzerka": {
       "name": "Kaisersemmel",
-      "weight": "60g",
+      "weight": "55g",
+      "description": "Klassisches Weizenbrötchen mit knuspriger, goldbrauner Kruste.",
       "packaging": "Karton 80 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC Grade A",
-      "description": "Klassische, knusprige Weizenkaisersemmel mit typischer Fünf-Stern-Einkerbung."
+      "shelfLife": "48 Std. (Frisch) / 9 Monate (Aufbackbar)",
+      "cert": "IFS Food, BRC Grade A"
     },
     "bulka_z_ziarnem": {
       "name": "Körnerbrötchen",
-      "weight": "75g",
+      "weight": "70g",
+      "description": "Weizenbrötchen mit Sonnenblumenkernen, Leinsamen, Sesam, Hirse und Kürbiskernen.",
       "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Fluffiges Weizenbrötchen reichlich bestreut mit Sesam, Lein- und Sonnenblumenkernen."
+      "shelfLife": "48 Std. (Frisch) / 9 Monate (Aufbackbar)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_wysokobialkowa": {
       "name": "Eiweißbrötchen",
       "weight": "80g",
+      "description": "Weizenbrötchen mit Sesam- und Leinsamenbestreuung. Vorgebacken, tiefgekühlt.",
       "packaging": "Karton 50 Stk.",
-      "shelfLife": "48h / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Spezialbrötchen mit hohem pflanzlichem Eiweißgehalt und reduziertem Kohlenhydratanteil."
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_z_warzywami": {
       "name": "Gemüsebrötchen",
       "weight": "80g",
+      "description": "Weizenbrötchen mit Spinat, Karotte, Roter Bete und Zwiebeln. Tiefgekühlt.",
       "packaging": "Karton 50 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Aromatisches Weizenbrötchen verfeinert mit getrockneten Gemüsestücken."
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_grahamka_slonecznik": {
-      "name": "Grahambrötchen mit Sonnenblumenkernen",
+      "name": "Graham-Sonnenblumenbrötchen",
       "weight": "75g",
+      "description": "Grahambrötchen mit Sonnenblumenkern-Bestreuung.",
       "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Dunkles Grahambrötchen mit knusprigen Sonnenblumenkernen."
+      "shelfLife": "48 Std. (Frisch) / 9 Monate (Aufbackbar)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_mleczna": {
       "name": "Milchbrötchen",
       "weight": "80g",
+      "description": "Feines Weizengebäck mit frischer Milch.",
       "packaging": "Karton 50 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Zartes und weiches Milchbrötchen aus feinem Hefeteig."
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_duza": {
-      "name": "Großes Frühstücksbrötchen",
-      "weight": "90g",
+      "name": "Großes Weizenbrötchen",
+      "weight": "100g",
+      "description": "Klassisches großes Weizenbrötchen mit knuspriger Kruste.",
       "packaging": "Karton 50 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Großes Weizenbrötchen mit knuspriger Kruste."
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_grahamka": {
       "name": "Grahambrötchen",
-      "weight": "70g",
+      "weight": "80g",
+      "description": "Weizenbrötchen mit Grahammehl.",
       "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC Grade A",
-      "description": "Klassisches Vollkorn-Grahambrötchen reich an Ballaststoffen."
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food, BRC Grade A"
     },
     "bulka_z_marchewka": {
       "name": "Karottenbrötchen",
       "weight": "80g",
+      "description": "Weizenbrötchen mit getrockneten Karotten, Sonnenblumenkernen und Leinsamen.",
       "packaging": "Karton 50 Stk.",
-      "shelfLife": "48h (Frisch)",
-      "cert": "IFS Food, BRC",
-      "description": "Aromatisches Weizenbrötchen mit geraspelten Karotten und leicht süßlichem Geschmack."
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "bulka_poznanska": {
       "name": "Posener Brötchen",
-      "weight": "70g",
+      "weight": "80g",
+      "description": "Traditionelles Weizenbrötchen mit knuspriger Kruste.",
       "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Traditionelles polnisches Brötchen mit charakteristischem Längsschnitt."
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "rogal_z_makiem": {
       "name": "Mohnhörnchen",
-      "weight": "90g",
-      "packaging": "Karton 40 Stk.",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Traditionelles Butterhörnchen reichlich bestreut mit Blaumohn."
+      "weight": "100g",
+      "description": "Hufeisenförmiges Weizengebäck mit Mohn bestreut.",
+      "packaging": "Karton 40 Stk. / Kiste",
+      "shelfLife": "48 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "ciabatta_80g": {
       "name": "Ciabatta 80g",
       "weight": "80g",
+      "description": "Langzeitgeführtes Weizenciabatta. Vorgebacken, tiefgekühlt.",
       "packaging": "Karton 50 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC",
-      "description": "Italienische Ciabatta mit knuspriger Kruste und großporiger Krume."
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "rogal_klasyczny": {
       "name": "Klassisches Hörnchen",
-      "weight": "80g",
-      "packaging": "Karton 40 Stk.",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Zartes und butterweiches Hefehörnchen."
-    },
-    "rogal_swiateczny_z_bialym_makiem": {
-      "name": "Festtags-Hörnchen mit Weißmohn",
-      "weight": "170g",
-      "packaging": "Karton 12 Stk.",
-      "shelfLife": "48h",
-      "cert": "IFS Food, BRC",
-      "description": "Festliches Hörnchen reich gefüllt mit Weißmohn, Nüssen und Marzipan."
-    },
-    "chleb_2ab": {
-      "name": "Urweizen 2AB Brot",
-      "weight": "400g",
-      "packaging": "Karton 10 Stk.",
-      "shelfLife": "6 Tage",
-      "cert": "IFS Food, BRC, 2AB Zertifiziert",
-      "description": "Gut bekömmliches Sauerteigbrot aus der Urweizensorte 2AB."
-    },
-    "bulka_2ab": {
-      "name": "Urweizen 2AB Brötchen",
-      "weight": "70g",
-      "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC, 2AB Zertifiziert",
-      "description": "Magenfreundliches Brötchen gebacken aus 2AB Urweizenmehl."
+      "weight": "100g",
+      "description": "Hufeisenförmiges Weizengebäck mit glänzender Kruste.",
+      "packaging": "Karton 40 Stk. / Kiste",
+      "shelfLife": "48 Std. (Frisch) / 9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "bagietka_2ab": {
-      "name": "Urweizen 2AB Baguette",
-      "weight": "250g",
+      "name": "2AB Urgetreide-Baguette",
+      "weight": "180g - 200g",
+      "description": "Weizenbaguette aus 2AB Urgetreidemehl.",
       "packaging": "Karton 20 Stk.",
-      "shelfLife": "48h (Frisch) / 9 Monate (Bake-off)",
-      "cert": "IFS Food, BRC, 2AB Zertifiziert",
-      "description": "Knuspriges Baguette aus 2AB Urweizen mit einzigartigem Aroma."
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert"
+    },
+    "bulka_2ab": {
+      "name": "2AB Urgetreide-Brötchen",
+      "weight": "60g - 70g",
+      "description": "Weizenbrötchen aus 2AB Urgetreidemehl.",
+      "packaging": "Karton 60 Stk. / Palette: 40 Kartons",
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert"
     }
   },
   "products_przekaski": {
     "paluch_z_serem": {
-      "name": "Paluch z serem",
+      "name": "Gouda-Käsestange",
       "weight": "80g",
-      "packaging": "Karton 40 szt. / Paleta: 48 kartonów",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Karton 40 Stk. / Palette: 48 Kartons",
+      "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenne posypane serem gouda"
+      "description": "Weizengebäckstange mit überbackenem Gouda-Käse."
     },
     "przekaska_z_serem": {
-      "name": "Przekąska z serem",
+      "name": "Gouda-Käsesnack",
       "weight": "70g",
-      "packaging": "Karton 40 szt.",
-      "shelfLife": "9 miesięcy (Mrożona)",
+      "packaging": "Karton 40 Stk.",
+      "shelfLife": "9 Monate (Tiefgekühlt)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenne z serem gouda"
+      "description": "Weizengebäck mit Gouda-Käse."
     },
     "wianek_ze_szpinakiem": {
-      "name": "Wianek ze szpinakiem",
+      "name": "Spinat-Béchamel-Kranz",
       "weight": "100g",
-      "packaging": "Karton 20 szt.",
-      "shelfLife": "48h (Świeży)",
+      "packaging": "Karton 20 Stk.",
+      "shelfLife": "48 Std. (Frisch)",
       "cert": "IFS Food, BRC",
-      "description": "Pieczywo pszenna drożdżowa w kształcie wieńca z dodatkiem sosu beszamel, oraz szpinaku."
+      "description": "Kranzförmiges Hefegebäck mit Béchamelsauce und Spinat."
     }
   },
   "products_chleby": {
     "chleb_baltonowski": {
-      "name": "Chleb baltonowski",
+      "name": "Baltonowski-Brot",
       "weight": "550g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, barwa złocisto-brązowa."
+      "description": "Weizenmischbrot mit Sauerteig. Länglicher Laib mit goldbrauner Kruste.",
+      "packaging": "Kiste 12 Stk. / Palette: 48 Kisten (576 Stk.)",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC Grade A"
     },
     "chleb_baltonowski_z_makiem": {
-      "name": "Chleb baltonowski z makiem",
+      "name": "Baltonowski-Brot mit Mohn",
       "weight": "500g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, barwa złocisto-brązowa. Posypane makiem."
+      "description": "Weizenmischbrot in länglicher Form, mit Mohn bestreut.",
+      "packaging": "Kiste 12 Stk.",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_geparda": {
-      "name": "Chleb geparda",
+      "name": "Gepard-Körnerbrot",
       "weight": "450g",
-      "description": "Pieczywo mieszane pszenno-żytnie na zakwasie żytnim z dodatkiem drożdży, z nasionami słonecznika, ziarnem prosa, siemieniem lnianym i nasionami sezamu"
+      "description": "Weizenmischbrot mit Roggensauerteig, Hefe, Sonnenblumenkernen, Hirse, Leinsamen und Sesam.",
+      "packaging": "Kiste 15 Stk. / Palette: 48 Kisten",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food"
     },
     "chleb_helios": {
-      "name": "Chleb helios",
+      "name": "Helios-Körnerbrot",
       "weight": "400g",
-      "description": "Pieczywo mieszane pszenno-żytnie z ziarnami."
+      "description": "Weizenmischbrot mit wertvollen Ölsaaten.",
+      "packaging": "Kiste 12 Stk. / Palette: 48 Kisten (576 Stk.)",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_ig": {
-      "name": "Chleb ig",
+      "name": "Niedriger GI-Brot",
       "weight": "300g",
-      "description": "Pieczywo mieszane o niskim indeksie glikemicznym."
+      "description": "Mischbrot mit niedrigem glykämischen Index.",
+      "packaging": "Karton 10 Stk. / Palette: 40 Kartons",
+      "shelfLife": "6 Tage",
+      "cert": "IFS Food, BRC, GI Geprüft"
     },
     "chleb_zakwas": {
-      "name": "Chleb na naturalnym zakwasie",
+      "name": "Natursauerteigbrot",
       "weight": "600g",
-      "description": "Pieczywo mieszane pszenno – żytnie na naturalnym zakwasie żytnim produkowane metodą wielofazową."
+      "description": "Weizenmischbrot aus natürlichem Roggensauerteig im Mehrstufenverfahren.",
+      "packaging": "Kiste 12 Stk. / Palette: 48 Kisten",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_pajda": {
-      "name": "Chleb pajda",
+      "name": "Pajda-Bauernbrot",
       "weight": "900g",
-      "description": "Pieczywo mieszane pszenno – żytnie na naturalnym zakwasie żytnim produkowane metodą wielofazową."
+      "description": "Traditionelles Weizenmischbrot mit natürlichem Roggensauerteig.",
+      "packaging": "Kiste 12 Stk.",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_boryny": {
-      "name": "Chleb przysmak boryny",
-      "weight": "400/800g",
-      "description": "Pieczywo wyprodukowane na bazie mieszanki do chleba, mąki żytniej, mąki pszennej z dodatkiem kwasu naturalnego, drożdży, soli oraz nasion słonecznika i siemienia lnianego obsypanego mieszanką nasion i płatków ziemniaczanych."
+      "name": "Boryna-Spezialbrot",
+      "weight": "400g / 800g",
+      "description": "Weizenmischbrot mit Sauerteig, Sonnenblumenkernen, Leinsamen und Kartoffelflocken.",
+      "packaging": "Kiste 10 Stk. / Palette: 48 Kisten",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food"
     },
     "chleb_razowy": {
-      "name": "Chleb razowy",
+      "name": "Roggenvollkornbrot",
       "weight": "450g",
-      "description": "Pieczywo żytnie razowe pełnoziarniste w formie prostokątnego bochenka."
+      "description": "Vollkorn-Roggenbrot in Kastenform.",
+      "packaging": "Kiste 12 Stk. / Palette: 48 Kisten",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_wieloziarnisty": {
-      "name": "Chleb wieloziarnisty",
+      "name": "Mehrkornbrot",
       "weight": "500g",
-      "description": "Pieczywo produkowane z mąki pszennej i żytniej na naturalnym zakwasie z dodatkiem drożdży, soli, ekstraktu słodowego, polepszacza oraz mieszanki ziaren; obsypanego mieszanka ziaren posypką ziarnistą"
+      "description": "Weizen-Roggen-Sauerteigbrot mit Saatenmischung innen und als Bestreuung.",
+      "packaging": "Kiste 15 Stk. / Palette: 40 Kisten (600 Stk.)",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_wiosenny": {
-      "name": "Chleb wiosenny z przyprawami i czosnkiem",
+      "name": "Frühlingsbrot mit Knoblauch & Kräutern",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem czosnku oraz przypraw (koperek suszony, pietruszka suszona, szczypiorek krojony)."
+      "description": "Roggenbrot verfeinert mit Knoblauch und Kräutern (Dill, Petersilie, Schnittlauch).",
+      "packaging": "Karton 12 Stk.",
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_z_maka": {
-      "name": "Chleb z mąką",
+      "name": "Bebemehltes Roggen-Weizenbrot",
       "weight": "500g",
-      "description": "Chleb wyprodukowany jest na kwasie uzyskanym metodą fermentacji wielofazowej z dodatkiem drożdży. Bochenki o kształcie podłużnym, z trzema nacięciami, posypany mąką żytnią typ 720"
+      "description": "Mehrstufen-Sauerteigbrot mit drei Einschnitten, bemehlt mit Roggenmehl Type 720.",
+      "packaging": "Kiste 12 Stk. / Palette: 48 Kisten",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zloty_klos": {
-      "name": "Chleb złoty kłos",
-      "weight": "400/800g",
-      "description": "Pieczywo pszenno-żytnie. Bochenki o kształcie podłużnym, z nacięciami w kształcie X, posypane mąką żytnią typ 720."
+      "name": "Goldähre-Brot",
+      "weight": "400g / 800g",
+      "description": "Weizenmischbrot mit X-förmigen Einschnitten, mit Roggenmehl bemehlt.",
+      "packaging": "Kiste 15 Stk. / Palette: 48 Kisten",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food"
     },
     "chleb_zytni_bez_drozdzy": {
-      "name": "Chleb żytni bez drożdży",
-      "weight": "500 g",
-      "description": "chleb żytni wypiekany bez dodatku drożdży"
+      "name": "Hefefreies Roggenbrot",
+      "weight": "500g",
+      "description": "Reines Roggensauerteigbrot, ohne Hefezusatz gebacken.",
+      "packaging": "Karton 10 Stk. / Palette: 48 Kartons",
+      "shelfLife": "6 Tage",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_chrzan": {
-      "name": "Chleb żytni z chrzanem",
+      "name": "Roggenbrot mit Meerrettich",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem chrzanu tartego i majeranku."
+      "description": "Roggenbrot mit geriebenem Meerrettich und Majoran.",
+      "packaging": "Kiste 12 Stk.",
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_kapusta": {
-      "name": "Chleb żytni z kiszoną kapustą",
+      "name": "Roggenbrot mit Sauerkraut",
       "weight": "400g",
-      "description": "Pieczywo żytnie z dodatkiem kapusty kiszonej."
+      "description": "Roggenbrot verfeinert mit natürlichem Sauerkraut.",
+      "packaging": "Kiste 12 Stk.",
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_papryka": {
-      "name": "Chleb żytni z papryką",
+      "name": "Roggenbrot mit Paprika",
       "weight": "380g",
-      "description": "Pieczywo pszenno-żytnie z pieczoną papryką, posypane mieszanką ziaren sezamu oraz sezamu czarnego."
+      "description": "Weizenmischbrot mit gerösteter Paprika, bestreut mit weißem und schwarzem Sesam.",
+      "packaging": "Kiste 15 Stk.",
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_ziarna": {
-      "name": "Chleb żytni z ziarnami",
+      "name": "Roggenbrot mit Saaten",
       "weight": "400g",
-      "description": "Chleb żytni z dodatkiem siemienia lnianego i nasion słonecznika, posypany ziarnami prosa i siemieniem lnianym oraz nasionami słonecznika i sezamu."
+      "description": "Roggenbrot mit Leinsamen und Sonnenblumenkernen, bestreut mit Hirse und Sesam.",
+      "packaging": "Kiste 12 Stk. / Palette: 48 Kisten",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chleb_zytni_slonecznik": {
-      "name": "Chleb żytni ze słonecznikiem",
+      "name": "Roggenbrot mit Sonnenblumenkernen",
       "weight": "600g",
-      "description": "Pieczywo żytnie ze słonecznikiem."
+      "description": "Roggenbrot mit gerösteten Sonnenblumenkernen.",
+      "packaging": "Kiste 12 Stk. / Palette: 48 Kisten (576 Stk.)",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food, BRC"
     },
     "chlebek_swieconka": {
-      "name": "Chlebek do święconki",
+      "name": "Oster-Minibrot",
       "weight": "60g",
-      "description": "Pieczywo pszenne obsypane mąką żytnią typ 720."
+      "description": "Weizen-Minilaib, bemehlt mit Roggenmehl Type 720.",
+      "packaging": "Karton 30 Stk.",
+      "shelfLife": "72 Std. (Frisch)",
+      "cert": "IFS Food"
     },
     "chleb_2ab": {
-      "name": "Chleb 2AB",
+      "name": "2AB Urgetreide-Brot",
       "weight": "300g",
-      "description": "Pieczywo pszenne wypiekane z mąki 2AB (mąka pszenna z pradawnych odmian zbóż) na drożdżach"
+      "description": "Weizenbrot aus 2AB Urgetreidemehl mit Hefe gebacken.",
+      "packaging": "Karton 10 Stk.",
+      "shelfLife": "9 Monate (Tiefgekühlt)",
+      "cert": "IFS Food, BRC, 2AB Zertifiziert"
     }
   }
 }
