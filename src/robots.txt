@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /shop
+Disallow: /shop.html
+Disallow: /reel-explorer
+Disallow: /reel-explorer.html
+Disallow: /reel-preview
+Disallow: /reel-preview.html
+
+Sitemap: https://leks.com.pl/sitemap.xml
