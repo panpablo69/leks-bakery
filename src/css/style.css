@@ -761,15 +761,24 @@ body::before {
     margin: 0 auto;
 }
 
-/* Absolutny kontener maskotki na desktopie (wyciągnięty na lewo) */
+/* Absolutny kontener maskotki na desktopie */
 .timeline-mascot-container {
     position: absolute;
-    left: -140px; /* Perfekcyjnie odsunięty na bok, by nie zasłaniał kafelka z 1989 roku */
-    top: 120px; /* Wyrównanie do wysokości kropki i linii osi czasu */
-    width: 180px;
+    left: -110px;
+    top: 120px;
+    width: 140px;
+    max-width: 140px;
     z-index: 5;
     transform-origin: bottom center;
-    transition: left 0.4s ease;
+    transition: left 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+@media (max-width: 1280px) {
+    .timeline-mascot-container {
+        left: -60px;
+        width: 110px;
+    }
 }
 
 .timeline-mascot-img {
@@ -949,7 +958,7 @@ body::before {
 }
 
 /* Responsywność dla osi czasu w timeline */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .timeline-mascot-container {
         position: relative; /* Wracamy do normalnego przepływu na mobile */
         left: auto;
