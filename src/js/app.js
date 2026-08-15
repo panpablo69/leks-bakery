@@ -1816,6 +1816,12 @@ function initContactForms() {
                 const dataObj = {};
                 formData.forEach((val, key) => { dataObj[key] = val; });
 
+                // Sprawdzenie docelowego adresu e-mail (b2b@leks.com.pl dla B2B, biuro@leks.com.pl dla głównego)
+                const targetEmail = formId === "b2b-contact-form" || (dataObj.from_name && dataObj.from_name.includes("B2B"))
+                    ? "b2b@leks.com.pl"
+                    : "biuro@leks.com.pl";
+
+                dataObj.target_email = targetEmail;
                 let success = false;
 
                 // 1. Spróbuj wysłać przez natywny PHP endpoint na serwerze SEOHOST (api/contact.php)
@@ -1837,7 +1843,7 @@ function initContactForms() {
 
                 // 2. Jeśli PHP backend nie odpowiedział (np. Vercel / serwis statyczny), użyj FormSubmit AJAX endpoint
                 if (!success) {
-                    const formSubmitUrl = "https://formsubmit.co/ajax/biuro@leks.com.pl";
+                    const formSubmitUrl = `https://formsubmit.co/ajax/${targetEmail}`;
                     const fsResponse = await fetch(formSubmitUrl, {
                         method: "POST",
                         headers: { 
@@ -1880,7 +1886,8 @@ function initContactForms() {
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({
                         event: "contact_form_submit",
-                        form_id: formId
+                        form_id: formId,
+                        target_email: targetEmail
                     });
                 } else {
                     throw new Error("Form submission failed on all endpoints.");
@@ -1888,7 +1895,8 @@ function initContactForms() {
             } catch (err) {
                 console.error("Contact form submission error:", err);
                 if (statusDiv) {
-                    statusDiv.innerHTML = `${errorMsg} <br><a href="mailto:biuro@leks.com.pl" style="color: #721c24; text-decoration: underline; font-weight: bold;">biuro@leks.com.pl</a>`;
+                    const targetEmail = formId === "b2b-contact-form" ? "b2b@leks.com.pl" : "biuro@leks.com.pl";
+                    statusDiv.innerHTML = `${errorMsg} <br><a href="mailto:${targetEmail}" style="color: #721c24; text-decoration: underline; font-weight: bold;">${targetEmail}</a>`;
                     statusDiv.style.color = "#721c24"; // Error Red
                     statusDiv.style.backgroundColor = "#f8d7da";
                     statusDiv.style.borderColor = "#f5c6cb";

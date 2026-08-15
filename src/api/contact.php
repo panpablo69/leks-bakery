@@ -49,7 +49,15 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
-$to = 'biuro@leks.com.pl';
+$target_email = isset($input['target_email']) ? trim($input['target_email']) : '';
+if (!empty($target_email) && filter_var($target_email, FILTER_VALIDATE_EMAIL)) {
+    $to = $target_email;
+} else if (stripos($from_name, 'B2B') !== false || stripos($subject, 'B2B') !== false) {
+    $to = 'b2b@leks.com.pl';
+} else {
+    $to = 'biuro@leks.com.pl';
+}
+
 $email_subject = "=?UTF-8?B?" . base64_encode("[Leks Website] " . $subject) . "?=";
 
 $email_content = "Otrzymano nową wiadomość z formularza na stronie LEKS:\n\n";
