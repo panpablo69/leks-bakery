@@ -1813,17 +1813,66 @@ function initContactForms() {
 
             try {
                 const formData = new FormData(form);
-                const response = await fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    body: formData
-                });
+                const dataObj = {};
+                formData.forEach((val, key) => { dataObj[key] = val; });
 
-                const result = await response.json();
+                let success = false;
 
-                if (response.ok && result.success) {
+                // 1. Spróbuj wysłać przez natywny PHP endpoint na serwerze SEOHOST (api/contact.php)
+                try {
+                    const phpResponse = await fetch("api/contact.php", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(dataObj)
+                    });
+                    if (phpResponse.ok) {
+                        const phpResult = await phpResponse.json();
+                        if (phpResult.success) {
+                            success = true;
+                        }
+                    }
+                } catch (phpErr) {
+                    console.log("PHP backend endpoint not available, trying cloud fallback...", phpErr);
+                }
+
+                // 2. Jeśli PHP backend nie odpowiedział (np. Vercel / serwis statyczny), użyj FormSubmit AJAX endpoint
+                if (!success) {
+                    const formSubmitUrl = "https://formsubmit.co/ajax/biuro@leks.com.pl";
+                    const fsResponse = await fetch(formSubmitUrl, {
+                        method: "POST",
+                        headers: { 
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: JSON.stringify({
+                            _subject: `[Leks Website] ${dataObj.subject || 'Nowe zapytanie'}`,
+                            _template: "table",
+                            "Imię i nazwisko": dataObj.name || '',
+                            "Adres E-mail": dataObj.email || '',
+                            "Firma": dataObj.company || '-',
+                            "Telefon": dataObj.phone || '-',
+                            "Temat": dataObj.subject || '',
+                            "Wiadomość": dataObj.message || '',
+                            "Źródło": dataObj.from_name || 'Formularz Leks'
+                        })
+                    });
+
+                    if (fsResponse.ok) {
+                        const fsResult = await fsResponse.json();
+                        if (fsResult.success === "true" || fsResult.success === true) {
+                            success = true;
+                        }
+                    }
+                }
+
+                if (success) {
                     if (statusDiv) {
                         statusDiv.textContent = successMsg;
                         statusDiv.style.color = "#155724"; // Success Green
+                        statusDiv.style.backgroundColor = "#d4edda";
+                        statusDiv.style.borderColor = "#c3e6cb";
+                        statusDiv.style.padding = "12px 16px";
+                        statusDiv.style.borderRadius = "8px";
                     }
                     form.reset();
                     
@@ -1834,13 +1883,17 @@ function initContactForms() {
                         form_id: formId
                     });
                 } else {
-                    throw new Error(result.message || "Form submission failed.");
+                    throw new Error("Form submission failed on all endpoints.");
                 }
             } catch (err) {
                 console.error("Contact form submission error:", err);
                 if (statusDiv) {
-                    statusDiv.textContent = errorMsg;
+                    statusDiv.innerHTML = `${errorMsg} <br><a href="mailto:biuro@leks.com.pl" style="color: #721c24; text-decoration: underline; font-weight: bold;">biuro@leks.com.pl</a>`;
                     statusDiv.style.color = "#721c24"; // Error Red
+                    statusDiv.style.backgroundColor = "#f8d7da";
+                    statusDiv.style.borderColor = "#f5c6cb";
+                    statusDiv.style.padding = "12px 16px";
+                    statusDiv.style.borderRadius = "8px";
                 }
             } finally {
                 if (submitBtn) {
