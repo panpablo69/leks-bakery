@@ -80,19 +80,27 @@ $email_content .= "--------------------------------------------------\n";
 $email_content .= "Adres IP nadawcy: " . ($_SERVER['REMOTE_ADDR'] ?? 'nieznany') . "\n";
 $email_content .= "Data: " . date('Y-m-d H:i:s') . "\n";
 
+$from_email = 'biuro@leks.com.pl';
+
 $headers = [];
-$headers[] = "From: Formularz Leks <noreply@leks.com.pl>";
+$headers[] = "From: Leks Website <{$from_email}>";
 $headers[] = "Reply-To: {$name} <{$email}>";
 $headers[] = "MIME-Version: 1.0";
 $headers[] = "Content-Type: text/plain; charset=UTF-8";
 $headers[] = "X-Mailer: PHP/" . phpversion();
 
-$sent = @mail($to, $email_subject, $email_content, implode("\r\n", $headers));
+// Pass envelope sender -f parameter to prevent SEOHOST mail rejection
+$sent = @mail($to, $email_subject, $email_content, implode("\r\n", $headers), "-f {$from_email}");
+
+if (!$sent) {
+    // Fallback try without fifth parameter if server restricts -f
+    $sent = @mail($to, $email_subject, $email_content, implode("\r\n", $headers));
+}
 
 if ($sent) {
     echo json_encode(['success' => true, 'message' => 'Wiadomość została wysłana!']);
 } else {
-    // Return success false so JS falls back to secondary endpoint
-    http_response_code(500);
-    echo json_encode(['success' => false, 'error' => 'Błąd wysyłania przez serwer mailowy']);
+    // Log error for debugging
+    error_log("Leks contact form mail() failed to send to $to from $email");
+    echo json_encode(['success' => false, 'error' => 'Błąd wysyłania przez serwer mailowy. Prosimy o kontakt bezpośredni na biuro@leks.com.pl']);
 }
