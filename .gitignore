@@ -19,3 +19,8 @@ results/
 Thumbs.db
 *.zip
 *.log
+
+# Local secrets & FTP credentials (NEVER commit to Git)
+.env
+ftp_config.json
+*.env
