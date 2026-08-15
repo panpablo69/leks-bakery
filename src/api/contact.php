@@ -52,6 +52,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $target_email = isset($input['target_email']) ? trim($input['target_email']) : '';
 if (!empty($target_email) && filter_var($target_email, FILTER_VALIDATE_EMAIL)) {
     $to = $target_email;
+} else if (stripos($from_name, 'Rekrutacja') !== false || stripos($subject, 'Aplikacja') !== false || stripos($subject, 'Rekrutacja') !== false) {
+    $to = 'rekrutacja@leks.com.pl';
 } else if (stripos($from_name, 'B2B') !== false || stripos($subject, 'B2B') !== false) {
     $to = 'b2b@leks.com.pl';
 } else {

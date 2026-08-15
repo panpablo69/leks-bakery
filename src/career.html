@@ -117,7 +117,7 @@
                                 <p data-i18n="career.jobs.production.desc">Zadania: Obsługa maszyn i urządzeń piekarniczych, kontrolowanie parametrów oraz pakowanie wyrobów gotowych.</p>
                             </div>
                             <p class="career-location" data-i18n="career.location.gorzow">Gorzów Wielkopolski</p>
-                            <a href="index.html#contact" class="btn btn-sm btn-outline" data-i18n="career.apply">Aplikuj</a>
+                            <button class="btn btn-sm btn-outline btn-apply-job" data-job-title="Operator Produkcji (Gorzów Wielkopolski)" data-job-location="Gorzów Wielkopolski" data-i18n="career.apply">Aplikuj</button>
                         </div>
                     </div>
                     
@@ -132,7 +132,7 @@
                                 <p data-i18n="career.jobs.mechanic.desc">Zadania: Bieżąca konserwacja parku maszynowego, diagnozowanie i usuwanie awarii elektryczno-mechanicznych.</p>
                             </div>
                             <p class="career-location" data-i18n="career.location.gorzow">Gorzów Wielkopolski</p>
-                            <a href="index.html#contact" class="btn btn-sm btn-outline" data-i18n="career.apply">Aplikuj</a>
+                            <button class="btn btn-sm btn-outline btn-apply-job" data-job-title="Mechanik-Elektryk (Gorzów Wielkopolski)" data-job-location="Gorzów Wielkopolski" data-i18n="career.apply">Aplikuj</button>
                         </div>
                     </div>
                     
@@ -147,7 +147,7 @@
                                 <p data-i18n="career.jobs.oven_operator.desc">Zadania: Nadzór nad prawidłowym wypiekiem w piecach tunelowych i wsadowych, kontrola temperatur.</p>
                             </div>
                             <p class="career-location" data-i18n="career.location.gorzow">Gorzów Wielkopolski</p>
-                            <a href="index.html#contact" class="btn btn-sm btn-outline" data-i18n="career.apply">Aplikuj</a>
+                            <button class="btn btn-sm btn-outline btn-apply-job" data-job-title="Operator Pieców Wsadowych (Gorzów Wielkopolski)" data-job-location="Gorzów Wielkopolski" data-i18n="career.apply">Aplikuj</button>
                         </div>
                     </div>
                     
@@ -162,7 +162,7 @@
                                 <p data-i18n="career.jobs.spontaneous.desc">Chcesz dołączyć do zespołu Leks, ale nie widzisz pasującej roli? Prześlij swoje CV – z wielką chęcią poznamy Twoje kompetencje!</p>
                             </div>
                             <p class="career-location" data-i18n="career.location.any">Dowolna lokalizacja</p>
-                            <a href="index.html#contact" class="btn btn-sm btn-outline" data-i18n="career.send_cv">Prześlij CV</a>
+                            <button class="btn btn-sm btn-outline btn-apply-job" data-job-title="Aplikacja Spontaniczna (CV)" data-job-location="Dowolna lokalizacja" data-i18n="career.send_cv">Prześlij CV</button>
                         </div>
                     </div>
 
@@ -340,6 +340,56 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Aplikacji Rekrutacyjnej -->
+    <div id="job-application-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal-card privacy-modal-card" style="max-width: 620px;">
+            <button id="close-job-modal" class="modal-close-btn" aria-label="Zamknij">&times;</button>
+            <div class="privacy-modal-body">
+                <span class="modal-badge">Rekrutacja Leks</span>
+                <h2 class="modal-title" id="job-modal-title">Aplikuj na stanowisko</h2>
+                <p id="job-modal-subtitle" style="color: var(--color-accent); font-weight: 600; margin-bottom: 20px;"></p>
+                <div class="modal-divider"></div>
+                
+                <form id="job-application-form" class="modern-form" style="margin-top: 20px;">
+                    <input type="hidden" name="from_name" value="Strona Leks - Rekrutacja">
+                    <input type="hidden" name="target_email" value="rekrutacja@leks.com.pl">
+                    <input type="hidden" id="job-modal-position" name="subject" value="Aplikacja na stanowisko">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="job-name" data-i18n="contact.label_name">Imię i nazwisko</label>
+                            <input type="text" id="job-name" name="name" autocomplete="name" required placeholder="np. Jan Kowalski" data-i18n-placeholder="contact.placeholder_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="job-phone" data-i18n="b2b.contact_phone_field_label">Numer telefonu</label>
+                            <input type="tel" id="job-phone" name="phone" autocomplete="tel" required placeholder="np. +48 123 456 789">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-email" data-i18n="contact.label_email">Adres e-mail</label>
+                        <input type="email" id="job-email" name="email" autocomplete="email" required placeholder="np. jan@domena.pl" data-i18n-placeholder="contact.placeholder_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-message" data-i18n="contact.label_message">Treść aplikacji / Doświadczenie</label>
+                        <textarea id="job-message" name="message" required placeholder="Opisz krótko swoje doświadczenie zawodowe..." rows="4"></textarea>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label style="font-size: 0.82rem; color: var(--color-text-muted); display: flex; align-items: flex-start; gap: 8px; cursor: pointer;">
+                            <input type="checkbox" required style="margin-top: 3px;">
+                            <span>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Leks Sp. z o.o. w celu prowadzenia procesu rekrutacji na to stanowisko (zgodnie z RODO).</span>
+                        </label>
+                    </div>
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <button type="submit" class="btn btn-primary" id="job-submit-btn" style="flex: 1; min-width: 180px;">Wyślij aplikację</button>
+                        <a id="job-mailto-btn" href="#" class="btn btn-outline" style="flex: 1; min-width: 180px; text-align: center;">Otwórz w e-mailu</a>
+                    </div>
+                    <div id="job-form-status" class="form-status-msg" role="status" aria-live="polite" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal RODO / Polityka Prywatności -->
     <div id="privacy-modal" class="modal-backdrop">

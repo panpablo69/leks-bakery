@@ -242,6 +242,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch(e) { console.error("initContactForms error:", e); }
     
     try {
+        initJobApplicationModal();
+    } catch(e) { console.error("initJobApplicationModal error:", e); }
+
+    try {
         initPrivacyModal();
     } catch(e) { console.error("initPrivacyModal error:", e); }
     
@@ -1769,7 +1773,8 @@ function initCertificates() {
 function initContactForms() {
     const forms = [
         { formId: "leks-contact-form", btnId: "form-submit-btn", statusId: "form-status" },
-        { formId: "b2b-contact-form", btnId: "b2b-submit-btn", statusId: "b2b-form-status" }
+        { formId: "b2b-contact-form", btnId: "b2b-submit-btn", statusId: "b2b-form-status" },
+        { formId: "job-application-form", btnId: "job-submit-btn", statusId: "job-form-status" }
     ];
 
     forms.forEach(({ formId, btnId, statusId }) => {
@@ -1798,7 +1803,7 @@ function initContactForms() {
 
             const sendingMsg = getMsg("contact.sending", "Wysyłanie...");
             const successMsg = getMsg("contact.success", "Wiadomość została wysłana! Dziękujemy za kontakt.");
-            const errorMsg = getMsg("contact.error", "Wystąpił błąd podczas wysyłania. Napisz bezpośrednio na: biuro@leks.com.pl");
+            const errorMsg = getMsg("contact.error", "Wystąpił błąd podczas wysyłania. Napisz bezpośrednio na e-mail.");
 
             const originalBtnHtml = submitBtn ? submitBtn.innerHTML : "";
             if (submitBtn) {
@@ -1816,10 +1821,13 @@ function initContactForms() {
                 const dataObj = {};
                 formData.forEach((val, key) => { dataObj[key] = val; });
 
-                // Sprawdzenie docelowego adresu e-mail (b2b@leks.com.pl dla B2B, biuro@leks.com.pl dla głównego)
-                const targetEmail = formId === "b2b-contact-form" || (dataObj.from_name && dataObj.from_name.includes("B2B"))
-                    ? "b2b@leks.com.pl"
-                    : "biuro@leks.com.pl";
+                // Dedykowany routing adresów e-mail (rekrutacja@, b2b@, biuro@)
+                let targetEmail = "biuro@leks.com.pl";
+                if (formId === "b2b-contact-form" || (dataObj.from_name && dataObj.from_name.includes("B2B"))) {
+                    targetEmail = "b2b@leks.com.pl";
+                } else if (formId === "job-application-form" || (dataObj.from_name && dataObj.from_name.includes("Rekrutacja"))) {
+                    targetEmail = "rekrutacja@leks.com.pl";
+                }
 
                 dataObj.target_email = targetEmail;
                 let success = false;
@@ -1858,7 +1866,7 @@ function initContactForms() {
                             "Firma": dataObj.company || '-',
                             "Telefon": dataObj.phone || '-',
                             "Temat": dataObj.subject || '',
-                            "Wiadomość": dataObj.message || '',
+                            "Wiadomość / Doświadczenie": dataObj.message || '',
                             "Źródło": dataObj.from_name || 'Formularz Leks'
                         })
                     });
@@ -1895,7 +1903,10 @@ function initContactForms() {
             } catch (err) {
                 console.error("Contact form submission error:", err);
                 if (statusDiv) {
-                    const targetEmail = formId === "b2b-contact-form" ? "b2b@leks.com.pl" : "biuro@leks.com.pl";
+                    let targetEmail = "biuro@leks.com.pl";
+                    if (formId === "b2b-contact-form") targetEmail = "b2b@leks.com.pl";
+                    if (formId === "job-application-form") targetEmail = "rekrutacja@leks.com.pl";
+                    
                     statusDiv.innerHTML = `${errorMsg} <br><a href="mailto:${targetEmail}" style="color: #721c24; text-decoration: underline; font-weight: bold;">${targetEmail}</a>`;
                     statusDiv.style.color = "#721c24"; // Error Red
                     statusDiv.style.backgroundColor = "#f8d7da";
@@ -1910,6 +1921,49 @@ function initContactForms() {
                 }
             }
         });
+    });
+}
+
+function initJobApplicationModal() {
+    const modal = document.getElementById("job-application-modal");
+    const closeBtn = document.getElementById("close-job-modal");
+    const applyBtns = document.querySelectorAll(".btn-apply-job");
+    const modalTitle = document.getElementById("job-modal-title");
+    const modalSubtitle = document.getElementById("job-modal-subtitle");
+    const modalPosInput = document.getElementById("job-modal-position");
+    const mailtoBtn = document.getElementById("job-mailto-btn");
+
+    if (!modal) return;
+
+    const closeModal = () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+    };
+
+    applyBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const jobTitle = btn.getAttribute("data-job-title") || "Stanowisko w Leks";
+            const jobLoc = btn.getAttribute("data-job-location") || "";
+            
+            if (modalTitle) modalTitle.textContent = `Aplikuj: ${jobTitle}`;
+            if (modalSubtitle) modalSubtitle.textContent = jobLoc ? `Lokalizacja: ${jobLoc}` : "";
+            if (modalPosInput) modalPosInput.value = `Aplikacja na stanowisko: ${jobTitle}`;
+            
+            if (mailtoBtn) {
+                const subject = encodeURIComponent(`Aplikacja na stanowisko: ${jobTitle}`);
+                const body = encodeURIComponent(`Dzień dobry,\n\nChciałbym zgłosić swoją kandydaturę na stanowisko: ${jobTitle}.\n\nW załączeniu przesyłam moje CV.\n\nPozdrawiam,\n[Twoje Imię i Nazwisko]`);
+                mailtoBtn.href = `mailto:rekrutacja@leks.com.pl?subject=${subject}&body=${body}`;
+            }
+
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
     });
 }
 
