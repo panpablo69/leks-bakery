@@ -431,11 +431,11 @@ const timelineData = {
 
 const mascotYearScales = {
     "1989": 0.72,
-    "1998": 0.80,
-    "2005": 0.88,
-    "2010": 0.96,
-    "2018": 1.05,
-    "2026": 1.15
+    "1998": 0.82,
+    "2005": 0.92,
+    "2010": 1.02,
+    "2018": 1.12,
+    "2026": 1.24
 };
 
 function updateMascotScale(year) {
@@ -466,30 +466,44 @@ function positionTimelineElements(button, animate = true) {
     
     if (isMobile) {
         // Pionowe pozycjonowanie na urządzeniach mobilnych
-        const btnTop = button.offsetTop + button.offsetHeight / 2;
-        card.style.left = "0px";
+        const btnTop = button.offsetTop;
+        const cardTop = Math.max(0, btnTop - 8);
         card.classList.add("active");
 
+        if (animate && typeof gsap !== "undefined") {
+            gsap.to(card, {
+                top: cardTop + "px",
+                left: "105px",
+                duration: 0.45,
+                ease: "power2.out"
+            });
+        } else {
+            card.style.top = cardTop + "px";
+            card.style.left = "105px";
+        }
+
         if (mascotSlider) {
+            const mascotTop = btnTop - 46;
             if (animate && typeof gsap !== "undefined") {
                 gsap.to(mascotSlider, {
-                    top: (button.offsetTop - 12) + "px",
-                    left: "32px",
+                    top: mascotTop + "px",
+                    left: "36px",
                     scale: targetScale,
-                    duration: 0.55,
+                    duration: 0.5,
                     ease: "back.out(1.4)",
                     transformOrigin: "bottom center"
                 });
             } else {
-                mascotSlider.style.top = (button.offsetTop - 12) + "px";
-                mascotSlider.style.left = "32px";
-                mascotSlider.style.transform = `translate(-50%, -100%) scale(${targetScale})`;
+                mascotSlider.style.top = mascotTop + "px";
+                mascotSlider.style.left = "36px";
+                mascotSlider.style.transform = `translateX(-50%) scale(${targetScale})`;
             }
         }
     } else {
         // Poziome pozycjonowanie na wersjach desktopowych
         const btnCenter = button.offsetLeft + button.offsetWidth / 2;
         card.style.left = btnCenter + "px";
+        card.style.top = "";
         card.classList.add("active");
 
         if (mascotSlider) {
