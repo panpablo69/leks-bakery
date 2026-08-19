@@ -2100,6 +2100,20 @@ body::before {
     display: flex;
     align-items: center;
     gap: 12px;
+    color: var(--color-white);
+}
+
+.contact-info-panel p a,
+.contact-phone,
+.contact-phone a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.contact-info-panel p a:hover,
+.contact-phone a:hover {
+    color: var(--color-accent-light);
+    text-decoration: underline;
 }
 
 .contact-form-panel {
