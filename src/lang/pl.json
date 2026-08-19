@@ -200,7 +200,7 @@
   "contact": {
     "subtitle": "Napisz Do Nas",
     "title": "Porozmawiajmy o pieczywie",
-    "hours": "Biuro obsługi klienta: Pn - Pt, 8:00 - 16:00",
+    "hours": "Biuro obsługi klienta: Pn - Pt, 7:00 - 15:00",
     "label_name": "Imię i nazwisko",
     "placeholder_name": "np. Jan Kowalski",
     "label_email": "Adres e-mail",
@@ -216,7 +216,7 @@
     "btn_send": "Wyślij wiadomość",
     "sending": "Wysyłanie...",
     "success": "Wiadomość została wysłana! Dziękujemy za kontakt.",
-    "error": "Wystąpił błąd podczas wysyłania. Napisz bezpośrednio na: biuro@leks.com.pl"
+    "error": "Wystąpił błąd podczas wysyłania. Napisz bezpośrednio na: sekretariat.sulecin@leks.com.pl"
   },
   "footer": {
     "privacy": "RODO (Polityka prywatności)",

@@ -200,7 +200,7 @@
   "contact": {
     "subtitle": "Escríbanos",
     "title": "Hablemos de pan",
-    "hours": "Oficina de atención al cliente: Lunes a Viernes, de 8:00 a 16:00",
+    "hours": "Oficina de atención al cliente: Lunes a Viernes, de 7:00 a 15:00",
     "label_name": "Nombre y apellido",
     "placeholder_name": "ej. Juan Pérez",
     "label_email": "Dirección de correo electrónico",
@@ -216,7 +216,7 @@
     "btn_send": "Enviar mensaje",
     "sending": "Enviando...",
     "success": "¡Mensaje enviado con éxito! Gracias por contactarnos.",
-    "error": "Ocurrió un error al enviar. Por favor escriba directamente a: biuro@leks.com.pl"
+    "error": "Ocurrió un error al enviar. Por favor escriba directamente a: sekretariat.sulecin@leks.com.pl"
   },
   "footer": {
     "privacy": "RGPD (Política de privacidad)",

@@ -200,7 +200,7 @@
   "contact": {
     "subtitle": "Write to Us",
     "title": "Let's talk about bread",
-    "hours": "Customer service office: Mon - Fri, 8:00 AM - 4:00 PM",
+    "hours": "Customer service office: Mon - Fri, 7:00 AM - 3:00 PM",
     "label_name": "Full Name",
     "placeholder_name": "e.g. John Smith",
     "label_email": "Email address",
@@ -216,7 +216,7 @@
     "btn_send": "Send Message",
     "sending": "Sending...",
     "success": "Message sent successfully! Thank you for contacting us.",
-    "error": "An error occurred while sending. Please write directly to: biuro@leks.com.pl"
+    "error": "An error occurred while sending. Please write directly to: sekretariat.sulecin@leks.com.pl"
   },
   "footer": {
     "privacy": "GDPR (Privacy Policy)",

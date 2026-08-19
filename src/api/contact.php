@@ -57,7 +57,7 @@ if (!empty($target_email) && filter_var($target_email, FILTER_VALIDATE_EMAIL)) {
 } else if (stripos($from_name, 'B2B') !== false || stripos($subject, 'B2B') !== false) {
     $to = 'b2b@leks.com.pl';
 } else {
-    $to = 'biuro@leks.com.pl';
+    $to = 'sekretariat.sulecin@leks.com.pl';
 }
 
 $email_subject = "=?UTF-8?B?" . base64_encode("[Leks Website] " . $subject) . "?=";
@@ -80,7 +80,7 @@ $email_content .= "--------------------------------------------------\n";
 $email_content .= "Adres IP nadawcy: " . ($_SERVER['REMOTE_ADDR'] ?? 'nieznany') . "\n";
 $email_content .= "Data: " . date('Y-m-d H:i:s') . "\n";
 
-$from_email = 'biuro@leks.com.pl';
+$from_email = 'sekretariat.sulecin@leks.com.pl';
 
 $headers = [];
 $headers[] = "From: Leks Website <{$from_email}>";
@@ -102,5 +102,5 @@ if ($sent) {
 } else {
     // Log error for debugging
     error_log("Leks contact form mail() failed to send to $to from $email");
-    echo json_encode(['success' => false, 'error' => 'Błąd wysyłania przez serwer mailowy. Prosimy o kontakt bezpośredni na biuro@leks.com.pl']);
+    echo json_encode(['success' => false, 'error' => 'Błąd wysyłania przez serwer mailowy. Prosimy o kontakt bezpośredni na sekretariat.sulecin@leks.com.pl']);
 }

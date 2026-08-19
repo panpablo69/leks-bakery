@@ -200,7 +200,7 @@
   "contact": {
     "subtitle": "Schreiben Sie uns",
     "title": "Lassen Sie uns über Brot sprechen",
-    "hours": "Kundenservice: Mo - Fr, 8:00 - 16:00 Uhr",
+    "hours": "Kundenservice: Mo - Fr, 7:00 - 15:00 Uhr",
     "label_name": "Vor- und Nachname",
     "placeholder_name": "z. B. Max Mustermann",
     "label_email": "E-Mail-Adresse",
@@ -216,7 +216,7 @@
     "btn_send": "Nachricht senden",
     "sending": "Senden...",
     "success": "Nachricht erfolgreich gesendet! Vielen Dank für Ihre Kontaktaufnahme.",
-    "error": "Beim Senden ist ein Fehler aufgetreten. Bitte schreiben Sie direkt an: biuro@leks.com.pl"
+    "error": "Beim Senden ist ein Fehler aufgetreten. Bitte schreiben Sie direkt an: sekretariat.sulecin@leks.com.pl"
   },
   "footer": {
     "privacy": "DSGVO (Datenschutzerklärung)",

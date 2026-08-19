@@ -172,90 +172,37 @@ function initLanguageSwitcher() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
     // Rejestracja wtyczki ScrollTrigger w GSAP
     try {
-        gsap.registerPlugin(ScrollTrigger);
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        }
     } catch(e) { console.error("GSAP register error:", e); }
-    
-    // Inicjalizacja języka
-    await loadInitialTranslations();
 
-    try {
-        initNavigation();
-    } catch(e) { console.error("initNavigation error:", e); }
+    // Inicjalizacja komponentów interfejsu bez blokowania
+    try { initNavigation(); } catch(e) { console.error("initNavigation error:", e); }
+    try { initLanguageSwitcher(); } catch(e) { console.error("initLanguageSwitcher error:", e); }
+    try { initContactForms(); } catch(e) { console.error("initContactForms error:", e); }
+    try { initJobApplicationModal(); } catch(e) { console.error("initJobApplicationModal error:", e); }
+    try { initPrivacyModal(); } catch(e) { console.error("initPrivacyModal error:", e); }
+    try { initBlogModal(); } catch(e) { console.error("initBlogModal error:", e); }
+    try { initB2BModal(); } catch(e) { console.error("initB2BModal error:", e); }
+    try { initHeroAnimations(); } catch(e) { console.error("initHeroAnimations error:", e); }
+    try { initTimeline(); } catch(e) { console.error("initTimeline error:", e); }
+    try { initAllProductsCategory(); } catch(e) { console.error("initAllProductsCategory error:", e); }
+    try { renderKategorie(); } catch(e) { console.error("renderKategorie error:", e); }
+    try { renderCategoryProducts(); } catch(e) { console.error("renderCategoryProducts error:", e); }
+    try { initProductsFilterAndSort(); } catch(e) { console.error("initProductsFilterAndSort error:", e); }
+    try { initParallax(); } catch(e) { console.error("initParallax error:", e); }
+    try { initAccordions(); } catch(e) { console.error("initAccordions error:", e); }
+    try { initScrollAnimations(); } catch(e) { console.error("initScrollAnimations error:", e); }
+    try { initSwipers(); } catch(e) { console.error("initSwipers error:", e); }
+    try { initHotspots(); } catch(e) { console.error("initHotspots error:", e); }
+    try { initCertificates(); } catch(e) { console.error("initCertificates error:", e); }
     
-    try {
-        initLanguageSwitcher();
-    } catch(e) { console.error("initLanguageSwitcher error:", e); }
-
-    try {
-        initHeroAnimations();
-    } catch(e) { console.error("initHeroAnimations error:", e); }
-    
-    try {
-        initTimeline();
-    } catch(e) { console.error("initTimeline error:", e); }
-    
-    try {
-        initAllProductsCategory();
-    } catch(e) { console.error("initAllProductsCategory error:", e); }
-    
-    try {
-        renderKategorie();
-    } catch(e) { console.error("renderKategorie error:", e); }
-    
-    try {
-        renderCategoryProducts();
-    } catch(e) { console.error("renderCategoryProducts error:", e); }
-
-    try {
-        initProductsFilterAndSort();
-    } catch(e) { console.error("initProductsFilterAndSort error:", e); }
-    
-    try {
-        initParallax();
-    } catch(e) { console.error("initParallax error:", e); }
-    
-    try {
-        initAccordions();
-    } catch(e) { console.error("initAccordions error:", e); }
-    
-    try {
-        initB2BModal();
-    } catch(e) { console.error("initB2BModal error:", e); }
-    
-    try {
-        initScrollAnimations();
-    } catch(e) { console.error("initScrollAnimations error:", e); }
-    
-    try {
-        initSwipers();
-    } catch(e) { console.error("initSwipers error:", e); }
-    
-    try {
-        initHotspots();
-    } catch(e) { console.error("initHotspots error:", e); }
-    
-    try {
-        initContactForms();
-    } catch(e) { console.error("initContactForms error:", e); }
-    
-    try {
-        initJobApplicationModal();
-    } catch(e) { console.error("initJobApplicationModal error:", e); }
-
-    try {
-        initPrivacyModal();
-    } catch(e) { console.error("initPrivacyModal error:", e); }
-    
-    try {
-        initBlogModal();
-    } catch(e) { console.error("initBlogModal error:", e); }
-    
-    try {
-        initCertificates();
-    } catch(e) { console.error("initCertificates error:", e); }
+    // Inicjalizacja języka asynchronicznie w tle
+    loadInitialTranslations().catch(err => console.error("loadInitialTranslations error:", err));
 
     // Odświeżenie na koniec załadowania okna
     window.addEventListener("load", () => {
@@ -1832,8 +1779,8 @@ function initContactForms() {
                 const dataObj = {};
                 formData.forEach((val, key) => { dataObj[key] = val; });
 
-                // Dedykowany routing adresów e-mail (rekrutacja@, b2b@, biuro@)
-                let targetEmail = "biuro@leks.com.pl";
+                // Dedykowany routing adresów e-mail (rekrutacja@, b2b@, sekretariat.sulecin@)
+                let targetEmail = "sekretariat.sulecin@leks.com.pl";
                 if (formId === "b2b-contact-form" || (dataObj.from_name && dataObj.from_name.includes("B2B"))) {
                     targetEmail = "b2b@leks.com.pl";
                 } else if (formId === "job-application-form" || (dataObj.from_name && dataObj.from_name.includes("Rekrutacja"))) {
@@ -1914,7 +1861,7 @@ function initContactForms() {
             } catch (err) {
                 console.error("Contact form submission error:", err);
                 if (statusDiv) {
-                    let targetEmail = "biuro@leks.com.pl";
+                    let targetEmail = "sekretariat.sulecin@leks.com.pl";
                     if (formId === "b2b-contact-form") targetEmail = "b2b@leks.com.pl";
                     if (formId === "job-application-form") targetEmail = "rekrutacja@leks.com.pl";
                     
@@ -1947,6 +1894,7 @@ function initJobApplicationModal() {
     if (!modal) return;
 
     const closeModal = () => {
+        modal.classList.remove("active");
         modal.style.display = "none";
         document.body.style.overflow = "";
     };
@@ -1968,6 +1916,7 @@ function initJobApplicationModal() {
             }
 
             modal.style.display = "flex";
+            modal.classList.add("active");
             document.body.style.overflow = "hidden";
         });
     });
