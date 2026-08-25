@@ -142,7 +142,7 @@
     },
     "jobs": {
       "production": {
-        "title": "Produktionsoperator",
+        "title": "Produktionsmitarbeiter",
         "desc": "Aufgaben: Bedienung von Bäckereimaschinen und -anlagen, Überwachung der Parameter und Verpackung der Fertigprodukte."
       },
       "mechanic": {
@@ -162,7 +162,7 @@
         "desc": "Aufgaben: Hilfsarbeiten beim Brotbacken, Bedienung automatisierter Linien, Einhaltung der Arbeitshygiene."
       },
       "oven_operator": {
-        "title": "Produktionsbediener (Gorzów Wielkopolski)",
+        "title": "Produktionsbediener",
         "desc": "Aufgaben: Überwachung des korrekten Backens in Tunnel- und Etagenöfen, Temperaturkontrolle."
       },
       "warehouse_ready": {

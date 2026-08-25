@@ -142,7 +142,7 @@
     },
     "jobs": {
       "production": {
-        "title": "Production Operator",
+        "title": "Production Worker",
         "desc": "Tasks: Operation of bakery machinery and equipment, monitoring parameters, and packaging finished products."
       },
       "mechanic": {
@@ -162,7 +162,7 @@
         "desc": "Tasks: Auxiliary work during bread baking, operation of automated lines, maintaining occupational hygiene."
       },
       "oven_operator": {
-        "title": "Production Operator (Gorzów Wielkopolski)",
+        "title": "Production Operator",
         "desc": "Tasks: Supervision of correct baking in tunnel and deck ovens, temperature control."
       },
       "warehouse_ready": {

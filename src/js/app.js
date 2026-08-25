@@ -457,7 +457,7 @@ function positionTimelineElements(button, animate = true) {
             if (animate && typeof gsap !== "undefined") {
                 gsap.to(mascotSlider, {
                     left: btnCenter + "px",
-                    top: "0px",
+                    top: "-170px",
                     scale: targetScale,
                     duration: 0.55,
                     ease: "back.out(1.4)",
@@ -465,7 +465,7 @@ function positionTimelineElements(button, animate = true) {
                 });
             } else {
                 mascotSlider.style.left = btnCenter + "px";
-                mascotSlider.style.top = "0px";
+                mascotSlider.style.top = "-170px";
                 mascotSlider.style.transform = `translateX(-50%) scale(${targetScale})`;
             }
         }

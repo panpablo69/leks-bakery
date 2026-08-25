@@ -764,8 +764,7 @@ body::before {
 /* Kontener wędrującej maskotki Kłos nad osią czasu */
 .timeline-mascot-container {
     position: absolute;
-    bottom: 100%;
-    margin-bottom: 60px; /* Wyciągnięcie maskotki ponad cyfry cyfr rocznika (1989, 1998, itd.) */
+    top: -170px;
     left: 0;
     width: 120px;
     height: 130px;

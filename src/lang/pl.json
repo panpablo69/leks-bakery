@@ -142,7 +142,7 @@
     },
     "jobs": {
       "production": {
-        "title": "Operator Produkcji",
+        "title": "Pracownik Produkcji",
         "desc": "Zadania: Obsługa maszyn i urządzeń piekarniczych, kontrolowanie parametrów oraz pakowanie wyrobów gotowych."
       },
       "mechanic": {
@@ -162,7 +162,7 @@
         "desc": "Zadania: Prace pomocnicze przy wypieku pieczywa, obsługa zautomatyzowanych linii, dbanie o higienę pracy."
       },
       "oven_operator": {
-        "title": "Operator Produkcji (Gorzów Wielkopolski)",
+        "title": "Operator Produkcji",
         "desc": "Zadania: Nadzór nad prawidłowym wypiekiem w piecach tunelowych i wsadowych, kontrola temperatur."
       },
       "warehouse_ready": {
