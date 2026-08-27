@@ -62,21 +62,13 @@
       "iso_desc": "La norma de calidad se aplica en todas las plantas de producción de Leks Sp. z o.o. El Sistema de Gestión de Inocuidad Alimentaria de la organización ha sido aprobado por ISOQAR."
     },
     "plants": {
-      "subtitle": "Infraestructura",
       "title": "Plantas de Producción",
-      "lead": "Tres modernas instalaciones de producción y logística que garantizan la máxima calidad y fiabilidad de suministro en toda Polonia y Europa.",
-      "plant1_badge": "Sede & Planta",
-      "plant1_title": "Sulęcin",
-      "plant1_address": "ul. Lipowa 27, 69-200 Sulęcin<br><span class=\"plant-legal\">(Sede: ul. Emilii Plater 4)</span>",
-      "plant1_desc": "Sede de operaciones, centro logístico y de almacenamiento moderno, y líneas automatizadas de panes de masa madre.",
-      "plant2_badge": "Planta de Producción ZP2",
-      "plant2_title": "Gorzów Wielkopolski",
-      "plant2_address": "ul. Podmiejska Boczna 14A, 66-400 Gorzów Wielkopolski",
-      "plant2_desc": "Producción de panes de trigo, centeno y mixtos, bollería y tecnología de ultracongelación / Bake-off (IFS Food, BRC).",
-      "plant3_badge": "Planta de Producción ZP3",
-      "plant3_title": "Tarnów Bycki",
-      "plant3_address": "Tarnów Bycki 28, 67-115 Bytom Odrzański",
-      "plant3_desc": "Planta especializada que abastece a los mercados regionales y nacionales con panes tradicionales y productos frescos."
+      "sulecin_title": "Sulęcin",
+      "sulecin_address": "ul. Lipowa 27<br>69-200 Sulęcin",
+      "gorzow_title": "Gorzów Wielkopolski",
+      "gorzow_address": "ul. Podmiejska Boczna 14A<br>66-400 Gorzów Wielkopolski",
+      "tarnow_title": "Tarnów Bycki",
+      "tarnow_address": "Tarnów Bycki 28<br>67-115 Bytom Odrzański"
     }
   },
   "team_banner": {

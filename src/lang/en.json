@@ -62,21 +62,13 @@
       "iso_desc": "The quality standard applies to all Leks Sp. z o.o. production plants. The organization's Food Safety Management System has been approved by ISOQAR."
     },
     "plants": {
-      "subtitle": "Infrastructure",
       "title": "Production Plants",
-      "lead": "Three modern production and logistics facilities ensuring highest quality and reliable deliveries across Poland and Europe.",
-      "plant1_badge": "Headquarters & Plant",
-      "plant1_title": "Sulęcin",
-      "plant1_address": "ul. Lipowa 27, 69-200 Sulęcin<br><span class=\"plant-legal\">(Headquarters: ul. Emilii Plater 4)</span>",
-      "plant1_desc": "Operations headquarters, automated sourdough bread baking lines, and a modern logistics and warehouse facility.",
-      "plant2_badge": "Production Plant ZP2",
-      "plant2_title": "Gorzów Wielkopolski",
-      "plant2_address": "ul. Podmiejska Boczna 14A, 66-400 Gorzów Wielkopolski",
-      "plant2_desc": "Production of wheat, rye and mixed breads, semi-confectionery goods, and deep-freeze Bake-off technology (IFS Food, BRC).",
-      "plant3_badge": "Production Plant ZP3",
-      "plant3_title": "Tarnów Bycki",
-      "plant3_address": "Tarnów Bycki 28, 67-115 Bytom Odrzański",
-      "plant3_desc": "Specialized bakery plant supplying regional and nationwide markets with traditional loaves and fresh bakery goods."
+      "sulecin_title": "Sulęcin",
+      "sulecin_address": "ul. Lipowa 27<br>69-200 Sulęcin",
+      "gorzow_title": "Gorzów Wielkopolski",
+      "gorzow_address": "ul. Podmiejska Boczna 14A<br>66-400 Gorzów Wielkopolski",
+      "tarnow_title": "Tarnów Bycki",
+      "tarnow_address": "Tarnów Bycki 28<br>67-115 Bytom Odrzański"
     }
   },
   "team_banner": {

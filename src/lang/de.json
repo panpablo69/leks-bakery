@@ -62,21 +62,13 @@
       "iso_desc": "Der Qualitätsstandard gilt für alle Produktionsstätten von Leks Sp. z o.o. Das Lebensmittelsicherheits-Managementsystem der Organisation wurde von ISOQAR zugelassen."
     },
     "plants": {
-      "subtitle": "Infrastruktur",
       "title": "Produktionsstätten",
-      "lead": "Drei moderne Produktions- und Logistikstandorte sichern höchste Qualität und zuverlässige Backwarenlieferungen in ganz Polen und Europa.",
-      "plant1_badge": "Hauptsitz & Werk",
-      "plant1_title": "Sulęcin",
-      "plant1_address": "ul. Lipowa 27, 69-200 Sulęcin<br><span class=\"plant-legal\">(Hauptsitz: ul. Emilii Plater 4)</span>",
-      "plant1_desc": "Betriebszentrale, automatisiertes Sauerteigbrot-Backzentrum sowie modernes Logistik- und Lagergebäude.",
-      "plant2_badge": "Produktionswerk ZP2",
-      "plant2_title": "Gorzów Wielkopolski",
-      "plant2_address": "ul. Podmiejska Boczna 14A, 66-400 Gorzów Wielkopolski",
-      "plant2_desc": "Herstellung von Weizen-, Roggen- und Mischbroten, feinen Backwaren sowie Tiefkühl- und Bake-off-Technologie (IFS Food, BRC).",
-      "plant3_badge": "Produktionswerk ZP3",
-      "plant3_title": "Tarnów Bycki",
-      "plant3_address": "Tarnów Bycki 28, 67-115 Bytom Odrzański",
-      "plant3_desc": "Spezialisierte Bäckereiproduktionsstätte zur Belieferung regionaler und landesweiter Märkte mit traditionellen Laiben und frischem Brot."
+      "sulecin_title": "Sulęcin",
+      "sulecin_address": "ul. Lipowa 27<br>69-200 Sulęcin",
+      "gorzow_title": "Gorzów Wielkopolski",
+      "gorzow_address": "ul. Podmiejska Boczna 14A<br>66-400 Gorzów Wielkopolski",
+      "tarnow_title": "Tarnów Bycki",
+      "tarnow_address": "Tarnów Bycki 28<br>67-115 Bytom Odrzański"
     }
   },
   "team_banner": {

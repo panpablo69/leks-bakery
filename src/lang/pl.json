@@ -62,21 +62,13 @@
       "iso_desc": "Norma jakości obowiązuje we wszystkich Zakładach Produkcyjnych Leks Sp. z o.o. System Zarządzania Bezpieczeństwem Żywności Organizacji został zatwierdzony przez ISOQAR."
     },
     "plants": {
-      "subtitle": "Infrastruktura",
       "title": "Zakłady Produkcyjne",
-      "lead": "Trzy nowoczesne obiekty produkcyjne i logistyczne zapewniające najwyższą jakość oraz niezawodność dostaw pieczywa w całej Polsce i Europie.",
-      "plant1_badge": "Siedziba & Zakład",
-      "plant1_title": "Sulęcin",
-      "plant1_address": "ul. Lipowa 27, 69-200 Sulęcin<br><span class=\"plant-legal\">(Siedziba: ul. Emilii Plater 4)</span>",
-      "plant1_desc": "Centrala operacyjna, zautomatyzowane linie wypieku chlebów na naturalnym zakwasie oraz nowoczesne centrum logistyczno-magazynowe.",
-      "plant2_badge": "Zakład Produkcyjny ZP2",
-      "plant2_title": "Gorzów Wielkopolski",
-      "plant2_address": "ul. Podmiejska Boczna 14A, 66-400 Gorzów Wielkopolski",
-      "plant2_desc": "Wypiek pieczywa pszennego, żytniego i mieszanego, wyroby półcukiernicze oraz technologia głębokiego mrożenia i Bake-off (IFS Food, BRC).",
-      "plant3_badge": "Zakład Produkcyjny ZP3",
-      "plant3_title": "Tarnów Bycki",
-      "plant3_address": "Tarnów Bycki 28, 67-115 Bytom Odrzański",
-      "plant3_desc": "Wyspecjalizowany zakład produkcyjny zaopatrujący rynki regionalne i ogólnopolskie w tradycyjne bochenki i pieczywo świeże."
+      "sulecin_title": "Sulęcin",
+      "sulecin_address": "ul. Lipowa 27<br>69-200 Sulęcin",
+      "gorzow_title": "Gorzów Wielkopolski",
+      "gorzow_address": "ul. Podmiejska Boczna 14A<br>66-400 Gorzów Wielkopolski",
+      "tarnow_title": "Tarnów Bycki",
+      "tarnow_address": "Tarnów Bycki 28<br>67-115 Bytom Odrzański"
     }
   },
   "team_banner": {
