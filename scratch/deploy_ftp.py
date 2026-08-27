@@ -8,53 +8,97 @@ CONFIG_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'ftp_conf
 def get_config():
     if not os.path.exists(CONFIG_PATH):
         print(f"Brak pliku konfiguracyjnego: {CONFIG_PATH}")
-        print("Utwórz plik ftp_config.json w głównym katalogu projektu z danymi FTP.")
         return None
     with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def upload_dir(ftp, local_dir, remote_dir):
-    try:
-        ftp.cwd(remote_dir)
-    except ftplib.error_perm:
-        ftp.mkd(remote_dir)
-        ftp.cwd(remote_dir)
+def ensure_remote_dir(ftp, remote_dir):
+    dirs = remote_dir.strip('/').split('/')
+    current = ''
+    for d in dirs:
+        if not d:
+            continue
+        current += '/' + d
+        try:
+            ftp.cwd(current)
+        except ftplib.error_perm:
+            try:
+                ftp.mkd(current)
+                ftp.cwd(current)
+            except Exception as e:
+                pass
 
-    for item in os.listdir(local_dir):
-        local_path = os.path.join(local_dir, item)
-        if os.path.isfile(local_path):
-            print(f"Wysyłanie pliku: {item} ...")
-            with open(local_path, 'rb') as f:
-                ftp.storbinary(f'STOR {item}', f)
-        elif os.path.isdir(local_path):
-            upload_dir(ftp, local_path, os.path.join(remote_dir, item))
+def get_remote_file_size(ftp, filename):
+    try:
+        return ftp.size(filename)
+    except Exception:
+        return None
+
+def upload_folder(ftp, local_folder, remote_base_dir):
+    uploaded_count = 0
+    skipped_count = 0
+    
+    for root, dirs, files in os.walk(local_folder):
+        rel_path = os.path.relpath(root, local_folder)
+        if rel_path == '.':
+            target_dir = remote_base_dir
+        else:
+            target_dir = os.path.join(remote_base_dir, rel_path).replace('\\', '/')
+        
+        ensure_remote_dir(ftp, target_dir)
+        
+        for file in files:
+            local_file_path = os.path.join(root, file)
+            local_size = os.path.getsize(local_file_path)
+            
+            # Text / Code files (.html, .css, .js, .json, .php, .txt, .xml) always re-upload
+            ext = os.path.splitext(file)[1].lower()
+            always_upload = ext in ['.html', '.css', '.js', '.json', '.php', '.txt', '.xml']
+            
+            if not always_upload:
+                remote_size = get_remote_file_size(ftp, file)
+                if remote_size is not None and remote_size == local_size:
+                    skipped_count += 1
+                    continue
+            
+            display_path = os.path.join(rel_path, file) if rel_path != '.' else file
+            print(f"Uploading: {display_path} ({local_size} B) ...")
+            with open(local_file_path, 'rb') as f:
+                ftp.storbinary(f'STOR {file}', f)
+            uploaded_count += 1
+            
+    print(f"Przeslano: {uploaded_count} plikow, pominieto (bez zmian): {skipped_count} plikow.")
 
 def main():
     config = get_config()
     if not config:
         sys.exit(1)
 
-    host = config.get('host')
+    host = config.get('host', 'h76.seohost.pl')
     user = config.get('user')
     password = config.get('password')
-    remote_path = config.get('remote_path', '/public_html')
+    remote_path = config.get('remote_path', 'domains/leks.com.pl/public_html')
     port = config.get('port', 21)
 
-    print(f"Łączenie z serwerem SEOHOST FTP: {host}:{port} ...")
+    print(f"Laczenie z serwerem SEOHOST FTP: {host}:{port} ...")
     try:
         ftp = ftplib.FTP()
-        ftp.connect(host, port)
+        ftp.connect(host, port, timeout=30)
         ftp.login(user, password)
-        print("Zalogowano pomyślnie na serwer FTP.")
+        ftp.set_pasv(True)
+        print("Zalogowano pomyslnie na serwer FTP.")
 
         src_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src')
-        print(f"Rozpoczynanie synchronizacji katalogu {src_dir} do {remote_path} ...")
-        upload_dir(ftp, src_dir, remote_path)
+        print(f"Synchronizowanie katalogu {src_dir} do {remote_path} ...")
+        
+        upload_folder(ftp, src_dir, remote_path)
+        
         ftp.quit()
-        print("✅ Automatyczne wdrożenie na SEOHOST zakończone sukcesem!")
+        print("\n>>> AUTOMATYCZNA SYNCHRONIZACJA NA LEKS.COM.PL ZAKONCZONA SUKCESEM! <<<")
     except Exception as e:
-        print(f"❌ Błąd automatycznej wysyłki FTP: {e}")
+        print(f"Blad podczas wysylania FTP: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":
     main()
+

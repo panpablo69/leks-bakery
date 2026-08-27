@@ -60,6 +60,23 @@
       "ifs_en_desc": "Certyfikat IFS Food (ZP2 – Gorzów Wlkp.): produkcja pieczywa pszennego, mieszanego i żytniego, wyrobów półcukierniczych oraz pieczywa głęboko mrożonego.",
       "iso_title": "Certyfikat ISO 22000:2018",
       "iso_desc": "Norma jakości obowiązuje we wszystkich Zakładach Produkcyjnych Leks Sp. z o.o. System Zarządzania Bezpieczeństwem Żywności Organizacji został zatwierdzony przez ISOQAR."
+    },
+    "plants": {
+      "subtitle": "Infrastruktura",
+      "title": "Zakłady Produkcyjne",
+      "lead": "Trzy nowoczesne obiekty produkcyjne i logistyczne zapewniające najwyższą jakość oraz niezawodność dostaw pieczywa w całej Polsce i Europie.",
+      "plant1_badge": "Siedziba & Zakład",
+      "plant1_title": "Sulęcin",
+      "plant1_address": "ul. Lipowa 27, 69-200 Sulęcin<br><span class=\"plant-legal\">(Siedziba: ul. Emilii Plater 4)</span>",
+      "plant1_desc": "Centrala operacyjna, zautomatyzowane linie wypieku chlebów na naturalnym zakwasie oraz nowoczesne centrum logistyczno-magazynowe.",
+      "plant2_badge": "Zakład Produkcyjny ZP2",
+      "plant2_title": "Gorzów Wielkopolski",
+      "plant2_address": "ul. Podmiejska Boczna 14A, 66-400 Gorzów Wielkopolski",
+      "plant2_desc": "Wypiek pieczywa pszennego, żytniego i mieszanego, wyroby półcukiernicze oraz technologia głębokiego mrożenia i Bake-off (IFS Food, BRC).",
+      "plant3_badge": "Zakład Produkcyjny ZP3",
+      "plant3_title": "Tarnów Bycki",
+      "plant3_address": "Tarnów Bycki 28, 67-115 Bytom Odrzański",
+      "plant3_desc": "Wyspecjalizowany zakład produkcyjny zaopatrujący rynki regionalne i ogólnopolskie w tradycyjne bochenki i pieczywo świeże."
     }
   },
   "team_banner": {
