@@ -60,6 +60,11 @@ if (!empty($target_email) && filter_var($target_email, FILTER_VALIDATE_EMAIL)) {
     $to = 'sekretariat.sulecin@leks.com.pl';
 }
 
+// Jeśli odbiorcą jest b2b@leks.com.pl, przekieruj maile do całego zespołu B2B
+if (strpos($to, 'b2b@leks.com.pl') !== false) {
+    $to = 'b2b@leks.com.pl, jaroslaw.krol@leks.com.pl, artur.krysztofiak@leks.com.pl';
+}
+
 $email_subject = "=?UTF-8?B?" . base64_encode("[Leks Website] " . $subject) . "?=";
 
 $email_content = "Otrzymano nową wiadomość z formularza na stronie LEKS:\n\n";

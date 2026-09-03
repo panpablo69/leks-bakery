@@ -323,6 +323,12 @@ body::before {
     transition: var(--transition-fast);
 }
 
+.nav-link#link-b2b,
+.nav-menu .nav-link[href="b2b.html"],
+.nav-menu .nav-link[data-i18n="nav.b2b"] {
+    font-weight: 700;
+}
+
 .nav-link:hover, .nav-link.active {
     color: var(--color-accent);
 }

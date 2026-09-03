@@ -1810,23 +1810,27 @@ function initContactForms() {
                 // 2. Jeśli PHP backend nie odpowiedział (np. Vercel / serwis statyczny), użyj FormSubmit AJAX endpoint
                 if (!success) {
                     const formSubmitUrl = `https://formsubmit.co/ajax/${targetEmail}`;
+                    const fsPayload = {
+                        _subject: `[Leks Website] ${dataObj.subject || 'Nowe zapytanie'}`,
+                        _template: "table",
+                        "Imię i nazwisko": dataObj.name || '',
+                        "Adres E-mail": dataObj.email || '',
+                        "Firma": dataObj.company || '-',
+                        "Telefon": dataObj.phone || '-',
+                        "Temat": dataObj.subject || '',
+                        "Wiadomość / Doświadczenie": dataObj.message || '',
+                        "Źródło": dataObj.from_name || 'Formularz Leks'
+                    };
+                    if (targetEmail === "b2b@leks.com.pl") {
+                        fsPayload._cc = "jaroslaw.krol@leks.com.pl,artur.krysztofiak@leks.com.pl";
+                    }
                     const fsResponse = await fetch(formSubmitUrl, {
                         method: "POST",
                         headers: { 
                             "Content-Type": "application/json",
                             "Accept": "application/json"
                         },
-                        body: JSON.stringify({
-                            _subject: `[Leks Website] ${dataObj.subject || 'Nowe zapytanie'}`,
-                            _template: "table",
-                            "Imię i nazwisko": dataObj.name || '',
-                            "Adres E-mail": dataObj.email || '',
-                            "Firma": dataObj.company || '-',
-                            "Telefon": dataObj.phone || '-',
-                            "Temat": dataObj.subject || '',
-                            "Wiadomość / Doświadczenie": dataObj.message || '',
-                            "Źródło": dataObj.from_name || 'Formularz Leks'
-                        })
+                        body: JSON.stringify(fsPayload)
                     });
 
                     if (fsResponse.ok) {
